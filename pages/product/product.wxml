@@ -1,0 +1,28 @@
+<view class="container">
+  <view class="product-list">
+    <!--商品列表-->
+    <view class="pro-item" bindtap="detail" wx:for="{{productList}}" wx:key="{{index}}">
+      <image src="../../static/images/product/{{item.img}}.jpg" class="pro-img" mode="widthFix" />
+      <view class="pro-content">
+        <view class="pro-tit">{{item.name}}</view>
+        <view>
+          <view class="pro-price">
+            <text class="sale-price">￥{{item.sale}}</text>
+            <text class="factory-price">￥{{item.factory}}</text>
+          </view>
+          <view class="pro-pay">{{item.payNum}}人付款</view>
+        </view>
+      </view>
+    </view>
+    <!--商品列表-->
+  </view>
+  <!--加载loadding-->
+  <view class="weui-loadmore" hidden="{{!loadding}}">
+    <view class="weui-loading"></view>
+    <view class="weui-loadmore__tips">正在加载...</view>
+  </view>
+  <view class="weui-loadmore weui-loadmore_line" hidden="{{pullUpOn}}">
+    <view class="weui-loadmore__tips weui-loadmore__tips_in-line weui-loadmore__tips_in-dot">没有更多了 </view>
+  </view>
+  <!--加载loadding-->
+</view>

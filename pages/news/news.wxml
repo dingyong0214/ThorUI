@@ -1,0 +1,25 @@
+<wxs module="wxs" src="../../filter/filter.wxs"></wxs>
+<view class="container">
+  <view class="list-view">
+    <view wx:for="{{newsList}}" wx:key="{{index}}" class="list-cell list-item {{(newsList.length-1)==index?'last':''}}" hover-class="hover" hover-stay-time="150" bindtap="detail">
+      <view class="cell-title-box {{item.img==0?'':'min'}}">
+        <view class="cell-title {{item.img==0?'pdr0':''}}">{{item.title}}</view>
+        <image src='../../static/images/product/{{item.img}}.jpg' class="img" wx:if="{{item.img!=0}}"></image>
+      </view>
+      <view class="sub-title">
+        <text class="badge {{wxs.getLabelCss(item.label)}}" wx:if="{{item.label!=0}}">{{wxs.getLabelText(item.label)}}</text>
+        <text class="sub-content">{{item.source}}</text>
+      </view>
+    </view>
+
+  </view>
+  <!--加载loadding-->
+  <view class="weui-loadmore" hidden="{{!loadding}}">
+    <view class="weui-loading"></view>
+    <view class="weui-loadmore__tips">正在加载...</view>
+  </view>
+  <view class="weui-loadmore weui-loadmore_line" hidden="{{pullUpOn}}">
+    <view class="weui-loadmore__tips weui-loadmore__tips_in-line weui-loadmore__tips_in-dot">没有更多了 </view>
+  </view>
+  <!--加载loadding-->
+</view>

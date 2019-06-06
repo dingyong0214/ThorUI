@@ -1,0 +1,54 @@
+<view class="page">
+  <scroll-view class="scrollList" scroll-y scroll-into-view="{{scrollViewId}}" style="height:{{winHeight}}px">
+    <view class="search-bar">
+      <view class="search-bar-form">
+        <view class="search-bar-box">
+          <icon class="icon-search-in-box" type="search" size="16"></icon>
+          <input confirm-type="search" class="search-bar-input" placeholder="请输入搜索关键词" placeholder-class="phcolor" value="{{inputVal}}"  bindinput="inputTyping" bindconfirm="searchCity"/>
+          <view class="icon-clear" wx:if="{{inputShowed}}" bindtap="clearInput">
+            <icon type="clear" size="15"></icon>
+          </view>
+        </view>
+      </view>
+       <button class="btn-primary" hover-class="btn-hover" bindtap="searchCity">搜索</button>
+    </view>
+    <view class="tui-list search-result" wx:if="{{inputShowed}}">
+      <view class="tui-list-cell" hover-class="tui-list-cell-hover" wx:for="{{searchResult}}" key="{{index}}" bindtap="selectCity" data-name="{{item}}" hover-stay-time='150' >
+        <view class="tui-list-cell-navigate">
+           <image src="../../static/images/news/{{(index%2===0 && index!==0)?'4.jpg':'2.jpg'}}" class="img"></image>
+              <view class="content">
+               <view class="title">{{item.name}}</view>
+               <view class="sub-title">{{item.mobile}}</view>
+              </view>
+        </view>
+      </view>
+    </view>
+    <view wx:if="{{!inputShowed}}">
+      <view class="tui-list city-list">
+        <block wx:for="{{lists}}" key="{{index}}" wx:for-item="list" wx:if="{{list.data[0]}}">
+          <view class="tui-list-cell-divider" id="{{list.letter}}">
+            {{list.letter}}
+          </view>
+          <view class="tui-list-cell" hover-class="tui-list-cell-hover" wx:for="{{list.data}}" key="{{index}}" bindtap="selectCity" data-name="{{item.name}}" hover-stay-time='150'>
+            <view class="tui-list-cell-navigate {{list.data.length-1==index?'last':''}}" >
+             <image src="../../static/images/news/{{(index%2===0 && index!==0)?'4.jpg':'2.jpg'}}" class="img"></image>
+              <view class="content">
+               <view class="title">{{item.name}}</view>
+               <view class="sub-title">{{item.mobile}}</view>
+              </view>
+
+            </view>
+          </view>
+        </block>
+      </view>
+    </view>
+  </scroll-view>
+  <view class="tui-indexed-list-bar" style="height:{{indexBarHeight}}px" catchtouchstart="touchStart" catchtouchmove="touchMove" catchtouchend="touchEnd" catchtouchcancel="touchCancel" wx:if="{{!inputShowed}}">
+    <text wx:for="{{lists}}" key="{{index}}" wx:for-item="items" class="tui-indexed-list-text" style="height:{{indexBarItemHeight}}px">
+				{{items.letter}}
+			</text>
+  </view>
+  <view class="tui-indexed-list-alert" wx:if="{{touchmove && lists[touchmoveIndex].letter}}">
+    {{lists[touchmoveIndex].letter}}
+  </view>
+</view>

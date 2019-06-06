@@ -1,0 +1,70 @@
+<!--pages/my/my.wxml-->
+<view class='container'>
+  <view class='top-container'>
+    <image class='bg-img' src='../../static/images/my/mine_bg_3x.png'></image>
+    <view bindtap='logout' class='logout' hover-class="opcity" hover-stay-time="150" >
+      <image class='logout-img' src='../../static/images/my/icon_out_3x.png' hidden='{{!isLogin}}'></image>
+      <text class='logout-txt' hidden='{{!isLogin}}'>退出</text>
+    </view>
+    <view hidden='{{isLogin}}' class='user-wrapper'>
+      <navigator url='../login/login' hover-class="opcity" hover-stay-time="150" class='user'>
+        <image class='avatar-img' src='../../static/images/my/mine_def_touxiang_3x.png'></image>
+        <text class='user-info-mobile'>请登录</text>
+      </navigator>
+    </view>
+    <view hidden='{{!isLogin}}' class='user'>
+      <image class='avatar-img' src='../../static/images/my/mine_def_touxiang_3x.png'></image>
+      <view class='user-info-mobile'>
+        <text>{{memberName}}</text>
+        <view  class='edit-img' hover-class="opcity" hover-stay-time="150" bindtap="edit">
+          <image src='../../static/images/my/mine_icon_bianji_3x.png'></image>      
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class='middle-container'>
+    <view data-url='../myWashTicket/myWashTicket'  data-index="2" class='middle-item' hover-class="opcity" hover-stay-time="150">
+      <image class='ticket-img' src='../../static/images/my/thorui.png'></image>
+      <text class='middle-tag'>Thor UI</text>
+    </view> 
+    <view bindtap='tapEvent' data-index="4" class='middle-item' hover-class="opcity" hover-stay-time="150">
+      <image class='car-img' src='../../static/images/my/github_3x.png'></image>
+      <text class='middle-tag'>GitHub</text>
+    </view>
+  </view>
+
+  <view class='bottom-container'>
+  <view class='ul-item'>
+    <view bindtap='tapEvent' data-index="1"  data-key='加油站' class='item' hover-class="opcity" hover-stay-time="150">
+      <image class='item-img' src='../../static/images/my/mine_icon_jiayouzhan_3x.png'></image>
+      <text class='item-name'>加油站</text>
+    </view>
+    <view bindtap='tapEvent' data-index="1" data-key='停车场'  class='item' hover-class="opcity" hover-stay-time="150">
+      <image class='item-img' src='../../static/images/my/mine_icon_tingche_3x.png'></image>
+      <text class='item-name'>停车场</text>
+    </view>
+    <view bindtap='tapEvent' data-index="1" data-key='充电桩' class='item' hover-class="opcity" hover-stay-time="150">
+      <image class='item-img' src='../../static/images/my/mine_icon_chongdian_3x.png'></image>
+      <text class='item-name'>充电桩</text>
+    </view>
+  </view>
+  <view class='ul-item'>
+    <view bindtap='tapEvent' class='item' hover-class="opcity" hover-stay-time="150">
+      <image class='item-img' src='../../static/images/my/reward.png'></image>
+      <text class='item-name'>赞赏</text>
+    </view>
+    <view  data-index="3" class='item' hover-class="opcity" hover-stay-time="150">
+      <button open-type="feedback" class="btn-feedback"> </button>
+      <image class='item-img' src='../../static/images/my/feedback.png'></image>
+      <text class='item-name'>反馈</text>
+     
+    </view>
+    <view bindtap='tapEvent'  class='item' hover-class="opcity" hover-stay-time="150">
+      <image class='item-img' src='../../static/images/my/log.png'></image>
+      <text class='item-name'>日志</text>
+    </view>
+  </view>
+    
+  </view>
+</view>

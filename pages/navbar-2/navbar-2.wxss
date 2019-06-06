@@ -1,0 +1,112 @@
+page{
+  background: #fcfcfc
+}
+/* 左侧导航布局 start*/
+
+/* 隐藏scroll-view滚动条*/
+::-webkit-scrollbar{
+  width: 0;
+  height: 0;
+  color: transparent;
+}
+
+.tab-view {
+  height: 100%;
+  width: 200rpx;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 10;
+}
+
+.tab-bar-item {
+  width: 200rpx;
+  height: 110rpx;
+  background: #f6f6f6;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 26rpx;
+  color: #444;
+  font-weight: 400;
+}
+
+.active {
+  position: relative;
+  color: #000;
+  font-size: 30rpx;
+  font-weight: 600;
+  background: #fcfcfc;
+}
+
+.active::before {
+  content: "";
+  position: absolute;
+  border-left: 8rpx solid #5677fc;
+  height: 30rpx;
+  left: 0;
+}
+
+/* 左侧导航布局 end*/
+
+.right-box {
+  padding: 28rpx 20rpx 0 220rpx;
+  box-sizing: border-box;
+}
+
+.page-view {
+  width: 100%;
+  overflow: hidden;
+}
+
+.swiper {
+  width: 100%;
+  height: 220rpx;
+}
+
+.slide-image {
+  width: 100%;
+  height: 220rpx;
+}
+
+.class-box {
+  padding-top: 30rpx;
+}
+
+.class-item {
+  background: #fff;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 20rpx;
+  margin-bottom: 20rpx;
+  border-radius: 8rpx;
+}
+
+.class-name {
+  font-size: 22rpx;
+}
+
+.g-container {
+  /* padding-top: 20rpx; */
+  display: flex;
+  display: -webkit-flex;
+  justify-content: flex-start;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.g-box {
+  width: 33.3333%;
+  text-align: center;
+  padding-top: 40rpx;
+}
+
+.g-image {
+  width: 120rpx;
+  height: 120rpx
+}
+
+.g-title {
+   font-size: 22rpx;
+}

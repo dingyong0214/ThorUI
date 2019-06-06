@@ -1,0 +1,26 @@
+<view class="container">
+
+  <view class="btn-box first">
+    <button class="btn-primary" hover-class="btn-hover" bindtap="showModal">从底部弹出</button>
+  </view>
+  <view class="btn-box ">
+    <button class="btn-primary" hover-class="btn-hover" bindtap="rightDrawer">从右边弹出</button>
+  </view>
+  <view class="btn-box ">
+    <button class="btn-primary" hover-class="btn-hover" bindtap="leftDrawer">从左边弹出</button>
+  </view>
+
+  <!--底部抽屉-->
+  <view class="mask-screen" bindtap="hideModal" hidden="{{!showModalStatus}}"></view>
+  <view animation="{{animationData}}" class="region-box" hidden="{{!showModalStatus}}">
+    <view class="region-txt {{(index==regionArr.length-3 || index==regionArr.length-2 || index==regionArr.length-1)?'grow':''}} {{tabIndex==index?'active':''}}" wx:for="{{regionArr}}" data-index="{{index}}" catchtap="getRegion">{{item}}</view>
+  </view>
+
+  <!--左右抽屉-->
+  <drawer mode="{{mode}}" visible="{{showDrawer}}" bind:close="closeDrawer">
+    <view class="d-container">
+       <button class="btn-primary" hover-class="btn-hover" bindtap="closeDrawer">关闭抽屉</button>
+    </view>
+  </drawer>
+
+</view>

@@ -1,0 +1,65 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/my/my",
+    "pages/maps/maps",
+    "pages/weather/weather",
+    "pages/longlat/longlat",
+    "pages/selectCity/selectCity",
+    "pages/picker/picker",
+    "pages/picker-view/picker-view",
+    "pages/indexList/indexList",
+    "pages/qrcode/qrcode",
+    "pages/drawer/drawer",
+    "pages/swipe-action/swipe-action",
+    "pages/luckdraw/luckdraw",
+    "pages/navbar-1/navbar-1",
+    "pages/navbar-2/navbar-2",
+    "pages/news/news",
+    "pages/sticky/sticky",
+    "pages/product/product",
+    "pages/basic/basic",
+    "pages/toptips/toptips",
+    "pages/keyboard/keyboard",
+    "pages/location/location"
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#5677FC",
+    "navigationBarTitleText": "Thor UI",
+    "navigationBarTextStyle": "white",
+    "backgroundColorTop": "#fafafa",
+    "backgroundColorBottom": "#fafafa"
+  },
+  "tabBar": {
+    "color": "#666666",
+    "selectedColor": "#5677FC",
+    "backgroundColor": "#FFFFFF",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "code",
+        "iconPath": "static/images/tabbar/code_gray.png",
+        "selectedIconPath": "static/images/tabbar/code_active.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "thor",
+        "iconPath": "static/images/tabbar/thor_gray.png",
+        "selectedIconPath": "static/images/tabbar/thor_active.png"
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "connectSocket": 10000,
+    "uploadFile": 10000,
+    "downloadFile": 10000
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于定位效果展示"
+    }
+  },
+  "debug": true
+}

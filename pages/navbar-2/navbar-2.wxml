@@ -1,0 +1,89 @@
+<view class="container">
+  <scroll-view scroll-y scroll-with-animation class="tab-view" scroll-top="{{scrollTop}}">
+    <view wx:for="{{tabbar}}" wx:key="{{index}}" class="tab-bar-item {{currentTab==index ? 'active' : ''}}" data-current="{{index}}" catchtap="swichNav">
+      <text>{{item}}</text>
+    </view>
+  </scroll-view>
+  <view class="right-box">
+  <!--内容部分 start 自定义可删除-->
+    <block wx:for="{{tabbar}}" wx:key="{{index}}" >
+    <view class="page-view" hidden="{{currentTab!==index}}">
+      <swiper indicator-dots="true" autoplay="true" interval="5000" indicator-color="rgba(255,255,255,.4)" indicator-active-color="#ffffff" duration="150" class="swiper" >
+        <swiper-item wx:if="{{index%2===0}}" catchtap="detail">
+          <image src="../../static/images/swiper/swiper_1.jpg" class="slide-image" />
+        </swiper-item>
+        <swiper-item catchtap="detail">
+          <image src="../../static/images/swiper/swiper_2.jpg" class="slide-image" />
+        </swiper-item>
+        <swiper-item catchtap="detail" >
+          <image src="../../static/images/swiper/swiper_3.jpg" class="slide-image"/>
+        </swiper-item>
+      </swiper>
+      <view class="class-box">
+        <view class="class-item">
+          <view class="class-name">{{item}}</view>
+          <view class="g-container">
+            <view class="g-box" catchtap="detail">
+             <image src="../../static/images/product/11.jpg" class="g-image"/>
+             <view class="g-title">高价回收</view>
+            </view>
+            <view class="g-box" catchtap="detail">
+             <image src="../../static/images/product/22.jpg" class="g-image"/>
+             <view class="g-title">好物优选</view>
+            </view>
+            <view class="g-box" catchtap="detail">
+             <image src="../../static/images/product/33.jpg" class="g-image"/>
+             <view class="g-title">iphone X</view>
+            </view>
+            <view class="g-box" catchtap="detail" wx:if="{{index%2===0}}">
+             <image src="../../static/images/product/44.jpg" class="g-image"/>
+             <view class="g-title">电动牙刷</view>
+            </view>
+          </view>
+        </view>
+
+       <view class="class-item">
+          <view class="class-name">专场推荐{{index+1}}</view>
+          <view class="g-container">
+            <view class="g-box" catchtap="detail" wx:if="{{index%2===0}}">
+             <image src="../../static/images/product/11.jpg" class="g-image"/>
+             <view class="g-title">笔记本</view>
+            </view>
+            <view class="g-box" catchtap="detail">
+             <image src="../../static/images/product/22.jpg" class="g-image"/>
+             <view class="g-title">电水壶</view>
+            </view>
+            <view class="g-box" catchtap="detail">
+             <image src="../../static/images/product/33.jpg" class="g-image"/>
+             <view class="g-title">iphone X</view>
+            </view>
+            <view class="g-box" catchtap="detail">
+             <image src="../../static/images/product/44.jpg" class="g-image"/>
+             <view class="g-title">电动牙刷</view>
+            </view>
+            <view class="g-box" catchtap="detail">
+             <image src="../../static/images/product/55.jpg" class="g-image"/>
+             <view class="g-title">抽纸</view>
+            </view>
+            <view class="g-box" catchtap="detail">
+             <image src="../../static/images/product/11.jpg" class="g-image"/>
+             <view class="g-title">笔记本</view>
+            </view>
+            <view class="g-box" catchtap="detail">
+             <image src="../../static/images/product/22.jpg" class="g-image"/>
+             <view class="g-title">电水壶</view>
+            </view>
+            <view class="g-box" catchtap="detail" wx:if="{{index%2===0}}">
+             <image src="../../static/images/product/33.jpg" class="g-image"/>
+             <view class="g-title">iphone X</view>
+            </view>
+          </view>
+        </view>
+
+      </view>
+    </view>
+    
+    </block>
+    <!--内容部分 end 自定义可删除-->
+  </view>
+</view>

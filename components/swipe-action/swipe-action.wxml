@@ -1,0 +1,29 @@
+<view class="i-swipeout-wrap">
+  <view class="i-swipeout-item  {{isShowBtn?'swipe-action-show':''}}" bindtouchstart="handlerTouchstart" bindtouchmove="handlerTouchmove" bindtouchend="handlerTouchend" style="{{parse.setPosition(position)}}">
+    <view class="i-swipeout-content">
+      <slot name="content"></slot>
+    </view>
+    <view class="i-swipeout-button-right-group" wx:if="{{actions.length > 0}}" catchtouchend="loop">
+      <view class="i-swipeout-button-right-item" wx:for="{{actions}}" style="{{parse.setStyle(item)}};width:{{item.width}}px;" wx:key="{{index}}" data-index="{{index}}" bindtap="handlerButton">
+        <image src="{{item.icon}}" wx:if="{{item.icon}}" style="width:{{item.imgWidth}}rpx;height:{{item.imgHeight}}rpx"></image>
+       <text>{{item.name}}</text>
+      </view>
+    </view>
+    <!--actions长度设置为0，可直接传按钮进来-->
+    <view class="i-swipeout-button-right-group" catchtouchend="loop" bind:tap="handlerParentButton" wx:if="{{actions.length === 0}}" style="width:{{operateWidth}}px;right:-{{operateWidth}}px;">
+      <slot name="button"></slot>
+    </view>
+  </view>
+  <view wx:if="{{isShowBtn}}" class="swipe-action_mask" bindtap="closeButtonGroup" catchtouchmove="closeButtonGroup" />
+</view>
+<wxs module="parse">
+  module.exports = {
+    setStyle: function(item) {
+      var defaults = '#f7f7f7';
+      return 'background:' + (item.background ? item.background : defaults) + ';' + 'color:' + item.color;
+    },
+    setPosition: function(position) {
+      return 'transform:translate(' + position.pageX + 'px,0);';
+    }
+  }
+</wxs>

@@ -1,0 +1,20 @@
+<view class="container">
+  <map id="maps" longitude="{{longitude}}" latitude="{{latitude}}" scale="16"  show-location  bindregionchange="regionchange">
+    <cover-image class="cover-image"  src="../../static/images/maps/location.png" />
+  </map>
+  <cover-view class="footer-box">
+    <cover-view class="result-box">
+      <cover-view class="info list-item">
+        <cover-view class="badge"></cover-view>
+        <cover-view class="ellipsis">{{address}}</cover-view>
+      </cover-view>
+      <cover-view class="info">
+       <cover-view class="badge orange"></cover-view>
+       <cover-view class="ellipsis"> {{longitude}},{{latitude}}</cover-view>
+      </cover-view>
+    </cover-view>
+  </cover-view>
+ <cover-view class="current-location" catchtap="currentLocation">
+   <cover-image src="../../static/images/maps/current.png" class="current-img"></cover-image>
+ </cover-view>
+</view>

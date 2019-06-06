@@ -1,0 +1,69 @@
+.btn-box{
+  padding: 30rpx
+}
+.first{
+  margin-top: 50rpx
+}
+
+.d-container{
+  width: 400rpx;
+  padding: 80rpx 30rpx
+}
+
+
+/*底部抽屉样式 start*/
+
+.mask-screen{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #000;
+  opacity: 0.5;
+  overflow: hidden;
+  z-index: 9;
+}
+.region-box{
+  width: 100%;
+  overflow: hidden;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
+  background: #fff;
+  padding-top: 20rpx;
+  height: 712rpx;
+  padding: 40rpx 30rpx 48rpx 30rpx;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content:flex-start;
+}
+.region-txt{
+  width: 96rpx;
+  height: 82rpx;
+  background:#e9edfc;
+  line-height: 82rpx;
+  border-radius: 6rpx;
+  /* display: inline-block; */
+  font-size: 30rpx;
+  color: #333;
+  text-align: center;
+  margin-right: 23rpx;
+  margin-bottom: 26rpx;
+  flex-grow:1
+}
+.region-txt:nth-of-type(6n){
+   margin-right: 0
+}
+.grow{
+  flex-grow:0
+}
+.active{
+ background: #5677FC;
+ color: #fff;
+}
+/*底部抽屉样式 end*/

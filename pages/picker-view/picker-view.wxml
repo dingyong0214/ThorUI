@@ -1,0 +1,41 @@
+<view class="conatiner">
+  <view class="search-box">
+    <view class="s-input">
+      <image src="../../static/images/index/search.png" class="s-img"></image>
+      <input placeholder-class="phcolor" class="input" name="input" placeholder="请输入关键字" confirm-type="search" bindconfirm="search" bindinput="bindViewInput" value='{{searchKey}}' />
+      <image src="../../static/images/index/cancle.png" class="img30" hidden="{{iconHidden}}" bindtap="resetInput"></image>
+    </view>
+    <view class="s-input s-select" bindtap="showPicker">
+      <text class="text  wid27">{{text[0]}}</text>
+      <image src="../../static/images/index/icon_right.png" class="img30 pdr20"></image>
+      <text class="text  wid27">{{text[1]}}</text>
+      <image src="../../static/images/index/icon_right.png" class="img30 pdr20"></image>
+      <text class="text wid46">{{text[2]}}</text>
+      <image src="../../static/images/index/icon_down.png" class="img32 flr"></image>
+    </view>
+  </view>
+  <view class="btn-select">
+    <button class="btn-primary" hover-class="btn-hover" bindtap="showPicker">请选择</button>
+  </view>
+
+  <!--picker-view start-->
+  <view class="mask-screen" bindtap="hidePicker" hidden="{{!showPickerStatus}}"></view>
+  <view class="picker-box" animation="{{animationData}}" hidden="{{!showPickerStatus}}">
+    <view class="picker-header list-item">
+      <view class="btn-cancle" hover-class="opcity" hover-stay-time="150" catchtap="hidePicker">取消</view>
+      <view class="btn-sure" hover-class="opcity" hover-stay-time="150" catchtap="picker">确定</view>
+    </view>
+    <picker-view indicator-style="height: 50px;" class="picker-view" value="{{value}}" bindchange="columnPicker">
+      <picker-view-column>
+        <view wx:for="{{proviceArr}}" class="item">{{item}}</view>
+      </picker-view-column>
+      <picker-view-column>
+        <view wx:for="{{cityArr}}" class="item">{{item}}</view>
+      </picker-view-column>
+      <picker-view-column>
+        <view wx:for="{{districtArr}}" class="item">{{item}}</view>
+      </picker-view-column>
+    </picker-view>
+  </view>
+  <!--picker-view end-->
+</view>

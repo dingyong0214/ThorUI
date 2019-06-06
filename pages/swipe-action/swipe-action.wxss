@@ -1,0 +1,29 @@
+.list-item{
+  padding:30rpx 30rpx;
+  display: flex;
+  align-items: item;
+}
+.item-img{
+  height: 120rpx;
+  width:120rpx;
+  margin-right: 20rpx;
+  display: block
+}
+.item-box{
+  flex: 1;
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between
+}
+.item-title{
+  font-size: 32rpx;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+}
+.item-time{
+  color: #999;
+  font-size: 24rpx;
+}

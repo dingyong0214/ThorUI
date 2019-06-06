@@ -1,0 +1,9 @@
+<view class="sticky-container">
+  <!--sticky 容器-->
+  <view class="{{ isFixed === true ? 'sticky-fixed' : '' }}">
+    <slot name="header"></slot>
+  </view>
+  <!--sticky 容器-->
+  <!--内容-->
+  <slot name="content"></slot>
+</view>

@@ -1,0 +1,163 @@
+/* picker start*/
+
+.mask-screen {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #000;
+  opacity: 0.5;
+  overflow: hidden;
+  z-index: 9;
+}
+
+.picker-box {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  z-index: 10;
+  background: #fff;
+}
+
+.picker-header {
+  width: 100%;
+  height: 90rpx;
+  padding: 0 46rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  font-size: 32rpx;
+  background: #fff;
+}
+
+.list-item::after {
+  left: 0;
+}
+
+.btn-cancle {
+  padding: 20rpx;
+  color: #888;
+}
+
+.btn-sure {
+  padding: 20rpx;
+  color: #5677fc;
+}
+
+.picker-view {
+  width: 100%;
+  height: 260px;
+}
+
+.item {
+  line-height: 50px;
+  text-align: center;
+}
+
+/* picker end*/
+
+.search-box {
+  width: 672rpx;
+  /* border:1rpx solid #DBE1EF; */
+  border-radius: 10rpx;
+  box-sizing: border-box;
+  margin: 80rpx auto 40rpx auto;
+  position: relative;
+}
+
+.search-box::after {
+  content: '';
+  position: absolute;
+  height: 200%;
+  width: 200%;
+  border: 1rpx solid #dbe1ef;
+  transform-origin: 0 0;
+  -webkit-transform-origin: 0 0;
+  -webkit-transform: scale(0.5);
+  transform: scale(0.5);
+  left: 0;
+  top: 0;
+  border-radius: 20rpx;
+}
+
+.s-input {
+  height: 86rpx;
+  padding: 0 21rpx;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+  /* -webkit-justify-content:center;
+  justify-content:center; */
+}
+
+.s-img {
+  width: 34rpx;
+  height: 34rpx;
+  margin-right: 17rpx;
+}
+
+.input {
+  font-size: 32rpx;
+  color: #353535;
+  width: 565rpx;
+  padding-right: 5rpx;
+  box-sizing: border-box;
+  height: 100%;
+}
+
+.img30 {
+  height: 30rpx;
+  width: 30rpx;
+}
+
+.s-select {
+  position: relative;
+  z-index: 9;
+}
+
+.s-select::before {
+  content: '';
+  position: absolute;
+  border-top: 1rpx solid #dbe1ef;
+  -webkit-transform: scaleY(0.5);
+  transform: scaleY(0.5);
+  top: 0;
+  right: 0;
+  left: 0;
+}
+
+.text {
+  color: #353535;
+  font-size: 32rpx;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.wid27 {
+  width: 27%;
+}
+
+.wid46 {
+  width: 46%;
+}
+
+.img32 {
+  height: 32rpx;
+  width: 32rpx;
+}
+
+.pdr20 {
+  padding-right: 20rpx;
+}
+
+.flr {
+  margin-left: auto;
+}
+
+.btn-select {
+  padding: 20rpx 40rpx;
+}
