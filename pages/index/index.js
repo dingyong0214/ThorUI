@@ -1,3 +1,4 @@
+const util = require('../../utils/util.js')
 Page({
   data: {
     list: [{
@@ -6,7 +7,7 @@ Page({
         open: false,
         pages: [{
           name: "拖拽定位",
-          page: "location"
+          page: "location" 
         }, {
           name: "周边兴趣点",
           page: "maps"
@@ -97,24 +98,30 @@ Page({
       },
       {
         id: 'play',
-        name: '其他',
+        name: '扩展',
         open: false,
         pages: [{
           name: "基础组件",
           page: "basic"
         }, {
-          name: "消息通知",
-          page: "basic"
+          name: "消息提示",
+          page: "msgtips"
         }, {
           name: "吸顶容器",
           page: "sticky"
-        }, {
+          }, {
+            name: "数字键盘",
+            page: "keyboard"
+          }, {
+            name: "时间轴",
+            page: "timeaxis"
+          }, {
           name: "抽奖转盘",
           page: "luckdraw"
         }, {
-          name: "数字键盘",
-          page: "keyboard"
-        }]
+            name: "模板",
+            page: "template"
+          }]
       }
     ]
   },
@@ -139,5 +146,17 @@ Page({
         icon: "none"
       })
     }, 350)
+  },
+  github: function () {
+    wx.setClipboardData({
+      data: 'https://github.com/dingyong0214/ThorUI',
+      success(res) {
+        wx.getClipboardData({
+          success(res) {
+            util.toast("链接已复制", 2000, true)
+          }
+        })
+      }
+    })
   }
 });

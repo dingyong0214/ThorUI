@@ -1,66 +1,56 @@
-// pages/basic/basic.js
 Page({
-
-  /**
-   * 页面的初始数据
-   */
   data: {
-
+    routers: [{
+        name: 'Color 色彩',
+        url: 'color'
+      },
+      {
+        name: 'Flex 布局',
+        url: 'flex'
+      },
+      {
+        name: 'Icon 图标',
+        url: 'icon'
+      },
+      {
+        name: 'Button 按钮',
+        url: 'button'
+      },
+      {
+        name: 'Tag 标签',
+        url: 'tag'
+      },
+      {
+        name: 'Badge 徽章',
+        url: 'badge'
+      },
+      {
+        name: 'List 列表',
+        url: 'list'
+      },
+      {
+        name: 'Card 卡片',
+        url: 'card'
+      },
+      {
+        name: 'Grid 宫格',
+        url: 'grid'
+      },
+      {
+        name: 'Loading 加载',
+        url: 'load'
+      },
+      {
+        name: 'Footer 页脚',
+        url: 'footer'
+      },
+      {
+        name: 'Other 其它',
+        url: 'other'
+      }
+    ]
   },
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
+  onLoad: function(options) {
 
   }
 })

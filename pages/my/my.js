@@ -1,22 +1,19 @@
-//const util = require('../../utils/util.js')
+let globalData = getApp().globalData;
+const util = require('../../utils/util.js')
 Page({
-
-  /**
-   * 页面的初始数据
-   */
   data: {
-    memberName: '135****7708', //昵称
-    isLogin: true
+    memberName: 'echo.', //昵称
+    isLogin: false
   },
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function(options) {
-
-  },
+  onLoad: function(options) {},
   onShow: function() {
-
+    let isLogin = globalData.isLogin;
+    if (isLogin) {
+      this.setData({
+        isLogin: isLogin,
+        memberName: util.formatNum(wx.getStorageSync("thorui_mobile") || 'echo.')
+      });
+    }
   },
   logout: function() {
     wx.showModal({
@@ -25,42 +22,50 @@ Page({
       confirmColor: '#5677FC',
       success: (res) => {
         if (res.confirm) {
-          wx.showToast({
-            title: '您点击了确定，功能完善中~',
-            icon:"none"
+          wx.clearStorage()
+          wx.reLaunch({
+            url: '../login/login'
           })
-          // wx.navigateTo({
-          //   url: '../login/login'
-          // })
         }
       }
     });
   },
-  edit(){
+  edit() {
     wx.showToast({
       title: '功能开发中~',
       icon: "none"
     })
   },
-  tapEvent:function(e){
+  tapEvent: function(e) {
     let index = e.currentTarget.dataset.index;
-    if(index==1){
+    let url = "";
+    if (index == 1) {
+      url = '../about/about'
+    } else if (index == 2) {
       let key = e.currentTarget.dataset.key;
-      wx.navigateTo({
-        url: '../maps/maps?key=' + key
-      })
-    }else{
-      this.previewReward()
-      wx.showToast({
-        title: '功能开发中~',
-        icon: "none"
-      })
+      url = '../maps/maps?key=' + key
+    } else {
+      url = '../log/log'
     }
+    wx.navigateTo({
+      url: url
+    })
   },
-  previewReward:function(){
+  github: function() {
+    wx.setClipboardData({
+      data: 'https://github.com/dingyong0214/ThorUI',
+      success(res) {
+        wx.getClipboardData({
+          success(res) {
+            util.toast("链接已复制",2000,true)
+          }
+        })
+      }
+    })
+  },
+  previewReward: function() {
     wx.previewImage({
-      current: 'http://psl8fdw0x.bkt.clouddn.com/reward.jpg', // 当前显示图片的http链接
-      urls: ["http://psl8fdw0x.bkt.clouddn.com/reward.jpg"] // 需要预览的图片http链接列表
+      urls: ["https://14790214.s21i.faiusr.com/2/ABUIABACGAAgi-uC6AUo8M780wcwuAg4uAg!1000x1000.jpg"]
     })
   }
 })

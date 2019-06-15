@@ -1,9 +1,9 @@
 <view class="container">
-  <view class="circle" wx:for="{{circleList}}" style="top:{{item.topCircle}}rpx;left:{{item.leftCircle}}rpx;background-color: {{(index%2==0)?colorCircleFirst:colorCircleSecond}};"></view>
-  <view class="container-in">
-    <view class="content-out {{index==indexSelect?'awardSelect':''}}" wx:for="{{awardList}}" style="top:{{item.topAward}}rpx;left:{{item.leftAward}}rpx;">
-      <image class="award-image" src="../../static/images/luck/{{item.imageAward}}"></image>
+  <view class="tui-dot tui-dot-{{index+1}}" wx:for="{{circleList}}" wx:key="{{index}}"></view>
+  <view class="tui-container-in">
+    <view class="tui-content-out tui-award-{{index+1}} {{index==indexSelect?'tui-awardSelect':''}}" wx:for="{{awardList}}" wx:key="{{index}}">
+      <image class="tui-award-image" src="../../static/images/luck/{{item.img}}"></image>
     </view>
-    <view class="btn-start {{isRunning?'ative':''}}" bindtap="startGame" >立即抽奖</view>
+    <view class="tui-btn-start {{isRunning?'tui-ative':''}}" bindtap="startDrawing">立即抽奖</view>
   </view>
 </view>

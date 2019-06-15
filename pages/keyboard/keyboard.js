@@ -1,66 +1,85 @@
-// pages/keyboard/keyboard.js
+const util = require('../../utils/util.js')
 Page({
-
-  /**
-   * 页面的初始数据
-   */
   data: {
-
+    show: false,
+    numberArr: [],
+    pwdArr: ["", "", "", "", "", ""],
+    temp: ["", "", "", "", "", ""]
   },
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-
+  onLoad: function(options) {},
+  switchKeyboard(e) {
+    let length = e.currentTarget.dataset.length;
+    let arr = ["", "", "", "", "", ""]
+    if (length == 4) {
+      arr = ["", "", "", ""]
+    }
+    this.setData({
+      pwdArr: arr,
+      temp: arr,
+      numberArr: []
+    }, () => {
+      this.setData({
+        show: true
+      })
+    })
   },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
+  closeKeyboard: function() {
+    this.setData({
+      show: false,
+      numberArr: [],
+      pwdArr: this.data.temp
+    })
   },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
+  getPwd: function() {
+    //判断并取出密码
+    if (this.data.numberArr.length === this.data.pwdArr.length) {
+      wx.showLoading({
+        title: '模拟提交...',
+        mask: true
+      })
+      setTimeout(() => {
+        let pwd = this.data.numberArr.join('')
+        this.closeKeyboard();
+        util.toast("您输入的密码为：" + pwd);
+      }, 1000);
+    }
   },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
+  keyboardClick: function(e) {
+    let numberArr = this.data.numberArr;
+    let pwdArr = this.data.pwdArr;
+    let index = e.detail.index;
+    if (numberArr.length === pwdArr.length || index == undefined) {
+      return;
+    }
+    if (index == 9) { //取消键
+      this.closeKeyboard();
+      return;
+    } else if (index == 11) {
+      //退格键
+      let len = numberArr.length;
+      if (len) {
+        pwdArr.splice(len - 1, 1, "");
+      } else {
+        pwdArr = this.data.temp;
+      }
+      numberArr.pop()
+    } else if (index == 10) {
+      numberArr.push(0);
+      pwdArr.splice(numberArr.length - 1, 1, "●");
+    } else {
+      numberArr.push(index + 1);
+      pwdArr.splice(numberArr.length - 1, 1, "●");
+    }
+    this.setData({
+      numberArr: numberArr,
+      pwdArr: pwdArr
+    }, () => {
+      this.getPwd()
+    })
   },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
+  lockscreen: function() {
+    wx.navigateTo({
+      url: '../lockscreen/lockscreen'
+    })
   }
 })

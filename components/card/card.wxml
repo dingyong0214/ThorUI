@@ -1,0 +1,17 @@
+<view class="tui-card-class tui-card {{full?'tui-card-full':''}} {{border?'tui-card-border':''}}" bindtap="handleClick" bindlongtap="longTap">
+  <view class="tui-card-header  {{header.line?'tui-header-line':''}}" style="background:{{header.bgcolor || '#fff'}};">
+    <view class="tui-header-left">
+      <image src='{{image.url}}' class="tui-header-thumb {{image.circle?'tui-thumb-circle':''}}" mode="widthFix" wx:if="{{image.url}}" style="height:{{image.height || 60}}rpx;width:{{image.width || 60}}rpx"></image>
+      <text class="tui-header-title" style="font-size:{{title.size || 30}}rpx;color:{{title.color || '#7A7A7A'}}" wx:if="{{title.text}}">{{title.text}}</text>
+    </view>
+    <view class="tui-header-right" style="font-size:{{tag.size || 24}}rpx;color:{{tag.color || '#b2b2b2'}}" wx:if="{{tag.text}}">
+      {{tag.text}}
+    </view>
+  </view>
+  <view class="tui-card-body">
+    <slot name="body"></slot>
+  </view>
+  <view class="tui-card-footer">
+    <slot name="footer"></slot>
+  </view>
+</view>

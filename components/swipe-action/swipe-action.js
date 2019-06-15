@@ -11,7 +11,7 @@ Component({
     actions: {
       value: [],
       type: Array,
-      observer: '_updateButtonSize'
+      observer: 'updateButtonSize'
     },
     unclosable: {
       value: false,
@@ -53,7 +53,7 @@ Component({
   methods: {
     //阻止事件冒泡
     loop() { },
-    _updateButtonSize() {
+     updateButtonSize() {
       const actions = this.data.actions;
       if (actions.length > 0) {
         const query = wx.createSelectorQuery().in(this);
@@ -148,6 +148,6 @@ Component({
     }
   },
   ready() {
-    this._updateButtonSize();
+    this.updateButtonSize();
   }
 });

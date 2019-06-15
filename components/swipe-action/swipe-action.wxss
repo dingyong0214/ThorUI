@@ -1,4 +1,4 @@
-.i-swipeout-wrap {
+.tui-swipeout-wrap {
   background: #fff;
   position: relative;
   overflow: hidden;
@@ -7,7 +7,7 @@
   position: relative;
   z-index: 99999
 }
-.i-swipeout-item {
+.tui-swipeout-item {
   width: 100%;
   /* padding: 15px 20px; */
   box-sizing: border-box;
@@ -15,12 +15,12 @@
   font-size: 14px;
 }
 
-.i-swipeout-content {
+.tui-swipeout-content {
   white-space: nowrap;
   overflow: hidden;
 }
 
-.i-swipeout-button-right-group {
+.tui-swipeout-button-right-group {
   position: absolute;
   right: -100%;
   top: 0;
@@ -29,7 +29,7 @@
   width: 100%;
 }
 
-.i-swipeout-button-right-item {
+.tui-swipeout-button-right-item {
   height: 100%;
   float: left;
   white-space: nowrap;

@@ -1,0 +1,3 @@
+<view class="tui-grid-class tui-grids {{unlined?'tui-border-top':''}}">
+  <slot></slot>
+</view>

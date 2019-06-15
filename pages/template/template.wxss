@@ -1,0 +1,21 @@
+.container {
+  padding: 20rpx 30rpx 40rpx 30rpx;
+  box-sizing: border-box;
+}
+
+.header {
+  padding: 80rpx 60rpx;
+}
+
+.title {
+  font-size: 34rpx;
+  color: #333;
+  font-weight: 500;
+}
+
+.sub-title {
+  font-size: 24rpx;
+  color: #7a7a7a;
+  padding-top: 18rpx;
+}
+

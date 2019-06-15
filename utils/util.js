@@ -20,40 +20,62 @@ const utils = {
     //是否全为数字
     return /^[0-9]+$/.test(value);
   },
+  formatNum: function(num) {
+    //格式化手机号码
+    if (utils.isMobile(num)) {
+      num = num.replace(/^(\d{3})\d{4}(\d{4})$/, '$1****$2')
+    }
+    return num;
+  },
   interfaceUrl: function() {
     //接口地址
     return "http://172.19.11.185:12000/";
   },
-  toast: function(text, success) {
+  toast: function(text, duration, success) {
     wx.showToast({
       title: text,
       icon: success ? 'success' : 'none',
-      duration: 2000
+      duration: duration || 2000
     })
   },
-  request: function (url, postData, method, type, hideLoading) {
+  preventMultiple: function(fn, gapTime) {
+    if (gapTime == null || gapTime == undefined) {
+      gapTime = 200;
+    }
+    let lastTime = null;
+    return function() {
+      let now = +new Date();
+      if (!lastTime || now - lastTime > gapTime) {
+        fn.apply(this, arguments);
+        lastTime = now;
+      }
+    }
+  },
+  request: function(url, postData, method, type, hideLoading) {
     //接口请求
     if (!hideLoading) {
       wx.showLoading({
         title: '请稍候...',
-        mask:true
+        mask: true
       })
     }
-    const params = { data: method === "POST" ? postData : JSON.stringify(postData) }
+    const params = {
+      data: method === "POST" ? postData : JSON.stringify(postData)
+    }
     return new Promise((resolve, reject) => {
       wx.request({
         url: this.interfaceUrl() + url,
         data: method === "POST" ? JSON.stringify(params) : params,
         header: {
           'content-type': type ? 'application/x-www-form-urlencoded' : 'application/json',
-          'authorization':wx.getStorageSync("token"),
+          'authorization': wx.getStorageSync("token"),
           'security': 1
         },
         method: method, //'GET','POST'
         dataType: 'json',
         success: (res) => {
           !hideLoading && wx.hideLoading()
-          if(res.data && res.data.code===403){
+          if (res.data && res.data.code === 403) {
             wx.showModal({
               title: '登录',
               content: '您尚未登录，请先登录',
@@ -66,7 +88,7 @@ const utils = {
                 })
               }
             })
-          }else{
+          } else {
             resolve(res.data)
           }
         },
@@ -78,7 +100,7 @@ const utils = {
       })
     })
   },
-  uploadFile: function (src) {
+  uploadFile: function(src) {
     const that = this
     wx.showLoading({
       title: '请稍候...',
@@ -86,14 +108,14 @@ const utils = {
     })
     return new Promise((resolve, reject) => {
       const uploadTask = wx.uploadFile({
-        url: 'http://39.108.124.252:8081/fileServce/file/ ',//测试地址,暂不使用
+        url: 'http://39.108.124.252:8081/fileServce/file/ ', //测试地址,暂不使用
         filePath: src,
         name: 'file',
         header: {
           'content-type': 'multipart/form-data'
         },
         formData: {},
-        success: function (res) {
+        success: function(res) {
           wx.hideLoading()
           let d = JSON.parse(res.data)
           if (d.code === 1) {
@@ -104,7 +126,7 @@ const utils = {
             that.toast(res.message);
           }
         },
-        fail: function (res) {
+        fail: function(res) {
           reject(res)
           wx.hideLoading();
           that.toast(res.message);
@@ -123,5 +145,6 @@ module.exports = {
   interfaceUrl: utils.interfaceUrl,
   toast: utils.toast,
   request: utils.request,
-  uploadFile:utils.uploadFile
+  uploadFile: utils.uploadFile,
+  formatNum: utils.formatNum
 }

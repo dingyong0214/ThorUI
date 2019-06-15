@@ -16,10 +16,17 @@
     <view class="region-txt {{(index==regionArr.length-3 || index==regionArr.length-2 || index==regionArr.length-1)?'grow':''}} {{tabIndex==index?'active':''}}" wx:for="{{regionArr}}" data-index="{{index}}" catchtap="getRegion">{{item}}</view>
   </view>
 
-  <!--左右抽屉-->
-  <drawer mode="{{mode}}" visible="{{showDrawer}}" bind:close="closeDrawer">
+  <!--左抽屉-->
+  <drawer mode="left" visible="{{leftDrawer}}" bind:close="closeDrawer" data-mode="left">
     <view class="d-container">
-       <button class="btn-primary" hover-class="btn-hover" bindtap="closeDrawer">关闭抽屉</button>
+      <button class="btn-primary" hover-class="btn-hover" bindtap="closeDrawer" data-mode="left">关闭抽屉</button>
+    </view>
+  </drawer>
+
+  <!--右抽屉-->
+   <drawer mode="right" visible="{{rightDrawer}}" bind:close="closeDrawer" data-mode="right">
+    <view class="d-container">
+      <button class="btn-primary" hover-class="btn-hover" bindtap="closeDrawer" data-mode="right">关闭抽屉</button>
     </view>
   </drawer>
 

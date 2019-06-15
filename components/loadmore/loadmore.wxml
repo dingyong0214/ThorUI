@@ -1,0 +1,4 @@
+<view class="tui-loadmore-class tui-loadmore" wx:if="{{visible}}">
+  <view class="{{'tui-loading-'+index}} {{(index==3 && type)?'tui-loading-'+type:''}}"></view>
+  <view class="tui-loadmore-tips">{{text}}</view>
+</view>

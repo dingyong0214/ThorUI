@@ -24,11 +24,11 @@
   </view>
 
   <view class='middle-container'>
-    <view data-url='../myWashTicket/myWashTicket'  data-index="2" class='middle-item' hover-class="opcity" hover-stay-time="150">
+    <view data-url='../myWashTicket/myWashTicket' bindtap='tapEvent'  data-index="1" class='middle-item' hover-class="opcity" hover-stay-time="150">
       <image class='ticket-img' src='../../static/images/my/thorui.png'></image>
       <text class='middle-tag'>Thor UI</text>
     </view> 
-    <view bindtap='tapEvent' data-index="4" class='middle-item' hover-class="opcity" hover-stay-time="150">
+    <view bindtap='github' class='middle-item' hover-class="opcity" hover-stay-time="150">
       <image class='car-img' src='../../static/images/my/github_3x.png'></image>
       <text class='middle-tag'>GitHub</text>
     </view>
@@ -36,31 +36,31 @@
 
   <view class='bottom-container'>
   <view class='ul-item'>
-    <view bindtap='tapEvent' data-index="1"  data-key='加油站' class='item' hover-class="opcity" hover-stay-time="150">
+    <view bindtap='tapEvent' data-index="2"  data-key='加油站' class='item' hover-class="opcity" hover-stay-time="150">
       <image class='item-img' src='../../static/images/my/mine_icon_jiayouzhan_3x.png'></image>
       <text class='item-name'>加油站</text>
     </view>
-    <view bindtap='tapEvent' data-index="1" data-key='停车场'  class='item' hover-class="opcity" hover-stay-time="150">
+    <view bindtap='tapEvent' data-index="2" data-key='停车场'  class='item' hover-class="opcity" hover-stay-time="150">
       <image class='item-img' src='../../static/images/my/mine_icon_tingche_3x.png'></image>
       <text class='item-name'>停车场</text>
     </view>
-    <view bindtap='tapEvent' data-index="1" data-key='充电桩' class='item' hover-class="opcity" hover-stay-time="150">
+    <view bindtap='tapEvent' data-index="2" data-key='充电桩' class='item' hover-class="opcity" hover-stay-time="150">
       <image class='item-img' src='../../static/images/my/mine_icon_chongdian_3x.png'></image>
       <text class='item-name'>充电桩</text>
     </view>
   </view>
   <view class='ul-item'>
-    <view bindtap='tapEvent' class='item' hover-class="opcity" hover-stay-time="150">
+    <view bindtap='previewReward' class='item' hover-class="opcity" hover-stay-time="150">
       <image class='item-img' src='../../static/images/my/reward.png'></image>
       <text class='item-name'>赞赏</text>
     </view>
-    <view  data-index="3" class='item' hover-class="opcity" hover-stay-time="150">
+    <view  class='item' hover-class="opcity" hover-stay-time="150">
       <button open-type="feedback" class="btn-feedback"> </button>
       <image class='item-img' src='../../static/images/my/feedback.png'></image>
       <text class='item-name'>反馈</text>
      
     </view>
-    <view bindtap='tapEvent'  class='item' hover-class="opcity" hover-stay-time="150">
+    <view bindtap='tapEvent' data-index="3"  class='item' hover-class="opcity" hover-stay-time="150">
       <image class='item-img' src='../../static/images/my/log.png'></image>
       <text class='item-name'>日志</text>
     </view>

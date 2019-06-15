@@ -1,2 +1,18 @@
-<!--pages/basic/basic.wxml-->
-<text>pages/basic/basic.wxml</text>
+<view class="container">
+  <view class="header">
+    <view class="title">Basic</view>
+    <view class="sub-title">基础组件是项目中独立的模块</view>
+  </view>
+  <tui-grid>
+    <block wx:for="{{routers}}" wx:key="{{index}}">
+      <navigator url="../basic-view/{{item.url}}/{{item.url}}" hover-class='none'>
+        <tui-grid-item>
+          <view class="tui-grid-icon">
+            <image src="../../static/images/basic/{{item.url}}.png" />
+          </view>
+          <text class="tui-grid-label">{{item.name}}</text>
+        </tui-grid-item>
+      </navigator>
+    </block>
+  </tui-grid>
+</view>

@@ -115,9 +115,9 @@ Page({
     setTimeout(() => {
       this.setData({
         newsList: this.data.loadData,
-        pageIndex:1,
-        pullUpOn:true,
-        loadding:false
+        pageIndex: 1,
+        pullUpOn: true,
+        loadding: false
       })
       wx.stopPullDownRefresh()
       wx.showToast({
@@ -129,22 +129,23 @@ Page({
 
   // 页面上拉触底事件的处理函数
   onReachBottom: function() {
+    if (!this.data.pullUpOn) return;
     this.setData({
       loadding: true
     }, () => {
       //延时为了看效果
       //setTimeout(()=>{
-        if (this.data.pageIndex == 3) {
-          this.setData({
-            loadding: false,
-            pullUpOn: false
-          })
-        } else {
-          this.setData({
-            newsList: this.data.newsList.concat(this.data.loadData),
-            pageIndex: this.data.pageIndex + 1
-          })
-        }
+      if (this.data.pageIndex == 3) {
+        this.setData({
+          loadding: false,
+          pullUpOn: false
+        })
+      } else {
+        this.setData({
+          newsList: this.data.newsList.concat(this.data.loadData),
+          pageIndex: this.data.pageIndex + 1
+        })
+      }
       //},200)
     })
   },

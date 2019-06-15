@@ -1,0 +1,30 @@
+.tui-pwd-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  vertical-align: top;
+}
+
+.tui-inner-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tui-input {
+  height: 80rpx;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 20rpx;
+  border-bottom: 2px solid #666;
+}
+.tui-margin-right{
+   margin-right: 30rpx;
+}
+
+.tui-input:last-child {
+  margin-right: 0 !important;
+}

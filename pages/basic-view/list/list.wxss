@@ -1,0 +1,94 @@
+.tui-cell-name {
+  padding-left: 20rpx;
+  vertical-align: middle;
+  line-height: 1;
+}
+.tui-list::after{
+  left: 94rpx !important
+}
+.tui-right {
+  margin-left: auto;
+  margin-right: 34rpx;
+  font-size: 26rpx;
+  line-height: 1;
+  color: #999;
+}
+
+.logo {
+  height: 40rpx;
+  width: 40rpx;
+}
+
+.tui-flex {
+  display: flex;
+  align-items: center;
+}
+
+.tui-msg-box {
+  display: flex;
+  align-items: center;
+}
+
+.tui-msg-pic {
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+  display: block;
+  margin-right: 24rpx;
+}
+
+.tui-msg-item {
+  max-width: 500rpx;
+  min-height: 80rpx;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.tui-msg-name {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-size: 34rpx;
+  line-height: 1;
+  color: #262b3a;
+}
+
+.tui-msg-content {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-size: 26rpx;
+  line-height: 1;
+  color: #9397a4;
+}
+
+.tui-msg-right {
+  max-width: 120rpx;
+  height: 88rpx;
+  margin-left: auto;
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.tui-msg-right.tui-right-dot{
+  height: 76rpx;
+  padding-bottom: 10rpx;
+
+}
+.tui-msg-time {
+  width: 100%;
+  font-size: 24rpx;
+  line-height: 24rpx;
+  color: #9397a4;
+}
+.tui-badge{
+  width:auto
+}
+
+.tui-msg::after{
+  left: 154rpx !important
+}

@@ -1,5 +1,6 @@
 //吸顶容器组件
 Component({
+  externalClasses: ['tui-sticky-class'], //自定义样式
   options: {
     multipleSlots: true
   },
@@ -52,7 +53,7 @@ Component({
           })
         }
         this.data.timer = setTimeout(() => {
-          const className = '.sticky-container';
+          const className = '.tui-sticky-class';
           const query = wx.createSelectorQuery().in(this);
           query.select(className).boundingClientRect((res) => {
             if (res) {

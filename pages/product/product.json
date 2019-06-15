@@ -1,5 +1,9 @@
 {
   "navigationBarTitleText": "商品列表",
   "enablePullDownRefresh": true,
-  "onReachBottomDistance": 50
+  "onReachBottomDistance": 50,
+  "usingComponents": {
+    "tui-loadmore": "../../components/loadmore/loadmore",
+    "tui-nomore": "../../components/nomore/nomore"
+  }
 }

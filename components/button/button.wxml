@@ -1,0 +1,30 @@
+<button class="tui-button-class tui-btn {{'tui-btn-'+size}} {{plain?'tui-'+type+'-outline':'tui-'+(type || 'gradual')}} {{parse.getDisabledClass(disabled,type)}} {{parse.getShapeClass(shape,plain)}}" hover-class="{{parse.getHoverClass(disabled,type,plain)}}" loading="{{loading}}"
+  disabled="{{disabled}}" open-type="{{ openType }}" app-parameter="{{ appParameter }}" hover-stop-propagation="{{ hoverStopPropagation }}" bindtap="handleClick" session-from="{{ sessionFrom }}" send-message-title="{{ sendMessageTitle }}" send-message-path="{{ sendMessagePath }}"
+  send-message-img="{{ sendMessageImg }}" show-message-card="{{ showMessageCard }}" bindcontact="bindcontact" bindgetuserinfo="bindgetuserinfo" bindgetphonenumber="bindgetphonenumber" binderror="binderror" form-type="{{formType}}" hidden="{{hidden}}">
+  <slot></slot>
+</button>
+<wxs module="parse">
+  module.exports = {
+    getDisabledClass: function(disabled, type) {
+      var className = '';
+      if (disabled && type != 'white' && type != 'gray') {
+        className = type == 'gradual' ? 'btn-gradual-disabled' : 'tui-dark-disabled';
+      }
+      return className;
+    },
+    getShapeClass: function(shape, plain) {
+      var className = '';
+      if (shape == 'circle') {
+        className = plain ? 'tui-outline-fillet' : 'tui-fillet';
+      }
+      return className;
+    },
+    getHoverClass: function(disabled, type, plain) {
+      var className = '';
+      if (!disabled) {
+        className = plain ? 'tui-outline-hover' : ('tui-' + (type || 'gradual') + '-hover');
+      }
+      return className;
+    }
+  }
+</wxs>

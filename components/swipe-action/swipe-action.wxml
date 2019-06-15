@@ -1,16 +1,16 @@
-<view class="i-swipeout-wrap">
-  <view class="i-swipeout-item  {{isShowBtn?'swipe-action-show':''}}" bindtouchstart="handlerTouchstart" bindtouchmove="handlerTouchmove" bindtouchend="handlerTouchend" style="{{parse.setPosition(position)}}">
-    <view class="i-swipeout-content">
+<view class="tui-swipeout-wrap">
+  <view class="tui-swipeout-item  {{isShowBtn?'swipe-action-show':''}}" bindtouchstart="handlerTouchstart" bindtouchmove="handlerTouchmove" bindtouchend="handlerTouchend" style="{{parse.setPosition(position)}}">
+    <view class="tui-swipeout-content">
       <slot name="content"></slot>
     </view>
-    <view class="i-swipeout-button-right-group" wx:if="{{actions.length > 0}}" catchtouchend="loop">
-      <view class="i-swipeout-button-right-item" wx:for="{{actions}}" style="{{parse.setStyle(item)}};width:{{item.width}}px;" wx:key="{{index}}" data-index="{{index}}" bindtap="handlerButton">
+    <view class="tui-swipeout-button-right-group" wx:if="{{actions.length > 0}}" catchtouchend="loop">
+      <view class="tui-swipeout-button-right-item" wx:for="{{actions}}" style="{{parse.setStyle(item)}};width:{{item.width}}px;" wx:key="{{index}}" data-index="{{index}}" bindtap="handlerButton">
         <image src="{{item.icon}}" wx:if="{{item.icon}}" style="width:{{item.imgWidth}}rpx;height:{{item.imgHeight}}rpx"></image>
-       <text>{{item.name}}</text>
+        <text>{{item.name}}</text>
       </view>
     </view>
     <!--actions长度设置为0，可直接传按钮进来-->
-    <view class="i-swipeout-button-right-group" catchtouchend="loop" bind:tap="handlerParentButton" wx:if="{{actions.length === 0}}" style="width:{{operateWidth}}px;right:-{{operateWidth}}px;">
+    <view class="tui-swipeout-button-right-group" catchtouchend="loop" bind:tap="handlerParentButton" wx:if="{{actions.length === 0}}" style="width:{{operateWidth}}px;right:-{{operateWidth}}px;">
       <slot name="button"></slot>
     </view>
   </view>

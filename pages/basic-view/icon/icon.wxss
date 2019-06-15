@@ -1,0 +1,22 @@
+.tui-grid-icon {
+  width: 64rpx;
+  height: 64rpx;
+  margin: 0 auto;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.tui-grid-icon + .tui-grid-label {
+  margin-top: 10rpx;
+}
+
+.tui-grid-label {
+  display: block;
+  text-align: center;
+  font-weight: 400;
+  color: #333;
+  font-size: 28rpx;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

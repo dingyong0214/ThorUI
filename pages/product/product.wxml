@@ -17,12 +17,7 @@
     <!--商品列表-->
   </view>
   <!--加载loadding-->
-  <view class="weui-loadmore" hidden="{{!loadding}}">
-    <view class="weui-loading"></view>
-    <view class="weui-loadmore__tips">正在加载...</view>
-  </view>
-  <view class="weui-loadmore weui-loadmore_line" hidden="{{pullUpOn}}">
-    <view class="weui-loadmore__tips weui-loadmore__tips_in-line weui-loadmore__tips_in-dot">没有更多了 </view>
-  </view>
-  <!--加载loadding-->
+   <tui-loadmore visible="{{loadding}}" index="3" type="primary"></tui-loadmore>
+   <tui-nomore visible="{{!pullUpOn}}"></tui-nomore>
+<!--加载loadding-->
 </view>

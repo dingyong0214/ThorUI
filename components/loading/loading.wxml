@@ -1,0 +1,4 @@
+ <view class="tui-loading-class tui-loading-init" wx:if="{{visible}}">
+    <view class="tui-loading-center"></view>
+    <view class="tui-loadmore-tips">{{text}}</view>
+  </view>

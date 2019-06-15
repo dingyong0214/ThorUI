@@ -12,10 +12,10 @@ Page({
     scrollH: 256
   },
 
-  onLoad: function (options) {
-    const that=this;
+  onLoad: function(options) {
+    const that = this;
     wx.getSystemInfo({
-      success: function (res) {
+      success: function(res) {
         // 计算主体部分高度,单位为px
         that.setData({
           // second部分高度 = 利用窗口可使用高度 - first部分高度（这里的高度单位为px，所有利用比例将600rpx转换为px）
@@ -25,7 +25,7 @@ Page({
     })
     this.setData({
       amapPlugin: new amap.AMapWX({
-        key: this.data.key 
+        key: this.data.key
       })
     })
     setTimeout(() => {
@@ -34,18 +34,18 @@ Page({
       });
     }, 200)
   },
-  trim: function (value) {
+  trim: function(value) {
     return value ? value.toString().replace(/(^\s*)|(\s*$)/g, "") : value;
   },
   showInput() {
     this.setData({
-      inputShowed:true
+      inputShowed: true
     })
   },
   hideInput() {
     this.setData({
       inputVal: "",
-      inputShowed:false
+      inputShowed: false
     })
     wx.hideKeyboard(); //强行隐藏键盘
   },
@@ -54,7 +54,7 @@ Page({
       inputVal: ""
     })
   },
-  inputTyping: function (e) {
+  inputTyping: function(e) {
     this.setData({
       inputVal: e.detail.value
     })
@@ -80,55 +80,58 @@ Page({
       title: "加载中..."
     })
     const that = this;
-    this.data.amapPlugin.getPoiAround({
-      querykeywords: keywords,
-      location: '', //location： 经纬度坐标。 为空时， 基于当前位置进行地址解析。 格式： '经度,纬度'
-      success: (data) => {
-        let arr = [];
-        let addr = [];
-        for (let i = 0; i < data.markers.length; i++) {
-          arr.push({
-            id: i,
-            latitude: data.markers[i].latitude,
-            longitude: data.markers[i].longitude,
-            title: data.markers[i].name
-          })
-          let tel = that.trim(data.poisData[i].tel);
-          if (~tel.indexOf(";")) {
-            tel = tel.split(";")[0]
+    setTimeout(() => {
+      this.data.amapPlugin.getPoiAround({
+        querykeywords: keywords,
+        location: '', //location： 经纬度坐标。 为空时， 基于当前位置进行地址解析。 格式： '经度,纬度'
+        success: (data) => {
+          let arr = [];
+          let addr = [];
+          for (let i = 0; i < data.markers.length; i++) {
+            arr.push({
+              id: i,
+              latitude: data.markers[i].latitude,
+              longitude: data.markers[i].longitude,
+              title: data.markers[i].name
+            })
+            let tel = that.trim(data.poisData[i].tel);
+            if (~tel.indexOf(";")) {
+              tel = tel.split(";")[0]
+            }
+            addr.push({
+              id: i,
+              latitude: data.markers[i].latitude,
+              longitude: data.markers[i].longitude,
+              title: data.markers[i].name,
+              address: data.markers[i].address,
+              tel: tel,
+              distance: data.poisData[i].distance
+            })
           }
-          addr.push({
-            id: i,
-            latitude: data.markers[i].latitude,
-            longitude: data.markers[i].longitude,
-            title: data.markers[i].name,
-            address: data.markers[i].address,
-            tel: tel,
-            distance: data.poisData[i].distance
-          })
-        }
-      
-        this.setData({
-          address:addr,
-          covers:arr
-        })
 
-        wx.hideLoading()
-      },
-      fail: (info) => {
-        console.log(info)
-        wx.showToast({
-          title: '获取位置信息失败，请检查是否打开位置权限'
-        })
-        wx.hideLoading()
-      }
-    })
+          this.setData({
+            address: addr,
+            covers: arr
+          })
+
+          wx.hideLoading()
+        },
+        fail: (info) => {
+          console.log(info)
+          wx.showToast({
+            title: '获取位置信息失败，请检查是否打开位置权限'
+          })
+          wx.hideLoading()
+        }
+      })
+    }, 0);
+
   },
-  bindInput: function (e) {
+  bindInput: function(e) {
     const keywords = e.detail.value;
     this.getPoiAround(keywords);
   },
-  marker: function (e) {
+  marker: function(e) {
     const that = this
     const item = that.data.address[e.markerId || 0];
     const menu = item.tel ? ["打电话", "到这里"] : ["到这里"];
@@ -136,13 +139,13 @@ Page({
     wx.showActionSheet({
       itemList: menu,
       success(res) {
-        if (res.tapIndex == 0 && item.tel){
-           wx.makePhoneCall({
+        if (res.tapIndex == 0 && item.tel) {
+          wx.makePhoneCall({
             phoneNumber: item.tel
           })
-        }else{
+        } else {
           const latitude = Number(item.latitude)
-          const longitude = Number(item.longitude)  
+          const longitude = Number(item.longitude)
           wx.openLocation({
             name: item.title,
             address: item.address,
@@ -171,8 +174,8 @@ Page({
   go(event) {
     const index = event.currentTarget.dataset.id;
     const item = this.data.address[index];
-    const latitude = Number(item.latitude) 
-    const longitude = Number(item.longitude) 
+    const latitude = Number(item.latitude)
+    const longitude = Number(item.longitude)
     wx.openLocation({
       name: item.title,
       address: item.address,

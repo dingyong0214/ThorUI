@@ -1,0 +1,110 @@
+page {
+  background: #fff;
+}
+
+.tui-bg-box {
+  width: 100%;
+  box-sizing: border-box;
+  position: relative;
+  padding-top: 44rpx;
+}
+
+.tui-photo {
+  height: 138rpx;
+  width: 138rpx;
+  display: block;
+  margin: 10rpx auto 0 auto;
+  border-radius: 50%;
+}
+
+.tui-login-name {
+  width: 128rpx;
+  height: 40rpx;
+  font-size: 30rpx;
+  color: #fff;
+  margin: 36rpx auto 0 auto;
+  text-align: center;
+}
+
+.tui-bg-img {
+  width: 100%;
+  height: 346rpx;
+  display: block;
+  position: absolute;
+  top: 0;
+  z-index: -1;
+}
+
+.tui-login-from {
+  width: 100%;
+  padding: 128rpx 104rpx 0 104rpx;
+  box-sizing: border-box;
+}
+
+.tui-input {
+  font-size: 32rpx;
+  width: 507rpx;
+  display: inline-block;
+  padding-left: 32rpx;
+  box-sizing: border-box;
+}
+
+.tui-line-cell {
+  padding: 27rpx 0;
+  display: -webkit-flex;
+  display: flex;
+  -webkiit-align-items: center;
+  align-items: center;
+  position: relative;
+}
+
+.tui-line-cell::after {
+  content: '';
+  position: absolute;
+  border-bottom: 1rpx solid #e0e0e0;
+  -webkit-transform: scaleY(0.5);
+  transform: scaleY(0.5);
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+
+.tui-top28 {
+  margin-top: 28rpx;
+}
+
+.tui-button-class {
+  width: 196rpx !important;
+  height: 54rpx !important;
+  border-radius: 27rpx !important;
+  font-size: 28rpx !important;
+  padding: 0 !important;
+  line-height: 54rpx !important;
+}
+
+/*项目中这个样式可以写到 app.wxss start*/
+.tui-btn-submit {
+  margin-top: 100rpx;
+  background: none;
+  position: relative;
+  padding: 0;
+}
+
+.tui-btn-inner {
+  position: absolute;
+  z-index: 2;
+  display: block !important;
+}
+/*项目中这个样式可以写到 app.wxss  end*/
+
+.tui-protocol {
+  color: #333;
+  font-size: 24rpx;
+  text-align: center;
+  width: 100%;
+  margin-top: 29rpx;
+}
+
+.tui-protocol-red {
+  color: #f54f46;
+}

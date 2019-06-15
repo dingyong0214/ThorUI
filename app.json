@@ -19,9 +19,35 @@
     "pages/sticky/sticky",
     "pages/product/product",
     "pages/basic/basic",
-    "pages/toptips/toptips",
+    "pages/msgtips/msgtips",
+    "pages/location/location",
+    "pages/template/template",
+    "pages/about/about",
+    "pages/login/login",
+    "pages/log/log",
+    "pages/timeaxis/timeaxis",
     "pages/keyboard/keyboard",
-    "pages/location/location"
+    "pages/lockscreen/lockscreen"
+   
+  ],
+  "subpackages": [
+    {
+      "root": "pages/basic-view/",
+      "pages": [
+        "color/color",
+        "button/button",
+        "flex/flex",
+        "tag/tag",
+        "badge/badge",
+        "load/load",
+        "icon/icon",
+        "list/list",
+        "card/card",
+        "grid/grid",
+        "footer/footer",
+        "other/other"
+      ]
+    }
   ],
   "window": {
     "backgroundTextStyle": "dark",
@@ -61,5 +87,6 @@
       "desc": "你的位置信息将用于定位效果展示"
     }
   },
-  "debug": true
+  "debug": true,
+  "sitemapLocation": "sitemap.json"
 }

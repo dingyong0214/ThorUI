@@ -1,0 +1,12 @@
+<view class="container">
+  <view class="header">
+    <view class="title">Footer</view>
+    <view class="sub-title">页脚 </view>
+  </view>
+  <tui-footer fixed="{{false}}" copyright="{{copyright}}"></tui-footer>
+  <tui-footer fixed="{{false}}" copyright="{{copyright}}" navigate="{{navigate}}" tui-footer-class="tui-custom"></tui-footer>
+  <tui-footer fixed="{{false}}" copyright="{{copyright}}" navigate="{{navigate2}}" tui-footer-class="tui-custom"></tui-footer>
+  <tui-footer fixed="{{false}}" copyright="{{copyright}}" navigate="{{navigate3}}" tui-footer-class="tui-custom"></tui-footer>
+  <tui-footer copyright="Copyright © 2019 Thor UI All Rights Reserved." navigate="{{navigate}}" bgcolor="#fafafa"></tui-footer>
+
+</view>

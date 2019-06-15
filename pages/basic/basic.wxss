@@ -1,1 +1,42 @@
-/* pages/basic/basic.wxss */
+.header {
+  padding: 80rpx 60rpx;
+}
+
+.title {
+  font-size: 34rpx;
+  color: #333;
+  font-weight: 500;
+}
+
+.sub-title {
+  font-size: 24rpx;
+  color: #7a7a7a;
+  padding-top: 18rpx;
+}
+
+.tui-grid-icon {
+  width: 64rpx;
+  height: 64rpx;
+  margin: 0 auto;
+}
+
+.tui-grid-icon image {
+  display: block;
+  width: 64rpx;
+  height: 64rpx;
+}
+
+.tui-grid-icon + .tui-grid-label {
+  margin-top: 10rpx;
+}
+
+.tui-grid-label {
+  display: block;
+  text-align: center;
+  font-weight: 400;
+  color: #333;
+  font-size: 28rpx;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

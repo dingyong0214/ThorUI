@@ -1,0 +1,10 @@
+{
+  "navigationBarBackgroundColor": "#FFFFFF",
+  "navigationBarTextStyle": "black",
+  "navigationBarTitleText": "Loading",
+  "usingComponents": {
+    "tui-loading": "../../../components/loading/loading",
+    "tui-loadmore": "../../../components/loadmore/loadmore",
+    "tui-nomore": "../../../components/nomore/nomore"
+  }
+}

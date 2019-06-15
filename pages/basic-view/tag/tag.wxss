@@ -1,0 +1,24 @@
+@import '../../../static/style/thorui.wxss';
+.container{
+  padding: 20rpx 30rpx 40rpx 30rpx;
+  box-sizing: border-box;
+}
+.title{
+  padding: 30rpx 0;
+  font-size: 30rpx;
+  color: #333
+}
+.tui-tag,.tui-tag-small,.tui-mrbtm{
+  margin-bottom: 26rpx;
+  margin-right: 20rpx
+}
+
+.flex-box{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items:flex-start;
+  margin-bottom: 26rpx;
+}

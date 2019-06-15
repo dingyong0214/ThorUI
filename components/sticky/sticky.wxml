@@ -1,4 +1,4 @@
-<view class="sticky-container">
+<view class="tui-sticky-class">
   <!--sticky 容器-->
   <view class="{{ isFixed === true ? 'sticky-fixed' : '' }}">
     <slot name="header"></slot>

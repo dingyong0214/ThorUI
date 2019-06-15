@@ -1,0 +1,5 @@
+<view class="tui-nomore-class tui-loadmore" wx:if="{{visible}}">
+  <view class="{{isDot?'tui-nomore-dot':'tui-nomore'}}">
+    <view style="background:{{bgcolor}}" class="{{isDot?'tui-dot-text':'tui-text'}}">{{isDot?dotText:text}}</view>
+  </view>
+</view>

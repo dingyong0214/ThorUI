@@ -1,0 +1,27 @@
+@import '../../../static/style/thorui.wxss';
+.header{
+  padding: 80rpx 60rpx 40rpx 60rpx;
+}
+.title{
+ font-size: 34rpx;
+ color: #333;
+ font-weight: 500;
+}
+.sub-title{
+ font-size: 24rpx;
+ color: #7A7A7A;
+ padding-top: 18rpx;
+}
+
+.tui-flex-box{
+  padding: 0 30rpx 80rpx 30rpx;
+  box-sizing: border-box;
+  font-size: 30rpx;
+}
+.tui-center{
+  padding: 18rpx 0;
+  margin-bottom: 12rpx;
+}
+.mr{
+  margin-right: 30rpx
+}

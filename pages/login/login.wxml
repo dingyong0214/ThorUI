@@ -1,0 +1,26 @@
+<view class="container">
+  <view class="tui-bg-box">
+    <image src="../../static/images/login/bg_login.png" class="tui-bg-img"></image>
+    <image src="../../static/images/my/mine_def_touxiang_3x.png" class="tui-photo"></image>
+    <view class="tui-login-name">Thor UI</view>
+  </view>
+  <form bindsubmit="login">
+    <view class="tui-login-from">
+      <view class="tui-line-cell">
+        <tui-icon name="mobile" size="20" color='#5677fc'></tui-icon>
+        <input placeholder-class="phcolor" class="tui-input" name="mobile" placeholder="请输入手机号码" bindinput="input" maxlength="11" value="{{mobile}}" type='number' />
+      </view>
+      <view class="tui-line-cell tui-top28">
+        <tui-icon name="pwd" size="20" color='#5677fc'></tui-icon>
+        <input placeholder-class="phcolor" class="tui-input" name="smsCode" placeholder="请输入验证码" maxlength="6" />
+        <tui-button size="mini" type="{{type}}" shape="circle" plain="{{true}}" disabled="{{disabled}}" bind:click="btnSend" tui-button-class="tui-button-class">{{btnText}}</tui-button>
+      </view>
+      <button form-type="submit" class="tui-btn-submit">
+         <tui-button tui-button-class="tui-btn-inner" >登录</tui-button>
+      </button>
+      <view class="tui-protocol" hover-class="opcity" hover-stay-time="150">点击"登录"即表示已同意
+        <text class="tui-protocol-red" bindtap="protocol">《用户协议》</text>
+      </view>
+    </view>
+  </form>
+</view>

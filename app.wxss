@@ -13,7 +13,7 @@ page {
 
 .phcolor {
   color: #ccc;
-  font-size: 34rpx;
+  font-size: 32rpx;
 }
 
 button::after {
@@ -69,8 +69,12 @@ button::after {
 }
 
 .btn-gray {
-  background: #ededed !important;
+  background: #ededed;
   color: #999 !important;
+}
+.btn-gray-hover {
+  background: #d5d5d5 !important;
+  color: #898989;
 }
 
 .btn-disabled {

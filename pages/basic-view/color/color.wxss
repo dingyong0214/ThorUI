@@ -1,0 +1,37 @@
+@import '../../../static/style/thorui.wxss';
+
+.container{
+  padding: 30rpx;
+  box-sizing: border-box;
+}
+.title{
+  padding: 30rpx 0;
+  font-size: 30rpx;
+  color: #333
+}
+.box{
+  display: flex;
+  display: -webkit-flex;
+  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+}
+.item{
+  width: 48%;
+  padding:30rpx 24rpx;
+  box-sizing: border-box;
+  border-radius: 8rpx;
+  color: #fff;
+  margin-bottom: 30rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-size: 26rpx;
+}
+.color{
+   padding-top: 24rpx;
+}
+.gray{
+  color: #999 !important;
+}

@@ -12,7 +12,8 @@ Page({
     ],
     regionTxt: "粤",
     tabIndex: 26,
-    showDrawer: false,
+    leftDrawer: false,
+    rightDrawer: false,
     mode: "right"
   },
   onLoad: function(options) {
@@ -57,33 +58,26 @@ Page({
       icon: "none"
     })
   },
-  //左右抽屉打开关闭方法
-  openDrawer(mode) {
-    if (mode == this.data.mode) {
+  closeDrawer(e) {
+    const mode = e.currentTarget.dataset.mode;
+    if(mode=="left"){
       this.setData({
-        showDrawer: true
+        leftDrawer: false
       })
-    } else {
+    }else{
       this.setData({
-        mode: mode
+        rightDrawer: false
       })
-      setTimeout(()=>{
-        this.setData({
-          showDrawer: true
-        })
-      },300)
     }
-
-  },
-  closeDrawer() {
-    this.setData({
-      showDrawer: false
-    })
   },
   rightDrawer() {
-    this.openDrawer("right")
+    this.setData({
+      rightDrawer: true
+    })
   },
   leftDrawer() {
-    this.openDrawer("left")
+    this.setData({
+      leftDrawer: true
+    })
   }
 })

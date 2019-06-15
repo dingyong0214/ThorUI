@@ -1,0 +1,24 @@
+<view class="tui-tag-class {{size?'tui-tag-'+size:'tui-tag'}} {{parse.getClassName(shape,plain)}} {{parse.getTypeClass(type,plain)}}" bindtap="handleClick" wx:if="{{visible}}">
+  <slot></slot>
+</view>
+<wxs module="parse">
+  module.exports = {
+    getTypeClass: function(type, plain) {
+      return plain ? 'tui-' + type + '-outline' : 'tui-' + type
+    },
+    getClassName: function(shape, plain) {
+      //circle, square，circleLeft，circleRight
+      var className = plain ? 'tui-tag-outline ' : '';
+      if (shape != 'square') {
+        if (shape == "circle") {
+          className = className + (plain ? 'tui-tag-outline-fillet' : 'tui-tag-fillet');
+        } else if (shape == "circleLeft") {
+          className = className + 'tui-tag-fillet-left';
+        } else if (shape == "circleRight") {
+          className = className + 'tui-tag-fillet-right';
+        }
+      }
+      return className;
+    }
+  }
+</wxs>

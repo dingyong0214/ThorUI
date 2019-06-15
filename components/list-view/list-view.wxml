@@ -1,0 +1,6 @@
+<view class="tui-list-view tui-view-class">
+  <view class="tui-list-title" wx:if="{{title}}">{{title}}</view>
+  <view class="tui-list-content {{unlined?'tui-border-'+unlined:''}}">
+    <slot></slot>
+  </view>
+</view>
