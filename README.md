@@ -1,6 +1,10 @@
 # ThorUI
 ThorUI组件库，微信小程序代码片段分享
 
+#网站介绍
+
+[Mozilla](https://www.thorui.cn/)
+
 本项目稳定后，会同步更新到uni-app，支付宝小程序，百度小程序，头条小程序等
 
 # V1.0.0
