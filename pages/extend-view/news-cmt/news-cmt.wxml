@@ -1,0 +1,14 @@
+<view class="container">
+  <view class="tui-cells">
+    <textarea class="tui-textarea" name="desc" placeholder="发表你的评论..." maxlength="500" placeholder-class="tui-phcolor-color" auto-focus/>
+    <view class="tui-textarea-counter">0/500</view>
+  </view>
+  <view class="tui-enclosure">
+    <tui-icon name="satisfied" size="25" class="tui-mr"></tui-icon>
+    <tui-icon name="picture" size="25" class="tui-mr"></tui-icon>
+    <tui-icon name="link" size="22" class="tui-mr"></tui-icon>
+  </view>
+  <view class="tui-cmt-btn">
+    <tui-button>发表</tui-button>
+  </view>
+</view>

@@ -1,1 +1,1 @@
-<view class="tui-icon-class tui-icon tui-icon-{{name}}" style="font-size: {{ size }}px; {{ color ? 'color:' + color : '' }};{{bold?'font-weight: bold': ''}}"></view>
+<view class="tui-icon-class tui-icon tui-icon-{{name}}" style="font-size: {{ size }}px; {{ color ? 'color:' + color : '' }};{{bold?'font-weight: bold': ''}}" wx:if="{{visible}}"></view>

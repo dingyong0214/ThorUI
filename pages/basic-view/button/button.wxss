@@ -7,8 +7,9 @@
 
 .title {
   padding: 30rpx 0;
-  font-size: 30rpx;
+  font-size: 32rpx;
   color: #333;
+  font-weight: bold;
 }
 
 .tui-btn, .tui-mbtm {

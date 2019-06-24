@@ -2,12 +2,20 @@ const util = require('../../utils/util.js')
 Page({
   data: {
     list: [{
+        id: 'basic',
+        name: '基础组件',
+        open: false,
+        pages: [{
+          name: "基础组件",
+          page: "basic"
+        }]
+      }, {
         id: 'map',
         name: '地图',
         open: false,
         pages: [{
           name: "拖拽定位",
-          page: "location" 
+          page: "location"
         }, {
           name: "周边兴趣点",
           page: "maps"
@@ -20,7 +28,7 @@ Page({
         }]
       },
       {
-        id: 'form',
+        id: 'index',
         name: '索引列表',
         open: false,
         pages: [{
@@ -95,33 +103,6 @@ Page({
           name: "商品列表",
           page: "product"
         }]
-      },
-      {
-        id: 'play',
-        name: '扩展',
-        open: false,
-        pages: [{
-          name: "基础组件",
-          page: "basic"
-        }, {
-          name: "消息提示",
-          page: "msgtips"
-        }, {
-          name: "吸顶容器",
-          page: "sticky"
-          }, {
-            name: "数字键盘",
-            page: "keyboard"
-          }, {
-            name: "时间轴",
-            page: "timeaxis"
-          }, {
-          name: "抽奖转盘",
-          page: "luckdraw"
-        }, {
-            name: "模板",
-            page: "template"
-          }]
       }
     ]
   },
@@ -147,7 +128,7 @@ Page({
       })
     }, 350)
   },
-  github: function () {
+  github: function() {
     wx.setClipboardData({
       data: 'https://github.com/dingyong0214/ThorUI',
       success(res) {

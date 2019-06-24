@@ -15,7 +15,7 @@
   text-align: center;
   font-weight: 400;
   color: #333;
-  font-size: 28rpx;
+  font-size: 30rpx;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;

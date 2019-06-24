@@ -1,0 +1,17 @@
+<view class="container">
+  <view class="header">
+    <view class="title">ActionSheet</view>
+    <view class="sub-title">操作菜单 </view>
+  </view>
+  <view class="tui-btn-box">
+    <tui-button type="white" shape="circle" tui-button-class="tui-btn-mtop" bind:click='openActionSheet' data-type="1">默认操作</tui-button>
+    <tui-button type="white" shape="circle" tui-button-class="tui-btn-mtop" bind:click='openActionSheet' data-type="2">退出登录</tui-button>
+    <tui-button type="white" shape="circle" tui-button-class="tui-btn-mtop" bind:click="openActionSheet" data-type="3">提示文本样式</tui-button>
+    <tui-button type="white" shape="circle" tui-button-class="tui-btn-mtop" bind:click="openActionSheet" data-type="4">无提示操作</tui-button>
+    <tui-button type="white" shape="circle" tui-button-class="tui-btn-mtop" bind:click="openActionSheet" data-type="5">无取消按钮</tui-button>
+    <tui-button type="white" shape="circle" tui-button-class="tui-btn-mtop" bind:click="openActionSheet" data-type="6">Mask不可点击</tui-button>
+
+  </view>
+
+  <tui-actionsheet show="{{showActionSheet}}" tips="{{tips}}" item-list="{{itemList}}" mask-closable="{{maskClosable}}" color="{{color}}" size="{{size}}" is-cancel="{{isCancel}}" bind:click="itemClick" bind:cancel="closeActionSheet"></tui-actionsheet>
+</view>

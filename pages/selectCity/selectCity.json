@@ -1,3 +1,6 @@
 {
-  "navigationBarTitleText": "城市选择"
+  "navigationBarTitleText": "城市选择",
+  "usingComponents": {
+    "tui-icon": "../../components/icon/icon"
+  }
 }

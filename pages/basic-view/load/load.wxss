@@ -9,13 +9,13 @@
 }
 
 .title {
-  font-size: 34rpx;
+  font-size: 36rpx;
   color: #333;
-  font-weight: 500;
+  font-weight: bold;
 }
 
 .sub-title {
-  font-size: 24rpx;
+  font-size: 28rpx;
   color: #7a7a7a;
   padding-top: 18rpx;
 }

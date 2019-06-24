@@ -28,7 +28,11 @@ button::after {
   background: #f7f7f9 !important;
 }
 
-.ellipsis {overflow: hidden; white-space: nowrap; text-overflow: ellipsis;}
+.ellipsis {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
 
 /*列表统一样式 */
 
@@ -72,14 +76,23 @@ button::after {
   background: #ededed;
   color: #999 !important;
 }
+
 .btn-gray-hover {
   background: #d5d5d5 !important;
   color: #898989;
+}
+
+.btn-white {
+  background: #fff;
+  color: #333 !important;
+}
+
+.tui-white-hover {
+  background: #e5e5e5 !important;
+  color: #2e2e2e !important;
 }
 
 .btn-disabled {
   color: #fafbfc !important;
   background: linear-gradient(-90deg, #cad8fb, #c9d3fb);
 }
-
-

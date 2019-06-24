@@ -3,12 +3,12 @@
   padding: 80rpx 60rpx 40rpx 60rpx;
 }
 .title{
- font-size: 34rpx;
+ font-size: 36rpx;
  color: #333;
- font-weight: 500;
+ font-weight: bold;
 }
 .sub-title{
- font-size: 24rpx;
+ font-size: 28rpx;
  color: #7A7A7A;
  padding-top: 18rpx;
 }

@@ -1,4 +1,6 @@
 {
+  "backgroundColorTop": "#EDEDED",
+  "backgroundColorBottom": "#EDEDED",
   "navigationBarBackgroundColor": "#FFFFFF",
   "navigationBarTextStyle": "black",
   "navigationBarTitleText": "Card",

@@ -65,7 +65,7 @@ Page({
   },
   previewReward: function() {
     wx.previewImage({
-      urls: ["https://14790214.s21i.faiusr.com/2/ABUIABACGAAgi-uC6AUo8M780wcwuAg4uAg!1000x1000.jpg"]
+      urls: ["https://thorui.cn/img/reward.jpg"]
     })
   }
 })

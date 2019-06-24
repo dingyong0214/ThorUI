@@ -1,0 +1,309 @@
+/* 隐藏scroll-view滚动条*/
+::-webkit-scrollbar{
+  width: 0;
+  height: 0;
+  color: transparent;
+}
+
+/*header*/
+.tui-header {
+  width: 100%;
+  padding-top: 34rpx;
+  /* box-shadow: 0 15rpx 10rpx -15rpx #f2f2f2; */
+  box-sizing: border-box;
+  background: #fff;
+  position: fixed;
+  z-index: 1000;
+}
+
+.tui-header-top, .tui-header-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 26rpx;
+  color: #333;
+}
+
+.tui-top-item {
+  height: 26rpx;
+  line-height: 26rpx;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tui-topitem-active {
+  position: relative;
+  font-weight: bold;
+}
+
+.tui-topitem-active::after {
+  content: '';
+  position: absolute;
+  width: 44rpx;
+  height: 6rpx;
+  background: #5677fc;
+  border-radius: 6rpx;
+  bottom: -10rpx;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+.tui-price-arrow {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 20rpx;
+}
+
+.tui-arrow {
+  line-height: 12px !important;
+  padding: 0 !important;
+  display: block !important;
+  position: relative;
+}
+
+.tui-arrow-up {
+  top: 5px;
+}
+
+.tui-arrow-down {
+  top: -3px;
+}
+
+.tui-header-bottom {
+  margin-top: 56rpx;
+  height: 108rpx;
+  padding: 0 30rpx;
+  box-sizing: border-box;
+  font-size: 24rpx;
+  align-items: flex-start;
+  overflow: hidden;
+}
+
+.tui-bottom-text {
+  line-height: 24rpx;
+}
+
+.tui-bottom-item {
+  flex: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 18rpx 12rpx;
+  border-radius: 40rpx;
+  box-sizing: border-box;
+  background: #f2f2f2;
+  margin-right: 20rpx;
+  white-space: nowrap;
+}
+
+.tui-bottom-item:last-child {
+  margin-right: 0;
+}
+
+.tui-btmItem-active {
+  padding-bottom: 60rpx;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.tui-bold {
+  font-weight: bold;
+}
+
+.tui-active {
+  color: #5677fc;
+}
+
+.tui-ml {
+  margin-left: 6rpx;
+}
+
+.tui-seizeaseat-20 {
+  height: 20rpx;
+}
+
+.tui-seizeaseat-30 {
+  height: 30rpx;
+}
+
+.tui-middle {
+  vertical-align: middle;
+}
+
+/*header*/
+
+/*header 下拉选择*/
+
+.tui-scroll-box {
+  width: 100%;
+  height: 480rpx;
+  box-sizing: border-box;
+  position: relative;
+  z-index: 99;
+  color: #fff;
+  font-size: 30rpx;
+  word-break: break-all;
+}
+
+.tui-drop-item {
+  color: #333;
+  height: 80rpx;
+  font-size: 28rpx;
+  padding: 20rpx 40rpx 20rpx 40rpx;
+  box-sizing: border-box;
+  display: inline-block;
+  width: 50%;
+}
+
+.tui-drop-btnbox {
+  width: 100%;
+  height: 100rpx;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  box-sizing: border-box;
+  display: flex;
+}
+
+.tui-drop-btn {
+  width: 50% !important;
+  border-radius: 0 !important;
+  font-size: 32rpx !important;
+  text-align: center;
+  height: 100rpx;
+  line-height: 100rpx;
+  border: 0;
+}
+
+.tui-btn-white {
+  border-radius: 0;
+}
+
+/*header 下拉选择*/
+
+.top-dropdown {
+  margin-top: 360rpx;
+  padding: 0 40rpx;
+  box-sizing: border-box;
+}
+
+.tui-share-box {
+  padding: 0 50rpx;
+  box-sizing: border-box;
+}
+
+.tui-drop-input-box {
+  padding: 50rpx;
+  box-sizing: border-box;
+}
+
+.tui-animation {
+  transform: rotate(0deg);
+  transition: all 0.2s;
+}
+
+.tui-animation-show {
+  transform: rotate(180deg);
+}
+
+.tui-selected-list {
+  background: #fff;
+  border-radius: 20rpx;
+}
+
+.tui-dropdown-scroll {
+  height: 400rpx;
+}
+
+.tui-selected-item {
+  display: flex;
+  align-items: center;
+  padding: 26rpx 30rpx !important;
+}
+
+.tui-ml-20 {
+  margin-left: 20rpx;
+}
+
+.tui-share {
+  background: #e8e8e8;
+  position: relative;
+  padding-bottom: 150rpx;
+}
+
+.tui-share-title {
+  font-size: 26rpx;
+  color: #7E7E7E;
+  text-align: center;
+  line-height: 26rpx;
+  padding: 20rpx 0 50rpx 0;
+}
+
+.tui-share-top, .tui-share-bottom {
+  width: 100%;
+  height: 126rpx;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 30rpx 20rpx 30rpx 30rpx;
+}
+
+.tui-mt {
+  margin-top: 40rpx;
+}
+
+.tui-share-item {
+  width: 126rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 24rpx;
+}
+
+.tui-item-last {
+  margin: 0;
+}
+
+.tui-empty {
+  margin-left: 18rpx;
+  visibility: hidden;
+}
+
+.tui-share-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fafafa;
+  height: 126rpx;
+  width: 126rpx;
+  border-radius: 32rpx;
+}
+
+.tui-share-text {
+  font-size: 24rpx;
+  color: #7E7E7E;
+  line-height: 24rpx;
+  padding: 20rpx 0;
+}
+
+.tui-btn-cancle {
+  width: 100%;
+  height: 100rpx;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background: #f6f6f6;
+  font-size: 36rpx;
+  color: #3e3e3e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.tui-hover{
+  background: rgba(0, 0, 0, .2)
+}

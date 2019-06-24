@@ -1,6 +1,6 @@
 <view class="container">
   <!--内容部分-->
-  <tui-view title="不带箭头，无点击效果">
+  <tui-view title="不带箭头，无点击效果" color="#777" tui-view-class="tui-view">
     <tui-cell bind:click="detail" hover="{{false}}">
       不带箭头，无点击效果
     </tui-cell>
@@ -8,14 +8,11 @@
       不带箭头，无点击效果
     </tui-cell>
     <tui-cell bind:click="detail" hover="{{false}}">
-      不带箭头，无点击效果
-    </tui-cell>
-    <tui-cell hover="{{false}}" last="{{true}}" bind:click="detail">
       不带箭头，无点击效果
     </tui-cell>
   </tui-view>
 
-  <tui-view title="带箭头，有点击效果">
+  <tui-view title="带箭头，有点击效果" tui-view-class="tui-view">
     <tui-cell bind:click="detail" arrow="{{true}}">
       带箭头，有点击效果
     </tui-cell>
@@ -23,48 +20,42 @@
       带箭头，有点击效果
     </tui-cell>
     <tui-cell bind:click="detail" arrow="{{true}}">
-      带箭头，有点击效果
-    </tui-cell>
-    <tui-cell last="{{true}}" bind:click="detail" arrow="{{true}}">
       带箭头，有点击效果
     </tui-cell>
   </tui-view>
 
-  <tui-view title="无上下线条" unlined="all">
-    <tui-cell bind:click="detail" arrow="{{true}}" color="#5677fc">
-      无上下线条,可单独设置，改变颜色
-    </tui-cell>
-    <tui-cell bind:click="detail" arrow="{{true}}" color="#ff7900">
+  <tui-view title="无上下线条" unlined="all" tui-view-class="tui-view">
+    <tui-cell bind:click="detail" arrow="{{true}}">
       无上下线条,可单独设置，改变颜色
     </tui-cell>
     <tui-cell bind:click="detail" arrow="{{true}}" color="#19be6b">
       无上下线条,可单独设置，改变颜色
     </tui-cell>
-    <tui-cell last="{{true}}" bind:click="detail" arrow="{{true}}" color="#ed3f14">
+    <tui-cell bind:click="detail" arrow="{{true}}">
       无上下线条,可单独设置，改变颜色
     </tui-cell>
   </tui-view>
 
-  <tui-view title="无线条" unlined="all">
-    <tui-cell bind:click="detail" last="{{true}}" size="32">
+  <tui-view title="无线条" unlined="all" tui-view-class="tui-view">
+    <tui-cell bind:click="detail" last="{{true}}" size="36">
       无线条，无箭头，大字体
     </tui-cell>
-    <tui-cell bind:click="detail" last="{{true}}" size="32">
+    <tui-cell bind:click="detail" last="{{true}}" size="36">
       无线条，无箭头，大字体
     </tui-cell>
-    <tui-cell bind:click="detail" last="{{true}}" size="32">
+    <tui-cell bind:click="detail" last="{{true}}" size="36">
       无线条，无箭头，大字体
     </tui-cell>
-    <tui-cell last="{{true}}" bind:click="detail" size="32">
+    <tui-cell last="{{true}}" bind:click="detail" size="36">
       无线条，无箭头，大字体
     </tui-cell>
   </tui-view>
-   <tui-view title="菜单列表">
+  <tui-view title="菜单列表" tui-view-class="tui-view">
     <tui-cell bind:click="detail" arrow="{{true}}" tui-cell-class="tui-list">
       <tui-icon name="wealth-fill" size="24" color="#ff7900"></tui-icon>
       <text class="tui-cell-name" slot="title">我的钱包</text>
     </tui-cell>
-    <tui-cell bind:click="detail" arrow="{{true}}" tui-cell-class="tui-list"> 
+    <tui-cell bind:click="detail" arrow="{{true}}" tui-cell-class="tui-list">
       <tui-icon name="service-fill" size="24" color="#5677fc"></tui-icon>
       <view class="tui-cell-name">服务窗</view>
     </tui-cell>
@@ -85,13 +76,13 @@
     </tui-cell>
   </tui-view>
 
-  <tui-view title="消息列表">
+  <tui-view title="消息列表" tui-view-class="tui-view">
     <tui-cell bind:click="detail" tui-cell-class="tui-msg">
       <view class="tui-msg-box">
-        <image src="../../../static/images/news/1.jpg" class="tui-msg-pic" mode="widthFix"></image>
+        <image src="../../../static/images/news/avatar_1.jpg" class="tui-msg-pic" mode="widthFix"></image>
         <view class="tui-msg-item">
-            <view class="tui-msg-name">呼噜猪</view>
-            <view class="tui-msg-content">上线打游戏了！</view>
+          <view class="tui-msg-name">呼噜猪</view>
+          <view class="tui-msg-content">上线打游戏了！</view>
         </view>
       </view>
       <view class="tui-msg-right">
@@ -99,12 +90,12 @@
         <tui-badge type="danger" tui-badge-class="tui-badge">9</tui-badge>
       </view>
     </tui-cell>
-     <tui-cell bind:click="detail" tui-cell-class="tui-msg">
+    <tui-cell bind:click="detail" tui-cell-class="tui-msg">
       <view class="tui-msg-box">
-        <image src="../../../static/images/news/2.jpg" class="tui-msg-pic" mode="widthFix"></image>
+        <image src="../../../static/images/news/avatar_2.jpg" class="tui-msg-pic" mode="widthFix"></image>
         <view class="tui-msg-item">
-            <view class="tui-msg-name">融金宝VIP交流3群</view>
-            <view class="tui-msg-content">[分享]我很看好的这款金融产品，推荐给你们</view>
+          <view class="tui-msg-name">融金宝VIP交流3群</view>
+          <view class="tui-msg-content">[分享]我很看好的这款金融产品，推荐给你们</view>
         </view>
       </view>
       <view class="tui-msg-right">
@@ -112,25 +103,25 @@
         <tui-badge type="gray" tui-badge-class="tui-badge">2</tui-badge>
       </view>
     </tui-cell>
-     <tui-cell bind:click="detail" tui-cell-class="tui-msg" >
+    <tui-cell bind:click="detail" tui-cell-class="tui-msg">
       <view class="tui-msg-box">
         <image src="../../../static/images/news/3.jpg" class="tui-msg-pic" mode="widthFix"></image>
         <view class="tui-msg-item">
-            <view class="tui-msg-name">客服助手</view>
-            <view class="tui-msg-content">点击查看您与客服的沟通记录</view>
+          <view class="tui-msg-name">客服助手</view>
+          <view class="tui-msg-content">点击查看您与客服的沟通记录</view>
         </view>
       </view>
       <view class="tui-msg-right tui-right-dot">
         <view class="tui-msg-time">08:16</view>
-        <tui-badge type="danger"  dot="{{true}}"></tui-badge>
+        <tui-badge type="danger" dot="{{true}}"></tui-badge>
       </view>
     </tui-cell>
-     <tui-cell bind:click="detail" tui-cell-class="tui-msg">
+    <tui-cell bind:click="detail" tui-cell-class="tui-msg">
       <view class="tui-msg-box">
         <image src="../../../static/images/news/4.jpg" class="tui-msg-pic" mode="widthFix"></image>
         <view class="tui-msg-item">
-            <view class="tui-msg-name">我的资产</view>
-            <view class="tui-msg-content">你昨天获得了7张优惠券，总计3000元</view>
+          <view class="tui-msg-name">我的资产</view>
+          <view class="tui-msg-content">你昨天获得了7张优惠券，总计3000元</view>
         </view>
       </view>
       <view class="tui-msg-right">
@@ -140,10 +131,10 @@
     </tui-cell>
     <tui-cell bind:click="detail" tui-cell-class="tui-msg">
       <view class="tui-msg-box">
-        <image src="../../../static/images/my/github_3x.png" class="tui-msg-pic" mode="widthFix"></image>
+        <image src="../../../static/images/news/avatar_1.jpg" class="tui-msg-pic" mode="widthFix"></image>
         <view class="tui-msg-item">
-            <view class="tui-msg-name">我的电脑</view>
-            <view class="tui-msg-content">[图片]</view>
+          <view class="tui-msg-name">我的电脑</view>
+          <view class="tui-msg-content">[图片]</view>
         </view>
       </view>
       <view class="tui-msg-right">
@@ -151,12 +142,12 @@
         <tui-badge type="danger" tui-badge-class="tui-badge">3</tui-badge>
       </view>
     </tui-cell>
-     <tui-cell bind:click="detail" last="{{true}}" tui-cell-class="tui-msg">
+    <tui-cell bind:click="detail" last="{{true}}" tui-cell-class="tui-msg">
       <view class="tui-msg-box">
-        <image src="../../../static/images/my/thorui.png" class="tui-msg-pic" mode="widthFix"></image>
+        <image src="../../../static/images/news/avatar_2.jpg" class="tui-msg-pic" mode="widthFix"></image>
         <view class="tui-msg-item">
-            <view class="tui-msg-name">小短腿</view>
-            <view class="tui-msg-content">[表情]</view>
+          <view class="tui-msg-name">小短腿</view>
+          <view class="tui-msg-content">[表情]</view>
         </view>
       </view>
       <view class="tui-msg-right">

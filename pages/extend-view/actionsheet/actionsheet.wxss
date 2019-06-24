@@ -1,0 +1,50 @@
+.container {
+  padding: 20rpx 0 120rpx 0;
+  box-sizing: border-box;
+}
+
+.header {
+  padding: 80rpx 90rpx 60rpx 90rpx;
+  box-sizing: border-box;
+}
+
+.title {
+  font-size: 34rpx;
+  color: #333;
+  font-weight: 500;
+}
+
+.sub-title {
+  font-size: 24rpx;
+  color: #7a7a7a;
+  padding-top: 18rpx;
+}
+
+.tui-btn-box {
+  padding: 10rpx 40rpx;
+  box-sizing: border-box;
+}
+
+.tui-btn-mtop {
+  margin-top: 36rpx;
+}
+
+.tui-keyboard-tips {
+  width: 100%;
+  height: 120rpx;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30rpx;
+  background: #fff;
+  position: relative;
+  color: #333;
+  border: 0;
+}
+
+.tui-digital-box {
+  background: #fff;
+  padding-bottom: 50rpx;
+  border: 0;
+}

@@ -8,7 +8,7 @@
       <navigator url="../basic-view/{{item.url}}/{{item.url}}" hover-class='none'>
         <tui-grid-item>
           <view class="tui-grid-icon">
-            <image src="../../static/images/basic/{{item.url}}.png" />
+            <image src="../../static/images/basic/{{item.url}}.png" style='width:{{item.width}}rpx;height:{{item.height}}rpx' />
           </view>
           <text class="tui-grid-label">{{item.name}}</text>
         </tui-grid-item>

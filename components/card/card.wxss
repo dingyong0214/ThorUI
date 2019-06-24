@@ -1,11 +1,11 @@
 .tui-card {
   margin: 0 30rpx;
   font-size: 28rpx;
-  overflow: hidden;
   background: #fff;
   border-radius: 10rpx;
   box-shadow: 0 0 10rpx #eee;
   box-sizing: border-box;
+  overflow: hidden;
 }
 .tui-card-full{
    margin: 0 !important;
@@ -16,16 +16,15 @@
 }
 .tui-card-border {
   position: relative;
-  overflow: initial;
-  box-shadow: none !important;
+  box-shadow: none !important
 }
 
 .tui-card-border::after {
-  content: '';
+  content: ' ';
   position: absolute;
   height: 200%;
   width: 200%;
-  border: 1px solid #eaeef1;
+  border: 1px solid #ddd;
   transform-origin: 0 0;
   -webkit-transform-origin: 0 0;
   -webkit-transform: scale(0.5);
@@ -33,6 +32,7 @@
   left: 0;
   top: 0;
   border-radius: 20rpx;
+  box-sizing: border-box;
 }
 
 .tui-card-header {
@@ -44,6 +44,8 @@
   position: relative;
   box-sizing: border-box;
   overflow: hidden;
+  border-top-left-radius: 10rpx;
+  border-top-right-radius: 10rpx;
 }
 
 .tui-card-header::after {
@@ -93,12 +95,12 @@
   font-size: 32rpx;
   color: #262b3a;
   box-sizing: border-box;
-  overflow: hidden;
 }
 
 .tui-card-footer {
   font-size: 28rpx;
   color: #596d96;
+   border-bottom-left-radius: 10rpx;
+  border-bottom-right-radius: 10rpx;
   box-sizing: border-box;
-  overflow: hidden;
 }

@@ -1,0 +1,47 @@
+page{
+  height: 100%;
+  background: #fff;
+}
+.tui-userinfo{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding-top: 100rpx;
+}
+.tui-avatar{
+  width: 160rpx;
+  height: 160rpx;
+  border-radius: 50%;
+}
+.tui-nickname{
+  font-weight: bold;
+  font-size: 40rpx;
+  color: #333;
+  padding: 20rpx 0;
+}
+
+.tui-pwd-tips{
+   text-align: center;
+   font-size: 30rpx;
+   color: #666;
+   padding: 70rpx 0 30rpx 0;
+}
+.tui-flex{
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+ padding: 20rpx 20rpx;
+ box-sizing: border-box;
+ font-size: 30rpx;
+color: #333;
+}
+
+.tui-fingerprint-box{
+  display: flex;
+  align-items: center;
+}
+.tui-text{
+  margin-left: 16rpx;
+  vertical-align: middle;
+}

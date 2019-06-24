@@ -1,0 +1,47 @@
+<wxs module="wxs" src="../../filter/filter.wxs"></wxs>
+<view class="tui-container">
+  <view class="tui-extend-box">
+    <block wx:for="{{list}}" wx:key="{{index}}" wx:if="{{(index+1)%2!=0}}">
+      <template is="extendItem" data="{{item,index:index}}" />
+    </block>
+  </view>
+  <view class="tui-extend-box">
+    <block wx:for="{{list}}" wx:key="{{index}}" wx:if="{{(index+1)%2==0}}">
+      <template is="extendItem" data="{{item,index:index}}" />
+    </block>
+  </view>
+
+  <!-- <view class="tui-extend-item tui-bg-{{wxs.getRandom()}}" wx:for="{{wxs.getArray(list)}}" wx:key="{{index}}">
+      <view class="tui-title tui-light">
+        {{item.name}}
+      </view>
+      <view class="tui-sub-title">{{item.desc}}</view>
+      <view class="tui-footer">
+        <tui-tag size="small" type="white" shape="circle" plain="{{true}}">查看详情</tui-tag>
+        <view>
+          <tui-icon name="like" color="#fff" size="20"></tui-icon>
+          <tui-icon name="partake" color="#fff" size="20" tui-icon-class="tui-r-icon"></tui-icon>
+        </view>
+      </view>
+    </view> -->
+
+  <!--模板-->
+  <template name="extendItem">
+    <view class="tui-extend-item tui-bg-{{wxs.getRandom()}}" id="{{item.page}}" catchtap="detail">
+      <view class="tui-title tui-light">
+        {{item.name}}
+      </view>
+      <view class="tui-sub-title" bindtap="">{{item.desc}}</view>
+      <view class="tui-footer">
+        <tui-tag size="small" type="white" shape="circle" plain="{{true}}">查看详情</tui-tag>
+        <view>
+          <tui-icon name="{{item.like?'like-fill':'like'}}" color="{{item.like?'#f54f46':'#fff'}}" size="20" tui-icon-class="tui-l-icon" id="{{index}}" catchtap="like"></tui-icon>
+          <button open-type="share" catchtap="onShareAppMessage" class="tui-btn" data-id="{{index}}">
+            <tui-icon name="partake" color="#fff" size="20" tui-icon-class="tui-r-icon"></tui-icon>
+          </button>
+        </view>
+      </view>
+    </view>
+  </template>
+
+</view>

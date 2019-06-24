@@ -15,7 +15,7 @@
     <view class="tui-list search-result" wx:if="{{inputShowed}}">
       <view class="tui-list-cell" hover-class="tui-list-cell-hover" wx:for="{{searchResult}}" key="{{index}}" bindtap="selectCity" data-name="{{item}}" hover-stay-time='150' >
         <view class="tui-list-cell-navigate">
-           <image src="../../static/images/news/{{(index%2===0 && index!==0)?'4.jpg':'2.jpg'}}" class="img"></image>
+           <image src="../../static/images/news/{{(index%2===0 && index!==0)?'avatar_2.jpg':'avatar_1.jpg'}}" class="img"></image>
               <view class="content">
                <view class="title">{{item.name}}</view>
                <view class="sub-title">{{item.mobile}}</view>
@@ -31,7 +31,7 @@
           </view>
           <view class="tui-list-cell" hover-class="tui-list-cell-hover" wx:for="{{list.data}}" key="{{index}}" bindtap="selectCity" data-name="{{item.name}}" hover-stay-time='150'>
             <view class="tui-list-cell-navigate {{list.data.length-1==index?'last':''}}" >
-             <image src="../../static/images/news/{{(index%2===0 && index!==0)?'4.jpg':'2.jpg'}}" class="img"></image>
+             <image src="../../static/images/news/{{(index%2===0 && index!==0)?'avatar_1.jpg':'avatar_2.jpg'}}" class="img"></image>
               <view class="content">
                <view class="title">{{item.name}}</view>
                <view class="sub-title">{{item.mobile}}</view>

@@ -76,17 +76,37 @@
   <tui-card image="{{card[2].img}}" title="{{card[2].title}}" tag="{{card[2].tag}}" header="{{card[2].header}}" bind:click="detail">
     <view slot="body">
       <view class="tui-article">
-        <image src="../../../static/images/swiper/swiper_1.jpg" class="tui-article-img"></image>
+        <image src="../../../static/images/swiper/swiper_2.jpg" class="tui-article-img"></image>
         <view class="tui-article-title">Vue+Node+高德地图+Echart做一款出行可视化全栈webapp</view>
       </view>
       <tui-list-cell>
         <view class='tui-cell-title'>.NET Core使用Exceptionless分布式日志收集</view>
-        <image src="../../../static/images/news/3.jpg" class="tui-cell-img" mode="widthFix"></image>
+        <image src="../../../static/images/news/avatar_1.jpg" class="tui-cell-img" mode="widthFix"></image>
       </tui-list-cell>
     </view>
     <view slot="footer" class="tui-default tui-flex">
       <text>余下3篇</text>
       <tui-icon name="arrowdown" size="20" color="#ccc" tui-icon-class="tui-right"></tui-icon>
+    </view>
+  </tui-card>
+
+  <view class="tui-title">
+    card 卡片
+  </view>
+  <tui-card image="{{card[2].img}}" title="{{card[2].title}}" tag="{{card[2].tag}}" header="{{card[2].header}}" bind:click="detail">
+    <view slot="body">
+      <tui-list-cell>
+        <view class='tui-cell-title'>.NET Core使用Exceptionless分布式日志收集</view>
+        <image src="../../../static/images/product/44.jpg" class="tui-cell-img" mode="widthFix"></image>
+      </tui-list-cell>
+      <tui-list-cell>
+        <view class='tui-cell-title'>高德地图+Echart做一款出行可视化全栈</view>
+        <image src="../../../static/images/product/11.jpg" class="tui-cell-img" mode="widthFix"></image>
+      </tui-list-cell>
+      <tui-list-cell last="{{true}}">
+        <view class='tui-cell-title'>高德地图+Echart做一款出行可视化全栈</view>
+        <image src="../../../static/images/product/22.jpg" class="tui-cell-img" mode="widthFix"></image>
+      </tui-list-cell>
     </view>
   </tui-card>
 

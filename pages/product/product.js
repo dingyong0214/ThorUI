@@ -181,7 +181,8 @@ Page({
       } else {
         this.setData({
           productList: this.data.productList.concat(this.data.loadData),
-          pageIndex: this.data.pageIndex + 1
+          pageIndex: this.data.pageIndex + 1,
+          loadding: false
         })
       }
     })

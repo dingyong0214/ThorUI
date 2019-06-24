@@ -1,16 +1,11 @@
 .tui-list-cell {
   position: relative;
-  background: #fff;
   width: 100%;
   padding: 26rpx 30rpx;
   box-sizing: border-box;
   overflow: hidden;
   display: flex;
   align-items: center;
-}
-
-.tui-list-cell.tui-padding-small {
-  padding: 24rpx 30rpx;
 }
 
 .tui-cell-hover {

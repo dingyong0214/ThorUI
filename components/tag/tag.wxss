@@ -53,8 +53,8 @@
   background: #333 !important;
 }
 
-.tui-gary {
-  background: #80848f !important;
+.tui-gray {
+  background: #ededed !important;
 }
 
 .tui-phcolor-gray {
@@ -138,6 +138,14 @@
 .tui-gray-outline::after {
   border: 1px solid #ccc !important;
 }
+
+.tui-white-outline {
+  color: #fff !important;
+  background: none;
+}
+.tui-white-outline::after {
+  border: 1px solid #fff !important;
+}
 /* color end*/
 
 /* tag start*/
@@ -152,7 +160,7 @@
 }
 
 .tui-tag-small {
-  padding: 10rpx 14rpx;
+  padding: 10rpx 16rpx;
   font-size: 24rpx;
   border-radius: 6rpx;
   /* display: inline-block;
@@ -179,7 +187,7 @@
   box-sizing: border-box;
   left: 0;
   top: 0;
-  border-radius: 20rpx;
+  border-radius: 80rpx;
   border: 1px solid #5677fc;
 }
 

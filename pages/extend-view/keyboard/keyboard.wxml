@@ -1,0 +1,18 @@
+<view class="container">
+  <view class="header">
+    <view class="title">Digital keyboard</view>
+    <view class="sub-title">数字键盘 </view>
+  </view>
+  <view class="tui-btn-box">
+    <tui-button type="white" shape="circle" tui-button-class="tui-btn-mtop" bind:click='switchKeyboard' data-length="6">6位数密码</tui-button>
+    <tui-button type="white" shape="circle" tui-button-class="tui-btn-mtop" bind:click='switchKeyboard' data-length="4">4位数密码</tui-button>
+    <tui-button type="white" shape="circle" tui-button-class="tui-btn-mtop" bind:click="lockscreen">锁屏密码</tui-button>
+  </view>
+
+  <tui-keyboard show="{{show}}" bind:close="closeKeyboard" bind:click="keyboardClick">
+    <view class="tui-digital-box">
+      <view class="tui-keyboard-tips">请输入密码</view>
+      <tui-keyboard-input inputvalue="{{pwdArr}}"></tui-keyboard-input>
+    </view>
+  </tui-keyboard>
+</view>

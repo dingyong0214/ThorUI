@@ -1,0 +1,86 @@
+.tui-actionsheet {
+  width: 100%;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9999;
+  visibility: hidden;
+  transform: translate3d(0, 100%, 0);
+  transform-origin: center;
+  transition: all 0.3s ease-in-out;
+  background: #eaeaec;
+  min-height: 100rpx;
+}
+
+.tui-actionsheet-show {
+  transform: translate3d(0, 0, 0);
+  visibility: visible;
+}
+
+.tui-tips {
+  width: 100%;
+  /* font-size: 26rpx; */
+  padding: 30rpx 60rpx;
+  box-sizing: border-box;
+  text-align: center;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tui-operate-box {
+  padding-bottom: 12rpx;
+}
+
+.tui-actionsheet-btn {
+  width: 100%;
+  height: 100rpx;
+  background: #fff;
+  box-sizing: border-box;
+  padding: 0 30rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 36rpx;
+  position: relative;
+}
+
+.tui-actionsheet-divider::before {
+  content: '';
+  width: 100%;
+  border-top: 1rpx solid #d9d9d9;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transform: scaleY(0.5);
+  transform: scaleY(0.5);
+}
+
+.tui-actionsheet-cancel {
+  color: #1a1a1a;
+}
+
+.tui-actionsheet-hover {
+  background: #f7f7f9;
+}
+
+.tui-actionsheet-mask {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 9996;
+  transition: all 0.3s ease-in-out;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.tui-mask-show {
+  opacity: 1;
+  visibility: visible;
+}

@@ -3,27 +3,28 @@
 }
 
 .title {
-  font-size: 34rpx;
+  font-size: 36rpx;
   color: #333;
-  font-weight: 500;
+  font-weight: bold;
 }
 
 .sub-title {
-  font-size: 24rpx;
+  font-size: 28rpx;
   color: #7a7a7a;
   padding-top: 18rpx;
 }
 
 .tui-grid-icon {
-  width: 64rpx;
-  height: 64rpx;
+  width: 74rpx;
+  height: 74rpx;
   margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .tui-grid-icon image {
   display: block;
-  width: 64rpx;
-  height: 64rpx;
 }
 
 .tui-grid-icon + .tui-grid-label {

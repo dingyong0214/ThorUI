@@ -1,0 +1,141 @@
+.tips{
+  background: #fff;
+  padding:50rpx 34rpx;
+  color: #555;
+  font-size: 24rpx;
+  line-height: 42rpx;
+  position: relative;
+}
+.tips::before{
+    content: '';
+  position: absolute;
+  border-top: 1rpx solid #eaeef1;
+  -webkit-transform: scaleY(0.5);
+  transform: scaleY(0.5);
+  top: 0;
+  right: 0;
+  left: 0;
+}
+
+/* .sticky-container{
+ position: relative;
+} */
+/* sticky 容器 start */
+.sticky-item{
+  width: 100%;
+  padding: 20rpx 30rpx;
+  background: #fafafa;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+/* sticky 容器 end */
+
+.date{
+  height: 54rpx;
+  font-size: 28rpx;
+  background: #fff;
+  padding: 0 28rpx;
+  border-radius: 25rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  /* box-shadow: 0 0 1rpx #7A7A7A; */
+}
+.date::after{
+  content: '';
+  position: absolute;
+  height: 200%;
+  width: 200%;
+  border:1rpx solid #eaeef1;
+  border-radius: 60rpx;
+   -webkit-transform-origin: 0 0;
+   transform-origin: 0 0;
+  -webkit-transform: scale(0.5);
+  transform: scale(0.5);
+  left: 0;
+  top: 0;
+}
+.amount{
+  text-align: right;
+  color: #7A7A7A;
+  font-size: 24rpx;
+}
+
+.list-view{
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+.list-view::after{
+  content: '';
+  position: absolute;
+  border-top: 1rpx solid #eaeef1;
+  -webkit-transform: scaleY(0.5);
+  transform: scaleY(0.5);
+  top: 0;
+  right: 0;
+  left: 0;
+}
+.list-item{
+  width:100%;
+  padding: 30rpx 28rpx;
+  box-sizing: border-box;
+  background: #fff;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.list-item::after{
+  left: 120rpx
+}
+.item-last::after{
+  left: 0 !important
+}
+.content-box{
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.logo{
+  width: 60rpx;
+  height: 60rpx;
+  flex-grow: 1
+}
+.des-box{
+  min-height: 130rpx;
+  padding-left:28rpx; 
+  box-sizing: border-box;
+  vertical-align: top;
+  color: #333;
+  font-size: 24rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.tit{
+  font-size: 32rpx;
+  max-width: 420rpx;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.time{
+  color: #888
+}
+.money{
+ font-size: 38rpx;
+ font-weight: 500;
+ color: #000;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-left: 20rpx;
+}
+.add{
+  color: #5677FC !important;
+}

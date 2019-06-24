@@ -1,10 +1,10 @@
 .tui-list-title{
   width: 100%;
-  padding: 25rpx 30rpx;
+  padding: 30rpx;
   box-sizing: border-box;
-  font-size: 28rpx;
-  line-height: 1;
-  color: #999;
+  font-size: 30rpx;
+  line-height: 30rpx;
+  color: #666;
 }
 .tui-list-content{
   width: 100%;

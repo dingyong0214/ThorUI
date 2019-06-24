@@ -1,7 +1,10 @@
+.tui-view{
+  padding-top: 40rpx !important
+}
 .tui-cell-name {
   padding-left: 20rpx;
   vertical-align: middle;
-  line-height: 1;
+  line-height: 30rpx;
 }
 .tui-list::after{
   left: 94rpx !important

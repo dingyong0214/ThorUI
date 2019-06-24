@@ -26,7 +26,7 @@
       <view class="current-city">
         <view class="title">定位城市</view>
         <view class="city-name">
-          <image src="../../static/images/maps/location.png" class="location"></image>
+          <tui-icon tui-icon-class="location" name="position-fill" color="#5677fc" size="18"></tui-icon>
           {{localCity}}
         </view>
       </view>

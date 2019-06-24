@@ -6,8 +6,9 @@
 }
 .title{
   padding: 30rpx 0;
-  font-size: 30rpx;
-  color: #333
+  font-size: 32rpx;
+  color: #333;
+  font-weight: bold;
 }
 .box{
   display: flex;
@@ -27,7 +28,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  font-size: 26rpx;
+  font-size: 30rpx;
 }
 .color{
    padding-top: 24rpx;

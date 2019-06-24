@@ -2,38 +2,38 @@
 //在 iOS 设备上小程序内的 wxs 会比 javascript 代码快 2 ~ 20 倍
 var wxs = {
   //转成数字
-  intParse: function (value) {
+  intParse: function(value) {
     return parseInt(value)
   },
-  floatParse: function (value) {
+  floatParse: function(value) {
     return parseFloat(value)
   },
-  rmoney:function(value){
+  rmoney: function(value) {
     //金额格式化
     return parseFloat(value).toFixed(2);
   },
-  formatDate: function (fdate, formatStr){
+  formatDate: function(fdate, formatStr) {
     //日期格式化
     if (fdate) {
       if (~fdate.indexOf('.')) {
         fdate = fdate.substring(0, fdate.indexOf('.'))
       }
-      var reg = getRegExp("/\-/","g")
+      var reg = getRegExp("/\-/", "g")
       fdate = fdate.toString().replace('T', ' ').replace(reg, '/')
       var fTime, fStr = 'ymdhis'
-      if (!formatStr){
+      if (!formatStr) {
         formatStr = "y-m-d h:i:s"
       }
-      if (fdate){
+      if (fdate) {
         fTime = getDate(fdate)
-      }else{
+      } else {
         fTime = getDate()
       }
       var month = fTime.getMonth() + 1
       var day = fTime.getDate()
       var hours = fTime.getHours()
       var minu = fTime.getMinutes()
-      var second = fTime.getSeconds() 
+      var second = fTime.getSeconds()
       month = month < 10 ? '0' + month : month
       day = day < 10 ? '0' + day : day
       hours = hours < 10 ? ('0' + hours) : hours
@@ -55,19 +55,37 @@ var wxs = {
       return ''
     }
   },
-  getLabelText:function(label){
-    return ["", "要闻", "朋友都看过", "本地资讯","互联网精英看过"][label];
+  getLabelText: function(label) {
+    return ["", "要闻", "朋友都看过", "本地资讯", "互联网精英看过"][label];
   },
-  getLabelCss: function (label) {
+  getLabelCss: function(label) {
     return ["", "b-red", "b-blue", "b-orange", "b-green"][label];
+  },
+  getRandom: function() {
+    var rnd = Math.floor(Math.random() * 6 + 1);
+    return rnd;
+  },
+  getArray: function(arr) {
+    var oddArr = [];
+    var evenArr = [];
+    arr.forEach(function(item, i) {
+      if ((i + 1) % 2 == 0) {
+        evenArr.push(item);
+      } else {
+        oddArr.push(item);
+      }
+    });
+    return oddArr.concat(evenArr);
   }
 }
 
 module.exports = {
   intParse: wxs.intParse,
   floatParse: wxs.floatParse,
-  rmoney:wxs.rmoney,
+  rmoney: wxs.rmoney,
   formatDate: wxs.formatDate,
   getLabelText: wxs.getLabelText,
-  getLabelCss: wxs.getLabelCss
+  getLabelCss: wxs.getLabelCss,
+  getRandom: wxs.getRandom,
+  getArray: wxs.getArray
 }

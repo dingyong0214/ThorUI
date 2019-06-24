@@ -16,6 +16,10 @@ Component({
     bold:{
       type:Boolean,
       value:false
+    },
+    visible:{
+      type: Boolean,
+      value: true
     }
   }
 });

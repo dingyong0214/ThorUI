@@ -37,6 +37,9 @@ Page({
         name: "search",
         size: 30
       }, {
+        name: "search-2",
+        size: 28
+      }, {
         name: "todown",
         size: 30
       }, {
@@ -239,7 +242,7 @@ Page({
         size: 30
       }, {
         name: "qrcode",
-        size: 26
+        size: 30
       }, {
         name: "coupon",
         size: 30
@@ -308,7 +311,7 @@ Page({
         size: 29
       }, {
         name: "delete",
-        size: 26
+        size: 25
       }, {
         name: "card",
         size: 34
@@ -515,6 +518,39 @@ Page({
         size: 30
       }, {
         name: "tool",
+        size: 30
+      }, {
+        name: "imface",
+        size: 28
+      }, {
+        name: "deletekey",
+        size: 30
+      }, {
+        name: "fingerprint",
+        size: 28
+      }, {
+        name: "warning",
+        size: 30
+      }, {
+        name: "soso",
+        size: 30
+      }, {
+        name: "satisfied",
+        size: 30
+      }, {
+        name: "dissatisfied",
+        size: 30
+      }, {
+        name: "pic",
+        size: 30
+      }, {
+        name: "pic-fill",
+        size: 30
+      }, {
+        name: "play",
+        size: 30
+      }, {
+        name: " ~~",
         size: 30
       }]
   },

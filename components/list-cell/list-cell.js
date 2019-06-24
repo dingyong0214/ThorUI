@@ -13,13 +13,13 @@ Component({
       type: Boolean,
       value: false //最后一条数据隐藏线条
     },
-    small: {
-      type: Boolean,
-      value: false //上下间距设小一点
-    }, 
+    bgcolor:{
+      type: String,
+      value: "#fff" //背景颜色
+    },
     size:{
       type: Number,
-      value: 30//字体大小
+      value: 32//字体大小
     },
     color: {
       type: String,

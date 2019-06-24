@@ -130,8 +130,6 @@ page {
 }
 
 .location {
-  width: 40rpx;
-  height: 40rpx;
   margin-right: 10rpx;
 }
 

@@ -5,8 +5,9 @@
 }
 .title{
   padding: 30rpx 0;
-  font-size: 30rpx;
-  color: #333
+  font-size: 32rpx;
+  color: #333;
+  font-weight: bold;
 }
 .tui-tag,.tui-tag-small,.tui-mrbtm{
   margin-bottom: 26rpx;

@@ -150,9 +150,8 @@ Page({
     })
   },
   detail(e) {
-    wx.showToast({
-      title: '详情功能尚未完善~',
-      icon: "none"
+    wx.navigateTo({
+      url: '../extend-view/newsDetail/newsDetail'
     })
   }
 })

@@ -1,0 +1,45 @@
+<view class="container">
+  <view class="tui-cmt-title">全部评论（501）</view>
+  <view class="tui-cmtbox">
+    <view class="tui-cmt-cell" wx:for="{{cmtList}}" wx:key="{{index}}">
+      <image src="../../../static/images/news/{{item.avatar}}" class="tui-avatar"></image>
+      <view class="tui-cmt-detail">
+        <view class="tui-header-box">
+          <view class="tui-cmt-nickname">{{item.nickname}}</view>
+          <view class="tui-fabulous {{item.isFabulous?'tui-primary':''}}" id="{{index}}" bindtap="cmtFabulous">{{item.fabulous==0?'赞':item.fabulous}}
+            <tui-icon name="{{item.isFabulous?'agree-fill':'agree'}}" size="15" color="{{item.isFabulous?'#5677fc':'#9a9a9a'}}"></tui-icon>
+          </view>
+        </view>
+        <view class="tui-cmt-content">
+          {{item.content}}
+        </view>
+        <view class="tui-reply-box" wx:if="{{item.replayNum>0}}">
+          <tui-list-cell tui-cell-class="tui-cell" bgcolor="#f2f2f2" size="28" wx:for-items="{{item.reply}}" wx:for-item="items" wx:key="{{index}}" last="{{item.replayNum<2 && item.reply.length-1==index}}" bindtap="cmtReply">
+            <view class="tui-flex-1 tui-reply-nickname">{{items.nickname}}</view>
+            <view class="tui-flex-1">{{items.content}}</view>
+          </tui-list-cell>
+          <tui-list-cell tui-cell-class="tui-cell" bgcolor="#f2f2f2" size="28" last="{{true}}" wx:if="{{item.replayNum>2}}" bindtap="cmtReply">
+            <view class="tui-flex-1  tui-cell-last">共{{item.replayNum}}条回复
+              <tui-icon name="arrowright" size="22" color="#5677fc" tui-icon-class="tui-arrow"></tui-icon>
+            </view>
+          </tui-list-cell>
+        </view>
+        <view class="tui-footer">
+          {{item.time}}
+          <view class="tui-primary tui-ml" hover-class="opcity" hover-start-time="150" bindtap="cmtReply">回复</view>
+        </view>
+      </view>
+    </view>
+
+  </view>
+
+  <view class="tui-operation">
+    <view class="tui-btn-comment" bindtap="btnCmt">发表你的评论...</view>
+  </view>
+
+  <!--加载loadding-->
+  <tui-loadmore visible="{{loadding}}" index="3" type="primary"></tui-loadmore>
+  <tui-nomore visible="{{!pullUpOn}}" bgcolor="#fff" text="没有更多评论"></tui-nomore>
+  <!--加载loadding-->
+
+</view>

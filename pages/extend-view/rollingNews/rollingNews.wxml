@@ -1,0 +1,45 @@
+<view class="container">
+  <view class='tui-notice-board'>
+    <view class="tui-icon-bg">
+      <tui-icon tui-icon-class="tui-rolling-icon" name-="news-fill" size='24' color='#f54f46'></tui-icon>
+    </view>
+    <view class="tui-scorll-view" bindtap='detail'>
+      <view class="tui-notice {{animation?'tui-animation':''}}">B站10分日本动漫已消失，9.9分仅剩12部，这一部动漫包揽三席！</view>
+    </view>
+  </view>
+
+  <view class="tui-subject">纵向滚动</view>
+  <view class="tui-rolling-news">
+    <tui-icon tui-icon-class="tui-rolling-icon" name-="news-fill" size='28' color='#5677fc'></tui-icon>
+    <swiper vertical="{{true}}" autoplay="{{true}}" circular="{{true}}" interval="3000" class="tui-swiper">
+      <swiper-item wx:for="{{newsList}}" wx:key="{{index}}" class="tui-swiper-item">
+        <view class="tui-news-item" bindtap='detail'>{{item}}</view>
+      </swiper-item>
+    </swiper>
+  </view>
+
+  <!--搜索框-->
+  <view class="tui-searchbox">
+
+    <view class="tui-rolling-search">
+      <!-- <icon type="search" class="tui-rolling-icon"  size='16' color='#999'></icon> -->
+      <tui-icon tui-icon-class="tui-rolling-icon" name-="search" size='18' color='#999'></tui-icon>
+      <swiper vertical="{{true}}" autoplay="{{true}}" circular="{{true}}" interval="3000" class="tui-swiper">
+        <swiper-item wx:for="{{hotSearch}}" wx:key="{{index}}" class="tui-swiper-item">
+          <view class="tui-news-item" bindtap='detail'>{{item}}</view>
+        </swiper-item>
+      </swiper>
+    </view>
+
+  </view>
+
+  <view class="tui-subject">横向滚动</view>
+  <view class="tui-rolling-news">
+    <tui-icon tui-icon-class="tui-rolling-icon" name-="news-fill" size='28' color='#5677fc'></tui-icon>
+    <swiper autoplay="{{true}}" circular="{{true}}" interval="3000" class="tui-swiper">
+      <swiper-item wx:for="{{newsList}}" key="{{index}}" class="tui-swiper-item">
+        <view class="tui-news-item" bindtap='detail'>{{item}}</view>
+      </swiper-item>
+    </swiper>
+  </view>
+</view>

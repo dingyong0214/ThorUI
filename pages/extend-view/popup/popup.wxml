@@ -1,0 +1,119 @@
+<view class="container">
+  <!--header-->
+  <view class="tui-header">
+    <view class="tui-header-top">
+      <view class="tui-top-item" bindtap="screen">综合</view>
+      <view class="tui-top-item" bindtap="screen">销量</view>
+      <view class="tui-top-item" bindtap="screen">
+        <view>价格</view>
+        <view class="tui-price-arrow">
+          <tui-icon name="turningup" size="12" tui-icon-class="tui-arrow tui-arrow-up" color="#444"></tui-icon>
+          <tui-icon name="turningdown" size="12" tui-icon-class="tui-arrow tui-arrow-down" color="#444"></tui-icon>
+        </view>
+      </view>
+      <view class="tui-top-item" bindtap="screen">
+        <text class="tui-bold">筛选</text>
+        <tui-icon name="screen" size="12" color="#5677fc" tui-icon-class="tui-ml" bold="{{true}}"></tui-icon>
+      </view>
+    </view>
+    <view class="tui-header-bottom">
+      <view class="tui-bottom-item {{proDropIndex==0?'tui-btmItem-active':''}} " data-index="0" bindtap="btnDropChange">
+        <view class="tui-bottom-text {{proDropIndex==0?'tui-active':''}}">品牌</view>
+        <tui-icon name="{{proDropIndex==0?'arrowup':'arrowdown'}}" size="14" color="{{proDropIndex==0?'#5677fc':'#444'}}" tui-icon-class="tui-ml"></tui-icon>
+      </view>
+      <view class="tui-bottom-item {{proDropIndex==1?'tui-btmItem-active':''}}" data-index="1" bindtap="btnDropChange">
+        <view class="tui-bottom-text {{proDropIndex==1?'tui-active':''}}">类型</view>
+        <tui-icon name="{{proDropIndex==1?'arrowup':'arrowdown'}}" size="14" color="{{proDropIndex==1?'#5677fc':'#444'}}" tui-icon-class="tui-ml"></tui-icon>
+      </view>
+      <view class="tui-bottom-item {{proDropIndex==2?'tui-btmItem-active':''}}" data-index="2" bindtap="btnDropChange">
+        <view class="tui-bottom-text {{proDropIndex==2?'tui-active':''}}">适用手机</view>
+        <tui-icon name="{{proDropIndex==2?'arrowup':'arrowdown'}}" size="14" color="{{proDropIndex==2?'#5677fc':'#444'}}" tui-icon-class="tui-ml"></tui-icon>
+      </view>
+    </view>
+
+  </view>
+
+  <!--header-->
+
+  <!--header 顶部下拉选择框-->
+
+  <tui-top-dropdown show="{{dropShow}}" paddingbtm="110" translatey="216" bind:close="btnCloseDrop">
+    <scroll-view class="tui-scroll-box" scroll-y scroll-top="{{scrollTop}}">
+      <view class="tui-seizeaseat-20"></view>
+      <view class="tui-drop-item {{item.selected?'tui-bold':''}}" wx:for="{{proDropData}}" wx:key="{{index}}" catchtap="btnSelected" data-index="{{index}}">
+        <tui-icon name="check" size="16" color="#5677fc" bold="{{true}}" visible="{{item.selected}}" tui-icon-class="tui-middle"></tui-icon>
+        <text class="tui-ml tui-middle">{{item.name}}</text>
+      </view>
+      <view class="tui-seizeaseat-30"></view>
+    </scroll-view>
+    <view class="tui-drop-btnbox">
+      <view class="tui-drop-btn btn-white" hover-class="tui-white-hover" hover-stay-time="150" bindtap="reset">重置</view>
+      <view class="tui-drop-btn btn-primary" hover-class="btn-hover" hover-stay-time="150" bindtap="btnCloseDrop">确定</view>
+    </view>
+  </tui-top-dropdown>
+  <!----header 顶部下拉选择框-->
+
+  <view class="top-dropdown">
+    <tui-button type="white" shape="circle" data-index="0" bindtap="btnDropChange">顶部下拉列表</tui-button>
+  </view>
+
+  <!---下拉选择框 dropdownlist--->
+  <view class="tui-drop-input-box">
+    <tui-dropdown-list show="{{dropdownShow}}" top="94" height="400">
+      <tui-button type="white" shape="circle" slot="selectionbox" bind:click="dropDownList">下拉选择框
+        <tui-icon name="turningdown" size="20" tui-icon-class="tui-animation {{dropdownShow?'tui-animation-show':''}}"></tui-icon>
+      </tui-button>
+      <view slot="dropdownbox" class="tui-selected-list">
+        <scroll-view scroll-y class="tui-dropdown-scroll">
+          <block wx:for="{{dropdownlist}}" wx:key="{{index}}">
+            <tui-list-cell tui-cell-class="tui-selected-item" bind:click="dropDownList" last="{{dropdownlist.length-1==index}}">
+              <tui-icon name="{{item.icon}}" size="{{item.size}}" color="{{item.color}}"></tui-icon>
+              <text class="tui-ml-20">{{item.name}}</text>
+            </tui-list-cell>
+          </block>
+        </scroll-view>
+      </view>
+    </tui-dropdown-list>
+  </view>
+  <!---下拉选择框--->
+
+  <view class="tui-share-box">
+    <tui-button type="white" shape="circle" bind:click="popup">底部分享弹窗</tui-button>
+  </view>
+
+
+  <!---底部分享弹窗-->
+  <tui-bottom-popup show="{{popupShow}}" bind:close="popup">
+    <view class="tui-share">
+      <view class="tui-share-title">分享到</view>
+      <scroll-view scroll-x>
+        <view class="tui-share-top">
+
+          <view class="tui-share-item {{shareList[0].share.length-1===index?'tui-item-last':''}}" wx:for="{{shareList[0].share}}" wx:key="{{index}}" bindtap="popup">
+            <view class="tui-share-icon" hover-class="tui-hover" hover-stay-time="150">
+              <tui-icon name="{{item.icon}}" color="{{item.color}}" size="36"></tui-icon>
+            </view>
+            <view class="tui-share-text">{{item.name}}</view>
+          </view>
+          <view class="tui-empty">!</view>
+        </view>
+      </scroll-view>
+
+
+      <scroll-view scroll-x class="tui-mt">
+        <view class="tui-share-bottom">
+          <view class="tui-share-item {{shareList[1].operate.length-1===index?'tui-item-last':''}}" wx:for="{{shareList[1].operate}}" wx:key="{{index}}" bindtap="popup">
+            <view class="tui-share-icon" hover-class="tui-hover" hover-stay-time="150">
+              <tui-icon name="{{item.icon}}" color="#404040" size="{{item.size}}" bold="{{index===2}}"></tui-icon>
+            </view>
+            <view class="tui-share-text">{{item.name}}</view>
+          </view>
+        </view>
+
+      </scroll-view>
+      <view class="tui-btn-cancle" bindtap="popup">取消</view>
+    </view>
+  </tui-bottom-popup>
+  <!---底部分享弹窗--->
+
+</view>

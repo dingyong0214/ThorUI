@@ -1,6 +1,7 @@
 {
   "pages": [
     "pages/index/index",
+    "pages/extend/extend",
     "pages/my/my",
     "pages/maps/maps",
     "pages/weather/weather",
@@ -12,23 +13,15 @@
     "pages/qrcode/qrcode",
     "pages/drawer/drawer",
     "pages/swipe-action/swipe-action",
-    "pages/luckdraw/luckdraw",
     "pages/navbar-1/navbar-1",
     "pages/navbar-2/navbar-2",
     "pages/news/news",
-    "pages/sticky/sticky",
     "pages/product/product",
     "pages/basic/basic",
-    "pages/msgtips/msgtips",
     "pages/location/location",
-    "pages/template/template",
     "pages/about/about",
     "pages/login/login",
-    "pages/log/log",
-    "pages/timeaxis/timeaxis",
-    "pages/keyboard/keyboard",
-    "pages/lockscreen/lockscreen"
-   
+    "pages/log/log"
   ],
   "subpackages": [
     {
@@ -46,6 +39,28 @@
         "grid/grid",
         "footer/footer",
         "other/other"
+      ]
+    },
+    {
+      "root": "pages/extend-view/",
+      "pages": [
+        "msgtips/msgtips",
+        "sticky/sticky",
+        "keyboard/keyboard",
+        "lockscreen/lockscreen",
+        "timeaxis/timeaxis",
+        "rollingNews/rollingNews",
+        "popup/popup",
+        "luckdraw/luckdraw",
+        "template/template",
+        "news/news",
+        "newsDetail/newsDetail",
+        "news-video/news-video",
+        "news-cmt/news-cmt",
+        "news-cmt-reply/news-cmt-reply",
+        "news-cmt-list/news-cmt-list",
+        "news-search/news-search",
+        "actionsheet/actionsheet"
       ]
     }
   ],
@@ -67,6 +82,12 @@
         "text": "code",
         "iconPath": "static/images/tabbar/code_gray.png",
         "selectedIconPath": "static/images/tabbar/code_active.png"
+      },
+      {
+        "pagePath": "pages/extend/extend",
+        "text": "extend",
+        "iconPath": "static/images/tabbar/extend_gray.png",
+        "selectedIconPath": "static/images/tabbar/extend_active.png"
       },
       {
         "pagePath": "pages/my/my",

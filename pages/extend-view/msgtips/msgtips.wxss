@@ -1,0 +1,73 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 60rpx 30rpx 100rpx 30rpx;
+  box-sizing: border-box;
+}
+
+.btn-primary {
+  margin-bottom: 40rpx;
+}
+
+.tui-subsection {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20rpx 0 80rpx 0;
+  border-radius: 10rpx;
+  overflow: hidden;
+  border: 0;
+  position: relative;
+}
+
+.tui-subsection::after {
+  content: "";
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  border: 1px solid #5677fc;
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
+  -webkit-transform: scale(0.5, 0.5);
+  transform: scale(0.5, 0.5);
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  left: 0;
+  top: 0;
+  border-radius: 20rpx;
+  z-index: -1;
+}
+
+.tui-subsection view {
+  flex: 1;
+  font-size: 28rpx;
+  text-align: center;
+  padding: 10rpx 30rpx;
+  color: #5677fc;
+  position: relative;
+}
+
+.tui-subsection view::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 1px;
+  border-right: 1px solid #5677fc;
+  -webkit-transform-origin: 100% 0;
+  transform-origin: 100% 0;
+  -webkit-transform: scaleX(0.5);
+  transform: scaleX(0.5);
+  right: 0;
+  top: 0;
+}
+
+.tui-subsection view:last-child::after {
+  border-right: 0;
+}
+
+.tui-subsection view.tui-active {
+  background: #5677fc;
+  color: #fff;
+}

@@ -1,8 +1,9 @@
 .tui-title{
-  padding: 30rpx 30rpx;
-  font-size: 30rpx;
+  padding: 50rpx 30rpx 30rpx 30rpx;
+  font-size: 32rpx;
   color: #333;
   box-sizing: border-box;
+  font-weight: bold;
 }
 .tui-grid-icon {
   width: 64rpx;

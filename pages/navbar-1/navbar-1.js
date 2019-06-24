@@ -1,6 +1,6 @@
 Page({
   data: {
-    tabbar: ["热门", "娱乐", "体育", "国内", "财经", "科技", "教育","汽车"],
+    tabbar: ["热门", "娱乐", "体育", "国内", "财经", "科技", "教育", "汽车"],
     winHeight: "", //窗口高度
     currentTab: 0, //预设当前项的值
     scrollLeft: 0 //tab标题的滚动条位置
@@ -32,7 +32,7 @@ Page({
       return false;
     } else {
       this.setData({
-        currentTab:cur
+        currentTab: cur
       })
     }
   },
@@ -49,10 +49,9 @@ Page({
       })
     }
   },
-  detail(e){
-   wx.showToast({
-     title: '详情功能尚未完善~',
-     icon:"none"
-   })
+  detail(e) {
+    wx.navigateTo({
+      url: '../extend-view/newsDetail/newsDetail'
+    })
   }
 })

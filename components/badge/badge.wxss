@@ -1,36 +1,36 @@
 /* color start*/
 
 .tui-primary {
-  background: #5677fc !important;
+  background: #5677fc;
   color: #fff;
 }
 .tui-danger {
-  background: #ed3f14 !important;
+  background: #ed3f14;
   color: #fff;
 }
 
 .tui-warning {
-  background: #ff7900 !important;
+  background: #ff7900;
   color: #fff;
 }
 
 .tui-green {
-  background: #19be6b !important;
+  background: #19be6b;
   color: #fff;
 }
 
 .tui-white {
-  background: #fff !important;
-  color: #333 !important;
+  background: #fff;
+  color: #333;
 }
 .tui-black {
-  background: #000 !important;
-  color: #fff !important;
+  background: #000;
+  color: #fff;
 }
 
 .tui-gray {
-  background: #ededed !important;
-  color: #999 !important;
+  background: #ededed;
+  color: #999;
 }
 
 /* color end*/
@@ -43,7 +43,6 @@
   border-radius: 8rpx;
   /* display: inline-block;
   vertical-align: middle; */
-  background: #5677fc;
   line-height: 1;
 }
 
@@ -54,8 +53,6 @@
   vertical-align: middle; */
   padding: 3px 6px;
   border-radius: 50px;
-  background: #5677fc;
-  color: #fff;
 }
 
 .tui-badge-small {

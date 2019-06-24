@@ -2,7 +2,7 @@ Page({
   data: {
     card: [{
       img: {
-        url: "/static/images/news/1.jpg"
+        url: "/static/images/news/avatar_1.jpg"
       },
       title: {
         text: "CSDN云计算"
@@ -11,20 +11,20 @@ Page({
         text: "1小时前"
       },
       header: {
-        bgcolor: "#ededed",
+        bgcolor: "#F7F7F7",
         line: true
       }
     },
     {
       img: {
-        url: "/static/images/news/2.jpg",
+        url: "/static/images/news/avatar_2.jpg",
         width: 80,
         height: 80,
         circle: true
       },
       title: {
         text: "CSDN云计算",
-        color: "#5677fc",
+        color: "#ed3f14",
         size: 34
       },
       tag: {
@@ -35,7 +35,7 @@ Page({
     },
     {
       img: {
-        url: "/static/images/news/4.jpg",
+        url: "/static/images/news/avatar_1.jpg",
         circle: true
       },
       title: {
@@ -46,7 +46,7 @@ Page({
       },
       header: {
         line: true,
-        bgcolor:"rgba(255,255,255,.7)"
+        bgcolor:"#F7F7F7"
       }
     },
     {

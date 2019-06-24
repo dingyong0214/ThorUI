@@ -13,9 +13,10 @@
 }
 
 .tui-title {
-  padding: 30rpx 0;
-  font-size: 30rpx;
+  padding: 55rpx 0 30rpx 0;
+  font-size: 32rpx;
   color: #333;
+  font-weight: bold
 }
 
 .tui-flex {
@@ -25,11 +26,9 @@
 .tui-triangle {
   margin-right: 30rpx;
 }
-
-.tui-chatbox-right {
-  margin-top: 30rpx;
+.tui-checkbox{
+  margin-left: 60rpx;
 }
-
-.tui-top30 {
-  margin-top: 30rpx;
+.tui-top40 {
+  margin-top: 40rpx;
 }
