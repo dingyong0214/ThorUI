@@ -1,6 +1,6 @@
 <view class="container">
   <view class="tui-header">功能开发中，敬请期待！最新完成：
-    <text class="tui-current" bindtap="currentStep">新闻模板</text>
+    <text class="tui-current" bindtap="currentStep">聊天模板</text>
   </view>
   <view class="tui-template">
     <tui-time-axis>

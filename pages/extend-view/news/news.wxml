@@ -4,7 +4,7 @@
       <icon type="search" size='13' color='#999'></icon>
       <swiper vertical="{{true}}" autoplay="{{true}}" circular="{{true}}" interval="8000" class="tui-swiper">
         <swiper-item wx:for="{{hotSearch}}" wx:key="{{index}}" class="tui-swiper-item" bindtap="search">
-          <view class="tui-hot-item" bindtap='detail'>大家正在搜：{{item}}</view>
+          <view class="tui-hot-item">大家正在搜：{{item}}</view>
         </swiper-item>
       </swiper>
     </view>

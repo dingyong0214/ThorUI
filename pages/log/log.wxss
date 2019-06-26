@@ -41,8 +41,11 @@
   background: #5c8dff;
   border: 1rpx solid #5c8dff;
   display: inline-block;
+}
+.tui-log-text{
   /* word-break: break-all;
-  word-wrap: break-word; */
+  word-wrap: break-word;
+  text-align: justify; */
 }
 
 .tui-content-log::before {

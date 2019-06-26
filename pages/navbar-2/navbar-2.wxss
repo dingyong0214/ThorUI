@@ -1,21 +1,65 @@
-page{
-  background: #fcfcfc
+page {
+  background: #fcfcfc;
 }
+
 /* 左侧导航布局 start*/
 
 /* 隐藏scroll-view滚动条*/
-::-webkit-scrollbar{
+
+::-webkit-scrollbar {
   width: 0;
   height: 0;
   color: transparent;
 }
 
-.tab-view {
-  height: 100%;
-  width: 200rpx;
+.tui-searchbox {
+  width: 100%;
+  height: 92rpx;
+  padding: 0 30rpx;
+  box-sizing: border-box;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: fixed;
   left: 0;
   top: 0;
+  z-index: 100;
+}
+
+.tui-searchbox::after {
+  content: '';
+  position: absolute;
+  border-bottom: 1rpx solid #d2d2d2;
+  -webkit-transform: scaleY(0.5);
+  transform: scaleY(0.5);
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+
+.tui-search-input {
+  width: 100%;
+  height: 60rpx;
+  background: #f1f1f1;
+  border-radius: 30rpx;
+  font-size: 26rpx;
+  color: #999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tui-search-text {
+  padding-left: 16rpx;
+}
+
+.tab-view {
+  /* height: 100%; */
+  width: 200rpx;
+  position: fixed;
+  left: 0;
+  top: 92rpx;
   z-index: 10;
 }
 
@@ -43,7 +87,7 @@ page{
 .active::before {
   content: "";
   position: absolute;
-  border-left: 8rpx solid #5677fc;
+  border-left: 8rpx solid #E41F19;
   height: 30rpx;
   left: 0;
 }
@@ -51,7 +95,7 @@ page{
 /* 左侧导航布局 end*/
 
 .right-box {
-  padding: 28rpx 20rpx 0 220rpx;
+  padding: 112rpx 20rpx 0 220rpx;
   box-sizing: border-box;
 }
 
@@ -63,6 +107,33 @@ page{
 .swiper {
   width: 100%;
   height: 220rpx;
+  border-radius: 12rpx;
+  overflow: hidden;
+  transform: translateZ(0);
+}
+
+.swiper .wx-swiper-dot {
+  width: 8rpx;
+  height: 8rpx;
+  display: inline-flex;
+  background: none;
+  justify-content: space-between;
+}
+
+.swiper .wx-swiper-dot::before {
+  content: '';
+  flex-grow: 1;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 16rpx;
+  overflow: hidden;
+}
+
+.swiper .wx-swiper-dot-active::before {
+  background: #fff;
+}
+
+.swiper .wx-swiper-dot.wx-swiper-dot-active {
+  width: 16rpx;
 }
 
 .slide-image {
@@ -80,7 +151,7 @@ page{
   box-sizing: border-box;
   padding: 20rpx;
   margin-bottom: 20rpx;
-  border-radius: 8rpx;
+  border-radius: 12rpx;
 }
 
 .class-name {
@@ -104,9 +175,9 @@ page{
 
 .g-image {
   width: 120rpx;
-  height: 120rpx
+  height: 120rpx;
 }
 
 .g-title {
-   font-size: 22rpx;
+  font-size: 22rpx;
 }

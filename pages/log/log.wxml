@@ -11,7 +11,7 @@
         <view slot="content">
           <view class="tui-content-log {{version==item.version?'':'tui-log-gray'}}">
             <view class="tui-version-date">{{logList.length-1==index?item.version:'V'+item.version}}（{{item.date}}）</view>
-            <view wx:for="{{item.log}}" wx:for-item="model" wx:key="{{index}}">{{model}}</view>
+            <view wx:for="{{item.log}}" wx:for-item="model" wx:key="{{index}}" class="tui-log-text">{{model}}</view>
           </view>
         </view>
       </tui-timeaxis-item>

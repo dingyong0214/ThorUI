@@ -85,8 +85,9 @@ page {
 
 .tui-banner-swiper .wx-swiper-dot {
   width: 8rpx;
-  display: inline-flex;
   height: 8rpx;
+  display: inline-flex;
+  background: none;
   justify-content: space-between;
 }
 
@@ -95,7 +96,6 @@ page {
   flex-grow: 1;
   background: rgba(255, 255, 255, 0.9);
   border-radius: 8rpx;
-  -webkit-border-radius: 8rpx;
 }
 
 .tui-banner-swiper .wx-swiper-dot-active::before {

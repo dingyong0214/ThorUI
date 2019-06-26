@@ -1,10 +1,10 @@
 <view class="page">
   <view class="page_hd">
-    <view class="page_title">
+    <view class="page_title" bindtap="mall">
       <image src="../../static/images/index/logo.png" class="logo"></image>
       <text class="title">Thor UI</text>
     </view>
-    <view class="page_desc">小程序代码片段分享，源码可去<text class="link" bindtap="github">GitHub</text>下载</view>
+    <view class="page_desc">小程序<text class="link" bindtap="mall">代码片段</text>分享，源码可去<text class="link" bindtap="github">GitHub</text>下载</view>
   </view>
   <view class="page_bd page_bd_spacing">
     <view class="kind-list">

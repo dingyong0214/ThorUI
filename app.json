@@ -1,6 +1,7 @@
 {
   "pages": [
     "pages/index/index",
+    "pages/aaa/aaa",
     "pages/extend/extend",
     "pages/my/my",
     "pages/maps/maps",
@@ -60,7 +61,14 @@
         "news-cmt-reply/news-cmt-reply",
         "news-cmt-list/news-cmt-list",
         "news-search/news-search",
-        "actionsheet/actionsheet"
+        "actionsheet/actionsheet",
+        "mall/mall",
+        "msgList/msgList",
+        "chat/chat",
+        "friendsList/friendsList",
+        "userInfo/userInfo",
+        "productList/productList",
+        "productDetail/productDetail"
       ]
     }
   ],

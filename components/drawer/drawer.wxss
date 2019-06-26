@@ -27,7 +27,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  z-index: 6;
+  z-index: 8888;
   background: rgba(0, 0, 0, 0.6);
   transition: all 0.3s ease-in-out;
 }
@@ -40,7 +40,7 @@
   transform: translate3d(-50%, -50%, 0);
   transform-origin: center;
   transition: all 0.3s ease-in-out;
-  z-index: 7;
+  z-index: 99999;
   opacity: 0;
   overflow-y: scroll;
   background: #fff;

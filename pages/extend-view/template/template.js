@@ -10,21 +10,21 @@ Page({
     }, {
       name: "新闻模板",
       state: 1,
-      stateText: "（已完成）",
+      stateText: "（100%）",
       desc: ["新闻模板包含：新闻列表，新闻详情，评论等"],
       page: "news"
     }, {
-      name: "商城模板",
-      state: 0,
-      stateText: "（开发中~）",
-      desc: ["商城模板包含：商品列表，商品搜索，商品详情，购物车，结算页面，我的订单等"],
-      page: "mall"
-    }, {
       name: "聊天模板",
-      state: 0,
-      stateText: "（开发中~）",
+      state: 1,
+      stateText: "（100%）",
       desc: ["聊天模板包含：消息列表，好友列表，聊天界面，用户信息等"],
       page: "msgList"
+    }, {
+      name: "商城模板",
+      state: 0,
+      stateText: "（进度50%）",
+      desc: ["商城模板包含：商品列表，商品搜索，商品详情，购物车，结算页面，我的订单等"],
+      page: "mall"
     }, {
       name: "其它模板",
       state: 0,
@@ -38,10 +38,9 @@ Page({
   },
   template: function(e) {
     let index = e.currentTarget.dataset.index;
-    console.log(index)
     let state = this.data.stepList[index].state;
     let page = this.data.stepList[index].page;
-    if (state == 1) {
+    if (state == 1 || index==3) {
       wx.navigateTo({
         url: `../${page}/${page}`
       })
@@ -51,7 +50,7 @@ Page({
   },
   currentStep: function() {
     wx.navigateTo({
-      url: '../news/news'
+      url: '../msgList/msgList'
     })
   }
 })

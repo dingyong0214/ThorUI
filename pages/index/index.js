@@ -87,7 +87,7 @@ Page({
             page: "navbar-1"
           },
           {
-            name: "垂直导航",
+            name: "垂直分类",
             page: "navbar-2"
           }
         ]
@@ -138,6 +138,11 @@ Page({
           }
         })
       }
+    })
+  },
+  mall:function(){
+    wx.navigateTo({
+      url: '../extend-view/mall/mall'
     })
   }
 });

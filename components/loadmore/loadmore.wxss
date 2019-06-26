@@ -95,7 +95,7 @@
   border-color: #e5e5e5 #e5e5e5 #e5e5e5 #5677fc;
 }
 
-.tui-loading-3.tui-loading-red {
+.tui-loading-3.tui-loading-green {
   border-color: #e5e5e5 #e5e5e5 #e5e5e5 #19be6b;
 }
 
@@ -103,7 +103,7 @@
   border-color: #e5e5e5 #e5e5e5 #e5e5e5 #ff7900;
 }
 
-.tui-loading-3.tui-loading-green {
+.tui-loading-3.tui-loading-red {
   border-color: #ededed #ededed #ededed #ed3f14;
 }
 

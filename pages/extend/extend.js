@@ -28,27 +28,37 @@ Page({
       like: false
     }, {
       name: "弹层下拉选择",
-        desc: "包含顶部下拉选择列表、输入框下拉选择以及底部分享弹层。",
+      desc: "包含顶部下拉选择列表、输入框下拉选择以及底部分享弹层。",
       page: "popup",
       like: false
-      }, {
-        name: "ActionSheet",
-        desc: "操作菜单:可加入提示信息，可单独设置字体样式。",
-        page: "actionsheet",
-        like: false
-      }, {
-        name: "新闻模板",
-        desc: "新闻模板包含：新闻列表，新闻详情，评论等。",
-        page: "news",
-        like: false
-      }, {
+    }, {
+      name: "ActionSheet",
+      desc: "操作菜单:可加入提示信息，可单独设置字体样式。",
+      page: "actionsheet",
+      like: false
+    }, {
+      name: "新闻模板",
+      desc: "新闻模板包含：新闻列表，新闻详情，评论等。",
+      page: "news",
+      like: false
+    }, {
+      name: "聊天模板",
+      desc: "聊天模板包含：消息列表，好友列表，聊天界面，用户信息等。",
+      page: "msgList",
+      like: false
+    }, {
+      name: "商城模板",
+      desc: "商城模板包含：商城首页，商城列表，商城详情等。开发中~",
+      page: "mall",
+      like: false
+    }, {
       name: "抽奖转盘",
       desc: "抽奖转盘，例子使用随机值进行抽奖，可以指定中奖奖项。",
       page: "luckdraw",
       like: false
     }, {
       name: "模板",
-      desc: "计划前三套模板：新闻，商城，聊天。敬请期待！",
+      desc: "计划前三套模板：新闻，聊天，商城。敬请期待！",
       page: "template",
       like: false
     }]
