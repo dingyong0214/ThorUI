@@ -38,6 +38,7 @@ ThorUI组件库，微信小程序代码片段分享
 
 6.已知bug修复，以及部分功能优化
 
+## 赞赏
 
 ![image](https://thorui.cn/img/reward_small.jpg)
 
@@ -45,26 +46,12 @@ ThorUI组件库，微信小程序代码片段分享
 #  商城模板部分截图
 
 
-![image](https://thorui.cn/img/mall/1.png)
-
-![image](https://thorui.cn/img/mall/2.png)
-
-![image](https://thorui.cn/img/mall/3.png)
-
-![image](https://thorui.cn/img/mall/4.png)
-
-![image](https://thorui.cn/img/mall/5.png)
-
-![image](https://thorui.cn/img/mall/6.png)
-
-![image](https://thorui.cn/img/mall/7.png)
-
-![image](https://thorui.cn/img/mall/8.png)
-
-![image](https://thorui.cn/img/mall/9.png)
-
-![image](https://thorui.cn/img/mall/10.png)
+| ![商城首页](https://thorui.cn/img/mall/1.png "商城首页")  | ![](https://thorui.cn/img/mall/2.png)  | ![](https://thorui.cn/img/mall/3.png)  |  ![](https://thorui.cn/img/mall/4.png) |
+| ------------ | ------------ | ------------ | ------------ |
+| ![](https://thorui.cn/img/mall/5.png)  |  ![](https://thorui.cn/img/mall/6.png) |   ![](https://thorui.cn/img/mall/7.png)| ![](https://thorui.cn/img/mall/8.png)  |
+|   ![](https://thorui.cn/img/mall/9.png)|  ![](https://thorui.cn/img/mall/10.png) |   |   |
 
 
+## 赞赏
 
 ![image](https://thorui.cn/img/reward_small.jpg)
