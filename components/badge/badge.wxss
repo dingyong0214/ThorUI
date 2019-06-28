@@ -8,6 +8,10 @@
   background: #ed3f14;
   color: #fff;
 }
+.tui-red {
+  background: #ff201f;
+  color: #fff;
+}
 
 .tui-warning {
   background: #ff7900;

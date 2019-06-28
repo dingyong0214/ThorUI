@@ -2,448 +2,502 @@ page {
   background: #f7f7f7;
 }
 
-/* 隐藏scroll-view滚动条*/
-
-::-webkit-scrollbar {
-  width: 0;
-  height: 0;
-  color: transparent;
+.container {
+  padding-bottom: 110rpx;
 }
 
 .tui-header-box {
   width: 100%;
-  background: #fff;
   position: fixed;
-  z-index: 99998;
   left: 0;
   top: 0;
+  z-index: 9998;
 }
 
 .tui-header {
+  width: 100%;
+  font-size: 18px;
+  line-height: 18px;
+  font-weight: 500;
+  height: 32px;
   display: flex;
-  align-items: flex-start;
+  align-items: center;
+  justify-content: center;
 }
 
-.tui-back {
-  margin-left: 8rpx;
+.tui-header-icon {
+  position: fixed;
+  left: 10px;
+  top: 0;
+  display: flex;
+  align-items: flex-start;
+  height: 32px;
+  transform: translateZ(0);
+  z-index: 99999;
+}
+
+.tui-badge {
+  background: #e41f19 !important;
+  position: absolute;
+  right: -4px;
+}
+
+.tui-icon-ml {
+  margin-left: 20rpx;
+}
+
+.tui-icon {
+  height: 32px !important;
+  width: 32px !important;
+  border-radius: 16px;
+}
+
+.tui-icon-back {
   height: 32px !important;
   width: 32px !important;
   display: block !important;
 }
 
-.tui-searchbox {
-  width: 100%;
-  height: 30px;
-  margin-right: 20rpx;
-  border-radius: 15px;
-  font-size: 12px;
-  background: #f7f7f7;
-  padding: 3px 10px;
-  box-sizing: border-box;
-  color: #999;
-  display: flex;
-  align-items: center;
-  overflow: hidden;
+.tui-icon-more {
+  height: 20px !important;
+  width: 20px !important;
+  padding: 6px !important;
+  display: block !important;
 }
 
-.tui-search-text {
-  padding-left: 16rpx;
-}
-
-.tui-search-key {
-  max-width: 80%;
-  height: 100%;
-  padding: 0 16rpx;
-  margin-left: 12rpx;
-  display: flex;
-  align-items: center;
-  border-radius: 15px;
-  background: rgba(0, 0, 0, 0.5);
-  color: #fff;
-  /* transform: scale(0.9);
-  transform-origin: 0 center; */
-}
-
-.tui-key-text {
-  box-sizing: border-box;
-  padding-right: 12rpx;
-  font-size: 12px;
-  line-height: 12px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-/*screen*/
-
-.tui-header-screen {
-  width: 100%;
-  box-sizing: border-box;
-  background: #fff;
-  position: fixed;
-  z-index: 1000;
-}
-
-.tui-screen-top, .tui-screen-bottom {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  font-size: 28rpx;
-  color: #333;
-}
-
-.tui-screen-top {
-  height: 88rpx;
+.tui-banner-swiper {
   position: relative;
-  background: #fff;
 }
 
-.tui-top-item {
-  height: 28rpx;
-  line-height: 28rpx;
-  flex: 1;
+.tui-tag-banner {
+  position: absolute;
+  color: #fff;
+  bottom: 30rpx;
+  right: 0;
+}
+
+.tui-slide-image {
+  width: 100%;
+  display: block;
+}
+
+/*顶部菜单*/
+
+.tui-menu-box {
+  box-sizing: border-box;
+}
+
+.tui-menu-header {
+  font-size: 34rpx;
+  color: #fff;
+  height: 32px;
   display: flex;
   align-items: center;
-  justify-content: center;
 }
 
-.tui-topitem-active {
-  color: #e41f19;
+.tui-top-dropdown {
+  z-index: 9999 !important;
 }
 
-.tui-screen-bottom {
-  height: 100rpx;
-  padding: 0 30rpx;
+.tui-menu-itembox {
+  color: #fff;
+  padding: 40rpx 10rpx 0 10rpx;
   box-sizing: border-box;
-  font-size: 24rpx;
-  align-items: center;
-  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 26rpx;
 }
 
-.tui-bottom-text {
-  line-height: 24rpx;
-  max-width: 82%;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-.tui-bottom-item {
-  flex: 1;
-  width: 0;
+.tui-menu-item {
+  width: 22%;
+  height: 160rpx;
+  border-radius: 24rpx;
   display: flex;
   align-items: center;
+  flex-direction: column;
   justify-content: center;
-  padding: 0 12rpx;
-  box-sizing: border-box;
-  background: #f7f7f7;
-  margin-right: 20rpx;
-  white-space: nowrap;
-  height: 60rpx;
-  border-radius: 40rpx;
+  background: rgba(0, 0, 0, 0.4);
+  margin-right: 4%;
+  margin-bottom: 4%;
 }
 
-.tui-bottom-item:last-child {
+.tui-menu-item:nth-of-type(4n) {
   margin-right: 0;
 }
 
-.tui-btmItem-active {
-  background: #fcedea !important;
-  color: #e41f19;
+.tui-badge-box {
+  position: relative;
+}
+
+.tui-menu-badge {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+}
+
+.tui-msg-badge {
+  top: -10px;
+}
+
+.tui-icon-up {
+  position: relative;
+  display: inline-block;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.tui-menu-text {
+  padding-top: 12rpx;
+}
+
+.tui-opcity .tui-menu-text, .tui-opcity .tui-badge-box {
+  opacity: 0.5;
+  transition: opacity 0.2s ease-in-out;
+}
+
+/*顶部菜单*/
+
+/*内容 部分*/
+
+.tui-padding {
+  padding: 0 30rpx;
+  box-sizing: border-box;
+}
+
+.tui-size {
+  font-size: 24rpx;
+  line-height: 24rpx;
+}
+
+.tui-gray {
+  color: #999;
+}
+
+.tui-red {
+  color: #ff201f;
+}
+
+.tui-border-radius {
+  border-bottom-left-radius: 24rpx;
+  border-bottom-right-radius: 24rpx;
+  overflow: hidden;
+}
+
+.tui-radius-all {
+  border-radius: 24rpx;
+  overflow: hidden;
+}
+
+.tui-mtop {
+  margin-top: 26rpx;
+}
+
+.tui-pro-detail {
+  box-sizing: border-box;
+  color: #333;
+}
+
+.tui-product-title {
+  background: #fff;
+  padding: 30rpx 0;
+}
+
+.tui-pro-pricebox {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #ff201f;
+  font-size: 36rpx;
   font-weight: bold;
+  line-height: 44rpx;
+}
+
+.tui-pro-price {
+  display: flex;
+  align-items: center;
+}
+
+.tui-price {
+  font-size: 58rpx;
+}
+
+.tui-original-price {
+  font-size: 26rpx;
+  line-height: 26rpx;
+  padding: 10rpx 30rpx;
+  box-sizing: border-box;
+}
+
+.tui-line-through {
+  text-decoration: line-through;
+}
+
+.tui-collection {
+  color: #333;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  height: 44rpx;
+}
+
+.tui-scale {
+  transform: scale(0.7);
+  transform-origin: center center;
+  line-height: 24rpx;
+  font-weight: normal;
+}
+
+.tui-icon-collection {
+  line-height: 20px !important;
+  margin-bottom: 0 !important;
+}
+
+.tui-pro-titbox {
+  font-size: 32rpx;
+  font-weight: 500;
   position: relative;
+  padding: 0 150rpx 0 30rpx;
+  box-sizing: border-box;
 }
 
-.tui-btmItem-active::after {
-  content: "";
+.tui-pro-title {
+  padding-top: 20rpx;
+}
+.tui-share-btn {
+  display: block;
+  background: none;
+  margin: 0;
+  padding: 0;
+  border-radius: 0
+}
+
+.tui-tag-share {
+  display: flex;
+  align-items: center;
+}
+
+.tui-share-position {
   position: absolute;
-  border: 1rpx solid #e41f19;
-  width: 100%;
-  height: 100%;
-  border-radius: 40rpx;
+  right: 0;
+  top: 30rpx;
 }
 
-.tui-btmItem-tap {
+.tui-share-text {
+  padding-left: 8rpx;
+}
+
+.tui-sub-title {
+  padding: 20rpx 0;
+}
+
+.tui-sale-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 30rpx;
+}
+
+.tui-discount-box {
+  background: #fff;
+}
+
+.tui-list-cell {
   position: relative;
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
+  display: flex;
+  align-items: center;
+  font-size: 26rpx;
+  line-height: 26rpx;
+  padding: 36rpx 30rpx;
+  box-sizing: border-box;
 }
 
-.tui-btmItem-tap::after {
-  content: "";
+.tui-right {
   position: absolute;
-  width: 100%;
-  height: 22rpx;
-  background: #f7f7f7;
-  left: 0;
-  top: 58rpx;
+  right: 30rpx;
+  top: 30rpx;
+}
+
+.tui-top40 {
+  top: 40rpx !important;
 }
 
 .tui-bold {
   font-weight: bold;
 }
 
-.tui-active {
-  color: #e41f19;
-}
-
-.tui-ml {
-  margin-left: 6rpx;
-}
-
-.tui-seizeaseat-20 {
-  height: 20rpx;
-}
-
-.tui-seizeaseat-30 {
-  height: 30rpx;
-}
-
-.tui-middle {
-  vertical-align: middle;
-}
-
-/*screen*/
-
-/*顶部下拉选择 属性*/
-
-.tui-scroll-box {
-  width: 100%;
-  height: 480rpx;
-  box-sizing: border-box;
-  position: relative;
-  z-index: 99;
-  color: #fff;
-  font-size: 30rpx;
-  word-break: break-all;
-}
-
-.tui-drop-item {
-  color: #333;
-  height: 80rpx;
-  font-size: 28rpx;
-  padding: 20rpx 40rpx 20rpx 40rpx;
-  box-sizing: border-box;
-  display: inline-block;
-  width: 50%;
-}
-
-.tui-drop-btnbox {
-  width: 100%;
-  height: 100rpx;
+.tui-list-cell::after {
+  content: '';
   position: absolute;
-  left: 0;
+  border-bottom: 1rpx solid #eaeef1;
+  -webkit-transform: scaleY(0.5);
+  transform: scaleY(0.5);
   bottom: 0;
-  box-sizing: border-box;
-  display: flex;
-}
-
-.tui-drop-btn {
-  width: 50%;
-  font-size: 32rpx;
-  text-align: center;
-  height: 100rpx;
-  line-height: 100rpx;
-  border: 0;
-}
-
-.tui-btn-red {
-  background: #e41f19;
-  color: #fff;
-}
-
-.tui-red-hover {
-  background: #c51a15 !important;
-  color: #e5e5e5;
-}
-
-.tui-btn-white {
-  background: #fff;
-  color: #333;
-}
-
-.tui-white-hover {
-  background: #e5e5e5;
-  color: #2e2e2e;
-}
-
-/*顶部下拉选择 属性*/
-
-/*顶部下拉选择 综合*/
-
-.tui-dropdownlist {
-  width: 100%;
-  position: absolute;
-  background: #fff;
-  border-bottom-left-radius: 24rpx;
-  border-bottom-right-radius: 24rpx;
-  overflow: hidden;
-  box-sizing: border-box;
-  padding-top: 10rpx;
-  padding-bottom: 26rpx;
-  left: 0;
-  top: 88rpx;
-  visibility: hidden;
-  transition: all 0.2s ease-in-out;
-  z-index: 999;
-}
-
-.tui-dropdownlist-show {
-  visibility: visible;
-}
-
-.tui-dropdownlist-mask {
-  position: fixed;
-  top: 0;
-  left: 0;
   right: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.6);
-  z-index: -1;
-  transition: all 0.2s ease-in-out;
-  opacity: 0;
-  visibility: hidden;
+  left: 126rpx;
 }
 
-.tui-mask-show {
-  opacity: 1;
-  visibility: visible;
+.tui-last::after {
+  border-bottom: 0 !important;
 }
 
-.tui-dropdownlist-item {
-  color: #333;
-  height: 70rpx;
-  font-size: 28rpx;
-  padding: 0 40rpx;
-  box-sizing: border-box;
+.tui-tag-coupon-box {
   display: flex;
   align-items: center;
-  justify-content: space-between;
 }
 
-/*顶部下拉选择 综合*/
-
-/* .tui-drawer-scroll {
-  height: 100%;
-} */
-
-.tui-drawer-box {
-  width: 686rpx;
-  font-size: 24rpx;
-  overflow: hidden;
-  position: relative;
-  padding-bottom: 100rpx;
+.tui-tag-coupon {
+  margin-right: 20rpx;
 }
 
-.tui-drawer-title {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 30rpx;
-  box-sizing: border-box;
-  height: 80rpx;
-}
-
-.tui-title-bold {
-  font-size: 26rpx;
-  font-weight: bold;
+.tui-cell-title {
+  width: 66rpx;
+  padding-right: 30rpx;
   flex-shrink: 0;
 }
 
-.tui-location {
-  margin-right: 6rpx;
-}
-
-.tui-attr-right {
-  width: 70%;
+.tui-promotion-box {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  text-align: right;
+  padding: 10rpx 0;
+  width: 74%;
 }
 
-.tui-all-box {
-  width: 90%;
-  white-space: nowrap;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
+.tui-inline-block {
+  display: inline-block !important;
+  transform: scale(0.8);
+  transform-origin: 0 center;
 }
 
-.tui-drawer-content {
-  padding: 16rpx 30rpx 30rpx 30rpx;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  box-sizing: border-box;
-}
-
-.tui-input {
-  border: 0;
-  height: 64rpx;
-  border-radius: 32rpx;
-  width: 45%;
-  background: #f7f7f7;
-  text-align: center;
-  font-size: 24rpx;
-  color: #333;
-}
-
-.tui-phcolor {
-  text-align: center;
-  color: #b2b2b2;
-  font-size: 24rpx;
-}
-
-.tui-flex-attr {
-  flex-wrap: wrap;
-  justify-content: flex-start;
-}
-
-.tui-attr-item {
-  width: 30%;
-  height: 64rpx;
-  background: #f7f7f7;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0 4rpx;
-  box-sizing: border-box;
-  border-radius: 32rpx;
-  margin-right: 5%;
-  margin-bottom: 5%;
-}
-
-.tui-attr-ellipsis {
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  width: 96%;
-  text-align: center;
-}
-
-.tui-attr-item:nth-of-type(3n) {
-  margin-right: 0%;
-}
-
-.tui-attr-btnbox {
-  width: 100%;
-  position: absolute;
-  height: 100rpx;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  left: 0;
-  bottom: 0;
-  box-sizing: border-box;
-  padding: 0 30rpx;
+.tui-basic-info {
   background: #fff;
 }
 
-.tui-attr-btnbox::before {
+.tui-addr-box {
+  width: 76%;
+}
+
+.tui-addr-item {
+  padding: 10rpx;
+  line-height: 34rpx;
+}
+
+.tui-guarantee {
+  background: #fdfdfd;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20rpx 30rpx 30rpx 30rpx;
+  font-size: 24rpx;
+}
+
+.tui-guarantee-item {
+  color: #999;
+  padding-right: 30rpx;
+  padding-top: 10rpx;
+}
+
+.tui-pl {
+  padding-left: 4rpx;
+}
+
+.tui-cmt-box {
+  background: #fff;
+}
+
+.tui-between {
+  justify-content: space-between !important;
+}
+
+.tui-cmt-all {
+  color: #ff201f;
+  padding-right: 8rpx;
+}
+
+.tui-cmt-content {
+  font-size: 26rpx;
+}
+
+.tui-cmt-user {
+  display: flex;
+  align-items: center;
+}
+
+.tui-acatar {
+  width: 60rpx;
+  height: 60rpx;
+  border-radius: 30rpx;
+  display: block;
+  margin-right: 16rpx;
+}
+
+.tui-cmt {
+  padding: 14rpx 0;
+}
+
+.tui-attr {
+  font-size: 24rpx;
+  color: #999;
+  padding: 6rpx 0;
+}
+
+.tui-cmt-btn {
+  padding: 50rpx 0 30rpx 0;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tui-tag-cmt {
+  min-width: 130rpx;
+  padding: 20rpx 52rpx !important;
+  font-size: 26rpx !important;
+  display: inline-block;
+}
+
+.tui-nomore-box {
+  padding-top: 10rpx;
+}
+
+.tui-product-img {
+  transform: translateZ(0);
+}
+
+.tui-product-img image {
+  width: 100%;
+  display: block;
+}
+
+/*底部操作栏*/
+
+.tui-col-7 {
+  width: 58.33333333%;
+}
+
+.tui-col-5 {
+  width: 41.66666667%;
+}
+
+.tui-operation {
+  width: 100%;
+  height: 100rpx;
+  box-sizing: border-box;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.98);
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 10;
+  bottom: 0;
+  left: 0;
+}
+
+.tui-operation::before {
   content: '';
   position: absolute;
-  top: 0;
+  top: 0px;
   right: 0;
   left: 0;
   border-top: 1rpx solid #eaeef1;
@@ -451,113 +505,180 @@ page {
   transform: scaleY(0.5);
 }
 
-.tui-drawer-btn {
-  width: 47%;
-  text-align: center;
-  height: 60rpx;
-  border-radius: 30rpx;
-  flex-shrink: 0;
+.tui-operation-left {
+  display: flex;
+  align-items: center;
+}
+
+.tui-operation-item {
+  flex: 1;
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
+  position: relative;
+}
+
+.tui-operation-text {
+  font-size: 22rpx;
+  color: #333;
+}
+
+.tui-opacity {
+  opacity: 0.5;
+}
+
+.tui-scale-small {
+  transform: scale(0.9);
+  transform-origin: center center;
+}
+
+.tui-operation-right {
+  height: 100rpx;
   box-sizing: border-box;
+  padding-top: 0;
 }
 
-.tui-drawerbtn-black {
-  border: 1rpx solid #555;
-}
-
-.tui-drawerbtn-primary {
-  background: #e41f19;
-  color: #fff;
-}
-
-/* 商品列表*/
-
-.tui-product-list {
+.tui-right-flex {
   display: flex;
-  justify-content: space-between;
-  flex-direction: row;
-  flex-wrap: wrap;
-  box-sizing: border-box;
+  align-items: center;
+  justify-content: center;
 }
 
-.tui-product-container {
+.tui-btn-equals {
+  width: 90% !important;
+  display: block !important;
+  font-size: 28rpx !important;
+}
+
+.tui-badge-class {
+  position: absolute;
+  top: -6rpx;
+}
+
+.tui-flex-1 {
   flex: 1;
-  margin-right: 10rpx;
 }
 
-.tui-product-container:last-child {
-  margin-right: 0;
+/*底部操作栏*/
+
+/*底部选择弹层*/
+
+.tui-popup {
+  border-top-left-radius: 24rpx;
+  border-top-right-radius: 24rpx;
 }
 
-.tui-pro-item {
+.tui-popup-box {
+  position: relative;
+  padding: 30rpx 0 100rpx 0;
+}
+
+.tui-popup-btn {
   width: 100%;
-  margin-bottom: 10rpx;
-  background: #fff;
-  box-sizing: border-box;
-  border-radius: 12rpx;
-  overflow: hidden;
-  transition: all 0.2s ease-in-out;
+  position: absolute;
+  left: 0;
+  bottom: 0;
 }
 
-.tui-flex-list {
+.tui-icon-close {
+  position: absolute;
+  top: 30rpx;
+  right: 30rpx;
+}
+
+.tui-product-box {
   display: flex;
-  margin-bottom: 1rpx !important;
+  align-items: flex-end;
+  font-size: 24rpx;
+  padding-bottom: 30rpx;
 }
 
-.tui-pro-img {
-  width: 100%;
+.tui-popup-img {
+  height: 200rpx;
+  width: 200rpx;
+  border-radius: 24rpx;
   display: block;
 }
 
-.tui-proimg-list {
-  width: 260rpx;
-  height: 260rpx;
-  flex-shrink: 0;
-  border-radius: 12rpx;
+.tui-popup-price {
+  padding-left: 20rpx;
+  padding-bottom: 8rpx;
 }
 
-.tui-pro-content {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  box-sizing: border-box;
-  padding: 20rpx;
+.tui-amount {
+  color: #ff201f;
+  font-size: 36rpx;
 }
 
-.tui-pro-tit {
-  color: #2e2e2e;
+.tui-number {
+  font-size: 24rpx;
+  line-height: 24rpx;
+  padding-top: 12rpx;
+  color: #999;
+}
+
+.tui-popup-scroll {
+  height: 600rpx;
   font-size: 26rpx;
-  word-break: break-all;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 2;
 }
 
-.tui-pro-price {
-  padding-top: 18rpx;
+.tui-scrollview-box {
+  padding: 0 30rpx 60rpx 30rpx;
+  box-sizing: border-box;
 }
 
-.tui-sale-price {
-  font-size: 34rpx;
-  font-weight: 500;
+.tui-attr-title {
+  padding: 10rpx 0;
+  color: #333;
+}
+
+.tui-attr-box {
+  font-size: 0;
+  padding: 20rpx 0;
+}
+
+.tui-attr-item {
+  max-width: 100%;
+  min-width: 200rpx;
+  height: 64rpx;
+  display: -webkit-inline-flex;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #f7f7f7;
+  padding: 0 26rpx;
+  box-sizing: border-box;
+  border-radius: 32rpx;
+  margin-right: 20rpx;
+  margin-bottom: 20rpx;
+  font-size: 26rpx;
+}
+
+.tui-attr-active {
+  background: #fcedea !important;
   color: #e41f19;
+  font-weight: bold;
+  position: relative;
 }
 
-.tui-factory-price {
-  font-size: 24rpx;
-  color: #a0a0a0;
-  text-decoration: line-through;
-  padding-left: 12rpx;
+.tui-attr-active::after {
+  content: "";
+  position: absolute;
+  border: 1rpx solid #e41f19;
+  width: 100%;
+  height: 100%;
+  border-radius: 40rpx;
+  left: 0;
+  top: 0;
 }
 
-.tui-pro-pay {
-  padding-top: 10rpx;
-  font-size: 24rpx;
-  color: #656565;
+.tui-number-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20rpx 0 30rpx 0;
+  box-sizing: border-box;
 }
 
-/* 商品列表*/
+/*底部选择弹层*/

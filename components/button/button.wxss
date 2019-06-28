@@ -10,6 +10,11 @@
   color: #fff;
 }
 
+.tui-red {
+  background: #e41f19 !important;
+  color: #fff;
+}
+
 .tui-warning {
   background: #ff7900 !important;
   color: #fff;
@@ -112,6 +117,20 @@
 
 .tui-danger-outline::after {
   border: 1px solid #ed3f14 !important;
+}
+
+.tui-red-hover {
+  background: #c51a15 !important;
+  color: #e5e5e5 !important;
+}
+
+.tui-red-outline {
+  color: #e41f19 !important;
+  background: none;
+}
+
+.tui-red-outline::after {
+  border: 1px solid #e41f19 !important;
 }
 
 .tui-warning-hover {

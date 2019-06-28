@@ -4,7 +4,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  z-index: 9999;
+  z-index: 99999;
   visibility: hidden;
   transform: translate3d(0, 100%, 0);
   transform-origin: center;
@@ -24,7 +24,7 @@
   right: 0;
   bottom: 0;
   background: rgba(0, 0, 0, 0.6);
-  z-index: 9996;
+  z-index: 99996;
   transition: all 0.3s ease-in-out;
   opacity: 0;
   visibility: hidden;
