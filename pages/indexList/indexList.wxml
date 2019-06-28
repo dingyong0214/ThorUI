@@ -13,7 +13,7 @@
        <button class="btn-primary" hover-class="btn-hover" bindtap="searchCity">搜索</button>
     </view>
     <view class="tui-list search-result" wx:if="{{inputShowed}}">
-      <view class="tui-list-cell" hover-class="tui-list-cell-hover" wx:for="{{searchResult}}" key="{{index}}" bindtap="selectCity" data-name="{{item}}" hover-stay-time='150' >
+      <view class="tui-list-cell" hover-class="tui-list-cell-hover" wx:for="{{searchResult}}"  wx:key="{{index}}" bindtap="selectCity" data-name="{{item}}" hover-stay-time='150' >
         <view class="tui-list-cell-navigate">
            <image src="../../static/images/news/{{(index%2===0 && index!==0)?'avatar_2.jpg':'avatar_1.jpg'}}" class="img"></image>
               <view class="content">
@@ -29,7 +29,7 @@
           <view class="tui-list-cell-divider" id="{{list.letter}}">
             {{list.letter}}
           </view>
-          <view class="tui-list-cell" hover-class="tui-list-cell-hover" wx:for="{{list.data}}" key="{{index}}" bindtap="selectCity" data-name="{{item.name}}" hover-stay-time='150'>
+          <view class="tui-list-cell" hover-class="tui-list-cell-hover" wx:for="{{list.data}}"  wx:key="{{index}}" bindtap="selectCity" data-name="{{item.name}}" hover-stay-time='150'>
             <view class="tui-list-cell-navigate {{list.data.length-1==index?'last':''}}" >
              <image src="../../static/images/news/{{(index%2===0 && index!==0)?'avatar_1.jpg':'avatar_2.jpg'}}" class="img"></image>
               <view class="content">
@@ -44,7 +44,7 @@
     </view>
   </scroll-view>
   <view class="tui-indexed-list-bar" style="height:{{indexBarHeight}}px" catchtouchstart="touchStart" catchtouchmove="touchMove" catchtouchend="touchEnd" catchtouchcancel="touchCancel" wx:if="{{!inputShowed}}">
-    <text wx:for="{{lists}}" key="{{index}}" wx:for-item="items" class="tui-indexed-list-text" style="height:{{indexBarItemHeight}}px">
+    <text wx:for="{{lists}}"  wx:key="{{index}}" wx:for-item="items" class="tui-indexed-list-text" style="height:{{indexBarItemHeight}}px">
 				{{items.letter}}
 			</text>
   </view>

@@ -8,12 +8,12 @@ Component({
     //最小值
     min: {
       type: Number,
-      value: -Infinity
+      value: 0
     },
     //最大值
     max: {
       type: Number,
-      value: Infinity
+      value: 100
     },
     //迈步大小 1 1.1 10...
     step: {

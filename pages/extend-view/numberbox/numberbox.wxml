@@ -1,0 +1,40 @@
+<view class="container">
+  <view class="header">
+    <view class="title">NumberBox</view>
+    <view class="sub-title">数字框</view>
+  </view>
+
+  <view class="tui-number-box">
+    <view class="tui-title"> 基本用法</view>
+    <tui-numberbox value="{{value}}" bind:change="change"></tui-numberbox>
+  </view>
+  <view class="tui-number-box">
+    <view class="tui-title">设置最小值和最大值</view>
+    <tui-numberbox min="1" max="10" value="{{value2}}" bind:change="change2"></tui-numberbox>
+  </view>
+  <view class="tui-number-box">
+    <view class="tui-title">设置步长 0.1</view>
+    <tui-numberbox step="0.1" value="{{value3}}" bind:change="change3"></tui-numberbox>
+  </view>
+  <view class="tui-number-box">
+    <view class="tui-title">设置步长 10</view>
+    <tui-numberbox step="10" value="{{value4}}" bind:change="change4"></tui-numberbox>
+  </view>
+  <view class="tui-number-box">
+    <view class="tui-title">禁用状态</view>
+    <tui-numberbox disabled="{{true}}" color="#b2b2b2"></tui-numberbox>
+  </view>
+  <view class="tui-number-box">
+    <view class="tui-title">设置大小</view>
+    <tui-numberbox height="70" width="140" iconsize="30" value="{{value5}}" bind:change="change5"></tui-numberbox>
+  </view>
+  <view class="tui-number-box">
+    <view class="tui-title">调整颜色</view>
+    <tui-numberbox bgcolor="rgba(0,0,0,.5)" color="#fff" iconcolor="rgba(0,0,0,.5)" value="{{value6}}" bind:change="change6"></tui-numberbox>
+  </view>
+  <view class="tui-number-box">
+    <view class="tui-title"> 获取输入的值：{{value7}}</view>
+    <tui-numberbox value="{{value7}}" bind:change="change7"></tui-numberbox>
+  </view>
+
+</view>

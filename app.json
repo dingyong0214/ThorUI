@@ -68,7 +68,8 @@
         "friendsList/friendsList",
         "userInfo/userInfo",
         "productList/productList",
-        "productDetail/productDetail"
+        "productDetail/productDetail",
+        "numberbox/numberbox"
       ]
     }
   ],

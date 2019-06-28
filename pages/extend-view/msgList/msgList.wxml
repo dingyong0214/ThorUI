@@ -1,2 +1,36 @@
-<!--pages/extend-view/msgList/msgList.wxml-->
-<text>pages/extend-view/msgList/msgList.wxml</text>
+<view class="container">
+  <!--tabbar-->
+  <view class="tui-tabbar">
+    <block wx:for="{{tabbar}}" wx:key="{{index}}">
+      <view class="tui-tabbar-item {{current==index?'tui-item-active':''}}" data-index="{{index}}" bindtap="tabbarSwitch">
+        <tui-icon name="{{current==index?item.icon+'-fill':item.icon}}" color="{{current==index?'#00C0FB':'#666'}}" size="{{item.size}}" class="{{index==0?'tui-ptop-4':''}}"></tui-icon>
+        <view class="tui-scale">{{item.text}}</view>
+      </view>
+    </block>
+  </view>
+  <!--tabbar-->
+  <!--searchbox-->
+  <view class="tui-searchbox">
+    <view class="tui-search-input" bindtap="search">
+      <icon type="search" size='15' color='#999'></icon>
+      <text class="tui-search-text">搜索</text>
+    </view>
+  </view>
+  <!--searchbox-->
+
+  <block wx:for="{{msgList}}" wx:key="{{index}}">
+    <tui-cell bind:click="detail" tui-cell-class="tui-msg" last="{{true}}">
+      <view class="tui-msg-box">
+        <image src="../../../static/images/news/{{item.pic}}.jpg" class="tui-msg-pic" mode="widthFix"></image>
+        <view class="tui-msg-item">
+          <view class="tui-msg-name">{{item.nickname}}</view>
+          <view class="tui-msg-content">{{item.msg}}</view>
+        </view>
+      </view>
+      <view class="tui-msg-right {{item.level==3?'tui-right-dot':''}}">
+        <view class="tui-msg-time">{{item.time}}</view>
+        <tui-badge type="{{item.level==2?'gray':'danger'}}" dot="{{item.level==3?true:false}}" tui-badge-class="{{item.level!=3?'tui-badge':''}}" wx:if="{{item.msgNum>0}}">{{item.level!=3?item.msgNum:""}}</tui-badge>
+      </view>
+    </tui-cell>
+  </block>
+</view>

@@ -16,7 +16,7 @@
       </view>
     </view>
     <view class="tui-list search-result" wx:if="{{inputShowed}}">
-      <view class="tui-list-cell" hover-class="tui-list-cell-hover" wx:for="{{searchResult}}" key="{{index}}" bindtap="selectCity" data-name="{{item}}" hover-stay-time='150'>
+      <view class="tui-list-cell" hover-class="tui-list-cell-hover" wx:for="{{searchResult}}"  wx:key="{{index}}" bindtap="selectCity" data-name="{{item}}" hover-stay-time='150'>
         <view class="tui-list-cell-navigate">
           {{item}}
         </view>
@@ -33,17 +33,17 @@
       <view class="hot-city">
         <view class="title">热门城市</view>
         <view class="city-names">
-          <view class="city-name-item" wx:for="{{hotCity}}" key="{{index}}" hover-class="tap-city" hover-stay-time="150" bindtap="selectCity" data-name="{{item}}">
+          <view class="city-name-item" wx:for="{{hotCity}}"  wx:key="{{index}}" hover-class="tap-city" hover-stay-time="150" bindtap="selectCity" data-name="{{item}}">
             {{item}}
           </view>
         </view>
       </view>
       <view class="tui-list city-list">
-        <block wx:for="{{lists}}" key="{{index}}" wx:for-item="list" wx:if="{{list.data[0]}}">
+        <block wx:for="{{lists}}"  wx:key="{{index}}" wx:for-item="list" wx:if="{{list.data[0]}}">
           <view class="tui-list-cell-divider" id="{{index === 0 ? 'suoyin' : list.letter}}">
             {{list.letter}}
           </view>
-          <view class="tui-list-cell" hover-class="tui-list-cell-hover" wx:for="{{list.data}}" key="{{index}}" bindtap="selectCity" data-name="{{item.cityName}}" hover-stay-time='150'>
+          <view class="tui-list-cell" hover-class="tui-list-cell-hover" wx:for="{{list.data}}"  wx:key="{{index}}" bindtap="selectCity" data-name="{{item.cityName}}" hover-stay-time='150'>
             <view class="tui-list-cell-navigate {{list.data.length-1==index?'last':''}}">
               {{item.cityName}}
             </view>

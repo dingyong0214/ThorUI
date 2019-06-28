@@ -1,66 +1,86 @@
-// pages/extend-view/friendsList/friendsList.js
+const util = require('../../../utils/util.js')
+const cityData = require('../../../utils/index.list.js')
 Page({
-
-  /**
-   * 页面的初始数据
-   */
   data: {
-
+    lists: [],
+    touchmove: false, // 是否在索引表上滑动
+    touchmoveIndex: -1,
+    titleHeight: 0, // A字距离窗口顶部的高度
+    indexBarHeight: 0, // 索引表高度
+    indexBarItemHeight: 0, // 索引表子项的高度
+    scrollViewId: '', // scroll-view滚动到的子元素的id
+    winHeight: 0,
+    scrollTop: 0
   },
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
   onLoad: function (options) {
-
+    const that = this;
+    setTimeout(() => {
+      wx.getSystemInfo({
+        success: function (res) {
+          let winHeight = res.windowHeight
+          let barHeight = winHeight - res.windowWidth / 750 * 232
+          that.setData({
+            winHeight: winHeight,
+            indexBarHeight: barHeight,
+            indexBarItemHeight: barHeight / 25,
+            titleHeight: res.windowWidth / 750 * 132,
+            lists: cityData.list
+          })
+        }
+      })
+    }, 50)
   },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
+  touchStart(e) {
+    this.setData({
+      touchmove: true
+    })
+    let pageY = e.touches[0].pageY
+    let index = Math.floor((pageY - this.data.titleHeight) / this.data.indexBarItemHeight)
+    let item = this.data.lists[index]
+    if (item) {
+      this.setData({
+        scrollViewId: item.letter,
+        touchmoveIndex: index
+      })
+    }
   },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
+  touchMove(e) {
+    let pageY = e.touches[0].pageY;
+    let index = Math.floor((pageY - this.data.titleHeight) / this.data.indexBarItemHeight)
+    let item = this.data.lists[index]
+    if (item) {
+      this.setData({
+        scrollViewId: item.letter,
+        touchmoveIndex: index
+      })
+    }
   },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
+  touchEnd() {
+    this.setData({
+      touchmove: false,
+      touchmoveIndex: -1
+    })
   },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
+  touchCancel() {
+    this.setData({
+      touchmove: false,
+      touchmoveIndex: -1
+    })
   },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
+  search: function () {
+    wx.navigateTo({
+      url: '../news-search/news-search'
+    })
   },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
+  detail: function () {
+    wx.navigateTo({
+      url: '../userInfo/userInfo'
+    })
   },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
+  //页面滚动执行方式
+  onScroll(e) {
+    this.setData({
+      scrollTop: e.detail.scrollTop
+    })
   }
 })

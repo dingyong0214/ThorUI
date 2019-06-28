@@ -1,1 +1,174 @@
-/* pages/extend-view/msgList/msgList.wxss */
+page {
+  background: #f5f6fa;
+}
+.container{
+  padding-bottom: 100rpx
+}
+
+/*tabbar*/
+
+.tui-tabbar {
+  width: 100%;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 99999;
+  background: #fff;
+  height: 100rpx;
+  left: 0;
+  bottom: 0;
+}
+
+.tui-tabbar::before {
+  content: '';
+  width: 100%;
+  border-top: 1rpx solid #d2d2d2;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transform: scaleY(0.5);
+  transform: scaleY(0.5);
+}
+
+.tui-tabbar-item {
+  flex: 1;
+  width: 25%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  font-size: 24rpx;
+  color: #666;
+  height: 80rpx;
+}
+
+.tui-ptop-4 {
+  padding-top: 4rpx;
+}
+
+.tui-scale {
+  font-weight: bold;
+  transform: scale(0.8);
+  transform-origin: center 100%;
+  line-height: 30rpx;
+}
+
+.tui-item-active {
+  color: #00c0fb !important;
+}
+
+/*tabbar*/
+
+/*searchbox*/
+
+.tui-searchbox {
+  width: 100%;
+  height: 100rpx;
+  padding: 0 30rpx;
+  box-sizing: border-box;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+/* 
+.tui-searchbox::after {
+  content: '';
+  position: absolute;
+  border-bottom: 1rpx solid #d2d2d2;
+  -webkit-transform: scaleY(0.5);
+  transform: scaleY(0.5);
+  bottom: 0;
+  right: 0;
+  left: 0;
+} */
+
+.tui-search-input {
+  width: 100%;
+  height: 72rpx;
+  background: #f5f6fa;
+  border-radius: 36rpx;
+  font-size: 30rpx;
+  color: #A8ABB8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tui-search-text {
+  padding-left: 16rpx;
+}
+
+/*searchbox*/
+
+
+.tui-msg-box {
+  display: flex;
+  align-items: center;
+}
+
+.tui-msg-pic {
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+  display: block;
+  margin-right: 24rpx;
+}
+
+.tui-msg-item {
+  max-width: 500rpx;
+  min-height: 80rpx;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.tui-msg-name {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-size: 34rpx;
+  line-height: 1;
+  color: #262b3a;
+}
+
+.tui-msg-content {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-size: 28rpx;
+  line-height: 1;
+  color: #9397a4;
+}
+
+.tui-msg-right {
+  max-width: 120rpx;
+  height: 88rpx;
+  margin-left: auto;
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.tui-msg-right.tui-right-dot{
+  height: 76rpx;
+  padding-bottom: 10rpx;
+
+}
+.tui-msg-time {
+  width: 100%;
+  font-size: 24rpx;
+  line-height: 24rpx;
+  color: #9397a4;
+}
+.tui-badge{
+  width:auto
+}
+
+.tui-msg::after{
+  left: 154rpx !important
+}

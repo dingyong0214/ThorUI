@@ -1,0 +1,32 @@
+.container {
+  padding: 20rpx 0 120rpx 0;
+  box-sizing: border-box;
+}
+
+.header {
+  padding: 80rpx 90rpx 60rpx 90rpx;
+  box-sizing: border-box;
+}
+
+.title {
+  font-size: 34rpx;
+  color: #333;
+  font-weight: 500;
+}
+
+.sub-title {
+  font-size: 24rpx;
+  color: #7a7a7a;
+  padding-top: 18rpx;
+}
+
+.tui-number-box {
+  padding: 40rpx;
+  box-sizing: border-box;
+  margin-bottom: 30rpx;
+  background: #fff;
+  font-size: 30rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}

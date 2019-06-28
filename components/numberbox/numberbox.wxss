@@ -10,6 +10,7 @@
   font-style: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+   padding: 10rpx;
 }
 
 .tui-icon-reduce:before {
@@ -28,10 +29,10 @@
 
 .tui-num-input {
   text-align: center;
-  margin: 0 20rpx;
+  margin: 0 10rpx;
   font-weight: bold;
 }
 
 .tui-disabled{
-  color: #ededed;
+  color: #ededed !important;
 }

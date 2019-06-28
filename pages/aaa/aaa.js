@@ -1,137 +1,86 @@
 const util = require('../../utils/util.js')
+const cityData = require('../../utils/index.list.js')
 Page({
   data: {
-    height: 64, //header高度
-    top: 0, //标题图标距离顶部距离
-    scrollH: 0, //滚动总高度
-    opcity: 0,
-    iconOpcity: 0.5,
-    banner: [
-      "https://www.thorui.cn/img/product/11.jpg",
-      "https://www.thorui.cn/img/product/2.png",
-      "https://www.thorui.cn/img/product/33.jpg",
-      "https://www.thorui.cn/img/product/4.png",
-      "https://www.thorui.cn/img/product/55.jpg",
-      "https://www.thorui.cn/img/product/6.png",
-      "https://www.thorui.cn/img/product/7.jpg",
-      "https://www.thorui.cn/img/product/8.jpg"
-    ],
-    bannerIndex: 0,
-    topMenu: [{
-      icon: "message",
-      text: "消息",
-      size: 26,
-      badge: 3
-    }, {
-      icon: "home",
-      text: "首页",
-      size: 23,
-      badge: 0
-    }, {
-      icon: "people",
-      text: "我的",
-      size: 26,
-      badge: 0
-    }, {
-      icon: "cart",
-      text: "购物车",
-      size: 23,
-      badge: 2
-    }, {
-      icon: "kefu",
-      text: "客服小蜜",
-      size: 26,
-      badge: 0
-    }, {
-      icon: "feedback",
-      text: "我要反馈",
-      size: 23,
-      badge: 0
-    }, {
-      icon: "share",
-      text: "分享",
-      size: 26,
-      badge: 0
-    }],
-    menuShow: false,
-    popupShow: false,
-    value:1,
-    collected:false
+    lists: [],
+    touchmove: false, // 是否在索引表上滑动
+    touchmoveIndex: -1,
+    titleHeight: 0, // A字距离窗口顶部的高度
+    indexBarHeight: 0, // 索引表高度
+    indexBarItemHeight: 0, // 索引表子项的高度
+    scrollViewId: '', // scroll-view滚动到的子元素的id
+    winHeight: 0,
+    scrollTop: 0
   },
   onLoad: function(options) {
-    let obj = wx.getMenuButtonBoundingClientRect();
-    this.setData({
-      width: obj.left,
-      height: obj.top + obj.height + 8,
-      top: obj.top + (obj.height - 32) / 2
-    }, () => {
+    const that = this;
+    setTimeout(() => {
       wx.getSystemInfo({
-        success: (res) => {
-          this.setData({
-            scrollH: res.windowWidth
+        success: function (res) {
+          let winHeight = res.windowHeight
+          let barHeight = winHeight - res.windowWidth / 750 * 232
+          that.setData({
+            winHeight: winHeight,
+            indexBarHeight: barHeight,
+            indexBarItemHeight: barHeight / 25,
+            titleHeight: res.windowWidth / 750 * 132,
+            lists: cityData.list
           })
         }
       })
-    });
+    }, 50)
   },
-  bannerChange: function(e) {
+  touchStart(e) {
     this.setData({
-      bannerIndex: e.detail.current
+      touchmove: true
+    })
+    let pageY = e.touches[0].pageY
+    let index = Math.floor((pageY - this.data.titleHeight) / this.data.indexBarItemHeight)
+    let item = this.data.lists[index]
+    if (item) {
+      this.setData({
+        scrollViewId: item.letter,
+        touchmoveIndex: index
+      })
+    }
+  },
+  touchMove(e) {
+    let pageY = e.touches[0].pageY;
+    let index = Math.floor((pageY - this.data.titleHeight) / this.data.indexBarItemHeight)
+    let item = this.data.lists[index]
+    if (item) {
+      this.setData({
+        scrollViewId: item.letter,
+        touchmoveIndex: index
+      })
+    }
+  },
+  touchEnd() {
+    this.setData({
+      touchmove: false,
+      touchmoveIndex: -1
     })
   },
-  previewImage: function(e) {
-    let index = e.currentTarget.dataset.index;
-    wx.previewImage({
-      current: this.data.banner[index],
-      urls: this.data.banner
+  touchCancel() {
+    this.setData({
+      touchmove: false,
+      touchmoveIndex: -1
+    })
+  },
+  search: function () {
+    wx.navigateTo({
+      url: '../news-search/news-search'
+    })
+  },
+  detail: function () {
+    wx.navigateTo({
+      url: '../userInfo/userInfo'
     })
   },
   //页面滚动执行方式
-  onPageScroll(e) {
-    let scroll = e.scrollTop <= 0 ? 0 : e.scrollTop;
-    let opcity = scroll / this.data.scrollH;
-    if (this.data.opcity >= 1 && opcity >=1){
-      return;
-    }
+  onScroll(e) {
     this.setData({
-      opcity: opcity,
-      iconOpcity: 0.5 * (1 - opcity < 0 ? 0 : 1 - opcity)
+      scrollTop: e.detail.scrollTop
     })
-  },
-  back: function() {
-    wx.navigateBack()
-  },
-  openMenu: function() {
-    this.setData({
-      menuShow: true
-    })
-  },
-  closeMenu: function() {
-    this.setData({
-      menuShow: false
-    })
-  },
-  showPopup: function() {
-    this.setData({
-      popupShow: true
-    })
-  },
-  hidePopup: function() {
-    this.setData({
-      popupShow: false
-    })
-  },
-  change:function(e){
-    this.setData({
-      value:e.detail.value
-    })
-  },
-  collecting:function(){
-    this.setData({
-      collected:!this.data.collected
-    })
-  },
-  common:function(){
-    util.toast("功能开发中~")
   }
 })

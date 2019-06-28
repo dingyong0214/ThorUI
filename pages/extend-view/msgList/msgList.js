@@ -1,66 +1,140 @@
-// pages/extend-view/msgList/msgList.js
+const util = require('../../../utils/util.js')
 Page({
-
-  /**
-   * 页面的初始数据
-   */
   data: {
-
+    current: 0,
+    tabbar: [{
+      icon: "community",
+      text: "消息",
+      size: 24
+    }, {
+      icon: "people",
+      text: "联系人",
+      size: 24
+    }, {
+      icon: "explore",
+      text: "发现",
+      size: 24
+    }],
+    msgList: [{
+      nickname: "波动星球",
+      pic: "avatar_1",
+      msg: "兰家双臂初长成！",
+      msgNum: 2,
+      time: "10:22",
+      level: 1
+    }, {
+      nickname: "Thorui看点",
+      pic: "avatar_2",
+      msg: "thorui商城模板即将上线，功能完善中！",
+      msgNum: 2,
+      time: "13:27",
+      level: 3
+    }, {
+      nickname: "技术交流群",
+      pic: "4",
+      msg: "[图片]",
+      msgNum: 18,
+      time: "12:27",
+      level: 1
+    }, {
+      nickname: "技术交流2群",
+      pic: "2",
+      msg: "[视频]",
+      msgNum: 98,
+      time: "10:27",
+      level: 2
+    }, {
+      nickname: "陈永华",
+      pic: "avatar_1",
+      msg: "对方已同意你的好友请求",
+      msgNum: 2,
+      time: "10:27",
+      level: 1
+    }, {
+      nickname: "尚高旭",
+      pic: "avatar_2",
+      msg: "晚上一起吃个饭！",
+      msgNum: 0,
+      time: "10:27",
+      level: 1
+    }, {
+      nickname: "张新旺",
+      pic: "avatar_1",
+      msg: "[图片]",
+      msgNum: 0,
+      time: "10:27",
+      level: 1
+    }, {
+      nickname: "曾少敏",
+      pic: "3",
+      msg: "对方已同意你的好友请求对方已同意你的好友请求",
+      msgNum: 0,
+      time: "10:27",
+      level: 1
+    }, {
+      nickname: "波动星球",
+      pic: "avatar_1",
+      msg: "兰家双臂初长成！",
+      msgNum: 2,
+      time: "10:22",
+      level: 1
+    }, {
+      nickname: "Thorui看点",
+      pic: "avatar_2",
+      msg: "thorui商城模板即将上线，功能完善中！",
+      msgNum: 2,
+      time: "13:27",
+      level: 3
+    }, {
+      nickname: "技术交流群",
+      pic: "4",
+      msg: "[图片]",
+      msgNum: 18,
+      time: "12:27",
+      level: 1
+    }, {
+      nickname: "技术交流2群",
+      pic: "2",
+      msg: "[视频]",
+      msgNum: 98,
+      time: "10:27",
+      level: 2
+    }, {
+      nickname: "陈永华",
+      pic: "avatar_1",
+      msg: "对方已同意你的好友请求",
+      msgNum: 2,
+      time: "10:27",
+      level: 1
+    }]
   },
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
   onLoad: function (options) {
 
   },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
   onPullDownRefresh: function () {
-
+    wx.stopPullDownRefresh();
   },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
+  tabbarSwitch: function (e) {
+    let index = e.currentTarget.dataset.index;
+    this.setData({
+      current: index
+    })
+    if (index != 0) {
+      if (index == 1) {
+        this.classify();
+      } else {
+        util.toast("功能开发中~")
+      }
+    }
   },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
+  search: function () {
+    wx.navigateTo({
+      url: '../news-search/news-search'
+    })
+  },
+  detail: function () {
+    wx.navigateTo({
+      url: '../chat/chat'
+    })
   }
 })
