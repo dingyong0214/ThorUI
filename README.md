@@ -39,4 +39,32 @@ ThorUI组件库，微信小程序代码片段分享
 6.已知bug修复，以及部分功能优化
 
 
-![image](http://psl8fdw0x.bkt.clouddn.com/reward_small.jpg)
+![image](https://thorui.cn/img/reward_small.jpg)
+
+
+#  商城模板部分截图
+
+
+![image](https://thorui.cn/img/mall/1.jpg)
+
+![image](https://thorui.cn/img/mall/2.jpg)
+
+![image](https://thorui.cn/img/mall/3.jpg)
+
+![image](https://thorui.cn/img/mall/4.jpg)
+
+![image](https://thorui.cn/img/mall/5.jpg)
+
+![image](https://thorui.cn/img/mall/6.jpg)
+
+![image](https://thorui.cn/img/mall/7.jpg)
+
+![image](https://thorui.cn/img/mall/8.jpg)
+
+![image](https://thorui.cn/img/mall/9.jpg)
+
+![image](https://thorui.cn/img/mall/10.jpg)
+
+
+
+![image](https://thorui.cn/img/reward_small.jpg)
