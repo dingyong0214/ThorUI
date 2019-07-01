@@ -71,7 +71,7 @@ ThorUI组件库，微信小程序代码片段分享
 
 
 #  聊天模板截图
-| ![](https://thorui.cn/img/chat/1.png)  |   ![](https://thorui.cn/img/chat/2.png)|  ![](https://thorui.cn/img/chat/3.png) |
+|  ![](https://thorui.cn/img/chat/1.png) | ![](https://thorui.cn/img/chat/2.png)  |  ![](https://thorui.cn/img/chat/3.png) |
 | ------------ | ------------ | ------------ |
 
 
