@@ -81,7 +81,7 @@ ThorUI组件库，微信小程序代码片段分享
 | ------------ | ------------ | ------------ | ------------ | ------------ |
 |  ![消息滚动](https://thorui.cn/img/function/6.jpg) |  ![弹层，下拉选择](https://thorui.cn/img/function/7.jpg) |  ![抽奖转盘](https://thorui.cn/img/function/8.jpg) | ![抽屉](https://thorui.cn/img/function/9.jpg)  | ![滑动菜单](https://thorui.cn/img/function/10.png)  |
 | ![二维码生成](https://thorui.cn/img/function/11.png)  |  ![地图-拖拽定位](https://thorui.cn/img/function/12.png) |![地图-周边地点](https://thorui.cn/img/function/13.png)   |  ![基础组件](https://thorui.cn/img/function/14.png) |  ![索引列表-城市选择](https://thorui.cn/img/function/15.png) |
-| ![索引列表](https://thorui.cn/img/function/16.png)  | ![顶部选项卡](https://thorui.cn/img/function/17.png)  |  ![顶部选项卡](https://thorui.cn/img/function/18.png) |  ![顶部选项卡](https://thorui.cn/img/function/19.png) |   |
+| ![索引列表](https://thorui.cn/img/function/16.png)  | ![顶部选项卡](https://thorui.cn/img/function/17.png)  |  ![rate评分](https://thorui.cn/img/function/18.png) |![数字输入框](https://thorui.cn/img/function/19.png) |   |
 
 
 
