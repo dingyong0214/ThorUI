@@ -74,7 +74,7 @@ Page({
   },
   detail: function () {
     wx.navigateTo({
-      url: '../userInfo/userInfo'
+      url: '../chat/chat'
     })
   },
   //页面滚动执行方式

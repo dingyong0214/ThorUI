@@ -2,6 +2,10 @@ page {
   background: #f7f7f7;
 }
 
+.container {
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
 /* 隐藏scroll-view滚动条*/
 
 ::-webkit-scrollbar {
@@ -431,15 +435,24 @@ page {
 .tui-attr-btnbox {
   width: 100%;
   position: absolute;
-  height: 100rpx;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
   left: 0;
   bottom: 0;
   box-sizing: border-box;
   padding: 0 30rpx;
   background: #fff;
+}
+
+.tui-attr-safearea {
+  height: 100rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+.tui-safearea-bottom {
+  width: 100%;
+  height: env(safe-area-inset-bottom);
 }
 
 .tui-attr-btnbox::before {

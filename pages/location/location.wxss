@@ -13,7 +13,8 @@ page {
   width: 100%;
   height: 100%;
 }
-.cover-image{
+
+.cover-image {
   height: 60rpx;
   width: 60rpx;
   position: fixed;
@@ -26,21 +27,21 @@ page {
 .footer-box {
   width: 100%;
   position: fixed;
-  bottom: 0;
-  padding: 0 30rpx 20rpx 30rpx;
+  top: 0;
+  padding: 30rpx;
   box-sizing: border-box;
 }
 
 .result-box {
   width: 100%;
-  padding:12rpx 30rpx;
+  padding: 12rpx 30rpx;
   box-sizing: border-box;
   color: #555;
   font-size: 28rpx;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background: rgba(255,255,255,.9);
+  background: rgba(255, 255, 255, 0.94);
   border-radius: 14rpx;
 }
 
@@ -48,14 +49,15 @@ page {
   left: 0;
 }
 
-.badge{
+.badge {
   height: 16rpx;
   width: 16rpx;
   border-radius: 8rpx;
-  background: #5677FC;
+  background: #5677fc;
   margin-right: 20rpx;
 }
-.orange{
+
+.orange {
   background: #ff7900 !important;
 }
 
@@ -64,27 +66,28 @@ page {
   align-items: center;
   padding: 20rpx 0;
 }
-.ellipsis{
-  width:100%;
+
+.ellipsis {
+  width: 100%;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
 }
 
-.current-location{
+.current-location {
   position: fixed;
   height: 76rpx;
   width: 76rpx;
   display: flex;
   align-items: center;
   justify-content: center;
-  bottom: 240rpx;
-  right: 30rpx;
-  background: rgba(255, 255, 255, .9);
+  bottom: 80rpx;
+  right: 60rpx;
+  background: rgba(255, 255, 255, 0.94);
   border-radius: 38rpx;
 }
 
-.current-img{
+.current-img {
   width: 42rpx;
-  height: 42rpx
+  height: 42rpx;
 }

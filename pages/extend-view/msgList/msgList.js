@@ -121,7 +121,9 @@ Page({
     })
     if (index != 0) {
       if (index == 1) {
-        this.classify();
+         wx.navigateTo({
+           url: '../friendsList/friendsList'
+         })
       } else {
         util.toast("功能开发中~")
       }

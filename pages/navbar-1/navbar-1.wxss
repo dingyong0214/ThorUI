@@ -64,6 +64,7 @@
   width: 100%;
   background: #fff;
   box-sizing: border-box;
+  padding-bottom: env(safe-area-inset-bottom);
 }
 
 .list-cell {

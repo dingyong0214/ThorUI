@@ -28,6 +28,7 @@
     </view>
     <!--联系人列表-->
     <view class="tui-footer">120位联系人</view>
+     <view class="tui-safearea-bottom"></view>
   </scroll-view>
   <view class="tui-indexed-list-bar" style="height:{{indexBarHeight}}px" catchtouchstart="touchStart" catchtouchmove="touchMove" catchtouchend="touchEnd" catchtouchcancel="touchCancel" wx:if="{{!inputShowed}}">
     <view wx:for="{{lists}}" wx:key="{{index}}" wx:for-item="items" class="tui-indexed-list-text" style="height:{{indexBarItemHeight}}px">

@@ -1,6 +1,9 @@
 page{
   background:#EDEDED;
 }
+.container {
+  padding-bottom: env(safe-area-inset-bottom);
+}
 
 .tui-title {
   width: 100%;

@@ -42,18 +42,23 @@ Page({
         page: "numberbox",
         like: false
       }, {
+        name: "Rate评分",
+        desc: "Rate评分:可设置星星数，可设置大小颜色。",
+        page: "rate",
+        like: false
+      }, {
       name: "新闻模板",
         desc: "新闻模板包含：新闻列表，新闻详情，评论等。",
       page: "news",
       like: false
     }, {
       name: "聊天模板",
-        desc: "聊天模板包含：消息列表，好友列表，聊天界面，用户信息等。",
+        desc: "聊天模板包含：消息列表，好友列表，聊天界面等。",
       page: "msgList",
       like: false
     }, {
       name: "商城模板",
-        desc: "商城模板包含：商城首页，商城列表，商城详情等。开发中。",
+        desc: "商城模板包含：商城首页，商城列表，商城详情，购物车等。",
       page: "mall",
       like: false
     }, {

@@ -1,0 +1,5 @@
+<view class="tui-rate-class tui-rate-box" bindtouchmove="touchMove">
+  <block wx:for="{{quantity}}" wx:key="{{index}}">
+    <view class="tui-icon tui-icon-collection{{hollow && current<=index?'':'-fill'}}" data-index="{{index}}" bindtap="handleTap" style="font-size:{{size}}px;color:{{current>index?active:normal}};"></view>
+  </block>
+</view>

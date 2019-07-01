@@ -1,6 +1,9 @@
 page {
   background: #fff;
 }
+.container{
+  padding-bottom: env(safe-area-inset-bottom);
+}
 
 .header {
   width: 100%;

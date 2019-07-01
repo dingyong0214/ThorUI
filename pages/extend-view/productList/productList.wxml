@@ -220,10 +220,13 @@
             <view class="tui-attr-ellipsis">44</view>
           </view>
         </view>
+        <view class="tui-safearea-bottom"></view>
       </scroll-view>
       <view class="tui-attr-btnbox">
-        <view class="tui-drawer-btn tui-drawerbtn-black" hover-class="tui-white-hover" hover-stay-time="150">重置</view>
-        <view class="tui-drawer-btn tui-drawerbtn-primary" hover-class="tui-red-hover" hover-stay-time="150" bindtap="closeDrawer">确定(80万+件商品)</view>
+        <view class="tui-attr-safearea">
+          <view class="tui-drawer-btn tui-drawerbtn-black" hover-class="tui-white-hover" hover-stay-time="150">重置</view>
+          <view class="tui-drawer-btn tui-drawerbtn-primary" hover-class="tui-red-hover" hover-stay-time="150" bindtap="closeDrawer">确定(80万+件商品)</view>
+        </view>
       </view>
     </view>
   </tui-drawer>

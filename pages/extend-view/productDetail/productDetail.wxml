@@ -164,6 +164,7 @@
       <image src="https://www.thorui.cn/img/detail/{{index+1}}.jpg" wx:for="{{20}}" wx:key="{{index}}" mode="widthFix"></image>
     </view>
     <tui-nomore text="已经到最底了" visible="{{true}}" bgcolor="#f7f7f7"></tui-nomore>
+    <view class="tui-safearea-bottom"></view>
   </view>
 
   <!--底部操作栏-->

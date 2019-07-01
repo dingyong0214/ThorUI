@@ -1,3 +1,6 @@
+.container{
+  padding-bottom:  env(safe-area-inset-bottom);
+}
 .tips{
   background: #fff;
   padding:50rpx 34rpx;

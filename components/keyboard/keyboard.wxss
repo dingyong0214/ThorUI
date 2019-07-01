@@ -44,6 +44,8 @@
   right: 0;
   bottom: 0;
   z-index: 999;
+  padding-bottom: env(safe-area-inset-bottom);
+  background: #fff;
 }
 .tui-keyboard-action {
   visibility: hidden;

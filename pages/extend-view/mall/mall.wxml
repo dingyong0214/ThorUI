@@ -127,4 +127,5 @@
   <tui-loadmore visible="{{loadding}}" index="3" type="red"></tui-loadmore>
   <!-- <tui-nomore visible="{{!pullUpOn}}"></tui-nomore> -->
   <!--加载loadding-->
+  <view class="tui-safearea-bottom"></view>
 </view>

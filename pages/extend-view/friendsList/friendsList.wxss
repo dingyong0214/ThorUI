@@ -107,7 +107,7 @@ page {
   border-radius: 24rpx;
   font-size: 50rpx;
   color: #fff;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.65);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -124,4 +124,8 @@ page {
   justify-content: center;
   font-size: 30rpx;
   color: #999;
+}
+.tui-safearea-bottom{
+  width: 100%;
+  height: env(safe-area-inset-bottom);
 }

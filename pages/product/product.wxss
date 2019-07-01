@@ -1,3 +1,6 @@
+.container{
+  padding-bottom: env(safe-area-inset-bottom);
+}
 .product-list {
   display: flex;
   display: -webkit-flex;

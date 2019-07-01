@@ -1,0 +1,35 @@
+<view class="container">
+  <view class="header">
+    <view class="title">Rate</view>
+    <view class="sub-title">评分</view>
+  </view>
+  <view class="tui-rate-box">
+    <view class="tui-title"> 基本用法</view>
+    <tui-rate current="{{current}}" bind:change="change"></tui-rate>
+  </view>
+  <view class="tui-rate-box">
+    <view class="tui-title">设置星星数</view>
+    <tui-rate current="{{index}}" quantity="8" bind:change="change"></tui-rate>
+  </view>
+  <view class="tui-rate-box">
+    <view class="tui-title">设置尺寸大小(缩小)</view>
+    <tui-rate current="{{index}}" bind:change="change" size="16"></tui-rate>
+  </view>
+   <view class="tui-rate-box">
+    <view class="tui-title">设置尺寸大小(放大)</view>
+    <tui-rate current="{{index}}" bind:change="change" size="26"></tui-rate>
+  </view>
+  <view class="tui-rate-box">
+    <view class="tui-title"> 设置颜色</view>
+    <tui-rate current="{{index}}" bind:change="change" normal="#ccc" active="#ff7900"></tui-rate>
+  </view>
+  <view class="tui-rate-box">
+    <view class="tui-title">不可点击</view>
+    <tui-rate current="{{index}}" bind:change="change" disabled="{{true}}"></tui-rate>
+  </view>
+  <view class="tui-rate-box">
+    <view class="tui-title">未选中为空心</view>
+    <tui-rate current="{{index}}" hollow="{{true}}" bind:change="change"></tui-rate>
+  </view>
+
+</view>

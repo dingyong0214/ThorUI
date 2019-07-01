@@ -1,3 +1,7 @@
+.container{
+  background: #fff;
+  padding-bottom: env(safe-area-inset-bottom);
+}
 .list-item{
   padding:30rpx 30rpx;
   display: flex;

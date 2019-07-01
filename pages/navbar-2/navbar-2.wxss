@@ -96,6 +96,7 @@ page {
 
 .right-box {
   padding: 112rpx 20rpx 0 220rpx;
+  padding-bottom: env(safe-area-inset-bottom);
   box-sizing: border-box;
 }
 

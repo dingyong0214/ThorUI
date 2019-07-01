@@ -1,3 +1,6 @@
+.container {
+  padding-bottom: env(safe-area-inset-bottom);
+}
 .tui-view{
   padding-top: 40rpx !important
 }

@@ -6,7 +6,7 @@
 }
 .tui-fixed{
   position: fixed;
-  bottom:0;
+  bottom:env(safe-area-inset-bottom);
   z-index: 9999;
 }
 .tui-footer-link{

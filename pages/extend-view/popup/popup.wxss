@@ -233,7 +233,8 @@
 .tui-share {
   background: #e8e8e8;
   position: relative;
-  padding-bottom: 150rpx;
+  padding-bottom:  env(safe-area-inset-bottom);
+  /* padding-bottom: 150rpx; */
 }
 
 .tui-share-title {
@@ -255,6 +256,7 @@
 
 .tui-mt {
   margin-top: 40rpx;
+  padding-bottom: 150rpx;
 }
 
 .tui-share-item {
@@ -303,6 +305,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  padding-bottom:  env(safe-area-inset-bottom);
 }
 .tui-hover{
   background: rgba(0, 0, 0, .2)

@@ -59,13 +59,18 @@ ThorUI组件库，微信小程序代码片段分享
 |  ![](https://thorui.cn/img/news/4.png) | ![](https://thorui.cn/img/news/5.png)  |  ![](https://thorui.cn/img/news/6.png) |
 
 
+#  聊天模板截图
+| ![](https://thorui.cn/img/chat/1.png)  |   ![](https://thorui.cn/img/chat/2.png)|  ![](https://thorui.cn/img/chat/3.png) |
+| ------------ | ------------ | ------------ |
+
+
 #  组件功能部分截图
 
 |   ![消息提示](https://thorui.cn/img/function/1.jpg)| ![吸顶容器](https://thorui.cn/img/function/2.jpg)  |  ![数字键盘](https://thorui.cn/img/function/3.jpg) |  ![锁频键盘](https://thorui.cn/img/function/4.jpg) |  ![时间轴](https://thorui.cn/img/function/5.jpg) |
 | ------------ | ------------ | ------------ | ------------ | ------------ |
 |  ![消息滚动](https://thorui.cn/img/function/6.jpg) |  ![弹层，下拉选择](https://thorui.cn/img/function/7.jpg) |  ![抽奖转盘](https://thorui.cn/img/function/8.jpg) | ![抽屉](https://thorui.cn/img/function/9.jpg)  | ![滑动菜单](https://thorui.cn/img/function/10.png)  |
 | ![二维码生成](https://thorui.cn/img/function/11.png)  |  ![地图-拖拽定位](https://thorui.cn/img/function/12.png) |![地图-周边地点](https://thorui.cn/img/function/13.png)   |  ![基础组件](https://thorui.cn/img/function/14.png) |  ![索引列表-城市选择](https://thorui.cn/img/function/15.png) |
-| ![索引列表](https://thorui.cn/img/function/16.png)  | ![顶部选项卡](https://thorui.cn/img/function/17.png)  |   |   |   |
+| ![索引列表](https://thorui.cn/img/function/16.png)  | ![顶部选项卡](https://thorui.cn/img/function/17.png)  |  ![顶部选项卡](https://thorui.cn/img/function/18.png) |  ![顶部选项卡](https://thorui.cn/img/function/19.png) |   |
 
 
 

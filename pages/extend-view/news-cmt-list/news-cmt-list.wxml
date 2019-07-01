@@ -34,12 +34,14 @@
   </view>
 
   <view class="tui-operation">
-    <view class="tui-btn-comment" bindtap="btnCmt">发表你的评论...</view>
+    <view class="tui-operation-inner">
+      <view class="tui-btn-comment" bindtap="btnCmt">发表你的评论...</view>
+    </view>
   </view>
 
   <!--加载loadding-->
   <tui-loadmore visible="{{loadding}}" index="3" type="primary"></tui-loadmore>
   <tui-nomore visible="{{!pullUpOn}}" bgcolor="#fff" text="没有更多评论"></tui-nomore>
   <!--加载loadding-->
-
+  <view class="tui-safearea-bottom"></view>
 </view>

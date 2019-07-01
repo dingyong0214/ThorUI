@@ -78,6 +78,5 @@
   <tui-loadmore visible="{{loadding}}" index="3" type="primary"></tui-loadmore>
   <tui-nomore visible="{{!pullUpOn}}" bgcolor="#fff" text="没有更多评论"></tui-nomore>
   <!--加载loadding-->
-
-
+  <view class="tui-safearea-bottom"></view>
 </view>

@@ -18,6 +18,11 @@ page {
   height: 100rpx;
   left: 0;
   bottom: 0;
+  padding-bottom: env(safe-area-inset-bottom);
+}
+.tui-safearea-bottom {
+  width: 100%;
+  height: env(safe-area-inset-bottom);
 }
 
 .tui-tabbar::before {

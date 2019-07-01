@@ -47,12 +47,15 @@
   </view>
 
   <view class="tui-operation">
-    <view class="tui-btn-comment" bindtap="btnCmt">回复楼主...</view>
+     <!--处理iphonex xr 等手机底部兼容-->
+    <view class="tui-operation-inner">
+     <view class="tui-btn-comment" bindtap="btnCmt">回复楼主...</view>
+    </view>
   </view>
 
   <!--加载loadding-->
   <tui-loadmore visible="{{loadding}}" index="3" type="primary"></tui-loadmore>
   <tui-nomore visible="{{!pullUpOn}}" bgcolor="#fff" text="没有更多回复"></tui-nomore>
   <!--加载loadding-->
-
+  <view class="tui-safearea-bottom"></view>
 </view>

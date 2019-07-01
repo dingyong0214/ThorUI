@@ -47,6 +47,9 @@
   font-size: 36rpx;
   position: relative;
 }
+.tui-btn-last{
+   padding-bottom: env(safe-area-inset-bottom);
+}
 
 .tui-actionsheet-divider::before {
   content: '';
@@ -61,6 +64,7 @@
 
 .tui-actionsheet-cancel {
   color: #1a1a1a;
+  padding-bottom: env(safe-area-inset-bottom);
 }
 
 .tui-actionsheet-hover {

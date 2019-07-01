@@ -38,7 +38,7 @@
                 <image src="../../static/images/product/22.jpg" class="g-image" />
                 <view class="g-title">好物优选</view>
               </view>
-              <view class="g-box" catchtap="productList"  data-key="iphone X">
+              <view class="g-box" catchtap="productList" data-key="iphone X">
                 <image src="../../static/images/product/33.jpg" class="g-image" />
                 <view class="g-title">iphone X</view>
               </view>
@@ -76,11 +76,11 @@
                 <image src="../../static/images/product/11.jpg" class="g-image" />
                 <view class="g-title">笔记本</view>
               </view>
-              <view class="g-box" catchtap="productList" data-key="电水壶" >
+              <view class="g-box" catchtap="productList" data-key="电水壶">
                 <image src="../../static/images/product/22.jpg" class="g-image" />
                 <view class="g-title">电水壶</view>
               </view>
-              <view class="g-box" catchtap="productList" data-key="iphone X"  wx:if="{{index%2===0}}">
+              <view class="g-box" catchtap="productList" data-key="iphone X" wx:if="{{index%2===0}}">
                 <image src="../../static/images/product/33.jpg" class="g-image" />
                 <view class="g-title">iphone X</view>
               </view>

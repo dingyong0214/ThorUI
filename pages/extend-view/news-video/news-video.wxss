@@ -164,7 +164,7 @@ page {
 .tui-operation {
   width: 100%;
   height: 100rpx;
-  box-sizing: border-box;
+  /* box-sizing: border-box; */
   overflow: hidden;
   background: #fff;
   display: flex;
@@ -174,6 +174,11 @@ page {
   left: 0;
   bottom: 0;
   z-index: 99999;
+  padding-bottom: env(safe-area-inset-bottom);
+}
+.tui-safearea-bottom{
+  width: 100%;
+  height: env(safe-area-inset-bottom);
 }
 
 .tui-operation::before {

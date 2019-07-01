@@ -20,6 +20,12 @@ page {
   height: 100rpx;
   left: 0;
   bottom: 0;
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+.tui-safearea-bottom {
+  width: 100%;
+  height: env(safe-area-inset-bottom);
 }
 
 .tui-tabbar::before {
@@ -57,7 +63,7 @@ page {
 }
 
 .tui-item-active {
-  color: #E41F19 !important;
+  color: #e41f19 !important;
 }
 
 /*tabbar*/
@@ -67,7 +73,7 @@ page {
   height: 100rpx;
   padding: 0 30rpx 0 20rpx;
   box-sizing: border-box;
-  background: #E41F19;
+  background: #e41f19;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -134,7 +140,7 @@ page {
 .tui-header-banner {
   padding-top: 100rpx;
   box-sizing: border-box;
-  background: #E41F19;
+  background: #e41f19;
 }
 
 .tui-hot-search {
@@ -163,7 +169,7 @@ page {
 .tui-banner-bg {
   display: flex;
   height: 180rpx;
-  background: #E41F19;
+  background: #e41f19;
   position: relative;
 }
 
@@ -174,7 +180,7 @@ page {
   border: 1px solid transparent;
   position: relative;
   z-index: 1;
-  background: #E41F19;
+  background: #e41f19;
 }
 
 .tui-route-left {
@@ -428,7 +434,7 @@ page {
 .tui-sale-price {
   font-size: 34rpx;
   font-weight: 500;
-  color: #E41F19;
+  color: #e41f19;
 }
 
 .tui-factory-price {

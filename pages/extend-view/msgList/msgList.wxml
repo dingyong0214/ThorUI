@@ -33,4 +33,5 @@
       </view>
     </tui-cell>
   </block>
+   <view class="tui-safearea-bottom"></view>
 </view>
