@@ -9,6 +9,10 @@ ThorUI组件库，微信小程序代码片段分享
 
 [https://www.thorui.cn/](https://www.thorui.cn/)
 
+# ThorUI组件文档参考
+
+[http://www.donarui.com/](http://www.donarui.com/)
+
 
 本项目已同步更新到[uni-app](https://ext.dcloud.net.cn/plugin?id=556)，后续会同步支付宝小程序，百度小程序，头条小程序等
 
