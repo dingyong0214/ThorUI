@@ -4,7 +4,7 @@
     <view class="tui-header" style="padding-top:{{top}}px; opacity:{{opcity}}">
       商品详情
     </view>
-    <view class="tui-header-icon" style="padding-top:{{top}}px">
+    <view class="tui-header-icon" style="margin-top:{{top}}px">
       <tui-icon name="arrowleft" color="{{opcity>=1?'#000':'#fff'}}" bindtap="back" tui-icon-class="tui-icon-back" class="tui-icon" style="background:rgba(0, 0, 0, {{iconOpcity}});"></tui-icon>
       <tui-icon name="more-fill" color="{{opcity>=1?'#000':'#fff'}}" size="20" tui-icon-class="tui-icon-more" class="tui-icon tui-icon-ml" style="background:rgba(0, 0, 0, {{iconOpcity}});" catchtap="openMenu"></tui-icon>
       <tui-badge type="red" tui-badge-class="tui-badge" size="small">5</tui-badge>
@@ -93,7 +93,7 @@
     </view>
 
     <view class="tui-basic-info tui-mtop tui-radius-all">
-      <view class="tui-list-cell" bindtap="showPopup" bindtap="showPopup">
+      <view class="tui-list-cell" bindtap="showPopup" >
         <view class="tui-bold tui-cell-title">已选</view>
         <view class="tui-selected-box">个性水滴耳环【A2】,1个，可选服务</view>
         <tui-icon name="more-fill" size="20" class="tui-right" color="#666"></tui-icon>

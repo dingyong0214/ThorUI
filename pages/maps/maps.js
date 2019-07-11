@@ -108,8 +108,7 @@ Page({
               distance: data.poisData[i].distance
             })
           }
-
-          this.setData({
+          that.setData({
             address: addr,
             covers: arr
           })
@@ -162,7 +161,7 @@ Page({
 
   },
   call(event) {
-    const index = event.currentTarget.dataset.id;
+    const index = Number(event.currentTarget.dataset.id);
     const tel = this.data.address[index].tel;
     if (tel) {
       wx.makePhoneCall({
@@ -172,7 +171,7 @@ Page({
 
   },
   go(event) {
-    const index = event.currentTarget.dataset.id;
+    const index = Number(event.currentTarget.dataset.id);
     const item = this.data.address[index];
     const latitude = Number(item.latitude)
     const longitude = Number(item.longitude)

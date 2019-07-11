@@ -1,6 +1,7 @@
 {
   "pages": [
     "pages/index/index",
+    "pages/aaa/aaa",
     "pages/extend/extend",
     "pages/my/my",
     "pages/maps/maps",
@@ -68,7 +69,8 @@
         "productList/productList",
         "productDetail/productDetail",
         "numberbox/numberbox",
-        "rate/rate"
+        "rate/rate",
+        "modal/modal"
       ]
     }
   ],

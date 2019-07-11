@@ -1,11 +1,11 @@
-<!--可以直接引入thorui.css使用，也可以使用组件button-->
+<!--可以直接引入thorui.wxss使用，也可以使用组件button-->
 <view class="container">
   <view class="title">
     默认按钮
   </view>
   <tui-button bind:click="detail" type="primary" tui-button-class="tui-mbtm">页面主操作</tui-button>
   <tui-button type="primary" disabled="{{true}}" loading="{{true}}" tui-button-class="tui-mbtm">页面主操作 Disabled</tui-button>
-  <!--注释部分为直接引入thorui.css写法-->
+  <!--注释部分为直接引入thorui.wxss写法-->
   <!-- <button class="tui-btn tui-btn-block tui-primary" hover-class="tui-primary-hover">页面主操作</button> -->
   <!-- <button class="tui-btn tui-btn-block tui-primary tui-dark-disabled" loading disabled>页面主操作 Disabled</button> -->
   <button class="tui-btn tui-btn-block tui-white" hover-class="tui-white-hover">页面次要操作</button>

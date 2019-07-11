@@ -47,6 +47,11 @@ Page({
         page: "rate",
         like: false
       }, {
+        name: "Modal弹框",
+        desc: "Modal弹框:可设置按钮数，按钮样式，提示文字样式等，还可自定义弹框内容。",
+        page: "modal",
+        like: false
+      }, {
       name: "新闻模板",
         desc: "新闻模板包含：新闻列表，新闻详情，评论等。",
       page: "news",

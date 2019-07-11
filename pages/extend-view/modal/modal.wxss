@@ -20,7 +20,6 @@
   padding-top: 18rpx;
 }
 
-
 .tui-btn-box {
   padding: 10rpx 40rpx;
   box-sizing: border-box;
@@ -28,4 +27,19 @@
 
 .tui-btn-mtop {
   margin-top: 36rpx;
+}
+
+.tui-modal-custom {
+  text-align: center
+}
+
+.tui-tips-img {
+  width: 80rpx;
+  height: 80rpx;
+  margin-top: 20rpx;
+}
+.tui-modal-custom-text{
+  font-size:30rpx;
+  color: #333;
+  padding: 20rpx 0
 }

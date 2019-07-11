@@ -1,6 +1,8 @@
 # ThorUI
 ThorUI组件库，微信小程序代码片段分享
 
+## 小程序二维码
+
 ![image](https://thorui.cn/img/applets.jpg)
 
 # 网站介绍
@@ -8,7 +10,15 @@ ThorUI组件库，微信小程序代码片段分享
 [https://www.thorui.cn/](https://www.thorui.cn/)
 
 
-本项目稳定后，会同步更新到uni-app，支付宝小程序，百度小程序，头条小程序等
+本项目稳定后，已同步更新到[uni-app](https://ext.dcloud.net.cn/plugin?id=556)，后续会同步支付宝小程序，百度小程序，头条小程序等
+
+
+## 更新日志
+
+# V1.2.1
+1.新增组件Modal弹框:可设置按钮数，按钮样式，提示文字样式等，还可自定义弹框内容。 
+
+2.修复部分已知bug。
 
 # V1.2.0
 1.新增组件NumberBox数字框:可设置步长，支持浮点数，支持调整样式(可单独设置)。

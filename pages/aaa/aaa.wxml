@@ -1,40 +1,16 @@
-<view class="tui-page">
-  <scroll-view class="tui-scrollList" scroll-y scroll-into-view="{{scrollViewId}}" style="height:{{winHeight}}px" bindscroll="onScroll">
-    <!--searchbox-->
-    <view class="tui-searchbox">
-      <view class="tui-search-input" bindtap="search">
-        <icon type="search" size='15' color='#999'></icon>
-        <text class="tui-search-text">搜索</text>
-      </view>
-    </view>
-    <tui-cell tui-cell-class="tui-line-left" last="{{true}}" bind:click="detail">
-      <image src="../../static/images/news/2.jpg" class="tui-img"></image>
-      <view class="tui-name">新的朋友</view>
-    </tui-cell>
-    <!--searchbox-->
-    <!--联系人列表-->
-    <view class="tui-list city-list">
-      <block wx:for="{{lists}}" key="{{index}}" wx:for-item="list" wx:if="{{list.data[0]}}">
-        <tui-sticky scrollTop="{{scrollTop}}">
-          <view class="tui-list-cell-divider" id="{{list.letter}}" slot="header">
-            {{list.letter}}
-          </view>
-          <tui-cell tui-cell-class="tui-line-left" slot="content" wx:for="{{list.data}}" wx:key="{{index}}" last="{{list.data.length-1==index?'last':''}}" bind:click="detail">
-            <image src="../../static/images/news/{{(index%2===0 && index!==0)?'avatar_1.jpg':'avatar_2.jpg'}}" class="tui-img"></image>
-            <view class="tui-name">{{item.name}}</view>
-          </tui-cell>
-        </tui-sticky>
-      </block>
-    </view>
-    <!--联系人列表-->
-    <view class="tui-footer">120位联系人</view>
-  </scroll-view>
-  <view class="tui-indexed-list-bar" style="height:{{indexBarHeight}}px" catchtouchstart="touchStart" catchtouchmove="touchMove" catchtouchend="touchEnd" catchtouchcancel="touchCancel" wx:if="{{!inputShowed}}">
-    <view wx:for="{{lists}}" wx:key="{{index}}" wx:for-item="items" class="tui-indexed-list-text" style="height:{{indexBarItemHeight}}px">
-				{{items.letter}}
-			</view>
+<view class="container">
+  <view class="header">
+    <view class="title">Modal</view>
+    <view class="sub-title">modal弹框</view>
   </view>
-  <view class="tui-indexed-list-alert" wx:if="{{touchmove && lists[touchmoveIndex].letter}}">
-    <text>{{lists[touchmoveIndex].letter}}</text>
+
+  <view class="tui-btn-box">
+    <tui-button type="white" shape="circle" tui-button-class="tui-btn-mtop"  bind:click='show'>一般弹框</tui-button>
+    <tui-button type="white" shape="circle" tui-button-class="tui-btn-mtop" bind:click='switchKeyboard' data-length="4">提示文本样式</tui-button>
+    <tui-button type="white" shape="circle" tui-button-class="tui-btn-mtop" bind:click="lockscreen">多个按钮</tui-button>
+      <tui-button type="white" shape="circle" tui-button-class="tui-btn-mtop" bind:click="lockscreen">圆形按钮</tui-button>
+       <tui-button type="white" shape="circle" tui-button-class="tui-btn-mtop" bind:click="lockscreen">按钮样式</tui-button>
+        <tui-button type="white" shape="circle" tui-button-class="tui-btn-mtop" bind:click="lockscreen">遮罩不可点</tui-button>
   </view>
+  <tui-modal show="{{modal}}" bind:click="show" bind:cancel="show" title="提示"  content="确定退出登录吗？"></tui-modal>
 </view>

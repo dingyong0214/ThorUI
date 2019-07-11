@@ -53,7 +53,7 @@
   <tui-view title="菜单列表" tui-view-class="tui-view">
     <tui-cell bind:click="detail" arrow="{{true}}" tui-cell-class="tui-list">
       <tui-icon name="wealth-fill" size="24" color="#ff7900"></tui-icon>
-      <text class="tui-cell-name" slot="title">我的钱包</text>
+      <text class="tui-cell-name">我的钱包</text>
     </tui-cell>
     <tui-cell bind:click="detail" arrow="{{true}}" tui-cell-class="tui-list">
       <tui-icon name="service-fill" size="24" color="#5677fc"></tui-icon>

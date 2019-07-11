@@ -27,7 +27,7 @@
   color: #8a5966 !important;
 }
 .tui-grid-five{
-  padding: 20rpx 20rpx !important;
+  padding:20rpx !important;
 }
 .tui-grid-label {
   display: block;

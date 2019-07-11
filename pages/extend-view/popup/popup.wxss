@@ -1,11 +1,13 @@
 /* 隐藏scroll-view滚动条*/
-::-webkit-scrollbar{
+
+::-webkit-scrollbar {
   width: 0;
   height: 0;
   color: transparent;
 }
 
 /*header*/
+
 .tui-header {
   width: 100%;
   padding-top: 34rpx;
@@ -214,6 +216,8 @@
 .tui-selected-list {
   background: #fff;
   border-radius: 20rpx;
+  overflow: hidden;
+  transform: translateZ(0);
 }
 
 .tui-dropdown-scroll {
@@ -233,13 +237,13 @@
 .tui-share {
   background: #e8e8e8;
   position: relative;
-  padding-bottom:  env(safe-area-inset-bottom);
+  padding-bottom: env(safe-area-inset-bottom);
   /* padding-bottom: 150rpx; */
 }
 
 .tui-share-title {
   font-size: 26rpx;
-  color: #7E7E7E;
+  color: #7e7e7e;
   text-align: center;
   line-height: 26rpx;
   padding: 20rpx 0 50rpx 0;
@@ -288,7 +292,7 @@
 
 .tui-share-text {
   font-size: 24rpx;
-  color: #7E7E7E;
+  color: #7e7e7e;
   line-height: 24rpx;
   padding: 20rpx 0;
 }
@@ -305,8 +309,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-bottom:  env(safe-area-inset-bottom);
+  padding-bottom: env(safe-area-inset-bottom);
 }
-.tui-hover{
-  background: rgba(0, 0, 0, .2)
+
+.tui-hover {
+  background: rgba(0, 0, 0, 0.2);
 }

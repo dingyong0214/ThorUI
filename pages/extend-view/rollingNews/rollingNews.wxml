@@ -37,7 +37,7 @@
   <view class="tui-rolling-news">
     <tui-icon tui-icon-class="tui-rolling-icon" name-="news-fill" size='28' color='#5677fc'></tui-icon>
     <swiper autoplay="{{true}}" circular="{{true}}" interval="3000" class="tui-swiper">
-      <swiper-item wx:for="{{newsList}}" key="{{index}}" class="tui-swiper-item">
+      <swiper-item wx:for="{{newsList}}" wx:key="{{index}}" class="tui-swiper-item">
         <view class="tui-news-item" bindtap='detail'>{{item}}</view>
       </swiper-item>
     </swiper>

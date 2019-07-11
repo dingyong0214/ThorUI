@@ -64,7 +64,7 @@ Page({
           latitude: res.latitude,
           longitude: res.longitude
         })
-        that.getAddress(res.longitude, res.latitude);
+        //that.getAddress(res.longitude, res.latitude);
       }
     })
   }

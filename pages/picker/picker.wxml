@@ -2,7 +2,7 @@
   <button class="btn-primary btn-gray" hover-class="btn-hover" >禁用状态</button>
   <button class="btn-primary btn-disabled" hover-class="btn-hover" >禁用状态</button>
  <picker value="{{value}}" mode="multiSelector" bindchange="picker" bindcolumnchange="columnPicker" range="{{multiArray}}" >
-  <button class="btn-primary" hover-class="btn-hover" bindtap="selectCity">请选择</button>
+  <button class="btn-primary" hover-class="btn-hover">请选择</button>
  </picker>
   <view class="result">
     {{text}}

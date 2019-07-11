@@ -51,7 +51,7 @@
   vertical-align: top;
   display: flex;
   justify-content: flex-start;
-  line-height: 1;
+  line-height: 28rpx;
 }
 .tui-order-time{
  font-size: 24rpx;

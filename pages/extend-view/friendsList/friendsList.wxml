@@ -14,12 +14,12 @@
     <!--searchbox-->
     <!--联系人列表-->
     <view class="tui-list city-list">
-      <block wx:for="{{lists}}" key="{{index}}" wx:for-item="list" wx:if="{{list.data[0]}}">
+      <block wx:for="{{lists}}" wx:key="{{index}}" wx:for-item="list" wx:if="{{list.data[0]}}">
         <tui-sticky scrollTop="{{scrollTop}}">
           <view class="tui-list-cell-divider" id="{{list.letter}}" slot="header">
             {{list.letter}}
           </view>
-          <tui-cell tui-cell-class="tui-line-left" slot="content" wx:for="{{list.data}}" wx:key="{{index}}" last="{{list.data.length-1==index?'last':''}}" bind:click="detail">
+          <tui-cell tui-cell-class="tui-line-left" slot="content" wx:for="{{list.data}}" wx:key="{{index}}" last="{{list.data.length-1==index?true:false}}" bind:click="detail">
             <image src="../../../static/images/news/{{(index%2===0 && index!==0)?'avatar_1.jpg':'avatar_2.jpg'}}" class="tui-img"></image>
             <view class="tui-name">{{item.name}}</view>
           </tui-cell>

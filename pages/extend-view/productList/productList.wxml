@@ -99,9 +99,9 @@
           </view>
         </view>
         <view class="tui-drawer-content">
-          <input placeholder-class="tui-phcolor" class="tui-input" name="mobile" placeholder="最低价" bindinput="input" maxlength="11" value="{{mobile}}" type='number' />
+          <input placeholder-class="tui-phcolor" class="tui-input" placeholder="最低价" maxlength="11" type='number' />
           <tui-icon name="reduce" color="#333" size="14"></tui-icon>
-          <input placeholder-class="tui-phcolor" class="tui-input" name="mobile" placeholder="最高价" bindinput="input" maxlength="11" value="{{mobile}}" type='number' />
+          <input placeholder-class="tui-phcolor" class="tui-input" placeholder="最高价" maxlength="11" type='number' />
         </view>
 
         <view class="tui-drawer-title">

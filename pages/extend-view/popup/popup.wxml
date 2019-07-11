@@ -51,13 +51,13 @@
       <view class="tui-drop-btn btn-primary" hover-class="btn-hover" hover-stay-time="150" bindtap="btnCloseDrop">确定</view>
     </view>
   </tui-top-dropdown>
-  <!----header 顶部下拉选择框-->
+  <!--header 顶部下拉选择框-->
 
   <view class="top-dropdown">
     <tui-button type="white" shape="circle" data-index="0" bindtap="btnDropChange">顶部下拉列表</tui-button>
   </view>
 
-  <!---下拉选择框 dropdownlist--->
+  <!--下拉选择框 dropdownlist-->
   <view class="tui-drop-input-box">
     <tui-dropdown-list show="{{dropdownShow}}" top="94" height="400">
       <tui-button type="white" shape="circle" slot="selectionbox" bind:click="dropDownList">下拉选择框
@@ -75,14 +75,14 @@
       </view>
     </tui-dropdown-list>
   </view>
-  <!---下拉选择框--->
+  <!--下拉选择框-->
 
   <view class="tui-share-box">
     <tui-button type="white" shape="circle" bind:click="popup">底部分享弹窗</tui-button>
   </view>
 
 
-  <!---底部分享弹窗-->
+  <!--底部分享弹窗-->
   <tui-bottom-popup show="{{popupShow}}" bind:close="popup">
     <view class="tui-share">
       <view class="tui-share-title">分享到</view>
@@ -112,6 +112,6 @@
       <view class="tui-btn-cancle" bindtap="popup">取消</view>
     </view>
   </tui-bottom-popup>
-  <!---底部分享弹窗--->
+  <!--底部分享弹窗-->
 
 </view>

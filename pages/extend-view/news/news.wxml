@@ -11,7 +11,7 @@
   </view>
   <!--banner-->
   <swiper indicator-dots="true" autoplay="true" interval="5000" duration="150" class="tui-banner-swiper" circular="{{true}}">
-    <swiper-item wx:for="{{banner}}" wx:index="{{index}}" catchtap="bannerDetail">
+    <swiper-item wx:for="{{banner}}" wx:key="{{index}}" catchtap="bannerDetail">
       <view class="tui-banner-title">{{item.title}}</view>
       <image src="../../../static/images/news/{{item.img}}" class="tui-slide-image" mode="widthFix" />
     </swiper-item>

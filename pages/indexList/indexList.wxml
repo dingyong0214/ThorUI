@@ -25,7 +25,7 @@
     </view>
     <view wx:if="{{!inputShowed}}">
       <view class="tui-list city-list">
-        <block wx:for="{{lists}}" key="{{index}}" wx:for-item="list" wx:if="{{list.data[0]}}">
+        <block wx:for="{{lists}}" wx:key="{{index}}" wx:for-item="list" wx:if="{{list.data[0]}}">
           <view class="tui-list-cell-divider" id="{{list.letter}}">
             {{list.letter}}
           </view>

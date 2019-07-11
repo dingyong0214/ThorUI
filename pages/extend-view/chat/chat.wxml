@@ -84,7 +84,7 @@
       <view class="tui-flex-center">
         <view class="tui-chatbox tui-chatbox-left tui-chat-flex tui-mr">
           <image src="../../../static/images/chat/voice.png" class="tui-chat-voice tui-mr"></image>
-          <view class="tui-chatbox-left">9"</view>
+          <view >8"</view>
         </view>
         <tui-badge dot="{{true}}" type="danger"></tui-badge>
       </view>
