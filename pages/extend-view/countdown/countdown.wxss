@@ -19,13 +19,20 @@
   color: #7a7a7a;
   padding-top: 18rpx;
 }
-.tui-text{
-  padding-left: 10rpx;
-  vertical-align: middle;
-  font-size: 26rpx
+
+.tui-countdown {
+  width: 100%;
+  padding: 40rpx 30rpx;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fff;
+  margin-top: 20rpx;
 }
-.tui-divider-img{
-  width: 32rpx;
-  height: 32rpx;
-  vertical-align: middle;
+
+.tui-countdown-text {
+  font-size: 30rpx;
+  line-height: 30rpx;
+  color: #555;
 }

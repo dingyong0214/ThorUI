@@ -1,0 +1,231 @@
+.container {
+  padding-bottom: 100rpx;
+  box-sizing: border-box;
+}
+
+/*banner*/
+
+.tui-banner-box {
+  width: 100%;
+  padding-top: 20rpx;
+  box-sizing: border-box;
+  background: #fff;
+}
+
+.tui-banner-swiper {
+  width: 100%;
+  height: 240rpx;
+}
+
+.tui-banner-item {
+  padding: 0 16rpx;
+  box-sizing: border-box;
+}
+
+.tui-slide-image {
+  width: 100%;
+  height: 240rpx;
+  display: block;
+  border-radius: 12rpx;
+  /* transition: all 0.1s linear; */
+}
+
+.tui-banner-scale {
+  transform: scaleY(0.9);
+  transform-origin: center center;
+}
+
+.tui-banner-swiper .wx-swiper-dot {
+  width: 8rpx;
+  height: 8rpx;
+  display: inline-flex;
+  background: none;
+  justify-content: space-between;
+}
+
+.tui-banner-swiper .wx-swiper-dot::before {
+  content: '';
+  flex-grow: 1;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 16rpx;
+  overflow: hidden;
+}
+
+.tui-banner-swiper .wx-swiper-dot-active::before {
+  background: #fff;
+}
+
+.tui-banner-swiper .wx-swiper-dot.wx-swiper-dot-active {
+  width: 16rpx;
+}
+
+/*banner*/
+
+/*headlines*/
+
+.tui-rolling-news {
+  width: 100%;
+  padding: 0 30rpx;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+  background: #fff;
+}
+
+.tui-rolling-news::after {
+  left: 0;
+}
+
+.tui-swiper {
+  margin-left: 8rpx;
+  font-size: 28rpx;
+  height: 80rpx;
+  flex: 1;
+}
+
+.tui-swiper-item {
+  display: flex;
+  align-items: center;
+}
+
+.tui-news-item {
+  line-height: 28rpx;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #555;
+}
+
+/*headlines*/
+
+/*classify*/
+
+.tui-classify-box {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 28rpx 0;
+  background-color: #fff;
+}
+
+.tui-classify-item {
+  width: 20%;
+  text-align: center;
+}
+
+.tui-classify-img {
+  width: 88rpx;
+  height: 88rpx;
+}
+
+.tui-classify-name {
+  font-size: 26rpx;
+  line-height: 26rpx;
+  padding-top: 8rpx;
+  color: #555;
+  white-space: nowrap;
+}
+
+/*classify*/
+
+/*spike*/
+
+.tui-spike-box {
+  background: #fff;
+  margin-top: 20rpx;
+}
+
+.tui-spike-title {
+  padding: 20rpx 30rpx;
+  box-sizing: border-box;
+  font-size: 30rpx;
+  color: #333;
+  font-weight: bold;
+}
+
+.tui-spike-title::after {
+  left: 0;
+}
+
+.tui-spike-swiper {
+  min-height: 440rpx;
+}
+
+.tui-pro-item {
+  display: flex;
+  width: 100%;
+  background: #fff;
+  box-sizing: border-box;
+  border-radius: 12rpx;
+  position: relative;
+}
+
+.tui-pro-item::after {
+  left: 240rpx;
+}
+
+.tui-pro-img {
+  width: 220rpx;
+  height: 220rpx;
+  display: block;
+  flex-shrink: 0;
+  border-radius: 12rpx;
+}
+
+.tui-pro-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
+  padding: 20rpx;
+}
+
+.tui-pro-tit {
+  color: #2e2e2e;
+  font-size: 26rpx;
+  word-break: break-all;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.tui-pro-btmbox {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.tui-sale-price {
+  font-size: 34rpx;
+  font-weight: 500;
+  color: #e41f19;
+}
+
+.tui-factory-price {
+  font-size: 24rpx;
+  color: #a0a0a0;
+  text-decoration: line-through;
+  padding-left: 12rpx;
+}
+
+.tui-countdown {
+  display: flex;
+  align-items: center;
+}
+
+.tui-countdown-text {
+  padding: 0 8rpx;
+  font-size: 24rpx;
+  line-height: 24rpx;
+  color: #555;
+}
+
+/*spike*/

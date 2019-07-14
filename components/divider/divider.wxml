@@ -1,0 +1,17 @@
+<view class="tui-divider" style="height:{{height}}rpx;">
+  <view class="tui-divider-line" style="width:{{width}};background:{{wxs.getBgColor(gradual,gradualColor,dividerColor)}}"></view>
+  <view class="tui-divider-text" style="color:{{color}};font-size:{{size}}rpx;line-height:{{size}}rpx;background:{{bgcolor}};">
+    <slot></slot>
+  </view>
+</view>
+<wxs module="wxs">
+  module.exports = {
+    getBgColor: function(gradual, gradualColor, dividerColor) {
+      var bgColor = dividerColor;
+      if (gradual) {
+        bgColor = "linear-gradient(to right," + gradualColor[0] + "," + gradualColor[1] + "," + gradualColor[1] + "," + gradualColor[0] + ")";
+      }
+      return bgColor;
+    }
+  }
+</wxs>

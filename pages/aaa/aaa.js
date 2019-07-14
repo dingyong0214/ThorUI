@@ -1,13 +1,9 @@
 const util = require('../../utils/util.js')
 Page({
   data: {
-    modal:false
+    gradualColor: ["red","#4a67d6"]
   },
   onLoad: function(options) {
-  },
-  show(){
-    this.setData({
-      modal:!this.data.modal
-    })
+
   }
 })

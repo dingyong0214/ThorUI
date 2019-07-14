@@ -17,7 +17,7 @@
     <tui-icon name="satisfied" size="20"></tui-icon>
   </tui-divider>
  <tui-divider size="36">
-   <image src="../../static/images/basic/icon.png" class="tui-divider-img"></image>
+   <image src="../../../static/images/basic/icon.png" class="tui-divider-img"></image>
    <text class="tui-text">猜你喜欢</text>
  </tui-divider>
 

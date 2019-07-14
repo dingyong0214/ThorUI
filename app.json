@@ -70,7 +70,10 @@
         "productDetail/productDetail",
         "numberbox/numberbox",
         "rate/rate",
-        "modal/modal"
+        "modal/modal",
+        "carousel/carousel",
+        "countdown/countdown",
+        "divider/divider"
       ]
     }
   ],

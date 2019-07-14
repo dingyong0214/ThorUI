@@ -1,0 +1,59 @@
+<view class="container">
+
+  <!--banner-->
+  <view class="tui-banner-box">
+    <swiper indicator-dots="true" autoplay="true" interval="5000" duration="150" class="tui-banner-swiper" circular="{{true}}" previous-margin="60rpx" next-margin="60rpx" bindchange="change">
+      <swiper-item wx:for="{{banner}}" wx:key="{{index}}" class="tui-banner-item">
+        <image src="../../../static/images/mall/banner/{{item}}" class="tui-slide-image {{current!=index?'tui-banner-scale':''}}" mode="scaleToFill" bindtap="detail" />
+      </swiper-item>
+    </swiper>
+  </view>
+  <!--banner-->
+
+  <!--headlines-->
+  <view class="tui-rolling-news list-item">
+    <tui-icon name-="news" size='22' color='#555'></tui-icon>
+    <swiper vertical="{{true}}" autoplay="{{true}}" circular="{{true}}" interval="4000" class="tui-swiper">
+      <swiper-item wx:for="{{headlines}}" wx:key="{{index}}" class="tui-swiper-item">
+        <view class="tui-news-item">{{item}}</view>
+      </swiper-item>
+    </swiper>
+  </view>
+  <!--headlines-->
+  <!--classify-->
+  <view class="tui-classify-box">
+    <view class="tui-classify-item" wx:for="{{classify}}" wx:key="{{index}}" bindtap="more" data-key="{{item.name}}">
+      <image src="../../../static/images/classify/{{item.img}}.png" class="tui-classify-img" />
+      <view class="tui-classify-name">{{item.name}}</view>
+    </view>
+  </view>
+  <!--classify-->
+  <view class="tui-spike-box">
+    <view class="tui-spike-title list-item">限时秒杀</view>
+    <!--商品列表-->
+    <swiper indicator-dots="{{false}}" autoplay="true" interval="5000" duration="400" circular="{{true}}" display-multiple-items="{{2}}" vertical="true" class="tui-spike-swiper">
+      <swiper-item wx:for="{{productList}}" wx:key="{{index}}">
+        <view class="tui-pro-item list-item" hover-class="hover" hover-start-time="150" bindtap="detail">
+          <image src="../../../static/images/mall/product/{{item.img}}.jpg" class="tui-pro-img" mode="widthFix" />
+          <view class="tui-pro-content">
+            <view class="tui-pro-tit">{{item.name}}</view>
+            <view class="tui-pro-btmbox">
+              <view class="tui-pro-price">
+                <text class="tui-sale-price">￥{{item.sale}}</text>
+                <text class="tui-factory-price">￥{{item.factory}}</text>
+              </view>
+              <view class="tui-countdown">
+                <view class="tui-countdown-text">剩余</view>
+                <tui-countdown time="{{item.time}}" color="#e41f19" bcolor="#e41f19" coloncolor="#e41f19"></tui-countdown>
+                <view class="tui-countdown-text">结束</view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </swiper-item>
+    </swiper>
+    <!--商品列表-->
+
+  </view>
+
+</view>
