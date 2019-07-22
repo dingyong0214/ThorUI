@@ -26,7 +26,6 @@ Component({
       clearTimeout(timer);
       this.setData({
         show: true,
-        duration: duration < 2000 ? 2000 : duration,
         type: type,
         msg: options.msg
       }, () => {

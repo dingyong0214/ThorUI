@@ -1,0 +1,7 @@
+<view class="tui-tips-box {{fixed?'tui-tips-fixed':''}}">
+  <image src="{{imgUrl}}" class="tui-tips-icon" style="width:{{imgWidth}}rpx;height:{{imgHeight}}rpx"></image>
+  <view class="tui-tips-content">
+    <slot></slot>
+  </view>
+  <button class="tui-tips-btn" hover-class="tui-tips-btn-hover" style="width:{{btnWidth}}rpx" wx:if="{{btnText}}" bindtap="handleClick">{{btnText}}</button>
+</view>

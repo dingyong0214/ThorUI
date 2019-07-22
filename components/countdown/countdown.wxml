@@ -1,13 +1,13 @@
 <view class="tui-countdown-class tui-countdown-box">
-  <view class="tui-countdown-item" style="background:{{bgcolor}};border-color:{{bcolor}};min-width:{{minwidth}}rpx;min-height:{{minheight}}rpx;" wx:if="{{hours}}">
+  <view class="tui-countdown-item" style="background:{{bgcolor}};border-color:{{bcolor}};width:{{width}}rpx;height:{{height}}rpx;" wx:if="{{hours}}">
     <view class="{{scale?'tui-countdown-scale':''}}" style="font-size:{{size}}rpx;color:{{color}};line-height:{{size}}rpx">{{h}}</view>
   </view>
   <view class="tui-countdown-colon" style="line-height:{{colonsize}}rpx;font-size:{{colonsize}}rpx;color:{{coloncolor}}" wx:if="{{hours}}">:</view>
-  <view class="tui-countdown-item" style="background:{{bgcolor}};border-color:{{bcolor}};min-width:{{minwidth}}rpx;min-height:{{minheight}}rpx;">
+  <view class="tui-countdown-item" style="background:{{bgcolor}};border-color:{{bcolor}};width:{{width}}rpx;height:{{height}}rpx;">
     <view class="{{scale?'tui-countdown-scale':''}}" style="font-size:{{size}}rpx;color:{{color}};line-height:{{size}}rpx">{{i}}</view>
   </view>
   <view class="tui-countdown-colon" style="line-height:{{colonsize}}rpx;font-size:{{colonsize}}rpx;color:{{coloncolor}}">:</view>
-  <view class="tui-countdown-item" style="background:{{bgcolor}};border-color:{{bcolor}};min-width:{{minwidth}}rpx;min-height:{{minheight}}rpx;">
+  <view class="tui-countdown-item" style="background:{{bgcolor}};border-color:{{bcolor}};width:{{width}}rpx;height:{{height}}rpx;">
     <view class="{{scale?'tui-countdown-scale':''}}" style="font-size:{{size}}rpx;color:{{color}};line-height:{{size}}rpx">{{s}}</view>
   </view>
 </view>

@@ -38,8 +38,8 @@
   width: 100%;
   height: 100rpx;
   background: #fff;
-  box-sizing: border-box;
-  padding: 0 30rpx;
+  /* box-sizing: border-box;
+  padding: 0 30rpx; */
   display: flex;
   align-items: center;
   justify-content: center;

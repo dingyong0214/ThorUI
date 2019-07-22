@@ -67,6 +67,36 @@ Page({
         page: "carousel",
         like: false
       }, {
+        name: "回到顶部",
+        desc: "回到顶部:可设置bottom，right值，可设置距离顶部多少距离显示。",
+        page: "goTop",
+        like: false
+      }, {
+        name: "Button按钮",
+        desc: "Button按钮:可自定义宽高，字体大小等。",
+        page: "button",
+        like: false
+      }, {
+        name: "alert弹框",
+        desc: "alert弹框:可设置提示文本，按钮文本及样式。",
+        page: "alert",
+        like: false
+      }, {
+        name: "tips提示",
+        desc: "tips提示:默认居中显示，可设置。带操作按钮，可隐藏。",
+        page: "tips",
+        like: false
+      }, {
+        name: "toast提示",
+        desc: "toast提示：带icon提示，可隐藏，居中显示。",
+        page: "toast",
+        like: false
+      }, {
+        name: "表单验证",
+        desc: "Form Validation：常用的表单验证,具体查看详情。",
+        page: "formValidation",
+        like: false
+      }, {
       name: "新闻模板",
       desc: "新闻模板包含：新闻列表，新闻详情，评论等。",
       page: "news",

@@ -3,22 +3,9 @@
     <view class="title">Divider</view>
     <view class="sub-title">分隔符：可设置占据高度，线条宽度，颜色等</view>
   </view>
+<view style="height:1000px"></view>
+	<tui-scroll-top scrollTop="{{top}}"></tui-scroll-top>
 
-  <tui-divider>默认divider</tui-divider>
-  <tui-divider dividerColor="red">改变线条颜色</tui-divider>
-  <tui-divider dividerColor="#5677fc" color="#5677fc">改变所有颜色</tui-divider>
-  <tui-divider width="80%">改变线条宽度</tui-divider>
-  <tui-divider width="60%" divideColor="red">改变线条宽度</tui-divider>
-  <tui-divider  gradual="{{true}}">渐变线条</tui-divider>
-  <tui-divider width="60%" gradual="{{true}}">渐变线条</tui-divider>
-  <tui-divider gradual="{{true}}" gradualColor="{{gradualColor}}">渐变线条</tui-divider>
-  <tui-divider  size="30">改变字体大小</tui-divider>
-  <tui-divider  size="30">
-    <tui-icon name="satisfied" size="20"></tui-icon>
-  </tui-divider>
- <tui-divider size="36">
-   <image src="../../static/images/basic/icon.png" class="tui-divider-img"></image>
-   <text class="tui-text">猜你喜欢</text>
- </tui-divider>
 
-</view>
+  </view>
+

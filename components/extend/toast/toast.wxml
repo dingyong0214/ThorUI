@@ -1,0 +1,17 @@
+<view class="tui-toast {{visible?'tui-toast-show':''}} {{content?'tui-toast-padding':''}} {{icon?'':'tui-unicon-padding'}}" style="width:{{wxs.getWidth(icon,content)}}">
+  <image src="{{imgUrl}}" class="tui-toast-img" wx:if="{{icon}}"></image>
+  <view class="tui-toast-text {{icon?'':'tui-unicon'}}">{{title}}</view>
+  <view class="tui-toast-text tui-content-ptop" wx:if="{{content && icon}}">{{content}}</view>
+</view>
+
+<wxs module="wxs">
+  module.exports = {
+    getWidth: function(icon, content) {
+      var width = "auto";
+      if (icon) {
+        width = content ? '420rpx' : '360rpx';
+      }
+      return width
+    }
+  }
+</wxs>

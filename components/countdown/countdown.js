@@ -2,12 +2,12 @@ Component({
   externalClasses: ['tui-countdown-class'],
   properties: {
     //数字框最小宽度
-    minwidth: {
+    width: {
       type: Number,
       value: 26
     },
     //数字框最小高度
-    minheight: {
+    height: {
       type: Number,
       value: 26
     },
@@ -71,9 +71,6 @@ Component({
     s: '00'
   },
   lifetimes: {
-    created: function() {
-      this.doLoop()
-    },
     detached: function() {
       clearInterval(this.data.countdown)
       this.setData({
@@ -94,10 +91,12 @@ Component({
     },
     doLoop: function() {
       let seconds = this.toSeconds(this.data.time.hours || 0, this.data.time.minute || 0, this.data.time.second)
-      this.countDown()
+      console.log(seconds)
+      this.countDown(seconds)
       this.setData({
         countdown: setInterval(() => {
           seconds--
+          console.log(seconds)
           if (seconds < 0) {
             this.endOfTime()
             return

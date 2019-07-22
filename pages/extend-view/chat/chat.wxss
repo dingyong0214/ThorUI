@@ -44,8 +44,11 @@ page {
 
 .tui-chat-operation {
   background: #f6f6f6 !important;
-  padding-right: 18rpx;
-  box-sizing: border-box;
+  /* padding-right: 18rpx;
+  box-sizing: border-box; */
+}
+.tui-pr{
+  padding-right: 16rpx
 }
 
 .tui-right-flex {

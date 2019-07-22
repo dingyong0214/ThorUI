@@ -10,7 +10,7 @@
     <view hover-class="tui-opcity" hover-stay-time="150">
       <tui-icon name="imface" size="26" color='#333'></tui-icon>
     </view>
-    <view hover-class="tui-opcity" hover-stay-time="150">
+    <view hover-class="tui-opcity" hover-stay-time="150" class="tui-pr">
       <tui-icon name="add" size="30" color='#333'></tui-icon>
     </view>
   </view>

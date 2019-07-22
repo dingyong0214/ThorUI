@@ -1,0 +1,7 @@
+<view class="tui-alert-box {{show?'tui-alert-show':''}}">
+  <view class="tui-alert-content" style="font-size:{{size}}rpx;color:{{color}}">
+    <slot></slot>
+  </view>
+  <view class="tui-alert-btn" style="color:{{btnColor}}" hover-class="tui-alert-btn-hover" hover-stay-time="150" catchtap="handleClick">{{btnText}}</view>
+</view>
+<view class="tui-alert-mask {{show?'tui-alert-mask-show':''}}" catchtap="handleClickCancel"></view>

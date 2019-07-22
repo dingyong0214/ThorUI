@@ -73,7 +73,13 @@
         "modal/modal",
         "carousel/carousel",
         "countdown/countdown",
-        "divider/divider"
+        "divider/divider",
+        "goTop/goTop",
+        "button/button",
+        "alert/alert",
+        "toast/toast",
+        "formValidation/formValidation",
+        "tips/tips"
       ]
     }
   ],

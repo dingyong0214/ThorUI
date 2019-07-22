@@ -13,11 +13,29 @@ ThorUI组件库，微信小程序代码片段分享
 
 [http://www.donarui.com/](http://www.donarui.com/)
 
+# ThorUI QQ交流群：745733024
+![](https://thorui.cn/img/V132/1.jpg)
+
 
 本项目已同步更新到[uni-app](https://ext.dcloud.net.cn/plugin?id=556)，后续会同步支付宝小程序，百度小程序，头条小程序等
 
 
 ## 更新日志
+
+# V1.3.2
+
+1.扩展基础组件(保留了之前版本):alert、tips、button、toast。
+
+2.新增表单验证功能，只需配置相应验证即可。
+
+3.新增返回顶部组件。
+
+4.优化部分页面，修复已知bug。
+
+# 功能截图 
+|  ![](https://thorui.cn/img/V132/4.jpg) |![](https://thorui.cn/img/V132/2.jpg)  |  ![](https://thorui.cn/img/V132/3.jpg) |
+| ------------ | ------------ | ------------ |
+|   |    |   |
 
 # V1.3.0
 1.新增倒计时组件:时分秒倒计时，支持设置大小，颜色等。
