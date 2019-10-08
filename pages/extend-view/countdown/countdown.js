@@ -1,20 +1,7 @@
 const util = require('../../../utils/util.js')
 Page({
   data: {
-    timeList: [{
-      hours: 1,
-      minute: 40,
-      second: 17
-    }, {
-      hours: 2,
-      minute: 20,
-      second: 58
-    }, {
-      minute: 19,
-      second: 36
-    }, {
-      second: 20
-    }]
+    timeList: [1000, 2000, 3000, 19, 240000]
   },
   onLoad: function (options) {
 

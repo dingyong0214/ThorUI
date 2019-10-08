@@ -90,7 +90,7 @@
         <view class="tui-share-top">
           <view class="tui-share-item {{shareList[0].share.length-1===index?'tui-item-last':''}}" wx:for="{{shareList[0].share}}" wx:key="{{index}}" bindtap="popup">
             <view class="tui-share-icon" hover-class="tui-hover" hover-stay-time="150">
-              <tui-icon name="{{item.icon}}" color="{{item.color}}" size="36"></tui-icon>
+              <tui-icon name="{{item.icon}}" color="{{item.color}}" size="{{item.size?item.size:36}}"></tui-icon>
             </view>
             <view class="tui-share-text">{{item.name}}</view>
           </view>

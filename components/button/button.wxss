@@ -6,7 +6,7 @@
 }
 
 .tui-danger {
-  background: #ed3f14 !important;
+  background: #EB0909 !important;
   color: #fff;
 }
 
@@ -106,17 +106,17 @@
 }
 
 .tui-danger-hover {
-  background: #d53912 !important;
+  background: #c80808 !important;
   color: #e5e5e5 !important;
 }
 
 .tui-danger-outline {
-  color: #ed3f14 !important;
+  color: #EB0909 !important;
   background: none;
 }
 
 .tui-danger-outline::after {
-  border: 1px solid #ed3f14 !important;
+  border: 1px solid #EB0909 !important;
 }
 
 .tui-red-hover {

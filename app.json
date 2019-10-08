@@ -1,7 +1,6 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/aaa/aaa",
     "pages/extend/extend",
     "pages/my/my",
     "pages/maps/maps",
@@ -79,7 +78,22 @@
         "alert/alert",
         "toast/toast",
         "formValidation/formValidation",
-        "tips/tips"
+        "tips/tips",
+        "mall-extend/address/address",
+        "mall-extend/editAddress/editAddress",
+        "mall-extend/my/my",
+        "mall-extend/myOrder/myOrder",
+        "mall-extend/set/set",
+        "mall-extend/shopcart/shopcart",
+        "mall-extend/submitOrder/submitOrder",
+        "mall-extend/success/success",
+        "mall-extend/userInfo/userInfo",
+        "picker-dateTime/picker-dateTime",
+        "fab/fab",
+        "tabbar/tabbar",
+        "tabs/tabs",
+        "collapse/collapse",
+        "upload/upload"
       ]
     }
   ],

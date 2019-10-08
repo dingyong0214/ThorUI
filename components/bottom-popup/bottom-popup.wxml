@@ -1,4 +1,6 @@
-<view class="tui-popup-class tui-bottom-popup {{show?'tui-popup-show':''}}" style="background:{{bgcolor}};{{height?'height:'+height+'rpx':''}}">
-  <slot></slot>
+<view catchtouchmove="forbid">
+  <view class="tui-popup-class tui-bottom-popup {{show?'tui-popup-show':''}}" style="background:{{bgcolor}};{{height?'height:'+height+'rpx':''}}">
+    <slot></slot>
+  </view>
+  <view class="tui-popup-mask {{show?'tui-mask-show':''}}" wx:if="{{mask}}" bindtap="handleClose"></view>
 </view>
-<view class="tui-popup-mask {{show?'tui-mask-show':''}}" wx:if="{{mask}}" bindtap="handleClose"></view>

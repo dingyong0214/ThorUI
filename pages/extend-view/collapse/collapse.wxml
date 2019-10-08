@@ -1,0 +1,40 @@
+<view class="container">
+  <view class="tui-title">基本使用</view>
+  <view>
+    <block wx:for="{{dataList}}" wx:key="{{index}}">
+      <tui-collapse index="{{index}}" current="{{item.current}}" disabled="{{item.disabled}}" bind:click="change">
+        <tui-list-cell hover="{{!item.disabled}}" slot="title">{{item.name}}</tui-list-cell>
+        <view class="tui-content" slot="content">{{item.intro}}</view>
+      </tui-collapse>
+    </block>
+  </view>
+
+  <view class="tui-title">无动画，无箭头</view>
+  <view>
+    <block wx:for="{{dataList2}}" wx:key="{{index}}">
+      <tui-collapse index="{{index}}" current="{{item.current}}" disabled="{{item.disabled}}" translateY="0" arrow="{{false}}" bind:click="change2">
+        <tui-list-cell hover="{{!item.disabled}}" slot="title">{{item.name}}</tui-list-cell>
+        <view class="tui-content" slot="content">{{item.intro}}</view>
+      </tui-collapse>
+    </block>
+  </view>
+
+  <view class="tui-title">手风琴效果</view>
+  <view>
+    <block wx:for="{{dataList}}" wx:key="{{index}}">
+      <tui-collapse index="{{index}}" current="{{current}}" disabled="{{item.disabled}}" bind:click="change3">
+        <tui-list-cell hover="{{!item.disabled}}" slot="title">{{item.name}}</tui-list-cell>
+        <view class="tui-content" slot="content">{{item.intro}}</view>
+      </tui-collapse>
+    </block>
+  </view>
+  <view class="tui-title">手风琴效果，固定内容高度</view>
+  <view>
+    <block wx:for="{{dataList3}}" wx:key="{{index}}">
+      <tui-collapse index="{{index}}" current="{{current2}}" height="120rpx" bdBgColor="#fff" translateY="0" bind:click="change4">
+        <tui-list-cell slot="title">{{item.name}}</tui-list-cell>
+        <view class="tui-content" slot="content">{{item.intro}}</view>
+      </tui-collapse>
+    </block>
+  </view>
+</view>

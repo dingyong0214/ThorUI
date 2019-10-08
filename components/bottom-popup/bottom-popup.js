@@ -32,6 +32,7 @@ Component({
         return;
       }
       this.triggerEvent('close', {});
-    }
+    },
+    forbid() { }
   }
 })

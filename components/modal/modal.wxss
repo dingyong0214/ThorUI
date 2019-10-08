@@ -7,18 +7,25 @@
   background: #fff;
   z-index: 99998;
   transition: all 0.3s ease-in-out;
-  transform: translate(-50%, -50%) scale(0);
   opacity: 0;
+  visibility: hidden;
   border-radius: 24rpx;
   box-sizing: border-box;
   padding: 40rpx 60rpx;
 }
 
-.tui-modal-show {
-  transform: translate(-50%, -50%) scale(1);
-  opacity: 1;
-}
+.tui-modal-scale {
+		transform: translate(-50%, -50%) scale(0);
+	}
 
+	.tui-modal-normal {
+		transform: translate(-50%, -50%) scale(1);
+	}
+
+	.tui-modal-show {
+		opacity: 1;
+		visibility: visible;
+	}
 .tui-modal-mask {
   position: fixed;
   top: 0;

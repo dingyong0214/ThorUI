@@ -1,0 +1,50 @@
+<view class="tui-datetime-picker">
+  <view class="tui-mask {{isShow?'tui-mask-show':''}}" catchtouchmove="stop" bindtap="hide"></view>
+  <view class="tui-header {{isShow?'tui-show':''}}">
+    <view class="tui-picker-header" catchtouchmove="stop">
+      <view class="tui-btn-picker" style="color:{{cancelColor}}" hover-class="tui-opacity" hover-stay-time="150" bindtap="hide">取消</view>
+      <view class="tui-btn-picker" style="color:{{color}}" hover-class="tui-opacity" hover-stay-time="150" bindtap="btnFix">确定</view>
+    </view>
+    <view class="tui-picker-body">
+      <picker-view value="{{value}}" bindchange="change" class="tui-picker-view">
+        <picker-view-column wx:if="{{!reset && type!=4}}">
+          <view class="tui-column-item" wx:for="{{years}}" wx:key="{{index}}">
+            {{ item }}
+            <text class="tui-text">年</text>
+          </view>
+        </picker-view-column>
+        <picker-view-column wx:if="{{!reset && type!=4}}">
+          <view class="tui-column-item" wx:for="{{months}}" wx:key="{{index}}">
+            {{ parse.formatNum(item)}}
+            <text class="tui-text">月</text>
+          </view>
+        </picker-view-column>
+        <picker-view-column wx:if="{{!reset && (type==1 || type==2)}}">
+          <view class="tui-column-item" wx:for="{{days}}" wx:key="{{index}}">
+            {{ parse.formatNum(item) }}
+            <text class="tui-text">日</text>
+          </view>
+        </picker-view-column>
+        <picker-view-column wx:if="{{!reset && (type==1 || type==4)}}">
+          <view class="tui-column-item" wx:for="{{hours}}" wx:key="{{index}}">
+            {{ parse.formatNum(item) }}
+            <text class="tui-text">时</text>
+          </view>
+        </picker-view-column>
+        <picker-view-column wx:if="{{!reset && (type==1 || type==4)}}">
+          <view class="tui-column-item" wx:for="{{minutes}}" wx:key="{{index}}">
+            {{ parse.formatNum(item) }}
+            <text class="tui-text">分</text>
+          </view>
+        </picker-view-column>
+      </picker-view>
+    </view>
+  </view>
+</view>
+<wxs module="parse">
+  module.exports = {
+    formatNum: function(num) {
+      return num < 10 ? "0" + num : num + "";
+    }
+  }
+</wxs>

@@ -1,0 +1,27 @@
+<view class="container">
+		<view class="header">
+			<view class="title">悬浮按钮</view>
+			<view class="sub-title">fab，可设置left，right，bottom值，可设置大小，颜色等，具体参考文档。拓展出来的按钮不应多于6个，否则违反了作为悬浮按钮的快速、高效的原则。 </view>
+		</view>
+		<view class="tui-btn-box">
+			<view class="tui-btn-btm">
+				<tui-button type="white" shape="circle" bind:click="change" data-type="1">左侧悬浮</tui-button>
+			</view>
+			<view class="tui-btn-btm">
+				<tui-button type="white" shape="circle" bind:click="change" data-type="2">右侧悬浮</tui-button>
+			</view>
+			<view class="tui-btn-btm">
+				<tui-button type="white" shape="circle" bind:click="change" data-type="3">设置默认按钮背景颜色</tui-button>
+			</view>
+			<view class="tui-btn-btm">
+				<tui-button type="white" shape="circle" bind:click="change" data-type="4">无拓展按钮</tui-button>
+			</view>
+			<view class="tui-btn-btm">
+				<tui-button type="white" shape="circle" bind:click="change" data-type="5">设置拓展按钮</tui-button>
+			</view>
+			<view class="tui-btn-btm">
+				<tui-button type="white" shape="circle" bind:click="change" data-type="6">拓展按钮无图标展示</tui-button>
+			</view>
+		</view>
+		<tui-fab left="{{left}}" right="{{right}}" bottom="{{bottom}}" bgColor="{{bgColor}}" btnList="{{btnList}}" bind:click="onClick"></tui-fab>
+	</view>

@@ -133,5 +133,13 @@ Page({
   },
   common: function () {
     util.toast("功能开发中~")
+  },
+  submit() {
+    this.setData({
+      popupShow:false
+    })
+    wx.navigateTo({
+      url: '../mall-extend/submitOrder/submitOrder'
+    })
   }
 })

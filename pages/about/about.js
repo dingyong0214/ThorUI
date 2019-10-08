@@ -6,13 +6,14 @@ Page({
   },
   onLoad: function(options) {
   },
-  email: function () {
+  copy: function (e) {
+    let text=e.currentTarget.dataset.text;
     wx.setClipboardData({
-      data: '1062884167@qq.com',
+      data: text,
       success(res) {
         wx.getClipboardData({
           success(res) {
-            util.toast("邮箱已复制", 2000, true)
+            //util.toast("邮箱已复制", 2000, true)
           }
         })
       }

@@ -1,6 +1,7 @@
 <view class="tui-sticky-class">
   <!--sticky 容器-->
-  <view class="{{ isFixed === true ? 'sticky-fixed' : '' }}">
+  <view style="height:{{stickyHeight}};background:{{bgColor}}" wx:if="{{isFixed}}"></view>
+  <view class="{{ isFixed === true ? 'tui-sticky-fixed' : '' }}" style="top:{{isFixed?stickyTop+'px':'auto'}}">
     <slot name="header"></slot>
   </view>
   <!--sticky 容器-->

@@ -1,4 +1,4 @@
-<view class="tui-cell-class tui-list-cell {{arrow?'tui-cell-arrow':''}} {{last?'tui-cell-last':''}}" hover-class="{{hover?'tui-cell-hover':''}}" style="background: {{bgcolor}};font-size: {{ size }}rpx; {{ color ? 'color:' + color : '' }}"
+<view class="tui-cell-class tui-list-cell {{arrow?'tui-cell-arrow':''}} {{last?'tui-cell-last':''}} {{lineLeft?'tui-line-left':''}} {{lineRight?'tui-line-right':''}}" hover-class="{{hover?'tui-cell-hover':''}}" style="background: {{bgcolor}};font-size: {{ size }}rpx; {{ color ? 'color:' + color : '' }};padding:{{padding}}"
   hover-stay-time="150" bindtap="handleClick">
   <slot></slot>
 </view>

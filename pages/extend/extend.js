@@ -53,50 +53,80 @@ Page({
       like: false
     }, {
       name: "倒计时",
-        desc: "倒计时:时分秒倒计时，支持设置大小，颜色等",
+      desc: "倒计时:时分秒倒计时，支持设置大小，颜色等",
       page: "countdown",
       like: false
-      }, {
-        name: "分隔符",
-        desc: "Divider分隔符：可设置占据高度，线条宽度，颜色等",
-        page: "divider",
-        like: false
-      }, {
-        name: "卡片轮播",
-        desc: "卡片轮播:包含顶部轮播，秒杀商品轮播等",
-        page: "carousel",
-        like: false
-      }, {
-        name: "回到顶部",
-        desc: "回到顶部:可设置bottom，right值，可设置距离顶部多少距离显示。",
-        page: "goTop",
-        like: false
-      }, {
-        name: "Button按钮",
-        desc: "Button按钮:可自定义宽高，字体大小等。",
-        page: "button",
-        like: false
-      }, {
-        name: "alert弹框",
-        desc: "alert弹框:可设置提示文本，按钮文本及样式。",
-        page: "alert",
-        like: false
-      }, {
-        name: "tips提示",
-        desc: "tips提示:默认居中显示，可设置。带操作按钮，可隐藏。",
-        page: "tips",
-        like: false
-      }, {
-        name: "toast提示",
-        desc: "toast提示：带icon提示，可隐藏，居中显示。",
-        page: "toast",
-        like: false
-      }, {
-        name: "表单验证",
-        desc: "Form Validation：常用的表单验证,具体查看详情。",
-        page: "formValidation",
-        like: false
-      }, {
+    }, {
+      name: "分隔符",
+      desc: "Divider分隔符：可设置占据高度，线条宽度，颜色等",
+      page: "divider",
+      like: false
+    }, {
+      name: "卡片轮播",
+      desc: "卡片轮播:包含顶部轮播，秒杀商品轮播等",
+      page: "carousel",
+      like: false
+    }, {
+      name: "回到顶部",
+      desc: "回到顶部:可设置bottom，right值，可设置距离顶部多少距离显示。",
+      page: "goTop",
+      like: false
+    }, {
+      name: "Button按钮",
+      desc: "Button按钮:可自定义宽高，字体大小等。",
+      page: "button",
+      like: false
+    }, {
+      name: "alert弹框",
+      desc: "alert弹框:可设置提示文本，按钮文本及样式。",
+      page: "alert",
+      like: false
+    }, {
+      name: "tips提示",
+      desc: "tips提示:默认居中显示，可设置。带操作按钮，可隐藏。",
+      page: "tips",
+      like: false
+    }, {
+      name: "toast提示",
+      desc: "toast提示：带icon提示，可隐藏，居中显示。",
+      page: "toast",
+      like: false
+    }, {
+      name: "表单验证",
+      desc: "Form Validation：常用的表单验证,具体查看详情。",
+      page: "formValidation",
+      like: false
+    }, {
+      name: "日期时间选择",
+      desc: "picker-view扩展，日期时间选择器，可设置默认显示，可根据需要调整选择的类型。",
+      page: "picker-dateTime",
+      like: false
+    }, {
+      name: "悬浮按钮",
+      desc: "fab，拓展出来的按钮不应多于6个，否则违反了作为悬浮按钮的快速、高效的原则。",
+      page: "fab",
+      like: false
+    }, {
+      name: "Tabbar",
+      desc: "Tabbar，类似uni-app原生tabbar组件，可用于自定义tabbar。",
+      page: "tabbar",
+      like: false
+    }, {
+      name: "tabs标签页",
+      desc: "tabs标签页，支持设置字体颜色、字体大小、背景色、高度等。",
+      page: "tabs",
+      like: false
+    }, {
+      name: "折叠面板",
+      desc: "collapse折叠面板，用来折叠/显示过长的内容或者是列表。内容及样式自定义。",
+      page: "collapse",
+      like: false
+    }, {
+      name: "图片上传",
+      desc: "upload，图片上传，需要根据上传接口实际返回数据进行适当调整 。",
+      page: "upload",
+      like: false
+    }, {
       name: "新闻模板",
       desc: "新闻模板包含：新闻列表，新闻详情，评论等。",
       page: "news",
@@ -118,7 +148,7 @@ Page({
       like: false
     }, {
       name: "模板",
-      desc: "计划前三套模板：新闻，聊天，商城。敬请期待！",
+        desc: "新闻、聊天、商城、订餐、短视频等。敬请期待！",
       page: "template",
       like: false
     }]

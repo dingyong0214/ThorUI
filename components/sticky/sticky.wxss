@@ -1,6 +1,5 @@
-.sticky-fixed {
-  width: 100%;
-  position: fixed;
-  top: 0;
-  z-index: 100;
-}
+.tui-sticky-fixed {
+		width: 100%;
+		position: fixed;
+		z-index: 99999;
+	}

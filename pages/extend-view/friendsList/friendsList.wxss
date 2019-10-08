@@ -45,7 +45,7 @@ page {
 
 /*searchbox*/
 
-.tui-line-left::after{
+.tui-line-left::after {
   left: 140rpx !important;
 }
 
@@ -113,7 +113,8 @@ page {
   align-items: center;
   padding: 0;
 }
-.tui-indexed-list-alert text{
+
+.tui-indexed-list-alert text {
   line-height: 50rpx;
 }
 
@@ -125,7 +126,8 @@ page {
   font-size: 30rpx;
   color: #999;
 }
-.tui-safearea-bottom{
+
+.tui-safearea-bottom {
   width: 100%;
   height: env(safe-area-inset-bottom);
 }

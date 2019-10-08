@@ -10,10 +10,12 @@
 }
 
 .tui-divider-line {
-  position: absolute;
-  height: 1rpx;
-  -webkit-transform: scaleY(0.5);
-  transform: scaleY(0.5);
+ position: absolute;
+		height: 1rpx;
+		top: 50%;
+		left: 50%;
+		-webkit-transform: scaleY(0.5) translateX(-50%) translateZ(0);
+		transform: scaleY(0.5) translateX(-50%) translateZ(0);
 }
 
 .tui-divider-text {

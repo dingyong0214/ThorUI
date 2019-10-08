@@ -18,8 +18,15 @@ const utils = {
     if (component) {
       component.showTips(options);
     }
+  },
+  dateTime:function(options){
+    const component = utils.getComponent('#tui-dateTime-ctx');
+    if (component) {
+      component.show();
+    }
   }
 };
 module.exports = {
-  toast: utils.toast
+  toast: utils.toast,
+  dateTime: utils.dateTime
 };

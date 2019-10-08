@@ -191,8 +191,14 @@ Page({
     if (index != 0) {
       if (index == 1) {
         this.classify();
-      }else{
-        util.toast("功能开发中~")
+      } else if (index == 2) {
+        wx.navigateTo({
+          url: '../mall-extend/shopcart/shopcart'
+        })
+      } else {
+        wx.navigateTo({
+          url: '../mall-extend/my/my'
+        })
       }
     }
   },

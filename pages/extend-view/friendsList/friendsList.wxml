@@ -15,7 +15,7 @@
     <!--联系人列表-->
     <view class="tui-list city-list">
       <block wx:for="{{lists}}" wx:key="{{index}}" wx:for-item="list" wx:if="{{list.data[0]}}">
-        <tui-sticky scrollTop="{{scrollTop}}">
+        <tui-sticky scrollTop="{{scrollTop}}" stickyHeight="66rpx">
           <view class="tui-list-cell-divider" id="{{list.letter}}" slot="header">
             {{list.letter=="well"?'#':list.letter}}
           </view>

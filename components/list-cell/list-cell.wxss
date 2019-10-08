@@ -1,7 +1,6 @@
 .tui-list-cell {
   position: relative;
   width: 100%;
-  padding: 26rpx 30rpx;
   box-sizing: border-box;
   overflow: hidden;
   display: flex;
@@ -20,8 +19,15 @@
   transform: scaleY(0.5);
   bottom: 0;
   right: 0;
-  left: 30rpx;
+  left: 0;
 }
+.tui-line-left::after{
+		left: 30rpx !important;
+	}
+	
+	.tui-line-right::after{
+		right: 30rpx !important;
+	}
 
 .tui-cell-last::after {
   border-bottom: 0 !important;

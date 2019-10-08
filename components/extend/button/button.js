@@ -1,6 +1,6 @@
 Component({
   properties: {
-    //样式类型 primary, white, danger, warning, green,blue, gray
+    //样式类型 primary, white, danger, warning, green,blue, gray，black
     type: {
       type: String,
       value: 'primary'

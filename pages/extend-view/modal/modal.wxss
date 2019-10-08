@@ -30,7 +30,7 @@
 }
 
 .tui-modal-custom {
-  text-align: center
+  text-align: center;
 }
 
 .tui-tips-img {
@@ -38,8 +38,21 @@
   height: 80rpx;
   margin-top: 20rpx;
 }
-.tui-modal-custom-text{
-  font-size:30rpx;
+
+.tui-modal-custom-text {
+  font-size: 30rpx;
   color: #333;
-  padding: 20rpx 0
+  padding: 20rpx 0;
+}
+
+.tui-prompt-title {
+  padding-bottom: 20rpx;
+  font-size: 34rpx;
+}
+
+.tui-input {
+  margin: 30rpx 40rpx;
+  border-bottom: 1rpx solid #e6e6e6;
+  padding-bottom: 20rpx;
+  font-size: 32rpx;
 }

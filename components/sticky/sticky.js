@@ -10,6 +10,22 @@ Component({
       observer(val) {
         this.updateStickyChange();
       }
+    },
+    //吸顶容器距离顶部距离 px
+    stickyTop: {
+      type: Number,
+      value:0
+     
+    },
+    //吸顶容器 高度 rpx
+    stickyHeight: {
+      type: String,
+      value: "auto"
+    },
+    //占位容器背景颜色
+    bgColor: {
+      type: String,
+      value: "none"
     }
   },
   data: {
@@ -39,8 +55,10 @@ Component({
       const top = data.top;
       const height = data.height;
       const scrollTop=this.data.scrollTop
+      let stickyTop = this.data.stickyTop
+      stickyTop = stickyTop < 0 ? 0 : stickyTop
       this.setData({
-        isFixed: (scrollTop >= top && scrollTop < top + height) ? true : false
+        isFixed: (scrollTop + stickyTop >= top && scrollTop + stickyTop < top + height) ? true : false
       },()=>{
         //console.log(this.data.isFixed)
       })
@@ -58,7 +76,7 @@ Component({
           query.select(className).boundingClientRect((res) => {
             if (res) {
               this.setData({
-                top: res.top,
+                top: res.top + (this.data.scrollTop || 0),
                 height: res.height
               })
             }

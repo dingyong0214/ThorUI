@@ -1,0 +1,53 @@
+<view class="tui-addr-box">
+  <form report-submit="true">
+    <tui-list-cell hover="{{false}}" padding="0">
+      <view class="tui-line-cell">
+        <view class="tui-title">收货人</view>
+        <input placeholder-class="tui-phcolor" class="tui-input" name="name" placeholder="请输入收货人姓名" maxlength="15" type="text" />
+      </view>
+    </tui-list-cell>
+    <tui-list-cell hover="{{false}}" padding="0">
+      <view class="tui-line-cell">
+        <view class="tui-title">手机号码</view>
+        <input placeholder-class="tui-phcolor" class="tui-input" name="mobile" placeholder="请输入收货人手机号码" maxlength="11" type="text" />
+      </view>
+    </tui-list-cell>
+    <tui-list-cell arrow="{{true}}" padding="0">
+      <view class="tui-line-cell">
+        <view class="tui-title">
+          <text class="tui-title-city-text">所在城市</text>
+        </view>
+        <input placeholder-class="tui-phcolor" class="tui-input" disabled name="city" placeholder="请选择城市" maxlength="50" type="text" />
+      </view>
+    </tui-list-cell>
+    <tui-list-cell hover="{{false}}" padding="0">
+      <view class="tui-line-cell">
+        <view class="tui-title">收货地址</view>
+        <input placeholder-class="tui-phcolor" class="tui-input" name="address" placeholder="请输入详细的收货地址" maxlength="50" type="text" />
+      </view>
+    </tui-list-cell>
+    <tui-list-cell hover="{{false}}" padding="0">
+      <view class="tui-line-cell">
+        <view class="tui-cell-title">地址类型</view>
+        <view class="tui-addr-label">
+          <text wx:for="{{lists}}" wx:key="{{index}}" class="tui-label-item {{index==1?'tui-label-active':''}}">{{item}}</text>
+        </view>
+      </view>
+    </tui-list-cell>
+
+    <!-- 默认地址 -->
+    <tui-list-cell hover="{{false}}" padding="0">
+      <view class="tui-swipe-cell">
+        <view>设为默认地址</view>
+        <switch checked color="#30CC67" class="tui-switch-small" />
+      </view>
+    </tui-list-cell>
+    <!-- 保存地址 -->
+    <view class="tui-addr-save">
+      <tui-button type="danger" height="88rpx">保存收货地址</tui-button>
+    </view>
+    <view class="tui-del" wx:if="{{false}}">
+      <tui-button type="gray" height="88rpx">删除收货地址</tui-button>
+    </view>
+  </form>
+</view>

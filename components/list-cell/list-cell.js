@@ -13,6 +13,18 @@ Component({
       type: Boolean,
       value: false //最后一条数据隐藏线条
     },
+    lineLeft: {
+      type: Boolean,
+      value: true
+    },
+    lineRight: {
+      type: Boolean,
+      value: false
+    },
+    padding: {
+      type: String,
+      value: "26rpx 30rpx"
+    },
     bgcolor:{
       type: String,
       value: "#fff" //背景颜色

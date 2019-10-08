@@ -3,7 +3,7 @@
     <view>1、判断平台，ios可直接使用position: sticky</view>
     <view>2、对sticky-item容器进行绝对定位，底部内容部分使用外边距撑开sticky-item高度，减缓页面抖动</view>
   </view>
-  <sticky scrollTop="{{scrollTop}}">
+  <sticky scrollTop="{{scrollTop}}" stickyHeight="104rpx">
     <view slot="header">
     <view class="sticky-item ">
     <view class="date">本月</view>
@@ -80,7 +80,7 @@
     </view>
   </sticky>
 
-<sticky scrollTop="{{scrollTop}}">
+<sticky scrollTop="{{scrollTop}}" stickyHeight="104rpx">
  <view slot="header">
   <view class="sticky-item ">
     <view class="date">5月</view>
@@ -156,7 +156,7 @@
  </view>
  </sticky>
 
-<sticky scrollTop="{{scrollTop}}">
+<sticky scrollTop="{{scrollTop}}" stickyHeight="104rpx">
  <view slot="header">
   <view class="sticky-item ">
  <view class="date">4月</view>

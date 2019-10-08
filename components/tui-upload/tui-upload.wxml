@@ -1,0 +1,16 @@
+<view class="tui-container">
+  <view class="tui-upload-box">
+    <view class="tui-image-item" wx:for="{{imageList}}" wx:key="{{index}}">
+      <image src="{{item}}" class="tui-item-img" catchtap="previewImage" data-index="{{index}}" mode="aspectFill"></image>
+      <view wx:if="{{!forbidDel}}" class="tui-img-del" catchtap="delImage" data-index="{{index}}"></view>
+      <view wx:if="{{statusArr[index]!=1}}" class="tui-upload-mask">
+        <view class="tui-upload-loading" wx:if="{{statusArr[index]==2}}"></view>
+        <text class="tui-tips">{{statusArr[index]==2?'上传中...':'上传失败'}}</text>
+        <view class="tui-mask-btn" wx:if="{{statusArr[index]==3}}" catchtap="reUpLoad" data-index="{{index}}" hover-class="tui-hover" hover-stay-time="150">重新上传</view>
+      </view>
+    </view>
+    <view wx:if="{{!forbidAdd && imageList.length < limit}}" class="tui-upload-add" bindtap="chooseImage">
+      <view class="tui-upload-icon tui-icon-plus"></view>
+    </view>
+  </view>
+</view>

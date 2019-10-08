@@ -1,0 +1,46 @@
+<view class="tui-set-box">
+		<tui-list-cell padding="0" lineLeft="{{false}}" arrow="{{true}}" bind:click="href" data-type="1">
+			<view class="tui-list-cell tui-info-box">
+				<image src="/static/images/my/mine_def_touxiang_3x.png" class="tui-avatar"></image>
+				<view>echo.</view>
+			</view>
+		</tui-list-cell>
+		<tui-list-cell padding="0" lineLeft="{{false}}" arrow="{{true}}" bind:click="href" data-type="2">
+			<view class="tui-list-cell">
+				地址管理
+			</view>
+		</tui-list-cell>
+		<view class="tui-mtop">
+			<tui-list-cell padding="0" lineLeft="{{false}}" arrow="{{true}}">
+				<view class="tui-list-cell">
+					账户与安全
+				</view>
+			</tui-list-cell>
+			<tui-list-cell padding="0" lineLeft="{{false}}" arrow="{{true}}">
+				<view class="tui-list-cell">
+					支付设置
+				</view>
+			</tui-list-cell>
+			<tui-list-cell padding="0" lineLeft="{{false}}" arrow="{{true}}">
+				<view class="tui-list-cell">
+					消息提醒设置
+				</view>
+			</tui-list-cell>
+		</view>
+		<view class="tui-mtop">
+			<tui-list-cell padding="0" lineLeft="{{false}}" arrow="{{true}}">
+				<view class="tui-list-cell">
+					关于我们
+				</view>
+			</tui-list-cell>
+			<tui-list-cell padding="0" lineLeft="{{false}}" arrow="{{true}}">
+				<view class="tui-list-cell">
+					意见反馈
+				</view>
+			</tui-list-cell>
+		</view>
+
+		<view class="tui-exit">
+			<tui-button type="danger" height="88rpx">退出登录</tui-button>
+		</view>
+	</view>

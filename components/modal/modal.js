@@ -52,6 +52,11 @@ Component({
     custom:{
       type:Boolean,
       value:false
+    },
+    //淡入效果，自定义弹框插入input输入框时传true
+    fadein: {
+      type: Boolean,
+      value: false
     }
 
   },
@@ -69,6 +74,7 @@ Component({
     handleClickCancel() {
       if(!this.data.maskClosable) return;
       this.triggerEvent('cancel');
-    }
+    },
+    forbid(){}
   }
 })

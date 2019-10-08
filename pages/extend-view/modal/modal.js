@@ -30,7 +30,8 @@ Page({
       text: "确定"
     }],
     modal7: false,
-    modal8: false
+    modal8: false,
+    modal9: false
   },
   onLoad: function (options) { },
   show() {
@@ -73,6 +74,11 @@ Page({
       modal8: true
     })
   },
+  show9() {
+    this.setData({
+      modal9: true
+    })
+  },
   hide() {
     this.setData({
       modal: false
@@ -111,6 +117,11 @@ Page({
   hide8() {
     this.setData({
       modal8: false
+    })
+  },
+  hide9() {
+    this.setData({
+      modal9: false
     })
   },
   handleClick(e) {

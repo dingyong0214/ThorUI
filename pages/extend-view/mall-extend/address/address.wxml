@@ -1,0 +1,28 @@
+<view class="tui-safe-area">
+		<view class="tui-address">
+			<block wx:for="{{3}}" wx:key="{{index}}">
+				<tui-list-cell padding="0">
+					<view class="tui-address-flex">
+						<view class="tui-address-left">
+							<view class="tui-address-main">
+								<view class="tui-address-name tui-ellipsis">{{["echo.","王大大","大长腿"][index]}}</view>
+								<view class="tui-address-tel">138****7708</view>
+							</view>
+							<view class="tui-address-detail">
+								<view class="tui-address-label" wx:if="{{index===0}}">默认</view>
+								<view class="tui-address-label" wx:if="{{index!=2}}">{{["公司","住宅","其它"][index]}}</view>
+								<text>广东省深圳市南山区高新科技园中区一路</text>
+							</view>
+						</view>
+						<view class="tui-address-imgbox">
+							<image class="tui-address-img" src="/static/images/mall/my/icon_addr_edit.png" />
+						</view>
+					</view>
+				</tui-list-cell>
+			</block>
+		</view>
+		<!-- 新增地址 -->
+		<view class="tui-address-new">
+			<tui-button type="danger" height="88rpx" bind:click="editAddr">+ 新增收货地址</tui-button>
+		</view>
+	</view>

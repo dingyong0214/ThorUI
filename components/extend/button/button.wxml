@@ -1,5 +1,5 @@
 <button class="tui-btn-class tui-btn {{plain?'tui-'+type+'-outline':'tui-btn-'+(type || 'primary')}} {{wxs.getDisabledClass(disabled,type)}} {{wxs.getShapeClass(shape,plain)}} {{wxs.getShadowClass(type,shadow,plain)}}" hover-class="{{wxs.getHoverClass(disabled,type,plain)}}"
-  style="width:{{width}};height:{{height}};line-height:{{height}};font-size:{{size+'rpx'}}" loading="{{loading}}" disabled="{{disabled}}" bindtap="handleClick">
+  style="width:{{width}};height:{{height}};line-height:{{height}};font-size:{{size}}rpx" loading="{{loading}}" disabled="{{disabled}}" bindtap="handleClick">
   <slot></slot>
 </button>
 

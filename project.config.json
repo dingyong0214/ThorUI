@@ -20,8 +20,8 @@
 		}
 	},
 	"compileType": "miniprogram",
-	"libVersion": "2.7.7",
-	"appid": "",
+	"libVersion": "2.8.3",
+	"appid": "wxb6a98ca343f57a38",
 	"projectname": "Thor%20UI",
 	"debugOptions": {
 		"hidedInDevtools": []

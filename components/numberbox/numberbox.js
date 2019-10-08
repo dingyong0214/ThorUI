@@ -3,7 +3,10 @@ Component({
   properties: {
     value: {
       type: Number,
-      value: 1
+      value: 1,
+      observer(val) {
+        this.setValue()
+      }
     },
     //最小值
     min: {
@@ -53,12 +56,27 @@ Component({
     color: {
       type: String,
       value: "#333"
+    },
+    //索引值，列表中使用
+    index: {
+      type: Number,
+      value: 0
     }
   },
   data: {
-
+    inputValue: 0
+  },
+  lifetimes: {
+    attached: function() {
+      this.setValue()
+    }
   },
   methods: {
+    setValue() {
+      this.setData({
+        inputValue: +this.data.value
+      })
+    },
     getScale() {
       let scale = 1;
       //浮点型
@@ -104,6 +122,11 @@ Component({
       } else {
         value = this.data.min
       }
+      if (value == this.data.value && value != this.data.inputValue) {
+        this.setData({
+          inputValue: value
+        })
+      }
       this.handleChange(value, "blur")
     },
     handleChange(value, type) {
@@ -112,7 +135,8 @@ Component({
       }
       this.triggerEvent('change', {
         value: value,
-        type: type
+        type: type,
+        index: this.data.index
       })
     }
   }

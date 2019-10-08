@@ -1,13 +1,18 @@
 <view class="tui-countdown-class tui-countdown-box">
-  <view class="tui-countdown-item" style="background:{{bgcolor}};border-color:{{bcolor}};width:{{width}}rpx;height:{{height}}rpx;" wx:if="{{hours}}">
-    <view class="{{scale?'tui-countdown-scale':''}}" style="font-size:{{size}}rpx;color:{{color}};line-height:{{size}}rpx">{{h}}</view>
+  <view class="tui-countdown-item" style="background:{{bgcolor}};border-color:{{bcolor}};width:{{width}}rpx;height:{{height}}rpx" wx:if="{{days}}">
+    <view class="tui-countdown-time {{scale?'tui-countdown-scale':''}}" style="font-size:{{size}}rpx;color:{{color}};line-height:{{size}}rpx">{{d}}</view>
   </view>
-  <view class="tui-countdown-colon" style="line-height:{{colonsize}}rpx;font-size:{{colonsize}}rpx;color:{{coloncolor}}" wx:if="{{hours}}">:</view>
-  <view class="tui-countdown-item" style="background:{{bgcolor}};border-color:{{bcolor}};width:{{width}}rpx;height:{{height}}rpx;">
-    <view class="{{scale?'tui-countdown-scale':''}}" style="font-size:{{size}}rpx;color:{{color}};line-height:{{size}}rpx">{{i}}</view>
+  <view class="tui-countdown-colon {{bcolor=='transparent'?'tui-colon-pad':''}}" style="line-height:{{colonSize}}rpx;font-size:{{colonSize}}rpx;color:{{colonColor}}" wx:if="{{days}}">{{isColon?':':'天'}}</view>
+  <view class="tui-countdown-item" style="background:{{bgcolor}};border-color:{{bcolor}};width:{{width}}rpx;height:{{height}}rpx" wx:if="{{hours}}">
+    <view class="tui-countdown-time {{scale?'tui-countdown-scale':''}}" style="font-size:{{size}}rpx;color:{{color}};line-height:{{size}}rpx">{{h}}</view>
   </view>
-  <view class="tui-countdown-colon" style="line-height:{{colonsize}}rpx;font-size:{{colonsize}}rpx;color:{{coloncolor}}">:</view>
-  <view class="tui-countdown-item" style="background:{{bgcolor}};border-color:{{bcolor}};width:{{width}}rpx;height:{{height}}rpx;">
-    <view class="{{scale?'tui-countdown-scale':''}}" style="font-size:{{size}}rpx;color:{{color}};line-height:{{size}}rpx">{{s}}</view>
+  <view class="tui-countdown-colon {{bcolor=='transparent'?'tui-colon-pad':''}}" style="line-height:{{colonSize}}rpx;font-size:{{colonSize}}rpx;color:{{colonColor}}" wx:if="{{hours}}">{{isColon?':':'时'}}</view>
+  <view class="tui-countdown-item" style="background:{{bgcolor}};border-color:{{bcolor}};width:{{width}}rpx;height:{{height}}rpx" wx:if="{{minutes}}">
+    <view class="tui-countdown-time {{scale?'tui-countdown-scale':''}}" style="font-size:{{size}}rpx;color:{{color}};line-height:{{size}}rpx">{{i}}</view>
   </view>
+  <view class="tui-countdown-colon {{bcolor=='transparent'?'tui-colon-pad':''}}" style="line-height:{{colonSize}}rpx;font-size:{{colonSize}}rpx;color:{{colonColor}} " wx:if="{{minutes}} ">{{isColon?':':'分'}}</view>
+  <view class="tui-countdown-item " style="background:{{bgcolor}};border-color:{{bcolor}};width:{{width}}rpx;height:{{height}}rpx " wx:if="{{seconds && minutes}} ">
+    <view class="tui-countdown-time {{scale?'tui-countdown-scale': ''}}" style="font-size:{{size}}rpx;color:{{color}};line-height:{{size}}rpx">{{s}}</view>
+  </view>
+  <view class="tui-countdown-colon {{bcolor=='transparent' ? 'tui-colon-pad': ''}} " style="line-height:{{colonSize}}rpx;font-size:{{colonSize}}rpx;color:{{colonColor}} " wx:if="{{seconds && !isColon && minutes}}">秒</view>
 </view>

@@ -22,10 +22,22 @@ Page({
     }, {
       name: "商城模板",
       state: 0,
-      stateText: "（进度50%）",
+      stateText: "（进度85%）",
       desc: ["商城模板包含：商品列表，商品搜索，商品详情，购物车，结算页面，我的订单等"],
       page: "mall"
-    }, {
+      }, {
+        name: "订餐",
+        state: 0,
+        stateText: "（进度10%）",
+        desc: ["订餐模板：列表，评价，购物车，订单，我的等"],
+        page: ""
+      }, {
+        name: "短视频",
+        state: 0,
+        stateText: "（进度20%）",
+        desc: ["短视频播放，类似抖音视频模板"],
+        page: ""
+      }, {
       name: "其它模板",
       state: 0,
       stateText: "",

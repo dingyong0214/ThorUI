@@ -1,0 +1,28 @@
+page{
+		background: #fff;
+	}
+	.container {
+		padding: 20rpx 0 120rpx 0;
+		box-sizing: border-box;
+	}
+
+	.header {
+		padding: 80rpx 90rpx 60rpx 90rpx;
+		box-sizing: border-box;
+	}
+
+	.title {
+		font-size: 34rpx;
+		color: #333;
+		font-weight: 500;
+	}
+
+	.sub-title {
+		font-size: 24rpx;
+		color: #7a7a7a;
+		padding-top: 18rpx;
+	}
+	.tui-box-upload{
+		padding-left: 25rpx;
+		box-sizing: border-box;
+	}

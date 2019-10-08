@@ -39,110 +39,70 @@ Page({
       name: "欧莱雅（LOREAL）奇焕光彩粉嫩透亮修颜霜 30ml（欧莱雅彩妆 BB霜 粉BB 遮瑕疵 隔离）",
       sale: 599,
       factory: 899,
-      time: {
-        hours: 0,
-        minute: 20,
-        second: 26
-      }
+      time: 2000
     },
     {
       img: 2,
       name: "德国DMK进口牛奶  欧德堡（Oldenburger）超高温处理全脂纯牛奶1L*12盒",
       sale: 29,
       factory: 69,
-      time: {
-        hours: 0,
-        minute: 30,
-        second: 22
-      }
+      time: 1000
     },
     {
       img: 3,
       name: "【第2支1元】柔色尽情丝柔口红唇膏女士不易掉色保湿滋润防水 珊瑚红",
       sale: 299,
       factory: 699,
-      time: {
-        hours: 0,
-        minute: 30,
-        second: 56
-      }
+      time: 2200
     },
     {
       img: 4,
       name: "百雀羚套装女补水保湿护肤品",
       sale: 1599,
       factory: 2899,
-      time: {
-        hours: 0,
-        minute: 36,
-        second: 12
-      }
+      time: 1800
     },
     {
       img: 5,
       name: "百草味 肉干肉脯 休闲零食 靖江精制猪肉脯200g/袋",
       sale: 599,
       factory: 899,
-      time: {
-        hours: 0,
-        minute: 40,
-        second: 40
-      }
+      time: 1650
     },
     {
       img: 6,
       name: "短袖睡衣女夏季薄款休闲家居服短裤套装女可爱韩版清新学生两件套 短袖粉色长颈鹿 M码75-95斤",
       sale: 599,
       factory: 899,
-      time: {
-        hours: 0,
-        minute: 50,
-        second: 20
-      }
+      time: 1400
     },
     {
       img: 1,
       name: "欧莱雅（LOREAL）奇焕光彩粉嫩透亮修颜霜",
       sale: 599,
       factory: 899,
-      time: {
-        hours: 1,
-        minute: 0,
-        second: 38
-      }
+      time: 2100
     },
     {
       img: 2,
       name: "德国DMK进口牛奶",
       sale: 29,
       factory: 69,
-      time: {
-        hours: 1,
-        minute: 10,
-        second: 4
-      }
+      time: 1790
     },
     {
       img: 3,
       name: "【第2支1元】柔色尽情丝柔口红唇膏女士不易掉色保湿滋润防水 珊瑚红",
       sale: 299,
       factory: 699,
-      time: {
-        hours: 1,
-        minute: 30,
-        second: 0
-      }
+      time: 2132
     },
     {
       img: 4,
       name: "百雀羚套装女补水保湿护肤品",
       sale: 1599,
       factory: 2899,
-      time: {
-        hours: 1,
-        minute: 40,
-        second: 17
-      }
+      time: 1534
     }
     ]
   },

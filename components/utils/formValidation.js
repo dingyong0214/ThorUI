@@ -138,7 +138,7 @@ const form = {
       return this.__isValidityBrithBy15IdCard;
     } else if (idCard.length == 18) {
       let arrIdCard = idCard.split("");
-      if (this.__isTrueValidateCodeBy18IdCard(idCard) && this.__isTrueValidateCodeBy18IdCard(arrIdCard)) {
+      if (this.__isValidityBrithBy18IdCard(idCard) && this.__isTrueValidateCodeBy18IdCard(arrIdCard)) {
         return true;
       } else {
         return false;

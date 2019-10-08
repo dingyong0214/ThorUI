@@ -186,7 +186,7 @@
     </view>
     <view class="tui-operation-right tui-right-flex tui-col-7">
       <tui-button type="red" tui-button-class="tui-btn-equals" shape="circle" size="mini" class="tui-flex-1" bindtap="showPopup">加入购物车</tui-button>
-      <tui-button type="warning" tui-button-class="tui-btn-equals" shape="circle" size="mini" class="tui-flex-1" bindtap="showPopup">立即购买</tui-button>
+      <tui-button type="warning" tui-button-class="tui-btn-equals" shape="circle" size="mini" class="tui-flex-1" bindtap="submit">立即购买</tui-button>
     </view>
   </view>
   <!--底部操作栏--->
@@ -292,7 +292,7 @@
       </scroll-view>
       <view class="tui-operation tui-operation-right tui-right-flex tui-popup-btn">
         <tui-button type="red" tui-button-class="tui-btn-equals" shape="circle" size="mini" class="tui-flex-1" bind:click="hidePopup">加入购物车</tui-button>
-        <tui-button type="warning" tui-button-class="tui-btn-equals" shape="circle" size="mini" class="tui-flex-1" bind:click="hidePopup">立即购买</tui-button>
+        <tui-button type="warning" tui-button-class="tui-btn-equals" shape="circle" size="mini" class="tui-flex-1" bind:click="submit">立即购买</tui-button>
       </view>
 
       <tui-icon name="close-fill" color="#999" class="tui-icon-close" size="20" bindtap="hidePopup"></tui-icon>

@@ -191,10 +191,20 @@ Page({
     popupShow: false,
     shareList: [{
       share: [{
+        name: "QQ",
+        icon: "qq",
+        color: "#07BDFD",
+        size: 34
+      },{
         name: "微信",
         icon: "wechat",
         color: "#80D640"
       }, {
+          name: "朋友圈",
+          icon: "moments",
+          color: "#80D640",
+          size: 32
+        }, {
         name: "支付宝",
         icon: "alipay",
         color: "#00AAEE"

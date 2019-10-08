@@ -44,7 +44,7 @@
               </view>
               <view class="tui-countdown">
                 <view class="tui-countdown-text">剩余</view>
-                <tui-countdown time="{{item.time}}" color="#e41f19" bcolor="#e41f19" coloncolor="#e41f19"></tui-countdown>
+                <tui-countdown time="{{item.time}}" color="#e41f19" bcolor="#e41f19" colonColor="#e41f19"></tui-countdown>
                 <view class="tui-countdown-text">结束</view>
               </view>
             </view>

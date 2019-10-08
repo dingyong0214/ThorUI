@@ -1,0 +1,15 @@
+<view class="container">
+  <view class="header">
+    <view class="title">Tabbar</view>
+    <view class="sub-title">类似uni-app原生tabbar组件，可用于自定义tabbar</view>
+  </view>
+  <view class="tui-mtop">
+    <tui-tabbar tabBar="{{tabBar}}" isFixed="{{false}}" current="{{current}}" bind:click="tabbarSwitch"></tui-tabbar>
+  </view>
+
+  <view class="tui-mtop">
+    <tui-tabbar tabBar="{{tabBar2}}" isFixed="{{false}}" unlined="{{true}}" backgroundColor="#F7F7F7" current="{{current}}" bind:click="tabbarSwitch"></tui-tabbar>
+  </view>
+
+  <tui-tabbar tabBar="{{tabBar2}}" hump="{{true}}" current="{{current}}" bind:click="tabbarSwitch"></tui-tabbar>
+</view>

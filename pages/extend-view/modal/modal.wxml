@@ -7,25 +7,34 @@
   <view class="tui-btn-box">
     <tui-button type="white" shape="circle" tui-button-class="tui-btn-mtop" bind:click='show'>一般弹框</tui-button>
     <tui-button type="white" shape="circle" tui-button-class="tui-btn-mtop" bind:click='show2'>提示文本样式</tui-button>
-      <tui-button type="white" shape="circle" tui-button-class="tui-btn-mtop" bind:click="show3">单个按钮</tui-button>
+    <tui-button type="white" shape="circle" tui-button-class="tui-btn-mtop" bind:click="show3">单个按钮</tui-button>
     <tui-button type="white" shape="circle" tui-button-class="tui-btn-mtop" bind:click="show4">多个按钮</tui-button>
     <tui-button type="white" shape="circle" tui-button-class="tui-btn-mtop" bind:click="show5">圆角按钮</tui-button>
     <tui-button type="white" shape="circle" tui-button-class="tui-btn-mtop" bind:click="show6">按钮颜色</tui-button>
     <tui-button type="white" shape="circle" tui-button-class="tui-btn-mtop" bind:click="show7">遮罩不可点</tui-button>
     <tui-button type="white" shape="circle" tui-button-class="tui-btn-mtop" bind:click="show8">自定义弹窗内容</tui-button>
+     <tui-button type="white" shape="circle" tui-button-class="tui-btn-mtop" bind:click="show9">自定义输入框</tui-button>
   </view>
   <tui-modal show="{{modal}}" bind:click="handleClick" bind:cancel="hide" title="提示" content="确定退出登录吗？"></tui-modal>
   <tui-modal show="{{modal2}}" bind:click="handleClick2" bind:cancel="hide2" content="确定退出登录吗？" color="#333" size="32"></tui-modal>
-   <tui-modal show="{{modal3}}" bind:click="handleClick3" bind:cancel="hide3" content="您还未登录，请先登录" button="{{button3}}"></tui-modal>
-   <tui-modal show="{{modal4}}" bind:click="handleClick4" bind:cancel="hide4" content="请选择支付方式" button="{{button4}}"></tui-modal>
-     <tui-modal show="{{modal5}}" bind:click="handleClick5" bind:cancel="hide5" content="确定退出登录吗？" color="#333" size="32" shape="circle"></tui-modal>
-      <tui-modal show="{{modal6}}" bind:click="handleClick6" bind:cancel="hide6" content="确定退出登录吗？" color="#333" size="32" button="{{button6}}"></tui-modal>
-       <tui-modal show="{{modal7}}" bind:click="handleClick7" bind:cancel="hide7" content="您还未登录，请先登录" button="{{button3}}" maskClosable="{{false}}"></tui-modal>
-        <tui-modal show="{{modal8}}" bind:cancel="hide8" custom="{{true}}">
-          <view class="tui-modal-custom">
-          <image src="../../../static/images/chat/fail.png" class="tui-tips-img"></image>
-          <view class="tui-modal-custom-text">我是自定内容</view>
-          <tui-button type="danger" shape="circle" tui-button-class="tui-btn-mtop" bind:click="handleClick8">确定</tui-button>
-          </view>
-        </tui-modal>
+  <tui-modal show="{{modal3}}" bind:click="handleClick3" bind:cancel="hide3" content="您还未登录，请先登录" button="{{button3}}"></tui-modal>
+  <tui-modal show="{{modal4}}" bind:click="handleClick4" bind:cancel="hide4" content="请选择支付方式" button="{{button4}}"></tui-modal>
+  <tui-modal show="{{modal5}}" bind:click="handleClick5" bind:cancel="hide5" content="确定退出登录吗？" color="#333" size="32" shape="circle"></tui-modal>
+  <tui-modal show="{{modal6}}" bind:click="handleClick6" bind:cancel="hide6" content="确定退出登录吗？" color="#333" size="32" button="{{button6}}"></tui-modal>
+  <tui-modal show="{{modal7}}" bind:click="handleClick7" bind:cancel="hide7" content="您还未登录，请先登录" button="{{button3}}" maskClosable="{{false}}"></tui-modal>
+  <tui-modal show="{{modal8}}" bind:cancel="hide8" custom="{{true}}">
+    <view class="tui-modal-custom">
+      <image src="../../../static/images/chat/fail.png" class="tui-tips-img"></image>
+      <view class="tui-modal-custom-text">我是自定内容</view>
+      <tui-button type="danger" shape="circle" tui-button-class="tui-btn-mtop" bind:click="handleClick8">确定</tui-button>
+    </view>
+  </tui-modal>
+
+  <tui-modal show="{{modal9}}" bind:cancel="hide9" custom="{{true}}" fadein="{{true}}">
+    <view class="tui-modal-custom">
+      <view class="tui-prompt-title">邮箱</view>
+      <input placeholder="请输入邮箱" class="tui-input" />
+      <tui-button shape="circle" bind:click="hide9" size="small">立即提交</tui-button>
+    </view>
+  </tui-modal>
 </view>
