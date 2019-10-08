@@ -22,6 +22,40 @@ ThorUI组件库，微信小程序代码片段分享
 
 ## 更新日志
 
+# V1.4.0
+
+1.新增日期时间选择器组件。
+
+2.新增悬浮按钮组件。
+
+3.新增Tabbar组件。
+
+4.新增tabs标签页组件。
+
+5.新增折叠面板组件。
+
+6.新增图片上传组件。
+
+7.NumberBox组件优化调整。
+
+8.Modal组件优化调整。
+
+9.sticky组件优化调整。
+
+10.countdown组件优化调整。
+
+11.商城模板新增购物车、我的、提交订单、支付成功、我的订单、地址列表、新增地址、设置、用户信息等页面。
+
+12.修改已知bug。
+
+# 功能截图 
+|  ![](https://thorui.cn/img/V140/1.png) |![](https://thorui.cn/img/V140/2.png)  |  ![](https://thorui.cn/img/V140/3.png) |
+| ------------ | ------------ | ------------ |
+|  ![](https://thorui.cn/img/V140/4.png) |![](https://thorui.cn/img/V140/5.png)  |  ![](https://thorui.cn/img/V140/6.png) |
+|  ![](https://thorui.cn/img/V140/7.png) |![](https://thorui.cn/img/V140/8.png)  |  ![](https://thorui.cn/img/V140/9.png) |
+|  ![](https://thorui.cn/img/V140/10.png) |![](https://thorui.cn/img/V140/11.png)  |  ![](https://thorui.cn/img/V140/12.png) |
+|  ![](https://thorui.cn/img/V140/13.png) |![](https://thorui.cn/img/V140/14.png)  |  ![](https://thorui.cn/img/V140/15.png) |
+
 # V1.3.2
 
 1.扩展基础组件(保留了之前版本):alert、tips、button、toast。
