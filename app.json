@@ -38,7 +38,8 @@
         "card/card",
         "grid/grid",
         "footer/footer",
-        "other/other"
+        "other/other",
+        "doc/doc"
       ]
     },
     {
@@ -93,7 +94,11 @@
         "tabbar/tabbar",
         "tabs/tabs",
         "collapse/collapse",
-        "upload/upload"
+        "upload/upload",
+        "skeleton/skeleton",
+        "request/request",
+        "friendsList-2/friendsList-2",
+        "clipboard/clipboard"
       ]
     }
   ],
@@ -135,6 +140,12 @@
     "connectSocket": 10000,
     "uploadFile": 10000,
     "downloadFile": 10000
+  },
+  "plugins": {
+    "subway": {
+      "version": "1.0.4",
+      "provider": "wx6aaf93c4435fa1c1"
+    }
   },
   "permission": {
     "scope.userLocation": {

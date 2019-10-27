@@ -29,7 +29,7 @@ const utils = {
   },
   interfaceUrl: function() {
     //接口地址
-    return "http://172.19.11.185:12000/";
+    return "https://www.thorui.cn";
   },
   toast: function(text, duration, success) {
     wx.showToast({
@@ -59,38 +59,18 @@ const utils = {
         mask: true
       })
     }
-    const params = {
-      data: method === "POST" ? postData : JSON.stringify(postData)
-    }
     return new Promise((resolve, reject) => {
       wx.request({
         url: this.interfaceUrl() + url,
-        data: method === "POST" ? JSON.stringify(params) : params,
+        data: postData,
         header: {
-          'content-type': type ? 'application/x-www-form-urlencoded' : 'application/json',
-          'authorization': wx.getStorageSync("token"),
-          'security': 1
+          'content-type': type ? 'application/x-www-form-urlencoded' : 'application/json'
         },
         method: method, //'GET','POST'
         dataType: 'json',
         success: (res) => {
           !hideLoading && wx.hideLoading()
-          if (res.data && res.data.code === 403) {
-            wx.showModal({
-              title: '登录',
-              content: '您尚未登录，请先登录',
-              showCancel: false,
-              confirmColor: "#5677FC",
-              confirmText: '确定',
-              success(res) {
-                wx.redirectTo({
-                  url: '../login/login'
-                })
-              }
-            })
-          } else {
-            resolve(res.data)
-          }
+          resolve(res.data)
         },
         fail: (res) => {
           !hideLoading && this.toast("网络不给力，请稍后再试~")

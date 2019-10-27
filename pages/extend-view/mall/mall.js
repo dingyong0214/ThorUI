@@ -181,7 +181,6 @@ Page({
     pullUpOn: true
   },
   onLoad: function(options) {
-
   },
   tabbarSwitch: function(e) {
     let index = e.currentTarget.dataset.index;
@@ -246,14 +245,14 @@ Page({
     wx.navigateTo({
       url: '/pages/navbar-2/navbar-2'
     })
-    
+
   },
   more: function(e) {
     let key = e.currentTarget.dataset.key || "";
     wx.navigateTo({
       url: '../productList/productList?searchKey=' + key
     })
-    
+
   },
   search: function() {
     wx.navigateTo({

@@ -1,0 +1,13 @@
+<view class="container">
+  <view class="header">
+    <view class="title">复制文本</view>
+    <view class="sub-title">clipboard，复制到剪贴板，兼容H5，APP和小程序依然使用平台自带api。小程序已移除相关文件，请下载
+      <text class="tui-primary" bind:tap="clipboard" data-text="https://ext.dcloud.net.cn/plugin?id=556">uni-app版本</text>组件库。 </view>
+    <view class="sub-title">ThorUI QQ交流群：745733024</view>
+  </view>
+  <view class="tui-btn-box">
+    <view class="tui-btn-btm">
+      <tui-button type="white" shape="circle" bind:click="clipboard" data-text="745733024">复制QQ群号：745733024</tui-button>
+    </view>
+  </view>
+</view>

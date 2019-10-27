@@ -17,10 +17,11 @@
 			"ignore": [],
 			"disablePlugins": [],
 			"outputPath": ""
-		}
+		},
+		"enhance": true
 	},
 	"compileType": "miniprogram",
-	"libVersion": "2.8.3",
+	"libVersion": "2.9.0",
 	"appid": "wxb6a98ca343f57a38",
 	"projectname": "Thor%20UI",
 	"debugOptions": {

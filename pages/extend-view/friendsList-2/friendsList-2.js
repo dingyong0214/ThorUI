@@ -1,4 +1,3 @@
-const util = require('../../../utils/util.js')
 const cityData = require('../../../utils/index.list.js')
 Page({
   data: {
@@ -8,8 +7,8 @@ Page({
     titleHeight: 0, // A字距离窗口顶部的高度
     indexBarHeight: 0, // 索引表高度
     indexBarItemHeight: 0, // 索引表子项的高度
-    scrollViewId: '', // scroll-view滚动到的子元素的id
-    winHeight: 0
+    winHeight: 0,
+    scrollTop: 0
   },
   onLoad: function (options) {
     const that = this;
@@ -27,13 +26,13 @@ Page({
           })
         }
       })
-    }, 50)
+    }, 10)
   },
   touchStart(e) {
     this.setData({
       touchmove: true
     })
-    let pageY = e.touches[0].pageY
+    let pageY = e.touches[0].pageY - this.data.scrollTop;
     let index = Math.floor((pageY - this.data.titleHeight) / this.data.indexBarItemHeight)
     let item = this.data.lists[index]
     if (item) {
@@ -41,16 +40,24 @@ Page({
         scrollViewId: item.letter,
         touchmoveIndex: index
       })
+      wx.pageScrollTo({
+        scrollTop: this.data.lists[index].stickyTop,
+        duration: 0
+      })
     }
   },
   touchMove(e) {
-    let pageY = e.touches[0].pageY;
+    let pageY = e.touches[0].pageY - this.data.scrollTop;
     let index = Math.floor((pageY - this.data.titleHeight) / this.data.indexBarItemHeight)
     let item = this.data.lists[index]
     if (item) {
       this.setData({
         scrollViewId: item.letter,
         touchmoveIndex: index
+      })
+      wx.pageScrollTo({
+        scrollTop: this.data.lists[index].stickyTop,
+        duration: 0
       })
     }
   },
@@ -66,6 +73,13 @@ Page({
       touchmoveIndex: -1
     })
   },
+  stickyChange: function (e) {
+    let index = e.detail.index;
+    let key = `lists[${index}].stickyTop`
+    this.setData({
+      [key]: e.detail.top
+    })
+  },
   search: function () {
     wx.navigateTo({
       url: '../news-search/news-search'
@@ -74,6 +88,12 @@ Page({
   detail: function () {
     wx.navigateTo({
       url: '../chat/chat'
+    })
+  },
+  //页面滚动执行方式
+  onPageScroll(e) {
+    this.setData({
+      scrollTop: e.scrollTop
     })
   }
 })

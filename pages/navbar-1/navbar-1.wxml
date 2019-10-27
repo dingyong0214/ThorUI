@@ -10,7 +10,7 @@
         <!--start 内容部分可直接删除-->
         <view class="list-view">
           <view class="list-cell list-item" hover-class="hover" hover-stay-time="150" bindtap="detail">
-            <view class="cell-title">温故知"心"习近平这些话要牢记</view>
+            <view class="cell-title">温故知"心"习大大这些话要牢记</view>
             <view class="img-container">
               <view class="cell-img">
                 <image src='../../static/images/product/2.jpg' class="img"></image>

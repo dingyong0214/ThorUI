@@ -135,9 +135,7 @@ Page({
     util.toast("功能开发中~")
   },
   submit() {
-    this.setData({
-      popupShow:false
-    })
+    this.hidePopup()
     wx.navigateTo({
       url: '../mall-extend/submitOrder/submitOrder'
     })

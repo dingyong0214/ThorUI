@@ -12,6 +12,18 @@
           <view class="tui-content-log {{version==item.version?'':'tui-log-gray'}}">
             <view class="tui-version-date">{{logList.length-1==index?item.version:'V'+item.version}}（{{item.date}}）</view>
             <view wx:for="{{item.log}}" wx:for-item="model" wx:key="{{index}}" class="tui-log-text">{{model}}</view>
+            <view class="tui-doc-box" wx:if="{{index===logList.length-1}}">
+								<view>组件文档地址：</view>
+								<view class="tui-link" catchtap="getLink" data-link="http://www.donarui.com">http://www.donarui.com</view>
+								<view>uni-app版本GitHub地址：</view>
+								<view class="tui-link" catchtap="getLink" data-link="https://github.com/dingyong0214/ThorUI-uniapp">https://github.com/dingyong0214/ThorUI-uniapp</view>
+								<view>uni-app版本插件市场地址：</view>
+								<view class="tui-link" catchtap="getLink" data-link="https://ext.dcloud.net.cn/plugin?id=556">https://ext.dcloud.net.cn/plugin?id=556</view>
+								<view>小程序版本GitHub地址：</view>
+								<view class="tui-link" catchtap="getLink" data-link="https://github.com/dingyong0214/ThorUI">https://github.com/dingyong0214/ThorUI</view>
+								<view>小程序版本插件市场地址：</view>
+								<view class="tui-link" catchtap="getLink" data-link="https://ext.dcloud.net.cn/plugin?id=569">https://ext.dcloud.net.cn/plugin?id=569</view>
+							</view>
           </view>
         </view>
       </tui-timeaxis-item>

@@ -1,8 +1,8 @@
 {
   "navigationBarBackgroundColor": "#fff",
   "navigationBarTextStyle": "black",
-  "navigationBarTitleText": "分隔符",
+  "navigationBarTitleText": "骨架屏",
   "usingComponents": {
-    "tui-scroll-top": "/components/scroll-top/scroll-top"
+    "tui-skeleton": "/components/tui-skeleton/tui-skeleton"
   }
 }

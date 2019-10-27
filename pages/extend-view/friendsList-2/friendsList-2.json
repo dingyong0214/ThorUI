@@ -5,6 +5,6 @@
   "backgroundColorBottom": "#F5F6FA",
   "navigationBarTitleText": "联系人 ",
   "usingComponents": {
-    "tui-cell": "../../../components/list-cell/list-cell"
+    "tui-sticky":"../../../components/sticky/sticky"
   }
 }

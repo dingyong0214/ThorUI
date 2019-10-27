@@ -1,11 +1,9 @@
 module.exports = {
-  list: [
-    {
+  list: [{
       "letter": "A",
-      "data": [
-        {
+      "data": [{
           "name": "阿拉斯加",
-          "mobile":"13588889999",
+          "mobile": "13588889999",
           "keyword": "阿拉斯加ABA13588889999"
         },
         {
@@ -37,8 +35,7 @@ module.exports = {
     },
     {
       "letter": "B",
-      "data": [
-        {
+      "data": [{
           "name": "白城",
           "mobile": "该主子没有留电话~",
           "keyword": "白城BAICHENG"
@@ -62,8 +59,7 @@ module.exports = {
     },
     {
       "letter": "C",
-      "data": [
-        {
+      "data": [{
           "name": "沧州",
           "mobile": "13588889999",
           "keyword": "沧州CANGZHOU13588889999"
@@ -77,8 +73,7 @@ module.exports = {
     },
     {
       "letter": "D",
-      "data": [
-        {
+      "data": [{
           "name": "大理",
           "mobile": "13588889999",
           "keyword": "大理DALI13588889999"
@@ -92,8 +87,7 @@ module.exports = {
     },
     {
       "letter": "E",
-      "data": [
-        {
+      "data": [{
           "name": "鄂尔多斯",
           "mobile": "13588889999",
           "keyword": "鄂尔多斯EERDUOSI13588889999"
@@ -112,8 +106,7 @@ module.exports = {
     },
     {
       "letter": "F",
-      "data": [
-        {
+      "data": [{
           "name": "防城港",
           "mobile": "该主子没有留电话~",
           "keyword": "防城港FANGCHENGGANG"
@@ -147,8 +140,7 @@ module.exports = {
     },
     {
       "letter": "G",
-      "data": [
-        {
+      "data": [{
           "name": "甘南",
           "mobile": "13588889999",
           "keyword": "甘南GANNAN13588889999"
@@ -167,8 +159,7 @@ module.exports = {
     },
     {
       "letter": "H",
-      "data": [
-        {
+      "data": [{
           "name": "哈尔滨",
           "mobile": "13588889999",
           "keyword": "哈尔滨HAERBIN13588889999"
@@ -192,14 +183,17 @@ module.exports = {
     },
     {
       "letter": "I",
-      "data": [
-       
+      "data": [{
+          "name": "ice",
+          "mobile": "13588889999",
+          "keyword": "佳木斯JIAMUSI13588889999"
+        }
+
       ]
     },
     {
       "letter": "J",
-      "data": [
-        {
+      "data": [{
           "name": "佳木斯",
           "mobile": "13588889999",
           "keyword": "佳木斯JIAMUSI13588889999"
@@ -218,8 +212,7 @@ module.exports = {
     },
     {
       "letter": "K",
-      "data": [
-        {
+      "data": [{
           "name": "开封",
           "mobile": "13588889999",
           "keyword": "开封KAIFENG13588889999"
@@ -238,8 +231,7 @@ module.exports = {
     },
     {
       "letter": "L",
-      "data": [
-        {
+      "data": [{
           "name": "来宾",
           "mobile": "13588889999",
           "keyword": "来宾LAIBIN13588889999"
@@ -323,8 +315,7 @@ module.exports = {
     },
     {
       "letter": "M",
-      "data": [
-        {
+      "data": [{
           "name": "眉山",
           "mobile": "15544448888",
           "keyword": "眉山MEISHAN15544448888"
@@ -348,8 +339,7 @@ module.exports = {
     },
     {
       "letter": "N",
-      "data": [
-        {
+      "data": [{
           "name": "南昌",
           "mobile": "15544448888",
           "keyword": "南昌NANCHANG15544448888"
@@ -378,18 +368,15 @@ module.exports = {
     },
     {
       "letter": "O",
-      "data": [
-        {
-          "name": "欧阳",
-          "mobile": "15544448888",
-          "keyword": "欧阳ouyang15544448888"
-        }
-      ]
+      "data": [{
+        "name": "欧阳",
+        "mobile": "15544448888",
+        "keyword": "欧阳ouyang15544448888"
+      }]
     },
     {
       "letter": "P",
-      "data": [
-        {
+      "data": [{
           "name": "盘锦",
           "mobile": "15544448888",
           "keyword": "盘锦PANJIN15544448888"
@@ -433,8 +420,7 @@ module.exports = {
     },
     {
       "letter": "Q",
-      "data": [
-        {
+      "data": [{
           "name": "黔东南",
           "mobile": "15544448888",
           "keyword": "黔东南QIANDONGNAN15544448888"
@@ -453,8 +439,7 @@ module.exports = {
     },
     {
       "letter": "R",
-      "data": [
-        {
+      "data": [{
           "name": "日喀则",
           "mobile": "15544448888",
           "keyword": "日喀则RIKAZE15544448888"
@@ -468,8 +453,7 @@ module.exports = {
     },
     {
       "letter": "S",
-      "data": [
-        {
+      "data": [{
           "name": "三门峡",
           "mobile": "15544448888",
           "keyword": "三门峡SANMENXIA15544448888"
@@ -488,8 +472,7 @@ module.exports = {
     },
     {
       "letter": "T",
-      "data": [
-        {
+      "data": [{
           "name": "塔城",
           "mobile": "15544448888",
           "keyword": "塔城TACHENG15544448888"
@@ -508,8 +491,7 @@ module.exports = {
     },
     {
       "letter": "W",
-      "data": [
-        {
+      "data": [{
           "name": "潍坊",
           "mobile": "15544448888",
           "keyword": "潍坊WEIFANG15544448888"
@@ -533,8 +515,7 @@ module.exports = {
     },
     {
       "letter": "X",
-      "data": [
-        {
+      "data": [{
           "name": "厦门",
           "mobile": "15544448888",
           "keyword": "厦门XIAMEN15544448888"
@@ -553,8 +534,7 @@ module.exports = {
     },
     {
       "letter": "Y",
-      "data": [
-        {
+      "data": [{
           "name": "雅安",
           "mobile": "15544448888",
           "keyword": "雅安YAAN15544448888"
@@ -578,8 +558,7 @@ module.exports = {
     },
     {
       "letter": "Z",
-      "data": [
-        {
+      "data": [{
           "name": "枣庄",
           "mobile": "15544448888",
           "keyword": "枣庄ZAOZHUANG15544448888"
@@ -595,7 +574,7 @@ module.exports = {
           "keyword": "张家口ZHANGJIAKOU15544448888"
         }
       ]
-    },{
+    }, {
       "letter": "well",
       "data": [{
         "name": "☆echo.",

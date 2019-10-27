@@ -1,0 +1,36 @@
+<view class="container">
+  <!--searchbox-->
+  <view class="tui-searchbox">
+    <view class="tui-search-input" bindtap="search">
+      <icon type="search" size='15' color='#999'></icon>
+      <text class="tui-search-text">搜索</text>
+    </view>
+  </view>
+  <view class="tui-list-cell tui-cell-last" hover-class="tui-cell-hover" hover-start-time="150" bindtap="detail">
+    <image src="../../../static/images/news/2.jpg" class="tui-img"></image>
+    <view class="tui-name">新的朋友</view>
+  </view>
+  <!--searchbox-->
+  <!--联系人列表-->
+  <tui-sticky scrollTop="{{scrollTop}}" stickyHeight="66rpx" index="{{mainIndex}}" bind:change="stickyChange" wx:for-items="{{lists}}" wx:for-index="mainIndex" wx:key="{{list.letter}}" wx:for-item="list">
+   <!--tips:sticky组件中最好不要嵌套其他自定义组件-->
+    <view class="tui-list-cell-divider" slot="header">
+      {{list.letter=="well"?'#':list.letter}}
+    </view>
+    <view slot="content" class="tui-list-cell {{list.data.length-1==index?'tui-cell-last':''}}" hover-class="tui-cell-hover" hover-start-time="150" wx:for-items="{{list.data}}" wx:key="{{index}}" bindtap="detail">
+      <image src="../../../static/images/news/{{(index%2===0 && index!==0)?'avatar_1.jpg':'avatar_2.jpg'}}" class="tui-img"></image>
+      <view class="tui-name">{{item.name}}</view>
+    </view>
+  </tui-sticky>
+
+  <!--联系人列表-->
+  <view class="tui-footer" wx:if="{{lists.length>0}}">120位联系人</view>
+  <view class="tui-indexed-list-bar" style="height:{{indexBarHeight}}px" catchtouchstart="touchStart" catchtouchmove="touchMove" catchtouchend="touchEnd" catchtouchcancel="touchCancel" wx:if="{{!inputShowed}}">
+    <view wx:for="{{lists}}" wx:key="{{index}}" wx:for-item="items" class="tui-indexed-list-text" style="height:{{indexBarItemHeight}}px">
+      {{items.letter=="well"?'#':items.letter}}
+    </view>
+  </view>
+  <view class="tui-indexed-list-alert" wx:if="{{touchmove && lists[touchmoveIndex].letter}}">
+    <text>{{lists[touchmoveIndex].letter=="well"?"#":lists[touchmoveIndex].letter}}</text>
+  </view>
+</view>

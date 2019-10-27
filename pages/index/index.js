@@ -1,6 +1,47 @@
 const util = require('../../utils/util.js')
 Page({
-  onLoad: function (options){
+  onLoad: function(options) {
+    if(!wx.getStorageSync("tuiReadDoc")){
+      wx.setTabBarBadge({
+        index: 0,
+        text: '1'
+      })
+    }
+    setTimeout(() => {
+      util.request("/Home/GetStatus", {}, "GET", false, true).then((res) => {
+        if (res.code == 100 && res.data == 1) {
+          this.setData({
+            list: this.data.list.concat([{
+                id: 'class',
+                name: '分类菜单',
+                open: false,
+                pages: [{
+                    name: "顶部选项卡",
+                    page: "navbar-1"
+                  },
+                  {
+                    name: "垂直分类",
+                    page: "navbar-2"
+                  }
+                ]
+              },
+              {
+                id: 'refresh',
+                name: '上拉加载下拉刷新',
+                open: false,
+                pages: [{
+                  name: "新闻列表",
+                  page: "news"
+                }, {
+                  name: "商品列表",
+                  page: "product"
+                }]
+              }
+            ])
+          })
+        }
+      }).catch((res) => {})
+    }, 50)
     // 在页面中定义插屏广告
     let interstitialAd = null
 
@@ -9,9 +50,9 @@ Page({
       interstitialAd = wx.createInterstitialAd({
         adUnitId: 'adunit-44bbe9a9087910e3'
       })
-      interstitialAd.onLoad(() => { })
-      interstitialAd.onError((err) => { })
-      interstitialAd.onClose(() => { })
+      interstitialAd.onLoad(() => {})
+      interstitialAd.onError((err) => {})
+      interstitialAd.onClose(() => {})
     }
 
     // 在适合的场景显示插屏广告
@@ -46,6 +87,9 @@ Page({
         }, {
           name: "天气",
           page: "weather"
+        }, {
+          name: "地铁图",
+          page: "subway"
         }]
       },
       {
@@ -58,7 +102,10 @@ Page({
         }, {
           name: "索引列表",
           page: "indexList"
-        }]
+          }, {
+            name: "索引&吸顶效果",
+            page: "friendsList-2"
+          }]
       },
       {
         id: 'nav',
@@ -98,32 +145,6 @@ Page({
           name: "滑动菜单",
           page: "swipe-action"
         }]
-      },
-      {
-        id: 'class',
-        name: '分类菜单',
-        open: false,
-        pages: [{
-            name: "顶部选项卡",
-            page: "navbar-1"
-          },
-          {
-            name: "垂直分类",
-            page: "navbar-2"
-          }
-        ]
-      },
-      {
-        id: 'refresh',
-        name: '上拉加载下拉刷新',
-        open: false,
-        pages: [{
-          name: "新闻列表",
-          page: "news"
-        }, {
-          name: "商品列表",
-          page: "product"
-        }]
       }
     ]
   },
@@ -149,6 +170,17 @@ Page({
       })
     }, 350)
   },
+  href(e) {
+    let page = e.currentTarget.dataset.page
+    if (page == "subway") {
+      let plugin = requirePlugin("subway");
+      let key = 'ZEHBZ-UK5K4-CN5UN-XX4YM-4LS66-IEFWH';
+      let referer = 'ThorUI';
+      wx.navigateTo({
+        url: 'plugin://subway/index?key=' + key + '&referer=' + referer
+      });
+    }
+  },
   github: function() {
     wx.setClipboardData({
       data: 'https://github.com/dingyong0214/ThorUI',
@@ -161,9 +193,18 @@ Page({
       }
     })
   },
-  mall: function() {
+  template: function() {
     wx.navigateTo({
-      url: '../extend-view/mall/mall'
+      url: '../extend-view/template/template'
+    })
+  },
+  doc: function() {
+    wx.setStorageSync("tuiReadDoc", "1")
+    wx.removeTabBarBadge({
+      index:0
+    })
+    wx.navigateTo({
+      url: '../basic-view/doc/doc'
     })
   }
 });

@@ -1,10 +1,14 @@
 <view class="page">
   <view class="page_hd">
-    <view class="page_title" bindtap="mall">
+    <view class="page_title" bindtap="doc">
       <image src="../../static/images/index/logo.png" class="logo"></image>
-      <text class="title">Thor UI</text>
+      <view class="title">Thor UI
+        <view class="tui-badge">文档</view>
+      </view>
     </view>
-    <view class="page_desc">小程序<text class="link" bindtap="mall">代码片段</text>分享，源码可去<text class="link" bindtap="github">GitHub</text>下载</view>
+    <view class="page_desc">小程序
+      <text class="link" bindtap="template">代码片段</text>分享，源码可去
+      <text class="link" bindtap="github">GitHub</text>下载</view>
   </view>
   <view class="page_bd page_bd_spacing">
     <view class="kind-list">
@@ -17,10 +21,14 @@
           <view class="kind-list_item-bd {{item.open ? 'kind-list_item-bd_show' : ''}}">
             <view class="tui-cells {{item.open ? 'tui-cells_show' : ''}}">
               <block wx:for-items="{{item.pages}}" wx:for-item="page" wx:key="*item">
-                <navigator url="../{{page.page}}/{{page.page}}" class="tui-cell tui-cell_access">
+                <navigator wx:if="{{page.page!='subway'}}" url="{{parse.getPageUrl(page.page)}}" class="tui-cell tui-cell_access">
                   <view class="tui-cell_bd">{{page.name}}</view>
                   <view class="tui-cell_ft tui-cell_ft_in-access"></view>
                 </navigator>
+                <view class="tui-cell tui-cell_access" hover-class="hover" hover-stay-time="150" wx:else bindtap="href" data-page="{{page.page}}">
+                  <view class="tui-cell_bd">{{page.name}}</view>
+                  <view class="tui-cell_ft tui-cell_ft_in-access"></view>
+                </view>
               </block>
             </view>
           </view>
@@ -29,3 +37,15 @@
     </view>
   </view>
 </view>
+
+<wxs module="parse">
+  module.exports = {
+    getPageUrl:function(page) {
+      var pageUrl = '../' + page + '/' + page;
+      if (page == 'friendsList-2') {
+        pageUrl = '../extend-view/' + page + '/' + page;
+      }
+      return pageUrl
+    }
+  }
+</wxs>

@@ -18,6 +18,7 @@
   font-size: 64rpx;
   padding-left: 20rpx;
   color: #333;
+  position: relative
 }
 
 .link {
@@ -185,4 +186,22 @@
 
 .kind-list_item-bd_show {
   height: auto;
+}
+.tui-badge {
+  position: absolute;
+  width: 80rpx;
+  height: 30rpx;
+  border-radius: 30rpx 30rpx 30rpx 0;
+  color: #fff;
+  background: #eb0909;
+  font-size: 25rpx;
+  line-height: 25rpx;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: scale(0.8) translateX(100%);
+  transform-origin: center center;
+  top: -8rpx;
+  right: 0;
 }

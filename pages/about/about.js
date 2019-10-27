@@ -13,7 +13,7 @@ Page({
       success(res) {
         wx.getClipboardData({
           success(res) {
-            //util.toast("邮箱已复制", 2000, true)
+            util.toast("链接已复制", 2000, true)
           }
         })
       }

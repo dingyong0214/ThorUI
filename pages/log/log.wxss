@@ -42,7 +42,8 @@
   border: 1rpx solid #5c8dff;
   display: inline-block;
 }
-.tui-log-text{
+
+.tui-log-text {
   /* word-break: break-all;
   word-wrap: break-word;
   text-align: justify; */
@@ -73,4 +74,14 @@
   font-size: 32rpx;
   font-weight: bold;
   padding-bottom: 20rpx;
+}
+
+.tui-doc-box {
+  padding-top: 20rpx;
+  word-break: break-all;
+}
+
+.tui-link {
+  padding-bottom: 20rpx;
+  color: #06c;
 }
