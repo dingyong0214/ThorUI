@@ -13,7 +13,9 @@ ThorUI组件库，微信小程序代码片段分享
 
 [http://www.donarui.com/](http://www.donarui.com/)
 
-# ThorUI QQ交流群：745733024
+# ThorUI QQ交流群2：881906325
+
+# ThorUI QQ交流群1：745733024
 ![](https://thorui.cn/img/V132/1.jpg)
 
 
