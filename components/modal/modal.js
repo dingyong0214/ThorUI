@@ -6,6 +6,18 @@ Component({
       type:Boolean,
       value:false
     },
+    width: {
+      type: String,
+      value: "84%"
+    },
+    padding: {
+      type: String,
+      value: "40rpx 64rpx"
+    },
+    radius: {
+      type: String,
+      value: "24rpx"
+    },
     //标题
     title: {
       type: String,

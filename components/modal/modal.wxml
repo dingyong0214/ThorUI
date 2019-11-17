@@ -1,5 +1,5 @@
 <view catchtouchmove="forbid">
-  <view class="tui-modal-class tui-modal-box {{show?'tui-modal-show':''}} {{(fadein || show)?'tui-modal-normal':'tui-modal-scale'}}">
+  <view class="tui-modal-class tui-modal-box {{show?'tui-modal-show':''}} {{(fadein || show)?'tui-modal-normal':'tui-modal-scale'}}" style="width:{{width}};padding:{{padding}};border-radius:{{radius}}">
     <view wx:if="{{!custom}}">
       <view class="tui-modal-title" v-if="title">{{title}}</view>
       <view class="tui-modal-content {{title?'':'tui-mtop'}}" style="color:{{color}};font-size:{{size}}rpx">{{content}}</view>

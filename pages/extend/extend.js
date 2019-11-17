@@ -44,7 +44,7 @@ Page({
       like: false
     }, {
       name: "Rate评分",
-      desc: "Rate评分:可设置星星数，可设置大小颜色。",
+        desc: "Rate评分:可设置大小颜色，支持半星，支持手势touch选择。",
       page: "rate",
       like: false
     }, {
@@ -102,12 +102,12 @@ Page({
       desc: "picker-view扩展，日期时间选择器，可设置默认显示，可根据需要调整选择的类型。",
       page: "picker-dateTime",
       like: false
-      }, {
-        name: "复制文本",
-        desc: "clipboard，复制到剪贴板，兼容H5，APP和小程序依然使用平台自带api。",
-        page: "clipboard",
-        like: false
-      }, {
+    }, {
+      name: "复制文本",
+      desc: "clipboard，复制到剪贴板，兼容H5，APP和小程序依然使用平台自带api。",
+      page: "clipboard",
+      like: false
+    }, {
       name: "悬浮按钮",
       desc: "fab，拓展出来的按钮不应多于6个，否则违反了作为悬浮按钮的快速、高效的原则。",
       page: "fab",
@@ -132,17 +132,17 @@ Page({
       desc: "upload，图片上传，需要根据上传接口实际返回数据进行适当调整 。",
       page: "upload",
       like: false
-      }, {
-        name: "骨架屏",
-        desc: "数据请求时常见到锁屏的loading动画，而现在越来越多的产品倾向于使用Skeleton Screen替代 。",
-        page: "skeleton",
-        like: false
-      }, {
-        name: "网络请求",
-        desc: "Network request，发起网络请求，简单的封装与使用 。",
-        page: "request",
-        like: false
-      }, {
+    }, {
+      name: "骨架屏",
+      desc: "数据请求时常见到锁屏的loading动画，而现在越来越多的产品倾向于使用Skeleton Screen替代 。",
+      page: "skeleton",
+      like: false
+    }, {
+      name: "网络请求",
+      desc: "Network request，发起网络请求，简单的封装与使用 。",
+      page: "request",
+      like: false
+    }, {
       name: "抽奖转盘",
       desc: "抽奖转盘，例子使用随机值进行抽奖，可以指定中奖奖项。",
       page: "luckdraw",
@@ -151,11 +151,6 @@ Page({
       name: "模板",
       desc: "计划前三套模板：新闻，聊天，商城。敬请期待！",
       page: "template",
-      like: false
-    }, {
-      name: "聊天模板",
-      desc: "聊天模板包含：消息列表，好友列表，聊天界面等。",
-      page: "msgList",
       like: false
     }]
   },
@@ -168,8 +163,14 @@ Page({
     }
     util.request("/Home/GetStatus", {}, "GET", false, true).then((res) => {
       if (res.code == 100 && res.data == 1) {
+        getApp().globalData.isOnline = true
         this.setData({
           list: this.data.list.concat([{
+            name: "聊天模板",
+            desc: "聊天模板包含：消息列表，好友列表，聊天界面等。",
+            page: "msgList",
+            like: false
+          }, {
             name: "新闻模板",
             desc: "新闻模板包含：新闻列表，新闻详情，评论等。",
             page: "news",

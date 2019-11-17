@@ -13,6 +13,18 @@
   display: block;
 }
 
+.tui-relative {
+  position: relative;
+}
+
+.tui-icon-main {
+  position: absolute;
+  height: 100%;
+  left: 0;
+  top: 0;
+  overflow: hidden;
+}
+
 .tui-icon-collection-fill:before {
   content: "\e6ea";
 }
@@ -25,4 +37,6 @@
   display: -webkit-inline-flex;
   display: inline-flex;
   align-items: center;
+  margin: 0;
+  padding: 0;
 }

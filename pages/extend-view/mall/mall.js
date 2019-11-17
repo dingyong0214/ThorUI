@@ -241,6 +241,11 @@ Page({
       url: '../productDetail/productDetail'
     })
   },
+  coupon: function () {
+    wx.navigateTo({
+      url: '../mall-extend/coupon/coupon'
+    })
+  },
   classify: function() {
     wx.navigateTo({
       url: '/pages/navbar-2/navbar-2'

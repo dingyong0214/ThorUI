@@ -139,5 +139,10 @@ Page({
     wx.navigateTo({
       url: '../mall-extend/submitOrder/submitOrder'
     })
+  },
+  coupon(){
+    wx.navigateTo({
+      url: '../mall-extend/coupon/coupon'
+    })
   }
 })

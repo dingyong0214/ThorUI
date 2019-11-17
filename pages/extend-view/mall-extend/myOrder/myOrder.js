@@ -27,9 +27,8 @@ Page({
     })
   },
   detail() {
-    wx.showToast({
-      title: '功能尚未完善~',
-      icon:'none'
+    wx.navigateTo({
+      url: '../orderDetail/orderDetail'
     })
   },
   onPullDownRefresh() {

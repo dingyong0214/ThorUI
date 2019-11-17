@@ -34,7 +34,7 @@ Component({
       value: []
     },
     //是否需要loading
-    loading: {
+    isLoading: {
       type: Boolean,
       value: true
     },

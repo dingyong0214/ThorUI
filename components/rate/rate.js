@@ -11,6 +11,14 @@ Component({
       type: Number,
       value: 0
     },
+    //当前选中星星分数(大于0，小于等于1的数)
+    score: {
+      type: Number,
+      value: 1,
+      observer(val) {
+        this.getPercent()
+      }
+    },
     //禁用点击
     disabled: {
       type: Boolean,
@@ -37,10 +45,21 @@ Component({
       value: false
     }
   },
+  lifetimes: {
+    attached: function () {
+      this.getPercent()
+    }
+  },
   data: {
-    pageX: 0
+    pageX: 0,
+    percent: 0
   },
   methods: {
+    getPercent() {
+      this.setData({
+        percent: Number(this.data.score || 0) * 100
+      })
+    },
     handleTap(e) {
       if (this.data.disabled) {
         return;

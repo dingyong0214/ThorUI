@@ -1,17 +1,14 @@
 .tui-modal-box {
   position: fixed;
-  width: 84%;
   left: 50%;
   top: 50%;
   margin: auto;
   background: #fff;
-  z-index: 99998;
+  z-index: 9999998;
   transition: all 0.3s ease-in-out;
   opacity: 0;
   visibility: hidden;
-  border-radius: 24rpx;
   box-sizing: border-box;
-  padding: 40rpx 60rpx;
 }
 
 .tui-modal-scale {
@@ -33,7 +30,7 @@
   right: 0;
   bottom: 0;
   background: rgba(0, 0, 0, 0.6);
-  z-index: 99996;
+  z-index: 9999996;
   transition: all 0.3s ease-in-out;
   opacity: 0;
   visibility: hidden;

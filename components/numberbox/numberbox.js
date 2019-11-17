@@ -61,6 +61,11 @@ Component({
     index: {
       type: Number,
       value: 0
+    },
+    //自定义参数
+    custom: {
+      type: Number,
+      value: 0
     }
   },
   data: {
@@ -98,6 +103,11 @@ Component({
         num += step
       }
       let value = num / scale
+      if (type === "plus" && value < this.data.min) {
+        value = this.data.min
+      } else if (type === "reduce" && value > this.data.max) {
+        value = this.data.max
+      }
       if (value < this.data.min || value > this.data.max) {
         return
       }
@@ -136,7 +146,8 @@ Component({
       this.triggerEvent('change', {
         value: value,
         type: type,
-        index: this.data.index
+        index: this.data.index,
+        custom: this.data.custom
       })
     }
   }

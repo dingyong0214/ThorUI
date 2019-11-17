@@ -10,11 +10,11 @@ Page({
     winHeight: 0,
     scrollTop: 0
   },
-  onLoad: function (options) {
+  onLoad: function(options) {
     const that = this;
     setTimeout(() => {
       wx.getSystemInfo({
-        success: function (res) {
+        success: function(res) {
           let winHeight = res.windowHeight
           let barHeight = winHeight - res.windowWidth / 750 * 232
           that.setData({
@@ -73,22 +73,24 @@ Page({
       touchmoveIndex: -1
     })
   },
-  stickyChange: function (e) {
+  stickyChange: function(e) {
     let index = e.detail.index;
     let key = `lists[${index}].stickyTop`
     this.setData({
       [key]: e.detail.top
     })
   },
-  search: function () {
+  search: function() {
     wx.navigateTo({
       url: '../news-search/news-search'
     })
   },
-  detail: function () {
-    wx.navigateTo({
-      url: '../chat/chat'
-    })
+  detail: function() {
+    if (getApp().globalData.isOnline) {
+      wx.navigateTo({
+        url: '../chat/chat'
+      })
+    }
   },
   //页面滚动执行方式
   onPageScroll(e) {

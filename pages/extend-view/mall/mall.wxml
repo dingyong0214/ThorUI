@@ -59,9 +59,9 @@
       <text>新人专享</text>
       <tui-icon name="arrowright" size="20" color="#555"></tui-icon>
     </view>
-    <view class="tui-activity-box" bindtap="detail">
-      <image src="../../../static/images/mall/activity/activity_1.jpg" class="tui-activity-img" mode="widthFix"></image>
-      <image src="../../../static/images/mall/activity/activity_2.jpg" class="tui-activity-img" mode="widthFix"></image>
+    <view class="tui-activity-box">
+      <image src="../../../static/images/mall/activity/activity_1.jpg" class="tui-activity-img" mode="widthFix"  bindtap="coupon"></image>
+      <image src="../../../static/images/mall/activity/activity_2.jpg" class="tui-activity-img" mode="widthFix"  bindtap="detail"></image>
     </view>
   </view>
 

@@ -60,8 +60,8 @@ Component({
     },
     //滑块bottom
     bottom: {
-      type: Number,
-      value: 0
+      type: String,
+      value: "0"
     },
     //标签页宽度
     itemWidth: {

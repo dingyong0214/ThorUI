@@ -58,6 +58,7 @@ App({
   },
   globalData: {
     isLogin: wx.getStorageSync("thorui_mobile") ? true : false,
-    version: "1.4.1"
+    version: "1.4.2",
+    isOnline:false
   }
 })

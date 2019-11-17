@@ -98,7 +98,9 @@
         "skeleton/skeleton",
         "request/request",
         "friendsList-2/friendsList-2",
-        "clipboard/clipboard"
+        "clipboard/clipboard",
+        "mall-extend/coupon/coupon",
+        "mall-extend/orderDetail/orderDetail"
       ]
     }
   ],
@@ -142,10 +144,7 @@
     "downloadFile": 10000
   },
   "plugins": {
-    "subway": {
-      "version": "1.0.4",
-      "provider": "wx6aaf93c4435fa1c1"
-    }
+    
   },
   "permission": {
     "scope.userLocation": {

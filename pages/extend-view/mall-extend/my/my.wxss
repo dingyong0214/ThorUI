@@ -86,11 +86,13 @@
 
 	.tui-mybg-box {
 		width: 100%;
+    height: 464rpx;
 		position: relative;
 	}
 
 	.tui-my-bg {
 		width: 100%;
+    height: 464rpx;
 		display: block;
 	}
 

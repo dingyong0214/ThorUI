@@ -1,0 +1,97 @@
+<view class="container">
+  <image src="https://www.thorui.cn/wx/static/images/mall/coupon/banner_coupon.png" mode="widthFix" class="tui-coupon-banner"></image>
+  <view class="tui-coupon-list">
+    <radio-group>
+      <label wx:for="{{2}}" wx:key="{{index}}">
+        <view class="tui-coupon-item tui-top20">
+          <image src="https://www.thorui.cn/wx/static/images/mall/coupon/bg_coupon_3x.png" class="tui-coupon-bg" mode="widthFix"></image>
+          <view class="tui-coupon-item-left">
+            <view class="tui-coupon-price-box">
+              <view class="tui-coupon-price-sign" wx:if="{{index%2==0}}">￥</view>
+              <view class="tui-coupon-price {{false?'':'tui-price-small'}}">{{index%2==0?50*(index+1):2.5}}</view>
+              <view class="tui-coupon-price-sign" wx:if="{{index%2!=0}}">折</view>
+            </view>
+            <view class="tui-coupon-intro">满38元可用</view>
+          </view>
+          <view class="tui-coupon-item-right">
+            <view class="tui-coupon-content">
+              <view class="tui-coupon-title-box">
+                <view class="tui-coupon-btn">全场券</view>
+                <view class="tui-coupon-title">全部商品可用</view>
+              </view>
+              <view class="tui-coupon-rule">
+                <view class="tui-rule-box tui-padding-btm">
+                  <view class="tui-coupon-circle"></view>
+                  <view class="tui-coupon-text">不可叠加使用</view>
+                </view>
+                <view class="tui-rule-box">
+                  <view class="tui-coupon-circle"></view>
+                  <view class="tui-coupon-text">{{index%2==0?"自领取之日起30天有效":"2019-11-01至2019-12-31"}}</view>
+                </view>
+              </view>
+            </view>
+            <radio value="1" class="tui-coupon-radio" color="#e41f19" checked="{{index%2==0}}" />
+          </view>
+        </view>
+      </label>
+    </radio-group>
+
+
+    <view class="tui-coupon-item tui-top20" wx:for="{{5}}" wx:key="{{index}}">
+      <image src="https://www.thorui.cn/wx/static/images/mall/coupon/bg_coupon_3x.png" class="tui-coupon-bg" mode="widthFix"></image>
+      <image src="{{parse.getSignUrl(index)}}" class="tui-coupon-sign" wx:if="{{index!=0 && index !=2}}"></image>
+      <view class="tui-coupon-item-left">
+        <view class="tui-coupon-price-box {{index>2?'tui-color-grey':''}}">
+          <view class="tui-coupon-price-sign" wx:if="{{index%2==0}}">￥</view>
+          <!--tui-price-small 面值>4位数的时候为true-->
+          <view class="tui-coupon-price {{false?'':'tui-price-small'}}">{{index%2==0?100*(index+1):9}}</view>
+          <view class="tui-coupon-price-sign" wx:if="{{index%2!=0}}">折</view>
+        </view>
+        <view class="tui-coupon-intro">满38元可用</view>
+      </view>
+      <view class="tui-coupon-item-right">
+        <view class="tui-coupon-content">
+          <view class="tui-coupon-title-box">
+            <view class="tui-coupon-btn {{index>2?'tui-bg-grey':''}}">全场券</view>
+            <view class="tui-coupon-title">全部商品可用</view>
+          </view>
+          <view class="tui-coupon-rule">
+            <view class="tui-rule-box tui-padding-btm">
+              <view class="tui-coupon-circle"></view>
+              <view class="tui-coupon-text">不可叠加使用</view>
+            </view>
+            <view class="tui-rule-box">
+              <view class="tui-coupon-circle"></view>
+              <view class="tui-coupon-text">{{index%2==0?"自领取之日起30天有效":"2019-11-01至2019-12-31"}}</view>
+            </view>
+          </view>
+        </view>
+      </view>
+      <view class="tui-btn-box" wx:if="{{index<=2}}">
+        <tui-button type="danger" width="146rpx" height="52rpx" size="{{24}}" shape="circle" plain="{{index%2!=0}}">{{index%2!=0?'立即使用':'立即领取'}}</tui-button>
+      </view>
+    </view>
+
+  </view>
+
+  <!--加载loadding-->
+  <tui-loadmore visible="{{loadding}}" index="{{3}}" type="red"></tui-loadmore>
+  <tui-nomore visible="{{!pullUpOn}}" bgcolor="#f5f5f5"></tui-nomore>
+  <!--加载loadding-->
+</view>
+
+<wxs module="parse">
+  module.exports = {
+    getSignUrl: function(index) {
+      var url = "";
+      if (index === 1) {
+        url = "/static/images/mall/coupon/img_couponcentre_received_3x.png"
+      } else if (index == 3) {
+        url = "/static/images/mall/coupon/img_coupon_beused_3x.png"
+      } else if (index == 4) {
+        url = "/static/images/mall/coupon/img_coupon_failure_3x.png"
+      }
+      return "https://www.thorui.cn/wx" + url
+    }
+  }
+</wxs>

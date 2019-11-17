@@ -3,7 +3,7 @@
   "navigationBarTextStyle": "black",
   "backgroundColorTop": "#F5F6FA",
   "backgroundColorBottom": "#F5F6FA",
-  "navigationBarTitleText": "联系人 ",
+  "navigationBarTitleText": "索引&吸顶效果",
   "usingComponents": {
     "tui-sticky":"../../../components/sticky/sticky"
   }

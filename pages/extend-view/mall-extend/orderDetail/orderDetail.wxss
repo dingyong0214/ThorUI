@@ -1,0 +1,313 @@
+.container {
+		padding-bottom: 118rpx;
+	}
+
+	.tui-order-header {
+		width: 100%;
+		height: 160rpx;
+		position: relative;
+	}
+
+	.tui-img-bg {
+		width: 100%;
+		height: 160rpx;
+	}
+
+	.tui-header-content {
+		width: 100%;
+		height: 160rpx;
+		position: absolute;
+		z-index: 10;
+		left: 0;
+		top: 0;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding: 0 70rpx;
+		box-sizing: border-box;
+	}
+
+	.tui-status-text {
+		font-size: 36rpx;
+		line-height: 36rpx;
+		color: #FEFEFE;
+	}
+
+	.tui-reason {
+		font-size: 24rpx;
+		line-height: 24rpx;
+		color: rgba(254, 254, 254, 0.75);
+		padding-top: 15rpx;
+		display: flex;
+		align-items: center;
+	}
+
+	.tui-reason-text {
+		padding-right: 12rpx;
+	}
+
+	.tui-status-img {
+		width: 80rpx;
+		height: 80rpx;
+		display: block;
+	}
+
+	.tui-flex-box {
+		width: 100%;
+		display: flex;
+		align-items: center;
+	}
+
+	.tui-icon-img {
+		width: 44rpx;
+		height: 44rpx;
+		flex-shrink: 0;
+	}
+
+	.tui-logistics {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		padding: 0 24rpx 0 20rpx;
+		box-sizing: border-box;
+	}
+
+	.tui-logistics-text {
+		font-size: 28rpx;
+		line-height: 32rpx;
+	}
+
+	.tui-logistics-time {
+		font-size: 24rpx;
+		line-height: 24rpx;
+		padding-top: 16rpx;
+		color: #666;
+	}
+
+	.tui-addr {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		padding-left: 20rpx;
+		box-sizing: border-box;
+	}
+
+	.tui-addr-userinfo {
+		font-size: 30rpx;
+		line-height: 30rpx;
+		font-weight: bold;
+	}
+
+	.tui-addr-text {
+		font-size: 24rpx;
+		line-height: 30rpx;
+		padding-top: 16rpx;
+	}
+
+	.tui-addr-tel {
+		padding-left: 40rpx;
+	}
+
+	.tui-order-item {
+		margin-top: 20rpx;
+		border-radius: 10rpx;
+		overflow: hidden;
+	}
+
+	.tui-goods-title {
+		width: 100%;
+		font-size: 28rpx;
+		line-height: 28rpx;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+
+	.tui-goods-item {
+		width: 100%;
+		padding: 20rpx 30rpx;
+		box-sizing: border-box;
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.tui-goods-img {
+		width: 180rpx;
+		height: 180rpx;
+		display: block;
+		flex-shrink: 0;
+	}
+
+	.tui-goods-center {
+		flex: 1;
+		padding: 20rpx 8rpx;
+		box-sizing: border-box;
+	}
+
+	.tui-goods-name {
+		max-width: 310rpx;
+		word-break: break-all;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		display: -webkit-box;
+		-webkit-box-orient: vertical;
+		-webkit-line-clamp: 2;
+		font-size: 26rpx;
+		line-height: 32rpx;
+	}
+
+	.tui-goods-attr {
+		font-size: 22rpx;
+		color: #888888;
+		line-height: 32rpx;
+		padding-top: 20rpx;
+		word-break: break-all;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		display: -webkit-box;
+		-webkit-box-orient: vertical;
+		-webkit-line-clamp: 2;
+	}
+
+	.tui-price-right {
+		text-align: right;
+		font-size: 24rpx;
+		color: #888888;
+		line-height: 30rpx;
+		padding-top: 20rpx;
+	}
+
+	.tui-color-red {
+		color: #E41F19;
+		padding-right: 30rpx;
+	}
+
+	.tui-goods-price {
+		width: 100%;
+		display: flex;
+		align-items: flex-end;
+		justify-content: flex-end;
+		font-size: 24rpx;
+	}
+
+	.tui-size-24 {
+		font-size: 24rpx;
+		line-height: 24rpx;
+	}
+
+	.tui-price-large {
+		font-size: 32rpx;
+		line-height: 30rpx;
+	}
+
+	.tui-goods-info {
+		width: 100%;
+		padding: 30rpx;
+		box-sizing: border-box;
+		background: #fff;
+	}
+
+	.tui-price-flex {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	.tui-size24 {
+		padding-bottom: 24rpx;
+		font-size: 24rpx;
+		line-height: 24rpx;
+		color: #888;
+	}
+
+	.tui-size32 {
+		font-size: 32rpx;
+		line-height: 32rpx;
+		font-weight: 500;
+	}
+
+	.tui-pbtm20 {
+		padding-bottom: 20rpx;
+	}
+
+	.tui-flex-shrink {
+		flex-shrink: 0;
+	}
+
+	.tui-primary-color {
+		color: #EB0909;
+	}
+
+	.tui-order-info {
+		margin-top: 20rpx;
+	}
+
+	.tui-order-title {
+		position: relative;
+		font-size: 28rpx;
+		line-height: 28rpx;
+		padding-left: 12rpx;
+		box-sizing: border-box;
+	}
+
+	.tui-order-title::before {
+		content: '';
+		position: absolute;
+		left: 0;
+		top: 0;
+		border-left: 4rpx solid #EB0909;
+		height: 100%;
+	}
+
+	.tui-order-content {
+		width: 100%;
+		padding: 30rpx;
+		box-sizing: border-box;
+		background: #fff;
+		font-size: 24rpx;
+		line-height: 30rpx;
+	}
+
+	.tui-order-flex {
+		display: flex;
+		padding-top: 24rpx;
+	}
+
+	.tui-order-flex:first-child {
+		padding-top: 0
+	}
+
+	.tui-item-title {
+		width: 132rpx;
+		flex-shrink: 0;
+	}
+
+	.tui-item-content {
+		color: #666;
+	}
+
+	.tui-safe-area {
+		height: 1rpx;
+		padding-bottom: env(safe-area-inset-bottom);
+	}
+
+	.tui-tabbar {
+		width: 100%;
+		height: 98rpx;
+		background: #fff;
+		position: fixed;
+		left: 0;
+		bottom: 0;
+		display: flex;
+		align-items: center;
+		justify-content: flex-end;
+		font-size: 26rpx;
+		box-shadow: 0 0 1px rgba(0, 0, 0, .3);
+		padding-bottom: env(safe-area-inset-bottom);
+		z-index: 999;
+	}
+	
+	.tui-btn-mr {
+		margin-right: 30rpx;
+	}

@@ -1,7 +1,7 @@
 <view class="container">
   <view class="header">
     <view class="title">Rate</view>
-    <view class="sub-title">评分</view>
+    <view class="sub-title">评分：可设置大小颜色，支持半星，支持手势touch选择。</view>
   </view>
   <view class="tui-rate-box">
     <view class="tui-title"> 基本用法</view>
@@ -24,12 +24,28 @@
     <tui-rate current="{{index}}" bind:change="change" normal="#ccc" active="#ff7900"></tui-rate>
   </view>
   <view class="tui-rate-box">
+    <view class="tui-title">未选中为空心</view>
+    <tui-rate current="{{index}}" hollow="{{true}}" bind:change="change"></tui-rate>
+  </view>
+  <view class="tui-rate-box">
     <view class="tui-title">不可点击</view>
     <tui-rate current="{{index}}" bind:change="change" disabled="{{true}}"></tui-rate>
   </view>
   <view class="tui-rate-box">
-    <view class="tui-title">未选中为空心</view>
-    <tui-rate current="{{index}}" hollow="{{true}}" bind:change="change"></tui-rate>
-  </view>
+			<view class="tui-title">不可点击(3.45星)</view>
+			<tui-rate current="{{4}}"  disabled="{{true}}" score="{{0.45}}"></tui-rate>
+		</view>
+		<view class="tui-rate-box">
+			<view class="tui-title">不可点击(3星半)</view>
+			<tui-rate current="{{4}}"  disabled="{{true}}" score="{{0.5}}"></tui-rate>
+		</view>
+		<view class="tui-rate-box">
+			<view class="tui-title">不可点击(3.55星)</view>
+			<tui-rate current="{{4}}"  disabled="{{true}}" score="{{0.55}}"></tui-rate>
+		</view>
+		<view class="tui-rate-box">
+			<view class="tui-title">不可点击(3.6星)</view>
+			<tui-rate current="{{4}}" active="#ff7900"  hollow="{{true}}" disabled="{{true}}" score="{{0.6}}"></tui-rate>
+		</view>
 
 </view>
