@@ -3,9 +3,10 @@
 # ThorUI
 ThorUI组件库，微信小程序代码片段分享
 
-## 小程序二维码
+|  ![小程序二维码](https://thorui.cn/img/applets.jpg) |![H5二维码](https://thorui.cn/img/h5_qrcode.png)  |
+| ------------ | ------------ |
+|  小程序二维码 |H5二维码  | 
 
-![image](https://thorui.cn/img/applets.jpg)
 
 # 网站介绍
 
@@ -15,13 +16,10 @@ ThorUI组件库，微信小程序代码片段分享
 
 [http://www.donarui.com/](http://www.donarui.com/)
 
-# ThorUI 微信群
-![](https://thorui.cn/img/V132/wechat_1.jpg)
 
-# ThorUI QQ交流群2：881906325
-
-# ThorUI QQ交流群1：745733024
-![](https://thorui.cn/img/V132/qq_new.jpg)
+| ![](https://thorui.cn/img/V132/qq_1.jpg)  |![](https://thorui.cn/img/V132/qq_new.jpg)  |
+| ------------ | ------------ |
+|  ThorUI QQ交流群1：745733024 |ThorUI QQ交流群2：881906325  | 
 
 
 本项目已同步更新到[uni-app](https://ext.dcloud.net.cn/plugin?id=556)，后续会同步支付宝小程序，百度小程序，头条小程序等
