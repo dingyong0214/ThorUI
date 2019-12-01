@@ -70,7 +70,7 @@ ThorUI组件库，微信小程序代码片段分享
 
 2.新增悬浮按钮组件。
 
-3.新增Tabbar组件。
+3.新增Tabbar组件。(使用案例：![](https://github.com/dingyong0214/AfterSale)
 
 4.新增tabs标签页组件。
 
