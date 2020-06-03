@@ -14,7 +14,7 @@ ThorUI组件库，微信小程序代码片段分享
 
 # ThorUI组件文档参考
 
-[http://www.donarui.com/](http://www.donarui.com/)
+[https://www.thorui.cn/doc](https://www.thorui.cn/doc)
 
 
 | ![](https://thorui.cn/img/V132/qq_1.jpg)  |![](https://thorui.cn/img/V132/qq_new.jpg)  |
@@ -26,6 +26,10 @@ ThorUI组件库，微信小程序代码片段分享
 
 
 ## 更新日志
+
+# V1.5.1（即将发布，预计时间 2020-06-06）
+
+# V1.5.0（即将发布，预计时间 2020-06-05）
 
 # V1.4.2
 
