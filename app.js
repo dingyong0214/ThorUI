@@ -4,7 +4,7 @@ App({
     // 获取小程序更新机制兼容
     if (wx.canIUse('getUpdateManager')) {
       const updateManager = wx.getUpdateManager()
-      updateManager.onCheckForUpdate(function(res) {
+      updateManager.onCheckForUpdate(function(res) { 
         // 请求完新版本信息的回调
         if (res.hasUpdate) {
           updateManager.onUpdateReady(function() {

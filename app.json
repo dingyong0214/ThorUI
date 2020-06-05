@@ -1,7 +1,7 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/extend/extend",
+    "pages/extend/extend", 
     "pages/my/my",
     "pages/maps/maps",
     "pages/weather/weather",

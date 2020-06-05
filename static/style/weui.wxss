@@ -3,7 +3,7 @@ page {
   font-family: -apple-system-font, "Helvetica Neue", sans-serif;
 }
 icon {
-  vertical-align: middle;
+  vertical-align: middle; 
 }
 .weui-cells {
   position: relative;
