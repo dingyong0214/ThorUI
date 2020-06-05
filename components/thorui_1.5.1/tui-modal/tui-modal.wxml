@@ -1,0 +1,18 @@
+<view catchtouchmove>
+		<view class="tui-modal-box {{(fadeIn || show)?'tui-modal-normal':'tui-modal-scale'}} {{show?'tui-modal-show':''}}" style="width:{{width}};padding:{{padding}};border-radius:{{radius}}">
+			<view wx:if="{{!custom}}">
+				<view class="tui-modal-title" wx:if="{{title}}">{{title}}</view>
+				<view class="tui-modal-content {{title?'':'tui-mtop'}}" style="color:{{color}};font-size:{{size+'rpx'}}">{{content}}</view>
+				<view class="tui-modalBtn-box {{button.length!=2?'tui-flex-column':''}}" >
+					<block wx:for="{{button}}" wx:key="index">
+						<button class="tui-modal-btn {{'tui-'+(item.type || 'primary')+(item.plain?'-outline':'')}} {{button.length!=2?'tui-btn-width':''}} {{button.length>2?'tui-mbtm':''}} {{shape=='circle'?'tui-circle-btn':''}}" hover-class="{{'tui-'+(item.plain?'outline':(item.type || 'primary'))+'-hover'}}" data-index="{{index}}" bindtap="handleClick">{{item.text || "确定"}}</button>
+					</block>
+				</view>
+			</view>
+			<view wx:else>
+				<slot></slot>
+			</view>
+		</view>
+		<view class="tui-modal-mask {{show?'tui-mask-show':''}}" bindtap="handleClickCancel"></view>
+
+	</view>

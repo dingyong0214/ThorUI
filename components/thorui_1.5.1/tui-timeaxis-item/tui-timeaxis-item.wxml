@@ -1,0 +1,6 @@
+<view class="tui-timeaxis-item">
+		<slot name="content"></slot>
+		<view class="tui-timeaxis-node" style="background-color:{{backgroundColor}}">
+			<slot name="node"></slot>
+		</view>
+	</view>

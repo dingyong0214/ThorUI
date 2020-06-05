@@ -1,0 +1,34 @@
+<view catchtouchmove="stop">
+  <view class="tui-bottom-navigation {{isFixed?'tui-navigation-fixed':''}} {{unlined?'tui-remove-splitLine':''}}">
+    <view class="tui-navigation-item {{splitLineScale?'tui-item-after_height':''}} {{index == itemList.length - 1?'tui-last-item':''}}" style="background-color:{{isDarkMode ? '#202020' : backgroundColor}}" wx:for="{{itemList}}" wx:key="index">
+      <view class="tui-item-inner" data-index="{{index}}" data-parameter="{{item.parameter}}" data-type="{{item.type}}" bindtap="menuClick">
+        <image src="{{parse.getIcon(current,index, item)}}" class="tui-navigation-img" wx:if="{{item.iconPath || (current == index && item.selectedIconPath && item.type == 1)}}"></image>
+        <view class="tui-navigation-text" style="color:{{isDarkMode ? '#fff' : current == index && item.type == 1 ? selectedColor : item.color || color}};font-weight:{{ current == index && bold && item.type == 1 ? 'bold' : 'normal'}};font-size:{{fontSize}}">
+          {{ item.text }}
+        </view>
+      </view>
+      <view class="tui-navigation-popup {{showMenuIndex == index?'tui-navigation-popup_show':''}}" style="background-color:{{isDarkMode ? '#4c4c4c' : subMenuBgColor}};left:{{item.popupLeft || '50%'}}" wx:if="{{item.itemList}}">
+        <view class="tui-popup-cell {{subIndex === 0?'tui-first-cell':''}} {{subIndex === item.itemList.length - 1?'tui-last-cell':''}}" hover-class="{{subMenuHover ? (isDarkMode ? 'tui-item-dark_hover' : 'tui-item-hover') : ''}}" hover-stay-time="150" wx:for-items="{{item.itemList}}"
+          wx:for-item="subItem" wx:key="subIndex" wx:for-index="subIndex" data-index="{{index}}" data-subindex="{{subIndex}}" data-type="{{item.type}}" data-parameter="{{subItem.parameter}}" bindtap="subMenuClick">
+          <view class="tui-ellipsis" style="color:{{isDarkMode ? '#fff' : subMenuColor}};font-size:{{subMenufontSize}};line-height:{{subMenufontSize}}">
+            {{ subItem.text }}
+          </view>
+        </view>
+        <view class="tui-popup-triangle" style="border-top-color:{{isDarkMode ? '#4c4c4c' : subMenuBgColor}}"></view>
+      </view>
+    </view>
+  </view>
+  <view class="tui-navigation-mask {{showMenuIndex != -1?'tui-navigation-mask_show':''}}" bindtap="handleClose"></view>
+</view>
+
+<wxs module="parse">
+  module.exports = {
+    getIcon: function(current, index, item) {
+      var url = item.iconPath;
+      if (item.type == 1) {
+        url = current == index ? item.selectedIconPath || item.iconPath : item.iconPath;
+      }
+      return url;
+    }
+  }
+</wxs>

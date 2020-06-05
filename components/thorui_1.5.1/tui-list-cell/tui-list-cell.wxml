@@ -1,0 +1,3 @@
+<view class="tui-list-class tui-list-cell {{arrow ? 'tui-cell-arrow' : ''}} {{arrow && arrowRight ? '' : 'tui-arrow-right'}} {{unlined ? 'tui-cell-unlined' : ''}} {{lineLeft ? 'tui-line-left' : ''}} {{lineRight ? 'tui-line-right' : ''}} {{arrow && arrowColor ? 'tui-arrow-' + arrowColor : ''}} {{radius ? 'tui-radius' : ''}}" hover-class="{{hover ? 'tui-cell-hover' : ''}}" style="background-color: {{backgroundColor}};font-size: {{size + 'rpx'}}; color: {{color}}; padding: {{padding}}" hover-stay-time="150" bindtap="handleClick">
+	<slot></slot>
+</view>

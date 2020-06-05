@@ -1,0 +1,28 @@
+<view>
+	<view class="tui-keyboard-mask {{show?'tui-mask-show':''}}" wx:if="{{mask}}" bindtap="handleClose"></view>
+	<view class="tui-keyboard {{radius?'tui-keyboard-radius':''}} {{action?'tui-keyboard-action':''}} {{show?'tui-keyboard-show':''}}">
+		<slot></slot>
+		<view class="tui-keyboard-grids">
+			<!--{{(index==9 || index==10 || index==11)?'tui-grid-bottom':''}}-->
+			<view class="tui-keyboard-grid {{index==9 || index==11?'tui-bg-gray':''}}" wx:for="{{itemList}}" wx:key="index" hover-class="tui-keyboard-hover" hover-stay-time="150" bindtap="handleClick" data-index="{{index}}">
+				<view wx:if="{{index<11}}" class="tui-keyboard-item {{index==9?'tui-fontsize-32':''}}">{{parse.getKeyBoard(index,action)}}</view>
+				<view wx:else class="tui-keyboard-item">
+					<view class="tui-icon tui-keyboard-delete"></view>
+				</view>
+			</view>
+		</view>
+	</view>
+</view>
+<wxs module="parse">
+	module.exports = {
+		getKeyBoard: function(index, action) {
+			var content = index + 1;
+			if (index == 9) {
+				content = action ? "取消" : "清除";
+			} else if (index == 10) {
+				content = 0;
+			}
+			return content;
+		}
+	}
+</wxs>

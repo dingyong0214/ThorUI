@@ -1,0 +1,39 @@
+<button class="tui-btn-class tui-btn {{plain ? 'tui-' + type + '-outline' : 'tui-btn-' + (type || 'primary')}} {{parse.getDisabledClass(disabled, type, plain,disabledGray)}} {{	parse.getShapeClass(shape, plain)}} {{parse.getShadowClass(type, shadow, plain)}}" hover-class="{{parse.getHoverClass(disabled, type, plain)}}" style="width: {{width}}; height: {{height}}; line-height: {{height}}; font-size: {{size + 'rpx'}};margin:{{margin}}" loading="{{loading}}" open-type="{{openType}}" bindgetuserinfo="bindgetuserinfo" disabled="{{disabled}}" bindtap="handleClick">
+	<slot></slot>
+</button>
+
+<wxs module="parse">
+	module.exports = {
+		getShadowClass: function(type, shadow, plain) {
+			var className = '';
+			if (shadow && type != 'white' && !plain) {
+				className = 'tui-shadow-' + type;
+			}
+			return className;
+		},
+		getDisabledClass: function(disabled, type, plain,disabledGray) {
+			var className = '';
+			if (disabled && type != 'white') {
+				var classVal = disabledGray ? 'tui-gray-disabled' : 'tui-dark-disabled';
+				className = plain ? 'tui-dark-disabled-outline' : classVal;
+			}
+			return className;
+		},
+		getShapeClass: function(shape, plain) {
+			var className = '';
+			if (shape == 'circle') {
+				className = plain ? 'tui-outline-fillet' : 'tui-fillet';
+			} else if (shape == 'rightAngle') {
+				className = plain ? 'tui-outline-rightAngle' : 'tui-rightAngle';
+			}
+			return className;
+		},
+		getHoverClass: function(disabled, type, plain) {
+			var className = '';
+			if (!disabled) {
+				className = plain ? 'tui-outline-hover' : 'tui-' + (type || 'primary') + '-hover';
+			}
+			return className;
+		}
+	}
+</wxs>

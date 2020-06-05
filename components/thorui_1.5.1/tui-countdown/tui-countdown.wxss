@@ -1,0 +1,40 @@
+.tui-countdown-box {
+	display: flex;
+	align-items: center;
+}
+
+.tui-countdown-box {
+	display: flex;
+	align-items: center;
+}
+
+.tui-countdown-item {
+	border: 1rpx solid;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 2rpx;
+	border-radius: 6rpx;
+	white-space: nowrap;
+	transform: translateZ(0);
+}
+
+.tui-countdown-time {
+	margin: 0;
+	padding: 0;
+}
+
+.tui-countdown-colon {
+	display: flex;
+	justify-content: center;
+	padding: 0 5rpx;
+}
+
+.tui-colon-pad {
+	padding: 0 !important;
+}
+
+.tui-countdown-scale {
+	transform: scale(0.9);
+	transform-origin: center center;
+}

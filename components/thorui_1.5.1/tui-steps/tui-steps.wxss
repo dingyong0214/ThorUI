@@ -1,0 +1,90 @@
+.tui-steps-box {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.tui-steps-column {
+  flex-direction: column;
+}
+
+.tui-step-ico {
+  border-radius: 40rpx;
+  position: relative;
+  z-index: 3;
+  margin: 0 auto;
+  border-width: 1rpx;
+  border-style: solid;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.tui-step-row_ico {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.tui-step-column_ico {
+  top: 0;
+}
+
+
+.tui-step-line {
+  position: absolute;
+  left: 50%;
+  top: 20rpx;
+  width: 100%;
+  height: 1rpx;
+}
+
+.tui-step-row_item_main {
+  text-align: center
+}
+
+.tui-step-item {
+  font-size: 24rpx;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.tui-step-item-ico {
+  height: 36rpx;
+  line-height: 36rpx;
+  text-align: center;
+}
+
+.tui-step-item-main {
+  margin-top: 16rpx;
+  clear: both
+}
+
+.tui-step-item-title {
+  word-break: break-all;
+}
+
+.tui-step-item-content {
+  margin-top: 8rpx;
+  word-break: break-all;
+}
+
+.tui-step-vertical {
+  width: 100%;
+  display: flex;
+  padding-bottom: 60rpx
+}
+
+.tui-step-column_item_main {
+  margin-top: 0;
+  padding-left: 20rpx;
+}
+
+.tui-step-column_line {
+  position: absolute;
+  height: 100%;
+  top: 0;
+  left: 18rpx;
+  margin: 0;
+  width: 1rpx
+}

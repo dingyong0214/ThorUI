@@ -1,0 +1,21 @@
+<view class="tui-steps-box {{direction==='column'?'tui-steps-column':''}}" >
+		<view class="tui-step-item {{direction==='row'?'tui-step-horizontal':'tui-step-vertical'}}" style="width:{{direction==='column'?'100%':spacing}}" 
+		 wx:for="{{items}}" wx:key="index">
+			<view class="tui-step-item-ico" style="width:{{direction==='column'?'36rpx':'100%'}}">
+				<view class="tui-step-ico {{direction==='column'?'tui-step-column_ico':'tui-step-row_ico'}}" style="width:{{type==2 || activeSteps===index?'36rpx':'16rpx'}};height:{{type==2 || activeSteps===index?'36rpx':'16rpx'}};background-color:{{index<=activeSteps?activeColor:(type==2?'#fff':deactiveColor)}};border-color:{{index<=activeSteps?activeColor:deactiveColor}}">
+					<text wx:if="{{activeSteps!==index}}" style="color:{{index<=activeSteps?'#fff':''}}">{{type==1?'':index+1}}</text>
+					<tui-icon name="check" size="{{16}}" color="#fff" wx:if="{{activeSteps===index}}"></tui-icon>
+				</view>
+				<view class="tui-step-line {{'tui-step-'+direction+'_line'}}" style="background-color:{{index<=activeSteps-1?activeColor:deactiveColor}}"
+				 wx:if="{{index!=items.length-1}}"></view>
+			</view>
+			<view class="tui-step-item-main {{'tui-step-'+direction+'_item_main'}}">
+				<view class="tui-step-item-title" style="color:{{index<=activeSteps?activeColor:deactiveColor}};font-size:{{titleSize+'rpx'}};line-height:{{titleSize+'rpx'}};font-weight:{{bold?'bold':'normal'}}">
+					{{item.title}}
+				</view>
+				<view class="tui-step-item-content" style="color:{{index<=activeSteps?activeColor:deactiveColor}};font-size:{{descSize+'rpx'}}">
+					{{item.desc}}
+				</view>
+			</view>
+		</view>
+	</view>

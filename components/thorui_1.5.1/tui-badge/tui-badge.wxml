@@ -1,0 +1,3 @@
+<view class="tui-badge-class {{dot ? 'tui-badge-dot' : 'tui-badge'}} {{'tui-' + type}} {{ !dot ? 'tui-badge-scale' : ''}}"  style="top:{{top}};right:{{right}};position:{{absolute ? 'absolute' : 'static'}};transform:scale({{scaleRatio}}) translateX({{translateX}});margin:{{margin}}" bindtap="handleClick">
+  <slot></slot>
+</view>

@@ -1,0 +1,42 @@
+<view class="tui-countdown-class tui-countdown-box">
+	<view class="tui-countdown-item" style="background: {{backgroundColor}}; border-color: {{borderColor}}; width: {{parse.getWidth(d, width)}}rpx; height: {{height}}rpx" wx:if="{{days}}">
+		<view class="tui-countdown-time {{scale ? 'tui-countdown-scale' : ''}}" style="font-size: {{size}}rpx; color: {{color}}; line-height: {{size}}rpx">
+			{{ d }}
+		</view>
+	</view>
+	<view class="tui-countdown-colon {{borderColor == 'transparent'?'tui-colon-pad':''}}" style="line-height: {{colonSize}}rpx; font-size: {{colonSize}}rpx; color: {{colonColor}}" wx:if="{{days}}">
+		{{ isColon ? ':' : '天' }}
+	</view>
+	<view class="tui-countdown-item" style="background: {{backgroundColor}}; border-color: {{borderColor}}; width: {{parse.getWidth(h, width) + 'rpx'}}; height: {{height + 'rpx'}}" wx:if="{{hours}}">
+		<view class="tui-countdown-time {{scale ? 'tui-countdown-scale' : ''}}" style="font-size: {{size + 'rpx'}}; color: {{color}}; line-height: {{size + 'rpx'}}">
+			{{ h }}
+		</view>
+	</view>
+	<view class="tui-countdown-colon {{borderColor == 'transparent'?'tui-colon-pad':''}}" style="line-height: {{colonSize + 'rpx'}}; font-size: {{colonSize + 'rpx'}}; color: {{colonColor}}" wx:if="{{hours}}">
+		{{ isColon ? ':' : '时' }}
+	</view>
+	<view class="tui-countdown-item" style="background: {{backgroundColor}}; border-color: {{borderColor}}; width: {{parse.getWidth(i, width) + 'rpx'}}; height: {{height + 'rpx'}}" wx:if="{{minutes}}">
+		<view class="tui-countdown-time {{scale ? 'tui-countdown-scale' : ''}}" style="font-size: {{size + 'rpx'}}; color: {{color}}; line-height: {{size + 'rpx'}}">
+			{{ i }}
+		</view>
+	</view>
+	<view class="tui-countdown-colon {{borderColor == 'transparent'?'tui-colon-pad':''}}" style="line-height: {{colonSize + 'rpx'}}; font-size: {{colonSize + 'rpx'}};color: {{colonColor}}" wx:if="{{minutes}}">
+		{{ isColon ? ':' : '分' }}
+	</view>
+	<view class="tui-countdown-item" style="background: {{backgroundColor}}; border-color: {{borderColor}}; width: {{parse.getWidth(s, width) + 'rpx'}}; height: {{height + 'rpx'}}" wx:if="{{seconds}}">
+		<view class="tui-countdown-time {{scale ? 'tui-countdown-scale' : ''}}"  style="font-size: {{size + 'rpx'}}; color: {{color}}; line-height: {{size + 'rpx'}}">
+			{{ s }}
+		</view>
+	</view>
+	<view class="tui-countdown-colon {{borderColor == 'transparent'?'tui-colon-pad':''}}" style="{ line-height: {{colonSize + 'rpx'}};font-size: {{colonSize + 'rpx'}}; color: {{colonColor}}" wx:if="{{seconds && !isColon}}">
+		{{ unitEn ? 's' : '秒' }}
+	</view>
+</view>
+
+<wxs module="parse">
+	module.exports = {
+		getWidth: function(num, width) {
+			return num > 99 ? (width / 2) * num.toString().length : width;
+		}
+	}
+</wxs>

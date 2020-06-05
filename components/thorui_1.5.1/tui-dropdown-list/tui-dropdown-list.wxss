@@ -1,0 +1,20 @@
+.tui-dropdown-list {
+	position: relative;
+}
+
+.tui-dropdown-view {
+	width: 100%;
+	overflow: hidden;
+	position: absolute;
+	z-index: -99;
+	left: 0;
+	opacity: 0;
+	/* visibility: hidden; */
+	transition: all 0.2s ease-in-out;
+}
+
+.tui-dropdownlist-show {
+	opacity: 1;
+	z-index: 996;
+	/* visibility: visible; */
+}

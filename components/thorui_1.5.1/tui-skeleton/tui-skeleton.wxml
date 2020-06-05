@@ -1,0 +1,25 @@
+<view class="tui-skeleton-cmomon tui-skeleton-box" style="width: {{winWidth}}px; height: {{winHeight}}px; background-color:{{backgroundColor}};">
+  <view class="tui-skeleton-cmomon" wx:for="{{skeletonElements}}" wx:key="{{index}}" style="width: {{item.width}}px; height: {{item.height}}px; left: {{item.left}}px; top: {{item.top}}px;background-color: {{skeletonBgColor}};border-radius:{{parse.getRadius(item.skeletonType,borderRadius)}}"></view>
+  <view class="tui-loading {{parse.getLoadingType(loadingType)}}" wx:if="{{isLoading}}"></view>
+</view>
+
+<wxs module="parse">
+  module.exports = {
+    getLoadingType: function(type) {
+      var value = 1
+      if (type && type > 0 && type < 11) {
+        value = type
+      }
+      return 'tui-loading-' + value
+    },
+    getRadius: function(type, val) {
+      var radius = "0"
+      if (type == "circular") {
+        radius = "50%"
+      } else if (type == "fillet") {
+        radius = val
+      }
+      return radius;
+    }
+  }
+</wxs>

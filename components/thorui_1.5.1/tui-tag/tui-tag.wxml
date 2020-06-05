@@ -1,0 +1,25 @@
+<view class="tui-tag {{originLeft ? 'tui-origin-left' : ''}} {{originRight ? 'tui-origin-right' : ''}} {{parse.getClassName(shape, plain)}} {{parse.getTypeClass(type, plain)}}" hover-class="{{hover ? 'tui-tag-opcity' : ''}}" hover-stay-time="150" style="transform:scale({{scaleMultiple}}); padding: {{padding}}; margin: {{margin}}; font-size: {{size}}; line-height: {{size}}"
+  bindtap="handleClick">
+  <slot></slot>
+</view>
+<wxs module="parse">
+  module.exports = {
+    getTypeClass: function(type, plain) {
+      return plain ? 'tui-' + type + '-outline' : 'tui-' + type;
+    },
+    getClassName: function(shape, plain) {
+      //circle, square，circleLeft，circleRight
+      var className = plain ? 'tui-tag-outline ' : '';
+      if (shape != 'square') {
+        if (shape == 'circle') {
+          className = className + (plain ? 'tui-tag-outline-fillet' : 'tui-tag-fillet');
+        } else if (shape == 'circleLeft') {
+          className = className + 'tui-tag-fillet-left';
+        } else if (shape == 'circleRight') {
+          className = className + 'tui-tag-fillet-right';
+        }
+      }
+      return className;
+    }
+  }
+</wxs>

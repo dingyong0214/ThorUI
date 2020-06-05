@@ -1,0 +1,18 @@
+<view class="tui-swipeout-wrap">
+  <view class="tui-swipeout-item {{isShowBtn ? 'swipe-action-show' : ''}}" bindtouchstart="handlerTouchstart" bindtouchmove="handlerTouchmove" bindtouchend="handlerTouchend" style="transform: translate({{position.pageX}}px,0)">
+    <view class="tui-swipeout-content">
+      <slot name="content"></slot>
+    </view>
+    <view class="tui-swipeout-button-right-group" wx:if="{{actions.length > 0}}" catchtouchend="loop">
+      <view class="tui-swipeout-button-right-item" wx:for="{{actions}}" wx:key="index" style="background-color: {{item.background || '#f7f7f7'}};color: {{item.color}}; width:{{item.width}}px" data-index="{{index}}" bindtap="handlerButton">
+        <image src="{{item.icon}}" wx:if="{{item.icon}}" style="width: {{item.imgWidth}}rpx; height:{{item.imgHeight}}rpx"></image>
+        <text style="font-size: {{item.fontsize}}rpx">{{ item.name }}</text>
+      </view>
+    </view>
+    <!--actions长度设置为0，可直接传按钮进来-->
+    <view class="tui-swipeout-button-right-group" catchtouchend="loop" bindtap="handlerParentButton" wx:if="{{actions.length === 0}}" style="width: {{operateWidth}}px; right: -{{operateWidth}}px">
+      <slot name="button"></slot>
+    </view>
+  </view>
+  <view wx:if="{{isShowBtn && showMask}}" class="swipe-action_mask" catchtap="closeButtonGroup" catchtouchstart="closeButtonGroup" />
+</view>

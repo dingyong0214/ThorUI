@@ -1,0 +1,6 @@
+<view class="tui-drawer-class" catchtouchmove>
+	<view wx:if="{{mask}}" class="tui-drawer-mask {{visible?'tui-drawer-mask_show':''}}" bindtap="handleMaskClick"></view>
+	<view class="tui-drawer-container {{mode=='left'?'tui-drawer-container_left':'tui-drawer-container_right'}} {{visible?'tui-drawer-container_show':''}}">
+		<slot></slot>
+	</view>
+</view>

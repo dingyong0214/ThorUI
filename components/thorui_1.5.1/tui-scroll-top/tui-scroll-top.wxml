@@ -1,0 +1,18 @@
+<view class="tui-scroll-top_box" hidden="{{!isIndex && !isShare && !(visible && toggle)}}" style="bottom: {{bottom}}rpx; right: {{right}}rpx">
+	<view class="tui-scroll-top_item" wx:if="{{isIndex}}" catchtap="goIndex">
+		<image class="tui-scroll-top_img" src="{{indexIcon}}"></image>
+		<view class="tui-scroll-top_text">首页</view>
+	</view>
+	<button open-type="share" class="tui-share-btn" wx:if="{{isShare && !customShare}}">
+		<view class="tui-scroll-top_item {{isIndex?'tui-scroll-item_top':''}}">
+			<image class="tui-scroll-top_img" src="{{shareIcon}}"></image>
+		</view>
+	</button>
+	<view class="tui-scroll-top_item {{isIndex?'tui-scroll-item_top':''}}" wx:if="{{isShare && customShare}}" catchtap="share">
+		<image class="tui-scroll-top_img" src="{{shareIcon}}"></image>
+	</view>
+	<view class="tui-scroll-top_item {{(isIndex || isShare)?'tui-scroll-item_top':''}}" hidden="{{!(visible && toggle)}}" catchtap="goTop">
+		<image class="tui-scroll-top_img" src="{{topIcon}}"></image>
+		<view class="tui-scroll-top_text tui-color-white">顶部</view>
+	</view>
+</view>

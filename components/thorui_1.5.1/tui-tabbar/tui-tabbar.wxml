@@ -1,0 +1,14 @@
+<view class="tui-tabbar {{isFixed?'tui-tabbar-fixed':''}} {{unlined?'tui-unlined':''}}" style="background: {{backgroundColor}}">
+  <block wx:for="{{tabBar}}" wx:key="index">
+    <view class="tui-tabbar-item {{item.hump?'tui-item-hump':''}}" style="background-color: {{item.hump ? backgroundColor : 'none'}}" bindtap="tabbarSwitch" data-index="{{index}}" data-hump="{{item.hump}}" data-pagePath="{{item.pagePath}}" data-verify="{{item.verify}}">
+      <view class="tui-icon-box {{item.hump?'tui-tabbar-hump':''}}">
+        <image src="{{current == index ? item.selectedIconPath : item.iconPath}}" class="{{item.hump ? '' : 'tui-tabbar-icon'}}"></image>
+        <view class="{{item.isDot ? 'tui-badge-dot' : 'tui-badge'}}" style="color: {{badgeColor}}; background-color: {{badgeBgColor}}" wx:if="{{item.num}}">
+          {{ item.isDot ? '' : item.num }}
+        </view>
+      </view>
+      <view class="tui-text-scale {{item.hump?'tui-text-hump':''}}" style="color:{{current == index ? selectedColor : color}}">{{ item.text }}</view>
+    </view>
+  </block>
+  <view class="{{hump?'tui-hump-box':''}}" wx:if="{{hump && !unlined}}"></view>
+</view>

@@ -1,0 +1,6 @@
+<view>
+	<view class="tui-top-dropdown tui-dropdown-box {{show ? 'tui-dropdown-show' : ''}}" style="height: {{height ? px(height) : 'auto'}};background-color: {{backgroundColor}};padding-bottom:{{paddingbtm}}rpx;	transform: translateZ(0) translateY({{show ? translatey+'rpx': '-100%'}})">
+		<slot></slot>
+	</view>
+	<view  class="tui-dropdown-mask {{mask && show ? 'tui-mask-show' : ''}}" bindtap="handleClose"></view>
+</view>

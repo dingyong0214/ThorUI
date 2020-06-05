@@ -1,0 +1,3 @@
+<view class="tui-timeaxis-class tui-time-axis">
+		<slot></slot>
+	</view>

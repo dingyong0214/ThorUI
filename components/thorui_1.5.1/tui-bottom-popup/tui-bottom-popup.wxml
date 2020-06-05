@@ -1,0 +1,6 @@
+<view catchtouchmove="forbid">
+		<view class="tui-popup-class tui-bottom-popup {{show?'tui-popup-show':''}} {{radius?'tui-popup-radius':''}}"  style="background-color:{{backgroundColor}};height:{{height?height+'rpx':'auto'}}">
+			<slot></slot>
+		</view>
+		<view class="tui-popup-mask {{show?'tui-mask-show':''}}" wx:if="{{mask}}" bindtap="handleClose"></view>
+	</view>

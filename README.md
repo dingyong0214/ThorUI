@@ -17,9 +17,10 @@ ThorUI组件库，微信小程序代码片段分享
 [https://www.thorui.cn/doc](https://www.thorui.cn/doc)
 
 
-| ![](https://thorui.cn/img/V132/qq_1.jpg)  |![](https://thorui.cn/img/V132/qq_new.jpg)  |
+| ![](https://thorui.cn/img/V132/qq_3.jpg)  |![](https://thorui.cn/img/V132/qq_new.jpg)  |
 | ------------ | ------------ |
-|  ThorUI QQ交流群1：745733024 |ThorUI QQ交流群2：881906325  | 
+|  ThorUI QQ交流群3：605135318 |ThorUI QQ交流群2：881906325  | 
+
 
 
 本项目已同步更新到[uni-app](https://ext.dcloud.net.cn/plugin?id=556)，后续会同步支付宝小程序，百度小程序，头条小程序等
@@ -27,9 +28,99 @@ ThorUI组件库，微信小程序代码片段分享
 
 ## 更新日志
 
-# V1.5.1（即将发布，预计时间 2020-06-06）
+## V1.5.1（2020-06-06）
 
-# V1.5.0（即将发布，预计时间 2020-06-05）
+1.日历组件支持农历（古历）。
+
+2.sticky吸顶组件新增wxs实现(tui-sticky-wxs)。
+
+3.新增圆形进度条组件renderjs实现(App、H5端)与canvas 2d实现（小程序端）以及nuve版本。
+
+4.图片裁剪组件优化，手势事件改为wxs实现。
+
+5.级联选择器组件优化，支持设置默认选中。
+
+6.新增图片颜色分析器组件，传入图片分析图片色彩。
+
+7.新增中文转拼音组件，可处理多音字。
+
+8.新增update页面(App端资源更新页面)。
+
+9.解决H5端异步请求数据后复制文本（clipboard）报错bug。
+解决方案：
+①.新增参数event，调用方法时传入此参数;
+②.异步请求转同步。
+
+10.修复其它已知bug。
+
+注：自1.4.2版本之后，ThorUI只对uni-app版本进行开源，小程序原生版付费会员才可使用（￥29.99），1.4.2版本之前不受影响。
+如若需要，请联系QQ：3168647172。
+
+## 部分功能截图 
+|  ![](https://thorui.cn/img/v151/1.png) |![](https://thorui.cn/img/v151/2.png)  |![](https://thorui.cn/img/v151/3.png)  |
+| ------------ | ------------ | ------------ |
+
+
+## V1.5.0 (2020-05-12)
+
+1.新增日历组件 。
+
+2.新增图片裁剪组件。
+
+3.新增头像、图片组合组件。
+
+4.新增顶部NavationBar导航组件。
+
+5.新增圆形进度条组件。
+
+6.新增底部导航组件。
+
+7.新增级联选择组件cascade-selection。
+
+8.新增步骤条组件。
+
+9.新增气泡框组件。
+
+10.countdown倒计时组件优化，可只显示秒数倒计时。
+
+11.回到顶部组件优化，新增回首页，分享按钮，可自定义控制显示。
+
+12.日期时间选择组件优化，新增秒数选择，单位可置顶展示。
+
+13.新增垂直分类菜单左右联动联动案例。
+
+14.地图支持H5。
+
+15.表单验证优化:非必填情况下,如果值为空,则不进行校验，不为空则进行校验。
+
+16.发布H5、QQ小程序以及Android App。H5地址：https://www.thorui.cn/h5/#/ ，QQ小程序搜索ThorUI,apk前往https://www.thorui.cn/ 下载。
+
+17.针对支付宝小程序做了部分优化调整。
+
+18.nvue支持uni-app编译模式。
+
+19.新增自定义tabbar使用模板，小程序参考：https://github.com/dingyong0214/AfterSale ，uni-app参考：https://github.com/dingyong0214/tabbar-uniapp。
+
+20.引入优化uParse。
+
+21.搜索页面新增关键词高亮显示。
+
+22.新增navbar上拉加载下拉刷新案例。
+
+23.v3编译支持。
+
+24.支持easycom组件模式，直接在页面中使用组件，无需引入注册。
+
+25.优化sticky组件，新增普通案例和异步加载案例。
+
+26.整体优化调整，项目重构，部分模板完善。
+
+## 部分功能截图 
+|  ![](https://thorui.cn/img/v150/v1501.png) |![](https://thorui.cn/img/v150/v1502.png)  |![](https://thorui.cn/img/v150/v1503.png)  |
+| ------------ | ------------ | ------------ |
+|  ![](https://thorui.cn/img/v150/v1504.png) |![](https://thorui.cn/img/v150/v1505.png)  |![](https://thorui.cn/img/v150/v1506.png)  |
+|  ![](https://thorui.cn/img/v150/v1507.png) |![](https://thorui.cn/img/v150/v1508.png)  |![](https://thorui.cn/img/v150/v1509.jpg)  |
+
 
 # V1.4.2
 

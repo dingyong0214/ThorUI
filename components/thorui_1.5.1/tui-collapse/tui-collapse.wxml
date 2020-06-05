@@ -1,0 +1,13 @@
+<view class="tui-collapse" style="background-color:{{bgColor}}">
+	<view class="tui-collapse-head" style="background-color:{{hdBgColor}}" catchtap="handleClick">
+		<view class="tui-header {{disabled?'tui-opacity':''}}">
+			<slot name="title"></slot>
+			<view class="tui-collapse-icon tui-icon-arrow {{isOpen?'tui-icon-active':''}}" style="color:{{arrowColor}}" wx:if="{{arrow}}"></view>
+		</view>
+	</view>
+	<view class="tui-collapse-body_box" style="background-color:{{bdBgColor}};height:{{isOpen?height:'0rpx'}}">
+		<view class="tui-collapse-body {{height=='auto'?'tui-collapse-transform':''}} {{isOpen && height=='auto'?'tui-collapse-body_show':''}}">
+			<slot name="content"></slot>
+		</view>
+	</view>
+</view>

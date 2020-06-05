@@ -1,0 +1,64 @@
+.tui-tabs-view {
+		width: 100%;
+		box-sizing: border-box;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		z-index: 9999;
+	}
+
+	.tui-tabs-relative {
+		position: relative;
+	}
+
+	.tui-tabs-fixed {
+		position: fixed;
+		left: 0;
+	}
+
+	.tui-tabs-fixed::before,
+	.tui-tabs-relative::before {
+		content: '';
+		position: absolute;
+		border-bottom: 1rpx solid #eaeef1;
+		-webkit-transform: scaleY(0.5) translateZ(0);
+		transform: scaleY(0.5) translateZ(0);
+		transform-origin: 0 100%;
+		bottom: 0;
+		right: 0;
+		left: 0;
+	}
+
+	.tui-unlined::before {
+		border-bottom: 0 !important
+	}
+
+	.tui-tabs-item {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.tui-tabs-disabled {
+		opacity: .6;
+	}
+
+	.tui-tabs-title {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		position: relative;
+		z-index: 2;
+	}
+
+	.tui-tabs-active {
+		transition: all 0.15s ease-in-out;
+	}
+
+	.tui-tabs-slider {
+		position: absolute;
+		left: 0;
+		transition: all 0.15s ease-in-out;
+		z-index: 0;
+		transform: translateZ(0);
+	}
