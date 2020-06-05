@@ -1,4 +1,4 @@
-//公共js，主要做表单验证，以及基本方法封装
+//公共js，主要做表单验证，以及基本方法封装 
 const utils = {
   isNullOrEmpty: function(value) {
     //是否为空
