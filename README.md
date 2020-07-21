@@ -17,9 +17,9 @@ ThorUI组件库，微信小程序代码片段分享
 [https://www.thorui.cn/doc](https://www.thorui.cn/doc)
 
 
-| ![](https://thorui.cn/img/V132/qq_3.jpg)  |![](https://thorui.cn/img/V132/qq_new.jpg)  |
+| ![](https://thorui.cn/img/V132/qq_3.jpg)  |![](https://thorui.cn/img/V132/qq_4.png)  |
 | ------------ | ------------ |
-|  ThorUI QQ交流群3：605135318 |ThorUI QQ交流群2：881906325  | 
+|  ThorUI QQ交流群3：605135318 |ThorUI QQ交流群4：928308676  | 
 
 
 
@@ -27,6 +27,50 @@ ThorUI组件库，微信小程序代码片段分享
 
 
 ## 更新日志
+
+
+## V1.5.2（2020-07-20）
+
+1.步骤条组件优化，支持自定义图标，支持设置线条为虚线。
+
+2.修复图片裁剪组件(wxs版)初始化裁剪不正确的问题。
+
+3.按钮（tui-button)组件支持表单提交，详见文档。
+
+4.图片上传组件（tui-upload）新增props：header，formData，修复初始化图片不显示的bug。
+
+5.tabbar组件与自定义导航栏组件(NavBar)背景支持设置高斯模糊(ios端)。
+
+6.uni-app版本骨架屏修复编译到小程序端无法获取到组件节点的bug。
+
+7.日历组件单个日期选择和区间选择支持设置默认选中。
+
+8.新增多语言模板。源码地址 ：[ThorUI-utag](https://github.com/dingyong0214/ThorUI-utag) 
+
+9.新增拖拽排序组件，wxs实现，详细查看多语言模板示例。
+
+10.新增签到模板（点star获取源码）。获取步骤如下：
+
+  1）去GitHub给ThorUI项目点star，项目地址分别为：[ThorUI](https://github.com/dingyong0214/ThorUI) 和 [ThorUI-uniapp](https://github.com/dingyong0214/ThorUI-uniapp)
+
+  2）加QQ3039218619，截图发送到该QQ即可获取源码。
+
+--------------------------
+
+注：自1.4.2版本之后，ThorUI只对uni-app版本进行开源，小程序原生版付费会员才可使用（￥99/永久），1.4.2版本之前不受影响。
+如若需要，请联系QQ：3168647172。
+
+
+## 部分功能截图 
+|  ![](https://thorui.cn/img/V152/1.png)	|![](https://thorui.cn/img/V152/2.png)	|![](https://thorui.cn/img/V152/3.png)	|
+| ------------								| ------------							| ------------							|
+|  ![](https://thorui.cn/img/V152/4.png)	|![](https://thorui.cn/img/V152/5.png)	|![](https://thorui.cn/img/V152/6.png)	|
+|  ![](https://thorui.cn/img/V152/7.png)	|![](https://thorui.cn/img/V152/8.png)	|![](https://thorui.cn/img/V152/9.png)	|
+|  ![](https://thorui.cn/img/V152/10.png)	|![](https://thorui.cn/img/V152/11.png)	|![](https://thorui.cn/img/V152/12.png)	|
+|  ![](https://thorui.cn/img/V152/13.png)	|![](https://thorui.cn/img/V152/14.png)	|![](https://thorui.cn/img/V152/17.png)	|
+
+[![Watch the video](https://thorui.cn/img/V152/6.png)](https://thorui.cn/img/V152/0720.MP4)
+
 
 ## V1.5.1（2020-06-06）
 
