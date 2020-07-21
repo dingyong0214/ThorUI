@@ -6,7 +6,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 70rpx 0 30rpx 0;
+  padding: 70rpx 0 30rpx 0; 
 }
 
 .logo {

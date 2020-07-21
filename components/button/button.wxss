@@ -6,7 +6,7 @@
 }
 
 .tui-danger {
-  background: #EB0909 !important;
+  background: #EB0909 !important; 
   color: #fff;
 }
 

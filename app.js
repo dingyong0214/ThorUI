@@ -12,7 +12,7 @@ App({
               title: '更新提示',
               content: '新版本已经上线啦~，为了获得更好的体验，建议立即更新',
               showCancel: false,
-              confirmColor: "#5677FC",
+              confirmColor: "#5677FC", 
               success: function(res) {
                 // 新的版本已经下载好，调用 applyUpdate 应用新版本并重启
                 updateManager.applyUpdate()

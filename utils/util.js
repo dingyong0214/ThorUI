@@ -14,7 +14,7 @@ const utils = {
   },
   isFloat: function(value) {
     //金额，只允许保留两位小数
-    return /^([0-9]*[.]?[0-9])[0-9]{0,1}$/.test(value);
+    return /^([0-9]*[.]?[0-9])[0-9]{0,1}$/.test(value); 
   },
   isNum: function(value) {
     //是否全为数字
