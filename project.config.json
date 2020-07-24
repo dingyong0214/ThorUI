@@ -1,28 +1,38 @@
 {
-	"description": "项目配置文件", 
+	"description": "项目配置文件",
 	"packOptions": {
 		"ignore": []
 	},
 	"setting": {
 		"urlCheck": false,
 		"es6": true,
+		"enhance": true,
 		"postcss": true,
+		"preloadBackgroundData": false,
 		"minified": true,
 		"newFeature": true,
+		"coverView": true,
+		"nodeModules": false,
 		"autoAudits": false,
+		"showShadowRootInWxmlPanel": true,
+		"scopeDataCheck": false,
+		"uglifyFileName": false,
 		"checkInvalidKey": true,
 		"checkSiteMap": true,
 		"uploadWithSourceMap": true,
+		"compileHotReLoad": false,
 		"babelSetting": {
 			"ignore": [],
 			"disablePlugins": [],
 			"outputPath": ""
 		},
-		"enhance": true
+		"useIsolateContext": true,
+		"useCompilerModule": false,
+		"userConfirmedUseCompilerModuleSwitch": false
 	},
 	"compileType": "miniprogram",
-	"libVersion": "2.9.0",
-	"appid": "wxb6a98ca343f57a38",
+	"libVersion": "2.12.0",
+	"appid": "wx1807449059560cc0",
 	"projectname": "Thor%20UI",
 	"debugOptions": {
 		"hidedInDevtools": []
@@ -47,9 +57,20 @@
 			"currentL": -1,
 			"list": []
 		},
-		"miniprogram": {
+		"gamePlugin": {
 			"current": -1,
 			"list": []
+		},
+		"miniprogram": {
+			"current": -1,
+			"list": [
+				{
+					"id": -1,
+					"name": "pages/extend-view/mall-extend/editAddress/editAddress",
+					"pathName": "pages/extend-view/mall-extend/editAddress/editAddress",
+					"scene": null
+				}
+			]
 		}
 	}
 }

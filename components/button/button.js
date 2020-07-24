@@ -1,7 +1,9 @@
-//注意：自定义组件无法触发form的bindsubmit,bindreset事件
+//注意：自定义组件无法触发form的bindsubmit,bindreset事件. 
+// 在基础库2.10.3 以上 添加 behaviors: ['wx://form-field-button'] 属性 form 可以触发bindsubmit事件。
 //可以在组件外层嵌套个button按钮，背景设为none，form-type写在外层按钮上(参考登录页面)
 Component({
-  externalClasses: ['tui-button-class'],//自定义样式
+  behaviors: ['wx://form-field-button'], // 用于触发bindsubmit事件
+  externalClasses: ['tui-button-class'], //自定义样式
   properties: {
     // primary, white, danger, warning, green, gray,gradual
     type: {
@@ -18,7 +20,7 @@ Component({
       type: String,
       value: 'square'
     },
-    plain:{
+    plain: {
       type: Boolean,
       value: false
     },
@@ -32,7 +34,7 @@ Component({
     },
     openType: {
       type: String,
-      value:''
+      value: ''
     },
     formType: {
       type: String,
@@ -40,7 +42,7 @@ Component({
     },
     hoverStopPropagation: {
       type: Boolean,
-      value:false
+      value: false
     },
     lang: {
       type: String,
@@ -50,7 +52,7 @@ Component({
       type: String,
       value: ''
     },
-    sessionFrom:{
+    sessionFrom: {
       type: String,
       value: ''
     },
@@ -66,33 +68,41 @@ Component({
       type: String,
       value: ''
     },
-    sendMessageTitle:{
+    sendMessageTitle: {
       type: String,
       value: ''
     },
-    hidden:{
-      type:Boolean,
-      value:false
+    hidden: {
+      type: Boolean,
+      value: false
     }
   },
   data: {
-  
+
   },
   methods: {
     handleClick() {
       if (this.data.disabled) return false;
       this.triggerEvent('click', {});
     },
-    bindgetuserinfo({ detail = {} } = {}) {
+    bindgetuserinfo({
+      detail = {}
+    } = {}) {
       this.triggerEvent('getuserinfo', detail);
     },
-    bindcontact({ detail = {} } = {}) {
+    bindcontact({
+      detail = {}
+    } = {}) {
       this.triggerEvent('contact', detail);
     },
-    bindgetphonenumber({ detail = {} } = {}) {
+    bindgetphonenumber({
+      detail = {}
+    } = {}) {
       this.triggerEvent('getphonenumber', detail);
     },
-    binderror({ detail = {} } = {}) {
+    binderror({
+      detail = {}
+    } = {}) {
       this.triggerEvent('error', detail);
     }
   }
