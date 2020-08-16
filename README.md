@@ -1,33 +1,93 @@
-<font color=#ff7900>开源不易，需要鼓励。给 ThorUI项目点个 star吧</font>
+ ``开源不易，需要鼓励。给 ThorUI项目点个 star吧``
 
 # ThorUI
-ThorUI组件库，微信小程序代码片段分享
+ThorUI组件库，微信小程序原生版
 
 |  ![微信小程序](https://thorui.cn/img/applets.jpg) |![H5二维码](https://thorui.cn/img/h5_qrcode.png)  |![QQ小程序](https://thorui.cn/img/qq_applets.png)  |![Android](https://thorui.cn/img/thorui_apk.png)  |
 | ------------ | ------------ | ------------ | ------------ |
 |  微信小程序 |H5二维码  | QQ小程序  | Android App  |
 
-
 # 网站介绍
 
 [https://www.thorui.cn/](https://www.thorui.cn/)
 
-# ThorUI组件文档参考
+# ThorUI组件文档
 
-[https://www.thorui.cn/doc](https://www.thorui.cn/doc)
-
+[https://thorui.cn/doc/](https://thorui.cn/doc/)
 
 | ![](https://thorui.cn/img/V132/qq_3.jpg)  |![](https://thorui.cn/img/V132/qq_4.png)  |
 | ------------ | ------------ |
 |  ThorUI QQ交流群3：605135318 |ThorUI QQ交流群4：928308676  | 
 
 
-
-本项目已同步更新到[uni-app](https://ext.dcloud.net.cn/plugin?id=556)，后续会同步支付宝小程序，百度小程序，头条小程序等
-
+本项目已同步更新到[微信小程序(原生小程序代码)](https://github.com/dingyong0214/ThorUI)，后续会更新到支付宝小程序，百度小程序，头条小程序等
 
 ## 更新日志
 
+## V1.5.5（2020-08-16）
+
+1.自定义导航栏组件优化，新增props：maxOpacity（最大不透明度值），dropDownHide（下拉隐藏NavigationBar，主要针对有回弹效果ios端）。
+
+2.上传组件优化，可限制上传图片类型，单张图片大小，sizeType，sourceType。
+
+3.倒计时组件优化，可每秒返回剩余时间，默认不返回。
+
+4.tui-modal弹框组件优化，修复transform导致元素内字体模糊的问题。
+
+5.tui-button按钮组件优化，新增link样式配置，具体查看文档。
+
+6.tui-tabs标签页组件优化，新增props：width（tabs宽度）设置。
+
+7.tui-image-group图片组合组件优化，横向展示支持多行。
+
+8.裁剪组件优化，修复网络图片在小程序端裁剪出现空白的问题。
+
+9.商城模板更新【会员专用】。
+
+ 1).首页改版，新增秒杀模块
+ 
+ 2).选择优惠券（提交订单）
+ 
+ 3).开具发票
+ 
+ 4).发票详情
+ 
+ 5).查看发票，发送至邮箱
+ 
+ 6).商品评论
+ 
+ 7).评论详情，评论回复
+ 
+ 8).评价晒单
+ 
+ 9).店铺
+ 
+ 10).店铺详情
+ 
+ 11).限时秒杀列表
+ 
+ 12).秒杀详情
+ 
+ 13).商品详情优化，新增视频播放入口
+ 
+ --------------------------
+ 
+ 注：1.4.2版本之后版本为会员专用内容，加入会员才可使用（￥99/永久)。
+ 
+ 如若需要，请联系QQ：3168647172 或 3039218619。
+ 
+ ## 部分功能截图
+ 
+|  ![](https://thorui.cn/img/V155/1.png)	|![](https://thorui.cn/img/V155/2.png)	|![](https://thorui.cn/img/V155/3.png)	|
+| ------------								| ------------							| ------------							|
+|  ![](https://thorui.cn/img/V155/4.png)	|![](https://thorui.cn/img/V155/5.png)	|![](https://thorui.cn/img/V155/6.jpg)	|
+|  ![](https://thorui.cn/img/V155/7.png)	|![](https://thorui.cn/img/V155/8.png)	|![](https://thorui.cn/img/V155/9.png)	|
+|  ![](https://thorui.cn/img/V155/10.png)	|![](https://thorui.cn/img/V155/11.png)	|![](https://thorui.cn/img/V155/12.png)	|
+|  ![](https://thorui.cn/img/V155/13.png)	|![](https://thorui.cn/img/V155/14.png)	|![](https://thorui.cn/img/V155/15.png)	|
+|  ![](https://thorui.cn/img/V155/16.png)	|![](https://thorui.cn/img/V155/17.png)	|![](https://thorui.cn/img/V155/18.png)	|
+|  ![](https://thorui.cn/img/V155/19.png)	|![](https://thorui.cn/img/V155/20.png)	|![](https://thorui.cn/img/V155/21.png)	|
+|  ![](https://thorui.cn/img/V155/22.png)	|![](https://thorui.cn/img/V155/23.png)	|![](https://thorui.cn/img/V155/24.png)										|
+ 
 
 ## V1.5.2（2020-07-20）
 
@@ -45,7 +105,7 @@ ThorUI组件库，微信小程序代码片段分享
 
 7.日历组件单个日期选择和区间选择支持设置默认选中。
 
-8.新增多语言模板。源码地址 ：[ThorUI-utag](https://github.com/dingyong0214/ThorUI-utag) 
+8.新增多语言模板（uniapp版）。源码地址 ：[ThorUI-utag](https://github.com/dingyong0214/ThorUI-utag) 
 
 9.新增拖拽排序组件，wxs实现，详细查看多语言模板示例。
 
@@ -59,17 +119,6 @@ ThorUI组件库，微信小程序代码片段分享
 
 注：自1.4.2版本之后，ThorUI只对uni-app版本进行开源，小程序原生版付费会员才可使用（￥99/永久），1.4.2版本之前不受影响。
 如若需要，请联系QQ：3168647172。
-
-
-## 部分功能截图 
-|  ![](https://thorui.cn/img/V152/1.png)	|![](https://thorui.cn/img/V152/2.png)	|![](https://thorui.cn/img/V152/3.png)	|
-| ------------								| ------------							| ------------							|
-|  ![](https://thorui.cn/img/V152/4.png)	|![](https://thorui.cn/img/V152/5.png)	|![](https://thorui.cn/img/V152/6.png)	|
-|  ![](https://thorui.cn/img/V152/7.png)	|![](https://thorui.cn/img/V152/8.png)	|![](https://thorui.cn/img/V152/9.png)	|
-|  ![](https://thorui.cn/img/V152/10.png)	|![](https://thorui.cn/img/V152/11.png)	|![](https://thorui.cn/img/V152/12.png)	|
-|  ![](https://thorui.cn/img/V152/13.png)	|![](https://thorui.cn/img/V152/14.png)	|![](https://thorui.cn/img/V152/17.png)	|
-
-[![Watch the video](https://thorui.cn/img/V152/6.png)](https://thorui.cn/img/V152/0720.MP4)
 
 
 ## V1.5.1（2020-06-06）
@@ -97,12 +146,8 @@ ThorUI组件库，微信小程序代码片段分享
 
 10.修复其它已知bug。
 
-注：自1.4.2版本之后，ThorUI只对uni-app版本进行开源（后期会区分会员和非会员版本），小程序原生版付费会员才可使用（￥30/永久），1.4.2版本之前不受影响。如若需要，请联系QQ：3039218619 或 3168647172。【目前价格只是对初期支持者优惠，下个版本统一会员价￥99/永久】
-
-## 部分功能截图 
-|  ![](https://thorui.cn/img/v151/1.png) |![](https://thorui.cn/img/v151/2.png)  |![](https://thorui.cn/img/v151/3.png)  |
-| ------------ | ------------ | ------------ |
-
+注：自1.4.2版本之后，ThorUI只对uni-app版本进行开源，小程序原生版付费会员才可使用（￥99/永久），1.4.2版本之前不受影响。
+如若需要，请联系QQ：3168647172。
 
 ## V1.5.0 (2020-05-12)
 
@@ -165,7 +210,8 @@ ThorUI组件库，微信小程序代码片段分享
 |  ![](https://thorui.cn/img/v150/v1507.png) |![](https://thorui.cn/img/v150/v1508.png)  |![](https://thorui.cn/img/v150/v1509.jpg)  |
 
 
-# V1.4.2
+
+## V1.4.2
 
 1.modal组件优化，宽高以及padding值可设置
 
@@ -179,11 +225,12 @@ ThorUI组件库，微信小程序代码片段分享
 
 6.分包，解决小程序预览时包体积超出限制的问题
 
-# 功能截图 
+## 功能截图 
 |  ![](https://thorui.cn/img/v142/1.jpg) |![](https://thorui.cn/img/v142/2.jpg)  |![](https://thorui.cn/img/v142/3.jpg)  |
 | ------------ | ------------ | ------------ |
 
-# V1.4.1
+
+## V1.4.1
 
 1.新增文档相关链接信息。
 
@@ -197,38 +244,40 @@ ThorUI组件库，微信小程序代码片段分享
 
 6.已知问题修复以及优化。
 
-# 功能截图 
+## 功能截图 
 |  ![](https://thorui.cn/img/V141/1.png) |![](https://thorui.cn/img/V141/2.jpg)  |
 | ------------ | ------------ |
 |  ![](https://thorui.cn/img/V141/3.jpg) |![](https://thorui.cn/img/V141/4.png)  | 
 
-# V1.4.0
+## V1.4.0
 
 1.新增日期时间选择器组件。
 
-2.新增悬浮按钮组件。
+2.H5新增复制文本功能。
 
-3.新增Tabbar组件。(使用案例：[https://github.com/dingyong0214/AfterSale](https://github.com/dingyong0214/AfterSale))
+3.新增悬浮按钮组件。
 
-4.新增tabs标签页组件。
+4.新增Tabbar组件。
 
-5.新增折叠面板组件。
+5.新增tabs标签页组件。
 
-6.新增图片上传组件。
+6.新增折叠面板组件。
 
-7.NumberBox组件优化调整。
+7.新增图片上传组件。
 
-8.Modal组件优化调整。
+8.NumberBox组件优化调整。
 
-9.sticky组件优化调整。
+9.Modal组件优化调整。
 
-10.countdown组件优化调整。
+10.sticky组件优化调整。
 
-11.商城模板新增购物车、我的、提交订单、支付成功、我的订单、地址列表、新增地址、设置、用户信息等页面。
+11.countdown组件优化调整。
 
-12.修改已知bug。
+12.商城模板新增购物车、我的、提交订单、支付成功、我的订单、地址列表、新增地址、设置、用户信息等页面。
 
-# 功能截图 
+13.修改已知bug。
+
+## 功能截图 
 |  ![](https://thorui.cn/img/V140/1.png) |![](https://thorui.cn/img/V140/2.png)  |  ![](https://thorui.cn/img/V140/3.png) |
 | ------------ | ------------ | ------------ |
 |  ![](https://thorui.cn/img/V140/4.png) |![](https://thorui.cn/img/V140/5.png)  |  ![](https://thorui.cn/img/V140/6.png) |
@@ -236,36 +285,45 @@ ThorUI组件库，微信小程序代码片段分享
 |  ![](https://thorui.cn/img/V140/10.png) |![](https://thorui.cn/img/V140/11.png)  |  ![](https://thorui.cn/img/V140/12.png) |
 |  ![](https://thorui.cn/img/V140/13.png) |![](https://thorui.cn/img/V140/14.png)  |  ![](https://thorui.cn/img/V140/15.png) |
 
-# V1.3.2
+## V1.3.2
 
-1.扩展基础组件(保留了之前版本):alert、tips、button、toast。
+1.修复H5端发行报错的问题。
 
-2.新增表单验证功能，只需配置相应验证即可。
+2.扩展基础组件(保留了之前版本):alert、tips、button、toast。
 
-3.新增返回顶部组件。
+3.新增表单验证功能，只需配置相应验证即可。
 
-4.优化部分页面，修复已知bug。
+4.新增返回顶部组件,nvue返回顶部看首页[nvue商品列表]。
 
-# 功能截图 
+5.优化部分页面，修复已知bug。
+
+## 功能截图 
 |  ![](https://thorui.cn/img/V132/4.jpg) |![](https://thorui.cn/img/V132/2.jpg)  |  ![](https://thorui.cn/img/V132/3.jpg) |
 | ------------ | ------------ | ------------ |
 |   |    |   |
 
-# V1.3.0
+## V1.3.0
 1.新增倒计时组件:时分秒倒计时，支持设置大小，颜色等。
 
 2.新增分隔符组件:Divider分隔符，可设置占据高度，线条宽度，颜色等。
 
 3.新增卡片轮播:包含顶部轮播，秒杀商品轮播等。
 
-4.已知问题修复以及优化。
+4.nvue下拉刷新优化。
 
-# V1.2.1
+5.修复已知bug。
+
+## V1.2.2
 1.新增组件Modal弹框:可设置按钮数，按钮样式，提示文字样式等，还可自定义弹框内容。 
 
 2.修复部分已知bug。
 
-# V1.2.0
+## V1.2.1
+1.修复部分兼容性问题。
+
+2.修复部分已知bug。
+
+## V1.2.0
 1.新增组件NumberBox数字框:可设置步长，支持浮点数，支持调整样式(可单独设置)。
 
 2.新增组件Rate评分:可设置星星数，可设置大小颜色。
@@ -276,7 +334,7 @@ ThorUI组件库，微信小程序代码片段分享
 
 5.优化部分体验。
 
-# V1.1.0
+## V1.1.0
 1.将基础组件移出扩展，单独出来。
 
 2.扩展改为单独tab bar选项extend。
@@ -291,7 +349,7 @@ ThorUI组件库，微信小程序代码片段分享
 
 7.部分功能优化，修复已知bug。
 
-# V1.0.0
+## V1.0.0
 1.【地图】新增拖拽定位功能
 
 2.【扩展】新增基础组件，包括：字体图标，按钮，Grid宫格，List列表，Card卡片...
@@ -304,12 +362,8 @@ ThorUI组件库，微信小程序代码片段分享
 
 6.已知bug修复，以及部分功能优化
 
-## 赞赏
 
-![image](https://thorui.cn/img/reward_small.jpg)
-
-
-#  商城模板部分截图
+##  商城模板部分截图
 
 
 | ![商城首页](https://thorui.cn/img/mall/1.png)  | ![](https://thorui.cn/img/mall/2.png)  | ![](https://thorui.cn/img/mall/3.png)  |  ![](https://thorui.cn/img/mall/4.png) |
@@ -318,20 +372,20 @@ ThorUI组件库，微信小程序代码片段分享
 |   ![](https://thorui.cn/img/mall/9.png)|  ![](https://thorui.cn/img/mall/10.png) |   |   |
 
 
-#  新闻模板部分截图
+##  新闻模板部分截图
 
 | ![](https://thorui.cn/img/news/1.png)  |   ![](https://thorui.cn/img/news/2.png)|  ![](https://thorui.cn/img/news/3.png) |
 | ------------ | ------------ | ------------ |
 |  ![](https://thorui.cn/img/news/4.png) | ![](https://thorui.cn/img/news/5.png)  |  ![](https://thorui.cn/img/news/6.png) |
 
 
-#  聊天模板截图
+##  聊天模板截图
 |  ![](https://thorui.cn/img/chat/1.png) | ![](https://thorui.cn/img/chat/2.png)  |  ![](https://thorui.cn/img/chat/3.png) |
 | ------------ | ------------ | ------------ |
 |  |   |   |
 
 
-#  组件功能部分截图
+##  组件功能部分截图
 
 |   ![消息提示](https://thorui.cn/img/function/1.jpg)| ![吸顶容器](https://thorui.cn/img/function/2.jpg)  |  ![数字键盘](https://thorui.cn/img/function/3.jpg) |  ![锁频键盘](https://thorui.cn/img/function/4.jpg) |  ![时间轴](https://thorui.cn/img/function/5.jpg) |
 | ------------ | ------------ | ------------ | ------------ | ------------ |

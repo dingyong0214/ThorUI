@@ -1,7 +1,6 @@
 .container {
-  padding: 0 50rpx 40rpx 50rpx; 
+  padding: 0 50rpx 40rpx 50rpx;
   box-sizing: border-box;
-  overflow: hidden;
 }
 
 .tui-flex {
@@ -18,6 +17,7 @@
   -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
   animation: tui-go 4s linear infinite;
+  z-index: 99;
 }
 
 @keyframes tui-go {
@@ -44,43 +44,43 @@
   font-size: 24rpx;
   color: #fff;
   text-align: center;
-  word-break: break-all;
-  word-wrap: break-word;
+  /* word-break: break-all;
+  word-wrap: break-word; */
 }
 
 .tui-cube-1 {
-  background: #fff;
+  background-color: #fff;
   -webkit-transform: rotateY(90deg) translateZ(-30px);
   transform: rotateY(90deg) translateZ(-30px);
   color: #333 !important;
 }
 
 .tui-cube-2 {
-  background: #8a5966;
+  background-color: #8a5966;
   -webkit-transform: rotateY(90deg) translateZ(30px);
   transform: rotateY(90deg) translateZ(30px);
 }
 
 .tui-cube-3 {
-  background: linear-gradient(-90deg, #5677fc, #5c8dff);
+  background-color: #5c8dff;
   -webkit-transform: rotateX(90deg) translateZ(30px);
   transform: rotateX(90deg) translateZ(30px);
 }
 
 .tui-cube-4 {
-  background: #ed3f14;
+  background-color: #ed3f14;
   -webkit-transform: rotateX(90deg) translateZ(-30px);
   transform: rotateX(90deg) translateZ(-30px);
 }
 
 .tui-cube-5 {
-  background: #ff7900;
+  background-color: #ff7900;
   -webkit-transform: translateZ(30px);
   transform: translateZ(30px);
 }
 
 .tui-cube-6 {
-  background: #19be6b;
+  background-color: #19be6b;
   -webkit-transform: translateZ(-30px);
   transform: translateZ(-30px);
 }
@@ -90,7 +90,7 @@
   margin-top: 50px;
   padding: 30rpx;
   box-sizing: border-box;
-  background: #fff;
+  background-color: #fff;
   border-radius: 10rpx;
   box-shadow: 0 0 10rpx #eee;
 }

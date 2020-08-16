@@ -1,5 +1,5 @@
 <view class="tui-skeleton-cmomon tui-skeleton-box" style="width: {{winWidth}}px; height: {{winHeight}}px; background-color:{{backgroundColor}};">
-  <view class="tui-skeleton-cmomon" wx:for="{{skeletonElements}}" wx:key="{{index}}" style="width: {{item.width}}px; height: {{item.height}}px; left: {{item.left}}px; top: {{item.top}}px;background-color: {{skeletonBgColor}};border-radius:{{parse.getRadius(item.skeletonType,borderRadius)}}"></view>
+  <view class="tui-skeleton-cmomon" wx:for="{{skeletonElements}}" wx:key="index" style="width: {{item.width}}px; height: {{item.height}}px; left: {{item.left}}px; top: {{item.top}}px;background-color: {{skeletonBgColor}};border-radius:{{parse.getRadius(item.skeletonType,borderRadius)}}"></view>
   <view class="tui-loading {{parse.getLoadingType(loadingType)}}" wx:if="{{isLoading}}"></view>
 </view>
 

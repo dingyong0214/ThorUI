@@ -55,9 +55,11 @@ Component({
     },
     ready: function() {
       this.nodesRef(`.${this.data.selector}`).then((res) => {
-        this.setData({
-          winHeight: res[0].height + res[0].top
-        })
+        if(res && res[0]){
+          this.setData({
+            winHeight: res[0].height + res[0].top
+          })
+        }
       });
       !this.isPreload() && this.selectorQuery()
     }

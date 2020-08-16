@@ -1,4 +1,0 @@
-<view class="tui-loading-init">
-		<view class="tui-loading-center"></view>
-		<view class="tui-loadmore-tips">{{text}}</view>
-	</view>
