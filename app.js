@@ -4,7 +4,7 @@ App({
     // 获取小程序更新机制兼容
     if (wx.canIUse('getUpdateManager')) {
       const updateManager = wx.getUpdateManager()
-      updateManager.onCheckForUpdate(function(res) { 
+      updateManager.onCheckForUpdate(function(res) {
         // 请求完新版本信息的回调
         if (res.hasUpdate) {
           updateManager.onUpdateReady(function() {
@@ -12,16 +12,11 @@ App({
               title: '更新提示',
               content: '新版本已经上线啦~，为了获得更好的体验，建议立即更新',
               showCancel: false,
-              confirmColor: "#5677FC", 
+              confirmColor: "#5677FC",
               success: function(res) {
                 // 新的版本已经下载好，调用 applyUpdate 应用新版本并重启
                 updateManager.applyUpdate()
               }
-            })
-
-            wx.setTabBarBadge({
-              index: 1,
-              text: 'new'
             })
           })
           updateManager.onUpdateFailed(function() {
@@ -38,16 +33,6 @@ App({
     } else {
       // 当前微信版本过低，无法使用该功能
     }
-
-    setTimeout(() => {
-      if (!wx.getStorageSync("thorui_" + this.globalData.version)) {
-        wx.setTabBarBadge({
-          index: 1,
-          text: 'new'
-        })
-      }
-    }, 0)
-
   },
   onError(err) {
     //全局错误监听
@@ -58,7 +43,11 @@ App({
   },
   globalData: {
     isLogin: wx.getStorageSync("thorui_mobile") ? true : false,
-    version: "1.5.5",
-    isOnline:false
+    version: "1.5.6",
+    isOnline:false,
+    mobile:wx.getStorageSync("thorui_mobile") || "",
+    statusBarHeight:0,
+    navigationBarHeight:0,
+    navigationBarWidth:0
   }
 })
