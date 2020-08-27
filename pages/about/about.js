@@ -7,7 +7,7 @@ Page({
   copy: function(e) {
     const dataset=e.currentTarget.dataset;
     let text=dataset.text;
-    let msg=dataset.msg;
+    let msg=dataset.msg;  
     tui.copy(text,msg)
   },
   log: function() {
