@@ -1,4 +1,4 @@
-import tui from '../../../common/httpRequest'
+import tui from '../../common/httpRequest'
 let globalData = getApp().globalData;
 Page({
   data: {

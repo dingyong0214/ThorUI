@@ -20,19 +20,19 @@
 		"checkInvalidKey": true,
 		"checkSiteMap": true,
 		"uploadWithSourceMap": true,
-		"compileHotReLoad": false,
 		"babelSetting": {
 			"ignore": [],
 			"disablePlugins": [],
 			"outputPath": ""
 		},
-		"useIsolateContext": true,
 		"useCompilerModule": false,
-		"userConfirmedUseCompilerModuleSwitch": false
+		"userConfirmedUseCompilerModuleSwitch": false,
+		"compileHotReLoad": false,
+		"useIsolateContext": true
 	},
 	"compileType": "miniprogram",
-	"libVersion": "2.12.0",
-	"appid": "wx1807449059560cc0",
+	"libVersion": "2.12.2",
+	"appid": "wx7a39d1263d3ec6b2",
 	"projectname": "Thor%20UI",
 	"debugOptions": {
 		"hidedInDevtools": []
