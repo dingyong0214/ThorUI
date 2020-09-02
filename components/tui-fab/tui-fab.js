@@ -69,9 +69,17 @@ Component({
     hidden: true,
     timer: null
   },
+  lifetimes: {
+    detached: function () {
+      clearTimeout(this.data.timer)
+      this.setData({
+        timer: null
+      })
+    }
+  },
   methods: {
-    stop() {},
-    handleClick: function(e) {
+    stop(){},
+    handleClick: function (e) {
       let index = e.currentTarget.dataset.index
       this.setData({
         hidden: false
@@ -99,7 +107,7 @@ Component({
         })
       }
     },
-    handleClickCancel: function() {
+    handleClickCancel: function () {
       if (!this.data.maskClosable) return;
       this.setData({
         isOpen: false

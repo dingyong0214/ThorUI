@@ -4,7 +4,7 @@
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
-		z-index: 9999;
+		z-index: 996;
 	}
 
 	.tui-tabs-relative {
@@ -21,8 +21,9 @@
 		content: '';
 		position: absolute;
 		border-bottom: 1rpx solid #eaeef1;
-		-webkit-transform: scaleY(0.5);
-		transform: scaleY(0.5);
+		-webkit-transform: scaleY(0.5) translateZ(0);
+		transform: scaleY(0.5) translateZ(0);
+		transform-origin: 0 100%;
 		bottom: 0;
 		right: 0;
 		left: 0;
@@ -55,9 +56,9 @@
 	}
 
 	.tui-tabs-slider {
-		border-radius: 40rpx;
 		position: absolute;
 		left: 0;
 		transition: all 0.15s ease-in-out;
 		z-index: 0;
+		transform: translateZ(0);
 	}

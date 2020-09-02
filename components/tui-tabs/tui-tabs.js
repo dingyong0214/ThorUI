@@ -16,7 +16,7 @@ Component({
       value: 30
     },
     //背景色
-    bgColor: {
+    backgroundColor: {
       type: String,
       value: "#FFFFFF"
     },
@@ -38,10 +38,7 @@ Component({
     //当前选项卡
     currentTab: {
       type: Number,
-      value: 0,
-      observer(val) {
-        this.checkCor();
-      }
+      value: 0
     },
     //滑块宽度
     sliderWidth: {
@@ -57,6 +54,10 @@ Component({
     sliderBgColor: {
       type: String,
       value: "#5677fc"
+    },
+    sliderRadius: {
+      type: String,
+      value: "50rpx"
     },
     //滑块bottom
     bottom: {
@@ -89,6 +90,11 @@ Component({
       value: false
     }
   },
+  observers: {
+    'currentTab,tabs': function(currentTab, tabs) {
+      this.checkCor();
+    }
+  },
   lifetimes: {
     ready: function() {
       setTimeout(() => {
@@ -101,7 +107,7 @@ Component({
             })
           }
         });
-      }, 20);
+      }, 10);
     }
   },
   data: {
@@ -131,7 +137,7 @@ Component({
         return false;
       } else {
         this.triggerEvent("change", {
-          index: Number(index)
+          index: index
         })
       }
     }
