@@ -2,7 +2,7 @@
 
 page {
   background: #fafafa;
-  /* font-family:PingFang-SC-Medium; */ 
+  /* font-family:PingFang-SC-Medium; */  
 }
 
 .container {

@@ -5,7 +5,7 @@ Page({
     disabled: false,
     btnText: "获取验证码",
     mobile: "",
-    type:"primary",
+    type:"primary", 
     code:""
   },
   onLoad: function(options) {},

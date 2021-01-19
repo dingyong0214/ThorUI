@@ -5,7 +5,7 @@ var wxs = {
   intParse: function(value) {
     return parseInt(value)
   },
-  floatParse: function(value) {
+  floatParse: function(value) { 
     return parseFloat(value)
   },
   rmoney: function(value) {

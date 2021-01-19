@@ -1,10 +1,10 @@
-// pages/basic-view/badge/badge.js
+
 Page({
 
   /**
    * 页面的初始数据
    */
-  data: {
+  data: { 
 
   },
 

@@ -2,7 +2,7 @@ Component({
   externalClasses: ['tui-badge-class'], //自定义样式
   properties: {
     //primary,warning,green,danger,white，black，gray
-    type: {
+    type: { 
       type: String,
       value: 'primary',
     },
