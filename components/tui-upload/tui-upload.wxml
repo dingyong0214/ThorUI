@@ -1,4 +1,4 @@
-<view class="tui-container">
+<view class="tui-container"> 
   <view class="tui-upload-box">
     <view class="tui-image-item" wx:for="{{imageList}}" wx:key="{{index}}">
       <image src="{{item}}" class="tui-item-img" catchtap="previewImage" data-index="{{index}}" mode="aspectFill"></image>
