@@ -32,7 +32,7 @@
 
       <!--下拉选择列表--综合-->
       <view class="tui-dropdownlist {{selectH>0?'tui-dropdownlist-show':''}}" style="height:{{selectH}}rpx">
-        <view class="tui-dropdownlist-item {{item.selected?'tui-bold':''}}" wx:for="{{dropdownList}}" wx:key="{{index}}" catchtap="dropdownItem" data-index="{{index}}">
+        <view class="tui-dropdownlist-item {{item.selected?'tui-bold':''}}" wx:for="{{dropdownList}}" wx:key="index" catchtap="dropdownItem" data-index="{{index}}">
           <text class="tui-ml tui-middle">{{item.name}}</text>
           <tui-icon name="check" size="16" color="#e41f19" bold="{{true}}" visible="{{item.selected}}" tui-icon-class="tui-middle"></tui-icon>
         </view>
@@ -43,7 +43,7 @@
 
     </view>
     <view class="tui-screen-bottom">
-      <block wx:for="{{attrArr}}" wx:key="{{index}}">
+      <block wx:for="{{attrArr}}" wx:key="index">
         <view class="tui-bottom-item {{item.isActive?'tui-btmItem-active':''}} {{attrIndex==index?'tui-btmItem-tap':''}}" data-index="{{index}}" bindtap="btnDropChange">
           <view class="tui-bottom-text {{attrIndex==index?'tui-active':''}}">{{item.isActive?item.selectedName:item.name}}</view>
           <tui-icon name="{{attrIndex==index?'arrowup':'arrowdown'}}" size="14" color="{{attrIndex==index || item.isActive?'#e41f19':'#444'}}" tui-icon-class="tui-ml" wx:if="{{item.list.length>0}}"></tui-icon>
@@ -56,12 +56,12 @@
   <!--list-->
   <view class="tui-product-list" style="margin-top:{{dropScreenH+18}}rpx">
     <view class="tui-product-container">
-      <block wx:for="{{productList}}" wx:key="{{index}}" wx:if="{{(index+1)%2!=0 || isList}}">
+      <block wx:for="{{productList}}" wx:key="index" wx:if="{{(index+1)%2!=0 || isList}}">
         <template is="productItem" data="{{item,index:index,isList:isList}}" />
       </block>
     </view>
     <view class="tui-product-container" wx:if="{{!isList}}">
-      <block wx:for="{{productList}}" wx:key="{{index}}" wx:if="{{(index+1)%2==0}}">
+      <block wx:for="{{productList}}" wx:key="index" wx:if="{{(index+1)%2==0}}">
         <template is="productItem" data="{{item,index:index}}" />
       </block>
     </view>
@@ -73,7 +73,7 @@
   <tui-top-dropdown bgcolor="#f7f7f7" show="{{dropScreenShow}}" paddingbtm="110" translatey="{{dropScreenH}}" bind:close="btnCloseDrop">
     <scroll-view class="tui-scroll-box" scroll-y scroll-top="{{scrollTop}}">
       <view class="tui-seizeaseat-20"></view>
-      <view class="tui-drop-item {{item.selected?'tui-bold':''}}" wx:for="{{attrData}}" wx:key="{{index}}" catchtap="btnSelected" data-index="{{index}}">
+      <view class="tui-drop-item {{item.selected?'tui-bold':''}}" wx:for="{{attrData}}" wx:key="index" catchtap="btnSelected" data-index="{{index}}">
         <tui-icon name="check" size="16" color="#e41f19" bold="{{true}}" visible="{{item.selected}}" tui-icon-class="tui-middle"></tui-icon>
         <text class="tui-ml tui-middle">{{item.name}}</text>
       </view>

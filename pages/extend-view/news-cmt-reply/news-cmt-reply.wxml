@@ -21,7 +21,7 @@
   <view class="tui-empty"></view>
   <view class="tui-cmt-title">全部回复（44）</view>
   <view class="tui-cmtbox">
-    <view class="tui-cmt-cell" wx:for="{{replyList}}" wx:key="{{index}}">
+    <view class="tui-cmt-cell" wx:for="{{replyList}}" wx:key="index">
       <view class="tui-header-box">
         <view class="tui-userinfo-box">
           <image src="../../../static/images/news/{{item.avatar}}" class="tui-avatar"></image>
@@ -35,7 +35,7 @@
         </view>
       </view>
       <view class="tui-reply-box" wx:if="{{item.reply.length>0}}">
-        <tui-list-cell tui-cell-class="tui-cell" bgcolor="#f2f2f2" size="28" wx:for-items="{{item.reply}}" wx:for-item="items" wx:key="{{index}}" last="{{true}}" bindtap="cmtReply">
+        <tui-list-cell tui-cell-class="tui-cell" bgcolor="#f2f2f2" size="28" wx:for-items="{{item.reply}}" wx:for-item="items" wx:key="index" last="{{true}}" bindtap="cmtReply">
           <view class="tui-flex-1 tui-reply-nickname">{{items.nickname}}</view>
           <view class="tui-flex-1">{{items.content}}</view>
         </tui-list-cell>

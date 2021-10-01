@@ -143,9 +143,6 @@
     "uploadFile": 10000,
     "downloadFile": 10000
   },
-  "plugins": {
-    
-  },
   "permission": {
     "scope.userLocation": {
       "desc": "你的位置信息将用于定位效果展示"

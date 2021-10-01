@@ -2,14 +2,14 @@
   <tui-tabs tabs="{{tabs}}" isFixed="{{scrollTop>=0}}" currentTab="{{currentTab}}" selectedColor="#E41F19" sliderBgColor="#E41F19" padding="0 20rpx" bind:change="change"></tui-tabs>
   <!--选项卡逻辑自己实现即可，此处未做处理-->
   <view class="{{scrollTop>=0?'tui-order-list':''}}">
-    <view class="tui-order-item" wx:for="{{3}}" wx:key="{{index}}">
+    <view class="tui-order-item" wx:for="{{3}}" wx:key="index">
       <tui-list-cell hover="{{false}}" lineLeft="{{false}}">
         <view class="tui-goods-title">
           <view>订单号：T201910000</view>
           <view class="tui-order-status">已完成</view>
         </view>
       </tui-list-cell>
-      <block wx:for="{{2}}" wx:key="{{index}}">
+      <block wx:for="{{2}}" wx:key="index">
         <tui-list-cell padding="0" bindclick="detail">
           <view class="tui-goods-item">
             <image src="/static/images/mall/product/{{index+3}}.jpg" class="tui-goods-img"></image>
@@ -52,7 +52,7 @@
           <view class="tui-order-status">已取消</view>
         </view>
       </tui-list-cell>
-      <block wx:for="1" wx:key="{{index}}">
+      <block wx:for="1" wx:key="index">
         <tui-list-cell padding="0" bind:click="detail">
           <view class="tui-goods-item">
             <image src="/static/images/mall/product/{{index+3}}.jpg" class="tui-goods-img"></image>

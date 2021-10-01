@@ -1,17 +1,17 @@
 <wxs module="wxs" src="../../filter/filter.wxs"></wxs>
 <view class="tui-container">
   <view class="tui-extend-box">
-    <block wx:for="{{list}}" wx:key="{{index}}" wx:if="{{(index+1)%2!=0}}">
+    <block wx:for="{{list}}" wx:key="index" wx:if="{{(index+1)%2!=0}}">
       <template is="extendItem" data="{{item,index:index}}" />
     </block>
   </view>
   <view class="tui-extend-box">
-    <block wx:for="{{list}}" wx:key="{{index}}" wx:if="{{(index+1)%2==0}}">
+    <block wx:for="{{list}}" wx:key="index" wx:if="{{(index+1)%2==0}}">
       <template is="extendItem" data="{{item,index:index}}" />
     </block>
   </view>
 
-  <!-- <view class="tui-extend-item tui-bg-{{wxs.getRandom()}}" wx:for="{{wxs.getArray(list)}}" wx:key="{{index}}">
+  <!-- <view class="tui-extend-item tui-bg-{{wxs.getRandom()}}" wx:for="{{wxs.getArray(list)}}" wx:key="index">
       <view class="tui-title tui-light">
         {{item.name}}
       </view>

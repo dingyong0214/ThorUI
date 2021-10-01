@@ -40,7 +40,7 @@
   <tui-top-dropdown show="{{dropShow}}" paddingbtm="110" translatey="216" bind:close="btnCloseDrop">
     <scroll-view class="tui-scroll-box" scroll-y scroll-top="{{scrollTop}}">
       <view class="tui-seizeaseat-20"></view>
-      <view class="tui-drop-item {{item.selected?'tui-bold':''}}" wx:for="{{proDropData}}" wx:key="{{index}}" catchtap="btnSelected" data-index="{{index}}">
+      <view class="tui-drop-item {{item.selected?'tui-bold':''}}" wx:for="{{proDropData}}" wx:key="index" catchtap="btnSelected" data-index="{{index}}">
         <tui-icon name="check" size="16" color="#5677fc" bold="{{true}}" visible="{{item.selected}}" tui-icon-class="tui-middle"></tui-icon>
         <text class="tui-ml tui-middle">{{item.name}}</text>
       </view>
@@ -65,7 +65,7 @@
       </tui-button>
       <view slot="dropdownbox" class="tui-selected-list">
         <scroll-view scroll-y class="tui-dropdown-scroll">
-          <block wx:for="{{dropdownlist}}" wx:key="{{index}}">
+          <block wx:for="{{dropdownlist}}" wx:key="index">
             <tui-list-cell tui-cell-class="tui-selected-item" bind:click="dropDownList" last="{{dropdownlist.length-1==index}}">
               <tui-icon name="{{item.icon}}" size="{{item.size}}" color="{{item.color}}"></tui-icon>
               <text class="tui-ml-20">{{item.name}}</text>
@@ -88,7 +88,7 @@
       <view class="tui-share-title">分享到</view>
       <scroll-view scroll-x>
         <view class="tui-share-top">
-          <view class="tui-share-item {{shareList[0].share.length-1===index?'tui-item-last':''}}" wx:for="{{shareList[0].share}}" wx:key="{{index}}" bindtap="popup">
+          <view class="tui-share-item {{shareList[0].share.length-1===index?'tui-item-last':''}}" wx:for="{{shareList[0].share}}" wx:key="index" bindtap="popup">
             <view class="tui-share-icon" hover-class="tui-hover" hover-stay-time="150">
               <tui-icon name="{{item.icon}}" color="{{item.color}}" size="{{item.size?item.size:36}}"></tui-icon>
             </view>
@@ -100,7 +100,7 @@
 
       <scroll-view scroll-x class="tui-mt">
         <view class="tui-share-bottom">
-          <view class="tui-share-item {{shareList[1].operate.length-1===index?'tui-item-last':''}}" wx:for="{{shareList[1].operate}}" wx:key="{{index}}" bindtap="popup">
+          <view class="tui-share-item {{shareList[1].operate.length-1===index?'tui-item-last':''}}" wx:for="{{shareList[1].operate}}" wx:key="index" bindtap="popup">
             <view class="tui-share-icon" hover-class="tui-hover" hover-stay-time="150">
               <tui-icon name="{{item.icon}}" color="#404040" size="{{item.size}}" bold="{{index===2}}"></tui-icon>
             </view>

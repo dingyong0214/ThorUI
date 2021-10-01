@@ -12,7 +12,7 @@
   </view>
   <view class="page_bd page_bd_spacing">
     <view class="kind-list">
-      <block wx:for-items="{{list}}" wx:key="{{item.id}}">
+      <block wx:for="{{list}}" wx:key="index">
         <view class="kind-list_item">
           <view id="{{item.id}}" class="tui-flex kind-list_item-hd {{item.open ? 'kind-list_item-hd_show' : ''}}" bindtap="kindToggle">
             <view class="tui-flex_item">{{item.name}}</view>
@@ -20,7 +20,7 @@
           </view>
           <view class="kind-list_item-bd {{item.open ? 'kind-list_item-bd_show' : ''}}">
             <view class="tui-cells {{item.open ? 'tui-cells_show' : ''}}">
-              <block wx:for-items="{{item.pages}}" wx:for-item="page" wx:key="*item">
+              <block wx:for-items="{{item.pages}}" wx:for-item="page" wx:for-index="subi" wx:key="subi">
                 <navigator wx:if="{{page.page!='subway'}}" url="{{parse.getPageUrl(page.page)}}" class="tui-cell tui-cell_access">
                   <view class="tui-cell_bd">{{page.name}}</view>
                   <view class="tui-cell_ft tui-cell_ft_in-access"></view>

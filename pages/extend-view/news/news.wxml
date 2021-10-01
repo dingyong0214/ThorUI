@@ -3,7 +3,7 @@
     <view class="tui-rolling-search">
       <icon type="search" size='13' color='#999'></icon>
       <swiper vertical="{{true}}" autoplay="{{true}}" circular="{{true}}" interval="8000" class="tui-swiper">
-        <swiper-item wx:for="{{hotSearch}}" wx:key="{{index}}" class="tui-swiper-item" bindtap="search">
+        <swiper-item wx:for="{{hotSearch}}" wx:key="index" class="tui-swiper-item" bindtap="search">
           <view class="tui-hot-item">大家正在搜：{{item}}</view>
         </swiper-item>
       </swiper>
@@ -11,7 +11,7 @@
   </view>
   <!--banner-->
   <swiper indicator-dots="true" autoplay="true" interval="5000" duration="150" class="tui-banner-swiper" circular="{{true}}">
-    <swiper-item wx:for="{{banner}}" wx:key="{{index}}" catchtap="bannerDetail">
+    <swiper-item wx:for="{{banner}}" wx:key="index" catchtap="bannerDetail">
       <view class="tui-banner-title">{{item.title}}</view>
       <image src="../../../static/images/news/{{item.img}}" class="tui-slide-image" mode="widthFix" />
     </swiper-item>
@@ -19,10 +19,10 @@
 
   <!--新闻列表-->
   <view class="tui-news-view">
-    <block wx:for="{{newsList}}" wx:key="{{index}}">
+    <block wx:for="{{newsList}}" wx:key="index">
       <tui-list-cell tui-cell-class="tui-news-cell {{item.isVideo || item.imgNum>1 ?  'tui-flex-column':'tui-flex-start'}}" last="{{newsList.length-1===index}}" id="{{index}}" bind:click="detail">
         <view class="tui-news-picbox {{item.isVideo || item.imgNum>1?'tui-w-full':'tui-w220 tui-h165'}} {{item.imgNum>1?'tui-flex-between':''}}" wx:if="{{item.imgNum>0}}">
-          <block wx:for-items="{{item.img}}" wx:for-item="items" wx:key="{{index}}">
+          <block wx:for-items="{{item.img}}" wx:for-item="items" wx:key="index">
             <image src="../../../static/images/news/{{items}}" mode="widthFix" class="tui-block {{item.imgNum>1?'tui-one-third':''}} {{item.isVideo?'tui-w-full':''}}"></image>
           </block>
           <view class="tui-btm-badge" wx:if="{{item.isVideo || item.imgNum>3}}">{{item.isVideo?item.time:item.imgNum+'图'}}</view>

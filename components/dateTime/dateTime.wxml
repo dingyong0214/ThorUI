@@ -8,31 +8,31 @@
     <view class="tui-picker-body">
       <picker-view value="{{value}}" bindchange="change" class="tui-picker-view">
         <picker-view-column wx:if="{{!reset && type!=4}}">
-          <view class="tui-column-item" wx:for="{{years}}" wx:key="{{index}}">
+          <view class="tui-column-item" wx:for="{{years}}" wx:key="index">
             {{ item }}
             <text class="tui-text">年</text>
           </view>
         </picker-view-column>
         <picker-view-column wx:if="{{!reset && type!=4}}">
-          <view class="tui-column-item" wx:for="{{months}}" wx:key="{{index}}">
+          <view class="tui-column-item" wx:for="{{months}}" wx:key="index">
             {{ parse.formatNum(item)}}
             <text class="tui-text">月</text>
           </view>
         </picker-view-column>
         <picker-view-column wx:if="{{!reset && (type==1 || type==2)}}">
-          <view class="tui-column-item" wx:for="{{days}}" wx:key="{{index}}">
+          <view class="tui-column-item" wx:for="{{days}}" wx:key="index">
             {{ parse.formatNum(item) }}
             <text class="tui-text">日</text>
           </view>
         </picker-view-column>
         <picker-view-column wx:if="{{!reset && (type==1 || type==4)}}">
-          <view class="tui-column-item" wx:for="{{hours}}" wx:key="{{index}}">
+          <view class="tui-column-item" wx:for="{{hours}}" wx:key="index">
             {{ parse.formatNum(item) }}
             <text class="tui-text">时</text>
           </view>
         </picker-view-column>
         <picker-view-column wx:if="{{!reset && (type==1 || type==4)}}">
-          <view class="tui-column-item" wx:for="{{minutes}}" wx:key="{{index}}">
+          <view class="tui-column-item" wx:for="{{minutes}}" wx:key="index">
             {{ parse.formatNum(item) }}
             <text class="tui-text">分</text>
           </view>

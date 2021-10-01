@@ -14,7 +14,7 @@
       <tui-icon name="delete" size='14' color='#333' bindtap="openActionSheet" class="tui-icon-delete"></tui-icon>
     </view>
     <view class="tui-history-content">
-      <block wx:for="{{history}}" wx:key="{{index}}">
+      <block wx:for="{{history}}" wx:key="index">
         <tui-tag type="gray" tui-tag-class="tui-tag" shape="circle">{{item}}</tui-tag>
       </block>
     </view>
@@ -25,7 +25,7 @@
       <view class="tui-search-title">大家正在搜</view>
     </view>
     <view class="tui-hot-content">
-      <block wx:for="{{hot}}" wx:key="{{index}}">
+      <block wx:for="{{hot}}" wx:key="index">
         <tui-tag type="gray" tui-tag-class="tui-tag" shape="circle">{{item}}</tui-tag>
       </block>
     </view>

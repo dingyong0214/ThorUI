@@ -4,7 +4,7 @@
       <slot name="content"></slot>
     </view>
     <view class="tui-swipeout-button-right-group" wx:if="{{actions.length > 0}}" catchtouchend="loop">
-      <view class="tui-swipeout-button-right-item" wx:for="{{actions}}" style="{{parse.setStyle(item)}};width:{{item.width}}px;" wx:key="{{index}}" data-index="{{index}}" bindtap="handlerButton">
+      <view class="tui-swipeout-button-right-item" wx:for="{{actions}}" style="width:{{item.width}}px;{{parse.setStyle(item)}};" wx:key="index" data-index="{{index}}" bindtap="handlerButton">
         <image src="{{item.icon}}" wx:if="{{item.icon}}" style="width:{{item.imgWidth}}rpx;height:{{item.imgHeight}}rpx"></image>
         <text>{{item.name}}</text>
       </view>

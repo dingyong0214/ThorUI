@@ -7,7 +7,7 @@
     </view>
   </view>
   <checkbox-group>
-    <view class="tui-cart-cell  tui-mtop" wx:for="{{dataList}}" wx:key="{{index}}">
+    <view class="tui-cart-cell  tui-mtop" wx:for="{{dataList}}" wx:key="index">
       <view class="tui-activity" wx:if="{{index%2==0}}">
         <view class="tui-bold">满3件享受优惠</view>
         <view class="tui-buy">去凑单
@@ -47,7 +47,7 @@
         <tui-button type="gray" plain="{{true}}" shape="circle" width="200rpx" height="56rpx" size="{{24}}">清空失效商品</tui-button>
       </view>
     </view>
-    <view class="{{index!==0?'tui-invalid-ptop':''}}" wx:for="{{2}}" wx:key="{{index}}">
+    <view class="{{index!==0?'tui-invalid-ptop':''}}" wx:for="{{2}}" wx:key="index">
       <tui-swipe-action actions="{{actions2}}">
         <view class="tui-goods-item" slot="content">
           <view class="tui-checkbox tui-invalid-pr">
@@ -78,7 +78,7 @@
   </tui-divider>
   <view class="tui-product-list">
     <view class="tui-product-container">
-      <block wx:for="{{productList}}" wx:key="{{index}}" wx:if="{{(index+1)%2!=0}}">
+      <block wx:for="{{productList}}" wx:key="index" wx:if="{{(index+1)%2!=0}}">
         <!--商品列表-->
         <view class="tui-pro-item" hover-class="hover" hover-start-time="150" bindtap="detail">
           <image src="/static/images/mall/product/{{item.img}}.jpg" class="tui-pro-img" mode="widthFix" />
@@ -98,7 +98,7 @@
       </block>
     </view>
     <view class="tui-product-container">
-      <block wx:for="{{productList}}" wx:key="{{index}}" wx:if="{{(index+1)%2==0}}">
+      <block wx:for="{{productList}}" wx:key="index" wx:if="{{(index+1)%2==0}}">
         <!--商品列表-->
         <view class="tui-pro-item" hover-class="hover" hover-start-time="150" bindtap="detail">
           <image src="/static/images/mall/product/{{item.img}}.jpg" class="tui-pro-img" mode="widthFix" />

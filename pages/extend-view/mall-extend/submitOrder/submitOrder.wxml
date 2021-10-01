@@ -24,7 +24,7 @@
           商品信息
         </view>
       </tui-list-cell>
-      <block wx:for="{{2}}" wx:key="{{index}}">
+      <block wx:for="{{2}}" wx:key="index">
         <tui-list-cell hover="{{false}}" padding="0">
           <view class="tui-goods-item">
             <image src="/static/images/mall/product/{{index+3}}.jpg" class="tui-goods-img"></image>

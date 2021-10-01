@@ -4,7 +4,7 @@
       <view class="tui-modal-title" v-if="title">{{title}}</view>
       <view class="tui-modal-content {{title?'':'tui-mtop'}}" style="color:{{color}};font-size:{{size}}rpx">{{content}}</view>
       <view class="tui-modalBtn-box {{button.length>2?'tui-flex-column':''}}">
-        <block wx:for="{{button}}" wx:key="{{index}}">
+        <block wx:for="{{button}}" wx:key="index">
           <button class="tui-modal-btn {{'tui-'+(item.type || 'primary')+(item.plain?'-outline':'')}} {{button.length!=2?'tui-btn-width':''}} {{button.length>2?'tui-mbtm':''}} {{shape=='circle'?'tui-circle-btn':''}}" hover-class="{{'tui-'+(item.plain?'outline':(item.type || 'primary'))+'-hover'}}"
             data-index="{{index}}" bindtap="handleClick">{{item.text || "确定"}}</button>
         </block>

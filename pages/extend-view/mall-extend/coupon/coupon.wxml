@@ -2,7 +2,7 @@
   <image src="https://www.thorui.cn/wx/static/images/mall/coupon/banner_coupon.png" mode="widthFix" class="tui-coupon-banner"></image>
   <view class="tui-coupon-list">
     <radio-group>
-      <label wx:for="{{2}}" wx:key="{{index}}">
+      <label wx:for="{{2}}" wx:key="index">
         <view class="tui-coupon-item tui-top20">
           <image src="https://www.thorui.cn/wx/static/images/mall/coupon/bg_coupon_3x.png" class="tui-coupon-bg" mode="widthFix"></image>
           <view class="tui-coupon-item-left">
@@ -37,7 +37,7 @@
     </radio-group>
 
 
-    <view class="tui-coupon-item tui-top20" wx:for="{{5}}" wx:key="{{index}}">
+    <view class="tui-coupon-item tui-top20" wx:for="{{5}}" wx:key="index">
       <image src="https://www.thorui.cn/wx/static/images/mall/coupon/bg_coupon_3x.png" class="tui-coupon-bg" mode="widthFix"></image>
       <image src="{{parse.getSignUrl(index)}}" class="tui-coupon-sign" wx:if="{{index!=0 && index !=2}}"></image>
       <view class="tui-coupon-item-left">

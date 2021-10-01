@@ -1,6 +1,6 @@
 <view class="container">
   <tui-grid>
-    <block wx:for="{{iconList}}" wx:key="{{index}}">
+    <block wx:for="{{iconList}}" wx:key="index">
       <tui-grid-item>
         <view class="tui-grid-icon">
           <tui-icon name="{{item.name}}" size="{{item.size}}" color="{{item.color}}"></tui-icon>

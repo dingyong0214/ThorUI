@@ -1,11 +1,11 @@
 <view class="container">
   <scroll-view scroll-x scroll-with-animation class="tab-view" scroll-left="{{scrollLeft}}">
-    <view wx:for="{{tabbar}}" wx:key="{{index}}" class="tab-bar-item {{currentTab==index ? 'active' : ''}}" data-current="{{index}}" catchtap="swichNav">
+    <view wx:for="{{tabbar}}" wx:key="index" class="tab-bar-item {{currentTab==index ? 'active' : ''}}" data-current="{{index}}" catchtap="swichNav">
       <text class="tab-bar-title">{{item}}</text>
     </view>
   </scroll-view>
   <swiper class="tab-content" current="{{currentTab}}" duration="300" bindchange="switchTab" style="height:{{winHeight}}px">
-    <swiper-item wx:for="{{tabbar}}" wx:key="{{index}}">
+    <swiper-item wx:for="{{tabbar}}" wx:key="index">
       <scroll-view scroll-y class="scoll-y">
         <!--start 内容部分可直接删除-->
         <view class="list-view">

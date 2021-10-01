@@ -18,7 +18,7 @@
   <map latitude="{{lat}}" longitude="{{lng}}" markers="{{covers}}" bindmarkertap="marker" scale="12"></map>
   <scroll-view scroll-y="true" class="scrollView" style="height:{{scrollH}}px">
     <view class="tui-list">
-      <view class="tui-list-cell {{index==address.length-1?'tui-cell-last':''}}" wx:for="{{address}}" wx:key="{{index}}">
+      <view class="tui-list-cell {{index==address.length-1?'tui-cell-last':''}}" wx:for="{{address}}" wx:key="index">
         <view class=" addr-title">{{item.title}}</view>
         <view class="addr-box">
           <view class="addr-detail ">

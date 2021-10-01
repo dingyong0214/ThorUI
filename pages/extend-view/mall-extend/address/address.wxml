@@ -1,6 +1,6 @@
 <view class="tui-safe-area">
 		<view class="tui-address">
-			<block wx:for="{{3}}" wx:key="{{index}}">
+			<block wx:for="{{3}}" wx:key="index">
 				<tui-list-cell padding="0">
 					<view class="tui-address-flex">
 						<view class="tui-address-left">

@@ -4,7 +4,7 @@
        2、如果传递action的话必须传递width来设置每个按钮的宽度
  -->
 
-  <swipe-action actions="{{actions}}" toggle="{{toggle}}" unclosable="{{true}}" bindchange="handlerCloseButton" wx:for="{{dataList}}" wx:key="{{index}}" params="{{item}}">
+  <swipe-action actions="{{actions}}" toggle="{{toggle}}" unclosable="{{true}}" bindchange="handlerCloseButton" wx:for="{{dataList}}" wx:key="index" params="{{item}}">
     <view slot="content">
       <view class="list-item">
          <image src="../../static/images/news/{{item.img}}.jpg" class="item-img"></image>

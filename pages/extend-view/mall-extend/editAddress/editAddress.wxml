@@ -33,7 +33,7 @@
 			<view class="tui-line-cell">
 				<view class="tui-cell-title">地址类型</view>
 				<view  class="tui-addr-label">
-					<text wx:for="{{lists}}" bindtap="chooseLabel" data-index="{{index}}" wx:key="{{index}}" class="tui-label-item {{index==currentLabelIndex?'tui-label-active':''}}">{{item}}</text>
+					<text wx:for="{{lists}}" bindtap="chooseLabel" data-index="{{index}}" wx:key="index" class="tui-label-item {{index==currentLabelIndex?'tui-label-active':''}}">{{item}}</text>
 				</view>
 			</view>
 		</tui-list-cell>

@@ -4,7 +4,7 @@
     <view class="sub-title">基础组件是项目中独立的模块</view>
   </view>
   <tui-grid>
-    <block wx:for="{{routers}}" wx:key="{{index}}">
+    <block wx:for="{{routers}}" wx:key="index">
       <navigator url="../basic-view/{{item.url}}/{{item.url}}" hover-class='none'>
         <tui-grid-item>
           <view class="tui-grid-icon">

@@ -1,7 +1,7 @@
 <view class="container">
   <!--tabbar-->
   <view class="tui-tabbar">
-    <block wx:for="{{tabbar}}" wx:key="{{index}}">
+    <block wx:for="{{tabbar}}" wx:key="index">
       <view class="tui-tabbar-item {{current==index?'tui-item-active':''}}" data-index="{{index}}" bindtap="tabbarSwitch">
         <tui-icon name="{{current==index?item.icon+'-fill':item.icon}}" color="{{current==index?'#00C0FB':'#666'}}" size="{{item.size}}" class="{{index==0?'tui-ptop-4':''}}"></tui-icon>
         <view class="tui-scale">{{item.text}}</view>
@@ -18,7 +18,7 @@
   </view>
   <!--searchbox-->
 
-  <block wx:for="{{msgList}}" wx:key="{{index}}">
+  <block wx:for="{{msgList}}" wx:key="index">
     <tui-cell bind:click="detail" tui-cell-class="tui-msg" last="{{true}}">
       <view class="tui-msg-box">
         <image src="../../../static/images/news/{{item.pic}}.jpg" class="tui-msg-pic" mode="widthFix"></image>

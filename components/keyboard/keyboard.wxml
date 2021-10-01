@@ -3,7 +3,7 @@
   <slot></slot>
   <view class="tui-keyboard-grids">
   <!--{{(index==9 || index==10 || index==11)?'tui-grid-bottom':''}}-->
-    <view class="tui-keyboard-grid  {{(index==9 || index==11)?'tui-bg-gray':''}}" wx:for="{{itemList}}" wx:key="{{index}}" hover-class="tui-keyboard-hover" hover-stay-time="150" catchtap="handleClick"
+    <view class="tui-keyboard-grid  {{(index==9 || index==11)?'tui-bg-gray':''}}" wx:for="{{itemList}}" wx:key="index" hover-class="tui-keyboard-hover" hover-stay-time="150" catchtap="handleClick"
       data-index="{{index}}">
       <view wx:if="{{index<11}}" class="tui-keyboard-item {{index==9?'tui-fontsize-32':''}}">{{parse.getKeyBoard(index,action)}}</view>
       <view wx:else class="tui-keyboard-item">

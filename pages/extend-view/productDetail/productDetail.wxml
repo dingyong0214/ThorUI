@@ -15,7 +15,7 @@
   <!--banner-->
   <view class="tui-banner-swiper">
     <swiper autoplay="true" interval="5000" duration="150" circular="{{true}}" style="height:{{scrollH}}px" bindchange="bannerChange">
-      <block wx:for="{{banner}}" wx:key="{{index}}">
+      <block wx:for="{{banner}}" wx:key="index">
         <swiper-item data-index="{{index}}" catchtap="previewImage">
           <image src="{{item}}" class="tui-slide-image" style="height:{{scrollH}}px" />
         </swiper-item>
@@ -161,7 +161,7 @@
       <tui-nomore text="宝贝详情" visible="{{true}}" bgcolor="#f7f7f7"></tui-nomore>
     </view>
     <view class="tui-product-img tui-radius-all">
-      <image src="https://www.thorui.cn/img/detail/{{index+1}}.jpg" wx:for="{{20}}" wx:key="{{index}}" mode="widthFix"></image>
+      <image src="https://www.thorui.cn/img/detail/{{index+1}}.jpg" wx:for="{{20}}" wx:key="index" mode="widthFix"></image>
     </view>
     <tui-nomore text="已经到最底了" visible="{{true}}" bgcolor="#f7f7f7"></tui-nomore>
     <view class="tui-safearea-bottom"></view>
@@ -198,7 +198,7 @@
         功能直达
       </view>
       <view class="tui-menu-itembox">
-        <block wx:for="{{topMenu}}" wx:key="{{index}}">
+        <block wx:for="{{topMenu}}" wx:key="index">
           <view class="tui-menu-item" hover-class="tui-opcity" hover-stay-time="150" bindtap="common">
             <view class="tui-badge-box">
               <tui-icon name="{{item.icon}}" color="#fff" size="{{item.size}}"></tui-icon>

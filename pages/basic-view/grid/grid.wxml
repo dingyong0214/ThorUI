@@ -3,7 +3,7 @@
     Grid-2列
   </view>
   <tui-grid>
-    <block wx:for="{{dataList}}" wx:key="{{index}}">
+    <block wx:for="{{dataList}}" wx:key="index">
       <tui-grid-item cell="2" bind:click="detail">
         <view class="tui-grid-icon">
           <tui-icon name="{{item.name}}" size="{{item.size}}" color="{{item.color}}"></tui-icon>
@@ -17,7 +17,7 @@
     Grid-3列
   </view>
   <tui-grid>
-    <block wx:for="{{dataList}}" wx:key="{{index}}">
+    <block wx:for="{{dataList}}" wx:key="index">
       <tui-grid-item cell="3" bind:click="detail">
         <view class="tui-grid-icon">
           <tui-icon name="{{item.name}}" size="{{item.size}}" color="{{item.color}}"></tui-icon>
@@ -31,7 +31,7 @@
     Grid-4列
   </view>
   <tui-grid>
-    <block wx:for="{{dataList}}" wx:key="{{index}}">
+    <block wx:for="{{dataList}}" wx:key="index">
       <tui-grid-item cell="4" tui-griditem-class="tui-grid-four" bind:click="detail">
         <view class="tui-grid-icon">
           <tui-icon name="{{item.name}}" size="{{item.size}}" color="{{item.color}}"></tui-icon>
@@ -45,7 +45,7 @@
     Grid-5列
   </view>
   <tui-grid>
-    <block wx:for="{{iconList}}" wx:key="{{index}}">
+    <block wx:for="{{iconList}}" wx:key="index">
       <tui-grid-item cell="5" tui-griditem-class="tui-grid-five"  bgcolor="#fcebef" bind:click="detail">
         <view class="tui-grid-icon">
           <tui-icon name="{{item.name}}" size="{{item.size}}" color="#8a5966"></tui-icon>
@@ -58,7 +58,7 @@
     Grid-5列
   </view>
   <tui-grid>
-    <block wx:for="{{iconList}}" wx:key="{{index}}">
+    <block wx:for="{{iconList}}" wx:key="index">
       <tui-grid-item cell="5" tui-griditem-class="tui-grid-five" bind:click="detail">
         <view class="tui-grid-icon">
           <tui-icon name="{{item.name}}" size="{{item.size}}" color="#8a5966"></tui-icon>

@@ -53,7 +53,7 @@
     <view class="tui-title tui-top40">图片上传（请点击加号上传）</view>
 
     <view class="tui-upload-box">
-      <view class="tui-upload-item" wx:for="{{files}}" wx:key="{{index}}">
+      <view class="tui-upload-item" wx:for="{{files}}" wx:key="index">
         <image src="{{item}}" class='tui-upload-img' bindtap="previewImage" mode="aspectFill" id="{{item}}"></image>
         <tui-icon name="close-fill" tui-icon-class="tui-upload-del" data-index="{{index}}" catchtap="deleteImage"></tui-icon>
       </view>

@@ -1,7 +1,7 @@
 <view class="container">
   <!--tabbar-->
   <view class="tui-tabbar">
-    <block wx:for="{{tabbar}}" wx:key="{{index}}">
+    <block wx:for="{{tabbar}}" wx:key="index">
       <view class="tui-tabbar-item {{current==index?'tui-item-active':''}}" data-index="{{index}}" bindtap="tabbarSwitch">
         <tui-icon name="{{current==index?item.icon+'-fill':item.icon}}" color="{{current==index?'#E41F19':'#666'}}" size="{{item.size}}" class="{{index==0?'tui-ptop-4':''}}"></tui-icon>
         <view class="tui-scale">{{item.text}}</view>
@@ -18,7 +18,7 @@
     <view class="tui-rolling-search">
       <icon type="search" size='13' color='#999'></icon>
       <swiper vertical="{{true}}" autoplay="{{true}}" circular="{{true}}" interval="8000" class="tui-swiper">
-        <swiper-item wx:for="{{hotSearch}}" wx:key="{{index}}" class="tui-swiper-item" bindtap="search">
+        <swiper-item wx:for="{{hotSearch}}" wx:key="index" class="tui-swiper-item" bindtap="search">
           <view class="tui-hot-item">{{item}}</view>
         </swiper-item>
       </swiper>
@@ -39,7 +39,7 @@
       <!--banner-->
       <view class="tui-banner-box">
         <swiper indicator-dots="true" autoplay="true" interval="5000" duration="150" class="tui-banner-swiper" circular="{{true}}">
-          <swiper-item wx:for="{{banner}}" wx:key="{{index}}" catchtap="detail">
+          <swiper-item wx:for="{{banner}}" wx:key="index" catchtap="detail">
             <image src="../../../static/images/mall/banner/{{item}}" class="tui-slide-image" mode="scaleToFill" />
           </swiper-item>
         </swiper>
@@ -48,7 +48,7 @@
   </view>
 
   <view class="tui-product-category">
-    <view class="tui-category-item" wx:for="{{category}}" wx:key="{{index}}" data-key="{{item.name}}" bindtap="more">
+    <view class="tui-category-item" wx:for="{{category}}" wx:key="index" data-key="{{item.name}}" bindtap="more">
       <image src="../../../static/images/mall/category/{{item.img}}" class="tui-category-img" mode="scaleToFill"></image>
       <view class="tui-category-name">{{item.name}}</view>
     </view>
@@ -71,7 +71,7 @@
       <tui-icon name="arrowright" size="20" color="#555"></tui-icon>
     </view>
     <view class="tui-new-box">
-      <view class="tui-new-item {{index!=0 && index!=1 ?'tui-new-mtop':''}}" wx:for="{{newProduct}}" wx:key="{{index}}" bindtap="detail">
+      <view class="tui-new-item {{index!=0 && index!=1 ?'tui-new-mtop':''}}" wx:for="{{newProduct}}" wx:key="index" bindtap="detail">
         <image src="../../../static/images/mall/new/{{item.type==1?'new':'discount'}}.png" class="tui-new-label" wx:if="{{item.isLabel}}"></image>
         <view class="tui-title-box">
           <view class="tui-new-title">{{item.name}}</view>
@@ -91,12 +91,12 @@
     </view>
     <view class="tui-product-list">
       <view class="tui-product-container">
-        <block wx:for="{{productList}}" wx:key="{{index}}" wx:if="{{(index+1)%2!=0}}">
+        <block wx:for="{{productList}}" wx:key="index" wx:if="{{(index+1)%2!=0}}">
           <template is="productItem" data="{{item,index:index}}" />
         </block>
       </view>
       <view class="tui-product-container">
-        <block wx:for="{{productList}}" wx:key="{{index}}" wx:if="{{(index+1)%2==0}}">
+        <block wx:for="{{productList}}" wx:key="index" wx:if="{{(index+1)%2==0}}">
           <template is="productItem" data="{{item,index:index}}" />
         </block>
       </view>

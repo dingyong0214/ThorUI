@@ -1,7 +1,7 @@
 <view catchtouchmove="stop">
   <view class="tui-fab-box {{!left || (left && right)?'tui-fab-right':''}}" style="left:{{parse.getLeft(left,right)}};right:{{parse.getRight(left,right)}};bottom:{{bottom}}rpx">
     <view class="tui-fab-btn {{isOpen?'tui-visible':''}} {{hidden?'tui-fab-hidden':''}}">
-      <view class="tui-fab-item-box {{left && !right && item.imgUrl?'tui-fab-item-left':''}}" wx:for="{{btnList}}" wx:key="{{index}}" catchtap="handleClick" data-index="{{index}}">
+      <view class="tui-fab-item-box {{left && !right && item.imgUrl?'tui-fab-item-left':''}}" wx:for="{{btnList}}" wx:key="index" catchtap="handleClick" data-index="{{index}}">
         <view class="{{left && !right?'tui-text-left':'tui-text-right'}}" wx:if="{{item.imgUrl}}" style="font-size:{{item.fontSize}}rpx;color:{{item.color}}">{{item.text || ""}}</view>
         <view class="tui-fab-item" style="width:{{width}}rpx;height:{{height}}rpx;background :{{item.bgColor || bgColor}};border-radius:{{radius}}">
           <view class="tui-fab-title" wx:if="{{!item.imgUrl}}" style="font-size:{{item.fontSize}}rpx;color:{{item.color}}">{{item.text || ""}}</view>

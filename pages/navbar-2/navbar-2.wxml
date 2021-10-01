@@ -7,13 +7,13 @@
   </view>
 
   <scroll-view scroll-y scroll-with-animation class="tab-view" scroll-top="{{scrollTop}}" style="height:{{menuHeight}}px">
-    <view wx:for="{{tabbar}}" wx:key="{{index}}" class="tab-bar-item {{currentTab==index ? 'active' : ''}}" data-current="{{index}}" catchtap="swichNav">
+    <view wx:for="{{tabbar}}" wx:key="index" class="tab-bar-item {{currentTab==index ? 'active' : ''}}" data-current="{{index}}" catchtap="swichNav">
       <text>{{item}}</text>
     </view>
   </scroll-view>
   <view class="right-box">
     <!--内容部分 start 自定义可删除-->
-    <block wx:for="{{tabbar}}" wx:key="{{index}}">
+    <block wx:for="{{tabbar}}" wx:key="index">
       <view class="page-view" hidden="{{currentTab!==index}}">
         <swiper indicator-dots autoplay circular interval="5000" duration="150" class="swiper">
           <swiper-item wx:if="{{index%2===0}}" catchtap="detail">
