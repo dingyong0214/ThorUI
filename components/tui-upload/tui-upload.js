@@ -1,12 +1,12 @@
 Component({
+  /**
+   * 组件的属性列表
+   */
   properties: {
     //初始化图片路径
     value: {
       type: Array,
-      value: [],
-      observer(val) {
-        this.initImages()
-      }
+      value: []
     },
     //禁用删除
     forbidDel: {
@@ -28,45 +28,23 @@ Component({
       type: Number,
       value: 9
     },
-    //original 原图，compressed 压缩图，默认二者都有
-    sizeType: {
-      type: Array,
-      value:['original', 'compressed']
-    },
-    //album 从相册选图，camera 使用相机，默认二者都有。如需直接开相机或直接选相册，请只使用一个选项
-    sourceType: {
-      type: Array,
-      value:['album', 'camera']
-    },
-    //可上传图片类型，默认为空，不限制  Array<String> [jpg,png,gif]
-    imageFormat: {
-      type: Array,
-      value:[]
-    },
-    //单张图片大小限制 MB 
-    size: {
-      type: Number,
-      value: 4
-    },
     //项目名，默认为 file
     fileKeyName: {
       type: String,
       value: "file"
-    },
-    //HTTP 请求 Header, header 中不能设置 Referer。
-    header: {
-      type: Object,
-      value: {}
-    },
-    //HTTP 请求中其他额外的 form data
-    formData: {
-      type: Object,
-      value: {}
     }
   },
   lifetimes: {
-    ready: function () {
-      this.initImages()
+    ready: function() {
+      let imgArr = [...this.data.value]
+      let status = []
+      for (let item of imgArr) {
+        status.push("1")
+      }
+      this.setData({
+        imageList: [...imgArr],
+        statusArr: status
+      })
     }
   },
   data: {
@@ -80,17 +58,6 @@ Component({
    * 组件的方法列表
    */
   methods: {
-    initImages() {
-      let imgArr = [...this.data.value]
-      let status = []
-      for (let item of imgArr) {
-        status.push("1")
-      }
-      this.setData({
-        imageList: [...imgArr],
-        statusArr: status
-      })
-    },
     // 重新上传
     reUpLoad(e) {
       let index = Number(e.currentTarget.dataset.index)
@@ -116,49 +83,23 @@ Component({
         imgArr: this.data.imageList
       })
     },
-    toast(text) {
-      text && wx.showToast({
-        title: text,
-        icon: "none"
-      });
-    },
-    chooseImage: function () {
+    chooseImage: function() {
       let _this = this;
       wx.chooseImage({
         count: _this.data.limit - _this.data.imageList.length,
-        sizeType: _this.data.sizeType,
-				sourceType: _this.data.sourceType,
-        success: function (e) {
+        success: function(e) {
           let imageArr = [];
           let status = []
-          for (let i = 0; i < e.tempFiles.length; i++) {
+          for (let i = 0; i < e.tempFilePaths.length; i++) {
             let len = _this.data.imageList.length;
             if (len >= _this.data.limit) {
-              _this.toast(`最多可上传${_this.data.limit}张图片`);
+              wx.showToast({
+                title: `最多可上传${_this.data.limit}张图片`,
+                icon: "none"
+              });
               break;
             }
-
-            //过滤图片类型
-							let path = e.tempFiles[i].path;
-
-							if (_this.data.imageFormat.length > 0) {
-								let format = path.split(".")[(path.split(".")).length - 1];
-								if (_this.data.imageFormat.indexOf(format) == -1) {
-									let text = `只能上传 ${_this.data.imageFormat.join(',')} 格式图片！`
-									_this.toast(text);
-									continue;
-								}
-							}
-
-							//过滤超出大小限制图片
-							let size = e.tempFiles[i].size;
-
-							if (_this.data.size * 1024 * 1024 < size){
-								let err=`单张图片大小不能超过：${_this.data.size}MB`
-								_this.toast(err);
-								continue;
-							}
-
+            let path = e.tempFilePaths[i]
             imageArr.push(path)
             status.push("2")
           }
@@ -190,17 +131,19 @@ Component({
         }
       })
     },
-    uploadImage: function (index, url) {
+    uploadImage: function(index, url) {
       let _this = this;
       let status = `statusArr[${index}]`;
       return new Promise((resolve, reject) => {
         wx.uploadFile({
           url: this.data.serverUrl,
           name: this.data.fileKeyName,
-          header: this.data.header,
-          formData: this.data.formData,
+          header: {
+            //设置请求头
+          },
+          formData: {},
           filePath: url,
-          success: function (res) {
+          success: function(res) {
             console.log(res)
             if (res.statusCode == 200) {
               //返回结果 此处需要按接口实际返回进行修改
@@ -231,7 +174,7 @@ Component({
               reject(index)
             }
           },
-          fail: function (res) {
+          fail: function(res) {
             _this.setData({
               [status]: "3"
             })
@@ -241,7 +184,7 @@ Component({
       })
 
     },
-    delImage: function (e) {
+    delImage: function(e) {
       let index = Number(e.currentTarget.dataset.index)
 
       let imgList = [...this.data.imageList]
@@ -257,7 +200,7 @@ Component({
       })
       this.change()
     },
-    previewImage: function (e) {
+    previewImage: function(e) {
       let index = Number(e.currentTarget.dataset.index)
       if (!this.data.imageList.length) return;
       wx.previewImage({

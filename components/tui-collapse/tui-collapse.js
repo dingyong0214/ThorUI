@@ -1,5 +1,7 @@
 Component({
-  externalClasses: ["tui-collapse"],
+  /**
+   * 组件的属性列表
+   */
   options: {
     multipleSlots: true
   },
@@ -7,7 +9,7 @@ Component({
     //collapse背景颜色
     bgColor: {
       type: String,
-      value: 'transparent'
+      value: 'none'
     },
     //collapse-head 背景颜色
     hdBgColor: {
@@ -17,12 +19,17 @@ Component({
     //collapse-body 背景颜色
     bdBgColor: {
       type: String,
-      value: 'transparent'
+      value: 'none'
     },
     //collapse-body实际高度 open时使用
     height: {
       type: String,
       value: 'auto'
+    },
+    //close时translateY ，当bd高度固定时，建议值为0
+    translateY: {
+      type: String,
+      value: '-50%'
     },
     //索引
     index: {
@@ -33,18 +40,18 @@ Component({
     current: {
       type: Number,
       value: -1,
-      observer(val){
-        this.updateCurrentChange()
+      observer(val) {
+        this.updateCurrentChange();
       }
     },
     // 是否禁用
     disabled: {
-      type: [Boolean, String],
+      type: Boolean,
       value: false
     },
     //是否带箭头
     arrow: {
-      type: [Boolean, String],
+      type: Boolean,
       value: true
     },
     //箭头颜色
@@ -53,8 +60,8 @@ Component({
       value: "#333"
     }
   },
-  lifetimes:{
-    attached:function(){
+  lifetimes: {
+    ready: function() {
       this.updateCurrentChange()
     }
   },
