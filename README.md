@@ -718,7 +718,6 @@ ThorUI组件库小程序原生版本，该开源版源码为V1.4.2版本，后�
 | ------------							| ------------							| ------------							|
 |  ![](https://thorui.cn/img/V152/4.png)|![](https://thorui.cn/img/V152/5.png)	|										|
 
-[![Watch the video](https://thorui.cn/img/V152/6.png)](https://thorui.cn/img/V152/0720.MP4)
 
 ### V1.5.1（2020-06-06）
 
