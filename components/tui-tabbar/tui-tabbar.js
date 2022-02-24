@@ -8,17 +8,17 @@ Component({
     //字体颜色
     color: {
       type: String,
-      value: "#666"
+      value: '#666'
     },
     //字体选中颜色
     selectedColor: {
       type: String,
-      value: "#5677FC"
+      value: '#5677FC'
     },
     //背景颜色
     backgroundColor: {
       type: String,
-      value: "#FFFFFF"
+      value: '#FFFFFF'
     },
     //是否需要中间凸起按钮
     hump: {
@@ -46,38 +46,38 @@ Component({
     //角标字体颜色
     badgeColor: {
       type: String,
-      value: "#fff"
+      value: '#fff'
     },
     //角标背景颜色
     badgeBgColor: {
       type: String,
-      value: "#F74D54"
+      value: '#F74D54'
     },
     unlined: {
       type: Boolean,
       value: false
-    }
-  },
-  data: {
-
+    },
+    //是否开启高斯模糊效果[IOS]
+    backdropFilter: {
+      type: Boolean,
+      value: false
+    },
+		//z-index
+		zIndex: {
+      type: Number,
+      optionalTypes:[String],
+			value: 9999
+		}
   },
   methods: {
     tabbarSwitch(e) {
-      let index = Number(e.currentTarget.dataset.index);
-      let hump = false;
-      let pagePath = "";
-      let verify = false
-      if (this.data.tabBar.length > 0) {
-        hump = this.data.tabBar[index].hump;
-        pagePath = this.data.tabBar[index].pagePath;
-        verify = this.data.tabBar[index].verify;
-      }
-      this.triggerEvent("click", {
-        index: index,
-        hump: hump,
-        pagePath: pagePath,
-        verify: verify
-      })
+      let dataset = e.currentTarget.dataset;
+      this.triggerEvent('click', {
+        index: Number(dataset.index),
+        hump: dataset.hump,
+        pagePath: dataset.pagepath,
+        verify: dataset.verify
+      });
     }
   }
 })

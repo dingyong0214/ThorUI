@@ -152,6 +152,21 @@ Page({
       desc: "计划前三套模板：新闻，聊天，商城。敬请期待！",
       page: "template",
       like: false
+    },{
+      name: "聊天模板",
+      desc: "聊天模板包含：消息列表，好友列表，聊天界面等。",
+      page: "common",
+      like: false
+    }, {
+      name: "新闻模板",
+      desc: "新闻模板包含：新闻列表，新闻详情，评论等。",
+      page: "common",
+      like: false
+    }, {
+      name: "商城模板",
+      desc: "商城模板包含：商城首页，商城列表，商城详情，购物车等。",
+      page: "common",
+      like: false
     }]
   },
   onLoad: function(options) {
@@ -161,29 +176,6 @@ Page({
         index: 1
       })
     }
-    util.request("/Home/GetStatus", {}, "GET", false, true).then((res) => {
-      if (res.code == 100 && res.data == 1) {
-        getApp().globalData.isOnline = true
-        this.setData({
-          list: this.data.list.concat([{
-            name: "聊天模板",
-            desc: "聊天模板包含：消息列表，好友列表，聊天界面等。",
-            page: "msgList",
-            like: false
-          }, {
-            name: "新闻模板",
-            desc: "新闻模板包含：新闻列表，新闻详情，评论等。",
-            page: "news",
-            like: false
-          }, {
-            name: "商城模板",
-            desc: "商城模板包含：商城首页，商城列表，商城详情，购物车等。",
-            page: "mall",
-            like: false
-          }])
-        })
-      }
-    }).catch((res) => {})
   },
   detail: function(e) {
     const page = e.currentTarget.id;

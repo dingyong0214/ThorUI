@@ -1,0 +1,5 @@
+.tui-tips{
+  padding: 80rpx;
+  font-size: 30rpx;
+  text-align: center;
+}

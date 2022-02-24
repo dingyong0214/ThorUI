@@ -30,6 +30,11 @@ Component({
       type: String,
       value: "50%"
     },
+    //默认按钮自定义内容[替换加号]
+    custom:{
+      type:Boolean,
+      value:false
+    },
     //默认按钮背景颜色
     bgColor: {
       type: String,
@@ -69,9 +74,17 @@ Component({
     hidden: true,
     timer: null
   },
+  lifetimes: {
+    detached: function () {
+      clearTimeout(this.data.timer)
+      this.setData({
+        timer: null
+      })
+    }
+  },
   methods: {
-    stop() {},
-    handleClick: function(e) {
+    stop(){},
+    handleClick: function (e) {
       let index = e.currentTarget.dataset.index
       this.setData({
         hidden: false
@@ -99,7 +112,7 @@ Component({
         })
       }
     },
-    handleClickCancel: function() {
+    handleClickCancel: function () {
       if (!this.data.maskClosable) return;
       this.setData({
         isOpen: false

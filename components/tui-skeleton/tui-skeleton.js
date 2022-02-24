@@ -36,16 +36,21 @@ Component({
     //是否需要loading
     isLoading: {
       type: Boolean,
-      value: true
+      value: false
     },
     //loading类型[1-10]
     loadingType: {
       type: Number,
       value: 1
+    },
+    //是否展示动画效果
+    active: {
+      type: Boolean,
+      value: true
     }
   },
   lifetimes: {
-    attached: function() {
+    attached: function () {
       const res = wx.getSystemInfoSync();
       this.setData({
         winWidth: res.windowWidth,
@@ -53,9 +58,9 @@ Component({
       })
       this.isPreload(true)
     },
-    ready: function() {
+    ready: function () {
       this.nodesRef(`.${this.data.selector}`).then((res) => {
-        if(res && res[0]){
+        if (res && res[0]) {
           this.setData({
             winHeight: res[0].height + res[0].top
           })

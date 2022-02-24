@@ -1,10 +1,9 @@
 .tui-tabs-view {
-		width: 100%;
+	  width: 100%;
 		box-sizing: border-box;
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
-		z-index: 9999;
 	}
 
 	.tui-tabs-relative {
@@ -21,8 +20,9 @@
 		content: '';
 		position: absolute;
 		border-bottom: 1rpx solid #eaeef1;
-		-webkit-transform: scaleY(0.5);
-		transform: scaleY(0.5);
+		-webkit-transform: scaleY(0.5) translateZ(0);
+		transform: scaleY(0.5) translateZ(0);
+		transform-origin: 0 100%;
 		bottom: 0;
 		right: 0;
 		left: 0;
@@ -36,6 +36,7 @@
 		display: flex;
 		align-items: center;
 		justify-content: center;
+		overflow: visible;
 	}
 
 	.tui-tabs-disabled {
@@ -47,7 +48,8 @@
 		align-items: center;
 		justify-content: center;
 		position: relative;
-		z-index: 2;
+		z-index: 3;
+		overflow: visible;
 	}
 
 	.tui-tabs-active {
@@ -55,9 +57,36 @@
 	}
 
 	.tui-tabs-slider {
-		border-radius: 40rpx;
 		position: absolute;
 		left: 0;
 		transition: all 0.15s ease-in-out;
-		z-index: 0;
+		z-index: 1;
+		transform-style: preserve-3d;
+	}
+	.tui-tabs__badge {
+		position: absolute;
+		font-size: 24rpx;
+		height: 32rpx;
+		min-width: 20rpx;
+		padding: 0 6rpx;
+		border-radius: 40rpx;
+		right: 0;
+		top: 0;
+		transform: translate(88%, -50%);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-shrink: 0;
+		z-index: 4;
+		font-weight: normal !important; 
+	}
+
+	.tui-badge__dot {
+		position: absolute;
+		height: 16rpx;
+		width: 16rpx;
+		border-radius: 50%;
+		right: -10rpx;
+		top: -10rpx;
+		z-index: 4;
 	}

@@ -8,8 +8,6 @@ Page({
       })
     }
     setTimeout(() => {
-      util.request("/Home/GetStatus", {}, "GET", false, true).then((res) => {
-        if (res.code == 100 && res.data == 1) {
           getApp().globalData.isOnline = true
           this.setData({
             list: this.data.list.concat([{
@@ -40,8 +38,6 @@ Page({
               }
             ])
           })
-        }
-      }).catch((res) => {})
     }, 50)
   },
   data: {

@@ -1,6 +1,18 @@
-<view class="tui-tabs-view {{isFixed?'tui-tabs-fixed':'tui-tabs-relative'}} {{unlined?'tui-unlined':''}}" style="height:{{height}}rpx;padding:0 {{padding}}rpx;background:{{bgColor}};top:{{isFixed?top+'px':'auto'}}">
-  <view wx:for="{{tabs}}" wx:key="index" class="tui-tabs-item" style="width:{{itemWidth}}" catchtap="swichTabs" data-index="{{index}}">
-    <view class="tui-tabs-title {{currentTab==index?'tui-tabs-active':''}} {{item.disabled?'tui-tabs-disabled':''}}" style="color:{{currentTab==index?selectedColor:color}};font-size:{{size}}rpx;line-height:{{size}}rpx;font-weight:{{(bold && currentTab==index)?'bold':'normal'}};">{{item.name}}</view>
+<view class="tui-tabs-view {{isFixed?'tui-tabs-fixed':'tui-tabs-relative'}} {{unlined?'tui-unlined':''}}"
+  style="width:{{tabsWidth}}px;height:{{height+'rpx'}};padding:0 {{padding}}rpx;background:{{backgroundColor}};top:{{isFixed?top+'px':'auto'}};z-index:{{isFixed?zIndex:'auto'}}"
+  wx:if="{{tabsWidth>0}}">
+  <view wx:for="{{tabs}}" wx:key="index" class="tui-tabs-item" style="width:{{itemWidth}};height:{{height}}rpx;" catchtap="swichTabs"
+    data-index="{{index}}">
+    <view class="tui-tabs-title {{currentTab==index?'tui-tabs-active':''}} {{item.disabled?'tui-tabs-disabled':''}}"
+      style="color:{{currentTab==index?selectedColor:color}};font-size:{{size+'rpx'}};font-weight:{{bold && currentTab==index?'bold':'normal'}}">
+      {{item.name}}
+      <view class="{{item.isDot ? 'tui-badge__dot' : 'tui-tabs__badge'}}"
+        style="color: {{badgeColor}};background-color: {{badgeBgColor}}" wx:if="{{item.num || item.isDot}}">
+        {{ item.isDot ? '' : item.num }}
+      </view>
+    </view>
   </view>
-  <view class="tui-tabs-slider" style="transform:translateX({{scrollLeft}}px);width:{{sliderWidth}}rpx;height:{{sliderHeight}}rpx;bottom:{{bottom}};background:{{sliderBgColor}};margin-bottom:{{bottom=='50%'?('-'+sliderHeight/2+'rpx'):0}}"></view>
+  <view wx:if="{{isSlider}}" class="tui-tabs-slider"
+    style="transform:translateX({{scrollLeft}}px);width:{{sliderWidth}}rpx;height:{{sliderHeight}}rpx;border-radius:{{sliderRadius}};bottom:{{bottom}};background:{{sliderBgColor}};margin-bottom:{{bottom=='50%'?('-'+sliderHeight/2+'rpx'):0}}">
+  </view>
 </view>

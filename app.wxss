@@ -96,3 +96,9 @@ button::after {
   color: #fafbfc !important;
   background: linear-gradient(-90deg, #cad8fb, #c9d3fb);
 }
+
+.tui-tips{
+  padding: 80rpx;
+  font-size: 30rpx;
+  text-align: center;
+}

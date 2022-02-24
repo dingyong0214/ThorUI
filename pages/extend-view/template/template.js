@@ -6,7 +6,7 @@ Page({
       state: 1,
       stateText: "",
       desc: ["计划前三套模板：新闻、商城、聊天。完成后再逐步追加，敬请期待！"],
-      page: "news"
+      page: "1"
     }, {
       name: "新闻模板",
       state: 1,
@@ -21,7 +21,7 @@ Page({
       page: "msgList"
     }, {
       name: "商城模板",
-      state: 0,
+      state: 1,
       stateText: "（进度100%）",
       desc: ["商城模板包含：商品列表，商品搜索，商品详情，购物车，结算页面，我的订单等"],
       page: "mall"
@@ -44,34 +44,23 @@ Page({
       desc: ["更多内容敬请期待！"],
       page: "news"
     }],
-    isOnline: false
+    isOnline: true
   },
   onLoad: function(options) {
-    util.request("/Home/GetStatus", {}, "GET", false, true).then((res) => {
-      if (res.code == 100 && res.data == 1) {
-        this.setData({
-          isOnline: true
-        })
-      }
-    }).catch((res) => {})
+    
   },
   template: function(e) {
-    if (!this.data.isOnline) return;
     let index = e.currentTarget.dataset.index;
     let state = this.data.stepList[index].state;
     let page = this.data.stepList[index].page;
+    if(page==1) return;
     if (state == 1 || index == 3) {
-      wx.navigateTo({
-        url: `../${page}/${page}`
-      })
+      util.toast("该模板为会员专享功能~")
     } else {
       util.toast("功能开发中~")
     }
   },
   currentStep: function() {
-    if (!this.data.isOnline) return;
-    wx.navigateTo({
-      url: '../msgList/msgList'
-    })
+    util.toast("该模板为会员专享功能~")
   }
 })
