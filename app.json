@@ -3,7 +3,7 @@
     "pages/index/index",
     "pages/extend/extend",
     "pages/my/my",
-    "pages/maps/maps",
+    "pages/maps/maps", 
     "pages/weather/weather",
     "pages/longlat/longlat",
     "pages/selectCity/selectCity",

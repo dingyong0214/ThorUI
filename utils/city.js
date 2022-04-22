@@ -1,5 +1,5 @@
 module.exports = {
-    list:[
+    list:[ 
 		{
 			"letter":"A",
 			"data": []
