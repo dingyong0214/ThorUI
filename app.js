@@ -1,4 +1,3 @@
-//app.js
 App({
   onLaunch: function() {
     // 获取小程序更新机制兼容
@@ -43,7 +42,7 @@ App({
   },
   globalData: {
     isLogin: wx.getStorageSync("thorui_mobile") ? true : false,
-    version: "1.8.0",
+    version: "1.9.0",
     isOnline:true,
     mobile:wx.getStorageSync("thorui_mobile") || "",
     statusBarHeight:0,

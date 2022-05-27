@@ -1,15 +1,12 @@
 /**
  * 常用方法封装 请求，文件上传等
- * @author echo.   
+ * @author echo.    
  **/
 
 const tui = {
 	//接口地址
 	interfaceUrl: function() {
 		return 'https://www.thorui.cn'
-		//return 'https://test.thorui.cn'
-		//return 'https://uat.thorui.cn'
-		// return 'https://prod.thorui.cn'
 	},
 	toast: function(text, duration, success) {
 		wx.showToast({

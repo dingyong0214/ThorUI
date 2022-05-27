@@ -1,5 +1,3 @@
-/**app.wxss**/
-
 page {
   background: #fafafa;
   /* font-family:PingFang-SC-Medium; */ 
