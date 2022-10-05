@@ -1,6 +1,6 @@
 App({
   onLaunch: function() {
-    // 获取小程序更新机制兼容
+    // 获取小程序更新机制兼容 
     if (wx.canIUse('getUpdateManager')) {
       const updateManager = wx.getUpdateManager()
       updateManager.onCheckForUpdate(function(res) {
