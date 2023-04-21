@@ -1,6 +1,6 @@
 import tui from '../../common/httpRequest'
 let globalData = getApp().globalData;
-Page({
+Page({ 
   data: {
     version: globalData.version
   },

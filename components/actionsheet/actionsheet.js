@@ -1,6 +1,6 @@
 Component({
   externalClasses: ['tui-actionsheet-class'],
-  properties: {
+  properties: { 
     //点击遮罩 是否可关闭
     maskClosable: {
       type: Boolean,

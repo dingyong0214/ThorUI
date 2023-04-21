@@ -199,9 +199,9 @@ Page({
 					'8.修复倒计时组件倒计时结束后重复执行结束事件的bug。',
 					'9.新增多语言模板。源码地址：https://github.com/dingyong0214/ThorUI-utag',
 					'10.新增拖拽排序组件，wxs实现，详细查看多语言模板示例。',
-					'11.新增签到模板（会员点star获取源码）。获取步骤如下：',
+					'11.新增签到模板（点star获取源码）。获取步骤如下：',
 					'1）去GitHub给ThorUI项目点star，项目地址分别为：https://github.com/dingyong0214/ThorUI 和 https://github.com/dingyong0214/ThorUI-uniapp',
-					'2）加QQ3039218619，截图发送到该QQ即可获取源码（仅会员可参加）。',
+					'2）加QQ3039218619，截图发送到该QQ即可获取源码。',
 					'--------------------------',
 					'--------------------------',
 					'注：自1.4.2版本之后，ThorUI只对uni-app版本进行开源，小程序原生版付费会员才可使用（￥150/永久），1.4.2版本之前不受影响。',
@@ -736,6 +736,37 @@ Page({
 					' 5）个人中心06。',
 					'',
 					'18.优化其他已知问题。'
+				]
+			}, {
+				version: '2.2.0',
+				date: '2023.04.21',
+				log: [
+					'1.新增 tui-section（标题栏）组件。',
+					'2.新增 tui-white-space（上下留白）组件。',
+					'3.新增 tui-wing-blank（左右两侧留白）组件。',
+					'4.新增 tui-link（超链接）组件。',
+					'5.新增 tui-code-input（验证码输入框）组件。',
+					'6.新增 tui-org-horizontal 组织架构树（横向）组件。',
+					'7.新增 tui-lottie（动画）组件。',
+					'8.会员商城模板优化，调整部分样式，修复已知问题。',
+					'9.tui-drag 拖拽排序 组件优化，修复vue2下编译到app初始化出错的问题。',
+					'10.tui-lazyload-img（图片懒加载）示例优化，修复已知问题。',
+					'11.tui-row/tui-col（栅格布局）组件优化，修复已知问题。',
+					'12.tui-org-tree 组织架构树 组件优化，新增 fields 属性修改treeData数据约定key名称。',
+					'13.tui-select（选择框）组件优化，属性list 支持 传入 disabled 控制item项是否可选择。',
+					'14.tui-numberbox（数字框）组件优化，修复已知问题。',
+					'15.tui-list-view（列表）组件优化，新增属性设置圆角值。',
+					'16.tui-list-cell（列表Item）组件优化调整，圆角属性 radius 调整，传具体值，自由设置圆角大小。',
+					'17.tui-button（按钮）组件优化，小程序端新增部分属性/事件，详见文档。',
+					'18.tui-form-button（按钮）组件优化，小程序端新增部分属性/事件，详见文档。',
+					'19.tui-searchbar（搜索栏）组件优化，所有px单位改为rpx。',
+					'20.tui-textarea (多行输入框) 组件优化，修复已知问题。',
+					'21.tui-checkbox（多项选择器）组件优化，新增属性控制当设置checked属性时是否触发父级change方法。',
+					'22.tui-sticky-wxs（吸顶容器）组件优化，调整wxs中对H5的判断。',
+					'23.tui-circular-progress（圆形进度条）组件优化，修复在vue3下编译到部分小程序可能不显示的问题。',
+					'24.tui-poster（绘制海报）组件优化，修复在vue3下编译到部分小程序可能不显示的问题。',
+					'25.tui-searchbar（搜索栏）组件优化，新增外部调用方法，重置组件。',
+					'26.优化部分已知问题。'
 				]
 			}
 		].reverse()

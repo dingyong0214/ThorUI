@@ -1,5 +1,5 @@
 App({
-  onLaunch: function() {
+  onLaunch: function() { 
     // 获取小程序更新机制兼容 
     if (wx.canIUse('getUpdateManager')) {
       const updateManager = wx.getUpdateManager()
@@ -42,7 +42,7 @@ App({
   },
   globalData: {
     isLogin: wx.getStorageSync("thorui_mobile") ? true : false,
-    version: "2.1.0",
+    version: "2.2.0",
     isOnline:true,
     mobile:wx.getStorageSync("thorui_mobile") || "",
     statusBarHeight:0,
