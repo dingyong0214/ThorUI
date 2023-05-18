@@ -1,8 +1,8 @@
 {
   "navigationBarTitleText": "更新日志",
   "usingComponents": {
-    "tui-icon": "../../components/icon/icon",
-    "tui-time-axis": "../../components/time-axis/time-axis",
-    "tui-timeaxis-item": "../../components/timeaxis-item/timeaxis-item"
+    "tui-icon": "../../../components/thorui/tui-icon/tui-icon",
+    "tui-time-axis": "../../../components/thorui/tui-time-axis/tui-time-axis",
+    "tui-timeaxis-item": "../../../components/thorui/tui-timeaxis-item/tui-timeaxis-item"
   }
 }
