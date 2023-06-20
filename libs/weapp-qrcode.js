@@ -1,6 +1,6 @@
 //Core code comes from https://github.com/davidshimjs/qrcodejs
  
-var QRCode;
+var QRCode; 
 
 (function () {
     /**

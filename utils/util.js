@@ -1,5 +1,5 @@
 //公共js，主要做表单验证，以及基本方法封装  
-const utils = {
+const utils = { 
   isNullOrEmpty: function(value) {
     //是否为空
     return (value === null || value === '' || value === undefined) ? true : false;

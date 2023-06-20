@@ -1,6 +1,6 @@
 //增强wxml表现能力，一般为数据的简单处理  
 //在 iOS 设备上小程序内的 wxs 会比 javascript 代码快 2 ~ 20 倍 
-var wxs = { 
+var wxs = {  
   //转成数字
   intParse: function(value) {
     return parseInt(value)

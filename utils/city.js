@@ -1,4 +1,4 @@
-module.exports = {
+module.exports = { 
     list:[ 
 		{
 			"letter":"A",

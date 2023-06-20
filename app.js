@@ -42,7 +42,7 @@ App({
   },
   globalData: {
     isLogin: wx.getStorageSync("thorui_mobile") ? true : false,
-    version: "2.8.0",
+    version: "2.9.0",
     isOnline:true,
     mobile:wx.getStorageSync("thorui_mobile") || "",
     statusBarHeight:0,
