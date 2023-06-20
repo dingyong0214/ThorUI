@@ -15,7 +15,7 @@
     <view class="tui-content">该项目主要以组件为主，以及部分模板的分享。1.5.0版本之前项目免费开源（不包括且不限于以下方式：恶意修改、销售、再版、删除），源码可在
       <text class="tui-content-email" data-text="https://github.com/dingyong0214/ThorUI" data-msg="链接已复制" bindtap="copy">GitHub</text>上下载，欢迎Watch & Star ★。</view>
     <view class="tui-content">
-      小程序1.5.0以及之后的版本将只对付费会员【￥150/永久】开放使用（uni-app版本继续免费开源，除了标注【会员专用】部分），如若需要，联系下方付费QQ，感谢支持与理解！
+      小程序1.5.0以及之后的版本将只对付费会员【￥200/永久】开放使用（uni-app版本继续免费开源，除了标注【会员专用】部分），如若需要，联系下方付费QQ，感谢支持与理解！
     </view>
     <view class="tui-content">项目可能存在缺陷或者bug，如果您在使用过程中发现问题或者有更好的建议，可反馈给我。</view>
 
