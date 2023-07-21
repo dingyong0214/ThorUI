@@ -1,6 +1,6 @@
 /**
  * 常用方法封装 请求，文件上传等
- * @author echo.      
+ * @author echo.
  **/
 
 const tui = {
