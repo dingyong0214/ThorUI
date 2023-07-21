@@ -1,7 +1,7 @@
  <font color="#5677fc">`开源不易，需要鼓励。给 ThorUI项目点个 star吧`</font> [GitHub](https://github.com/dingyong0214/ThorUI)
 
 # ThorUI 
-ThorUI组件库小程序原生版本，该开源版源码为V1.4.2版本，后续更新版本付费会员才可使用（￥200/永久）【线上最新版为V2.9.0】。
+ThorUI组件库小程序原生版本，该开源版源码为V1.4.2版本，后续更新版本付费会员才可使用（￥200/永久）【线上最新版为V2.9.1】。
 
 [点此开通会员](https://thorui.cn/doc/docs/member.html)
 
