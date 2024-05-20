@@ -28,7 +28,7 @@ App({
             })
           })
         }
-      })
+      }) 
     } else {
       // 当前微信版本过低，无法使用该功能
     }
@@ -42,7 +42,7 @@ App({
   },
   globalData: {
     isLogin: wx.getStorageSync("thorui_mobile") ? true : false,
-    version: "2.9.5",
+    version: "3.0.0",
     isOnline:true,
     mobile:wx.getStorageSync("thorui_mobile") || "",
     statusBarHeight:0,

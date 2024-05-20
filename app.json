@@ -125,7 +125,7 @@
   },
   "permission": {
     "scope.userLocation": {
-      "desc": "你的位置信息将用于定位效果展示"
+      "desc": "你的位置信息将用于定位效果展示" 
     }
   },
   "debug": true,
