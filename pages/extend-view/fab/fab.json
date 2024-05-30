@@ -3,7 +3,7 @@
   "navigationBarBackgroundColor": "#fff",
   "navigationBarTextStyle": "black",
   "usingComponents": {
-      "tui-button": "../../../../components/extend/button/button",
-      "tui-fab": "../../../../components/tui-fab/tui-fab"
+      "tui-button": "../../../components/extend/button/button",
+      "tui-fab": "../../../components/tui-fab/tui-fab"
   }
 }
